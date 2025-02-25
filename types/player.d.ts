@@ -1,0 +1,45 @@
+interface IPlayer {
+    GetWeaponManager: () => IWeaponManager;
+    SetVoiceFlags: (flags: number) => null|undefined;
+    GetVoiceFlags: () => number;
+    QueryConvar: (convar_name: string) => null|undefined;
+    SetListening: (id: number,override: ListenOverride) => null|undefined;
+    GetListening: (id: number) => ListenOverride;
+    ChangeTeam: (team: Team) => null|undefined;
+    SwitchTeam: (team: Team) => null|undefined;
+    SendMsg: (msgType: MessageType,text: string) => null|undefined;
+    Respawn: () => null|undefined;
+    Kill: () => null|undefined;
+    IsFirstSpawn: () => boolean;
+    IsFakeClient: () => boolean;
+    SetVar: (key: string,value: any) => null|undefined;
+    GetVar: (key: string) => any;
+    ShowMenu: (menuid: string) => null|undefined;
+    HideMenu: () => null|undefined;
+    GetSteamID2: () => string;
+    GetConnectedTime: () => number;
+    GetSteamID: () => number;
+    GetSlot: () => number;
+    GetIPAddress: () => string;
+    SetConvar: (convar: string,value: string) => null|undefined;
+    GetConvar: (convar: string) => string;
+    ExecuteCommand: (command: string) => null|undefined;
+    SetChatColor: (color: string) => null|undefined;
+    GetChatColor: () => string;
+    SetNameColor: (color: string) => null|undefined;
+    GetNameColor: () => string;
+    SetChatTagColor: (color: string) => null|undefined;
+    GetChatTagColor: () => string;
+    SetChatTag: (tag: string) => null|undefined;
+    GetChatTag: () => string;
+    Drop: (reason: DisconnectReason) => null|undefined;
+    CCSPlayerPawnBase: () => CCSPlayerPawnBase;
+    CCSPlayerPawn: () => CCSPlayerPawn;
+    CCSPlayerController: () => CCSPlayerController;
+    CBasePlayerPawn: () => CBasePlayerPawn;
+    CBasePlayerController: () => CBasePlayerController;
+    CBaseEntity: () => CBaseEntity;
+    PerformMenuAction: (action: string,value: number) => null|undefined;
+    IsValid: () => boolean;
+}
+declare const player : IPlayer

@@ -1,0 +1,44 @@
+interface CPhysicsProp {
+    readonly "MotionEnabled": CEntityIOOutput;
+    readonly "OnAwakened": CEntityIOOutput;
+    readonly "OnAwake": CEntityIOOutput;
+    readonly "OnAsleep": CEntityIOOutput;
+    readonly "OnPlayerUse": CEntityIOOutput;
+    readonly "OnOutOfWorld": CEntityIOOutput;
+    readonly "OnPlayerPickup": CEntityIOOutput;
+    "ForceNavIgnore": boolean;
+    "NoNavmeshBlocker": boolean;
+    "ForceNpcExclude": boolean;
+    "MassScale": number;
+    "InertiaScale": number;
+    "BuoyancyScale": number;
+    "DamageType": number;
+    "DamageToEnableMotion": number;
+    "ForceToEnableMotion": number;
+    "ThrownByPlayer": boolean;
+    "DroppedByPlayer": boolean;
+    "TouchedByPlayer": boolean;
+    "FirstCollisionAfterLaunch": boolean;
+    "ExploitableByPlayer": number;
+    "HasBeenAwakened": boolean;
+    "IsOverrideProp": boolean;
+    "NextCheckDisableMotionContactsTime": number;
+    "InitialGlowState": number;
+    "GlowRange": number;
+    "GlowRangeMin": number;
+    "GlowColor": Color;
+    "ShouldAutoConvertBackFromDebris": boolean;
+    "MuteImpactEffects": boolean;
+    "AcceptDamageFromHeldObjects": boolean;
+    "EnableUseOutput": boolean;
+    readonly "CrateType": any;
+    "StrItemClass": Object;
+    "ItemCount": Object;
+    "RemovableForAmmoBalancing": boolean;
+    "Awake": boolean;
+    readonly "Parent": CBreakableProp;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CPhysicsProp(ptr_or_class: string|AnySDKClass): CPhysicsProp;

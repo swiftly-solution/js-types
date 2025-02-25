@@ -1,0 +1,44 @@
+interface CFuncTrackTrain {
+    readonly "Ppath": CPathTrack;
+    "Length": number;
+    "PosPrev": Vector;
+    "Prev": QAngle;
+    "ControlMins": Vector;
+    "ControlMaxs": Vector;
+    "LastBlockPos": Vector;
+    "LastBlockTick": number;
+    "Volume": number;
+    "Bank": number;
+    "OldSpeed": number;
+    "BlockDamage": number;
+    "Height": number;
+    "MaxSpeed": number;
+    "Dir": number;
+    "SoundMove": string;
+    "SoundMovePing": string;
+    "SoundStart": string;
+    "SoundStop": string;
+    "StrPathTarget": string;
+    "MoveSoundMinDuration": number;
+    "MoveSoundMaxDuration": number;
+    "NextMoveSoundTime": number;
+    "MoveSoundMinPitch": number;
+    "MoveSoundMaxPitch": number;
+    "OrientationType": number;
+    "VelocityType": number;
+    readonly "OnStart": CEntityIOOutput;
+    readonly "OnNext": CEntityIOOutput;
+    readonly "OnArrivedAtDestinationNode": CEntityIOOutput;
+    "ManualSpeedChanges": boolean;
+    "DesiredSpeed": number;
+    "SpeedChangeTime": number;
+    "AccelSpeed": number;
+    "DecelSpeed": number;
+    "AccelToSpeed": boolean;
+    "NextMPSoundTime": number;
+    readonly "Parent": CBaseModelEntity;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CFuncTrackTrain(ptr_or_class: string|AnySDKClass): CFuncTrackTrain;

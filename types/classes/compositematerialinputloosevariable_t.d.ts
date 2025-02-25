@@ -1,0 +1,41 @@
+interface CompositeMaterialInputLooseVariable_t {
+    "StrName": string;
+    "ExposeExternally": boolean;
+    "StrExposedFriendlyName": string;
+    "StrExposedFriendlyGroupName": string;
+    "ExposedVariableIsFixedRange": boolean;
+    "StrExposedVisibleWhenTrue": string;
+    "StrExposedHiddenWhenTrue": string;
+    "StrExposedValueList": string;
+    "VariableType": number;
+    "ValueBoolean": boolean;
+    "ValueIntX": number;
+    "ValueIntY": number;
+    "ValueIntZ": number;
+    "ValueIntW": number;
+    "HasFloatBounds": boolean;
+    "ValueFloatX": number;
+    "ValueFloatX_Min": number;
+    "ValueFloatX_Max": number;
+    "ValueFloatY": number;
+    "ValueFloatY_Min": number;
+    "ValueFloatY_Max": number;
+    "ValueFloatZ": number;
+    "ValueFloatZ_Min": number;
+    "ValueFloatZ_Max": number;
+    "ValueFloatW": number;
+    "ValueFloatW_Min": number;
+    "ValueFloatW_Max": number;
+    "CValueColor4": Color;
+    "ValueSystemVar": number;
+    "StrTextureContentAssetPath": string;
+    "StrTextureCompilationVtexTemplate": string;
+    "TextureType": number;
+    "StrString": string;
+    "StrPanoramaPanelPath": string;
+    "PanoramaRenderRes": number;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CompositeMaterialInputLooseVariable_t(ptr_or_class: string|AnySDKClass): CompositeMaterialInputLooseVariable_t;

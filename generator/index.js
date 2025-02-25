@@ -16,11 +16,24 @@ const AddInArray = (arr, idx, element) => {
     arr.splice(idx, 0, element);
 }
 
+const anyTypes = ["CTypedBitVec", "uint32_t", "value", "C_", "CAttachmentNameSymbolWithStorage", "CAnimGraphTagOptionalRef", "uint8_t", "V_uuid_t", "PulseValueType_t"]
+
 const GetType = (type) => {
     if (!type) return "any;"
 
     type = type.replace(new RegExp("nil", "g"), "null")
-    type = type.replace(new RegExp("...\\)", "g"), "...args: any[])")
+    type = type.replace("...)", "...args: any[])")
+    if (type == "bool") type = "boolean"
+    if (type.startsWith("bitfield:")) {
+        return "any;";
+    }
+    for (t of anyTypes) {
+        if (type.includes(t)) return "any;"
+    }
+
+    if (type == "Player") return "IPlayer;";
+    else if (type == "Memory") return "IMemory;";
+    else if (type == "WeaponManager") return "IWeaponManager;"
 
     if (type == "any") return "any;"
     else if (type == "void") return "null|undefined;"
@@ -41,7 +54,7 @@ const GetType = (type) => {
             const fun = type.split(")|")
             return `${fun[1].split(" ")[0]} | (${fun[0].replace("fun", "").replace(new RegExp("table", "g"), "Object[]")}) => void);`
         } else return `${type.replace("fun", "").replace(new RegExp("table", "g"), "Object[]")} => void;`
-    } else if(type.includes(",")) {
+    } else if (type.includes(",")) {
         return `[${type}];`
     } else return `${type};`
 }
@@ -53,7 +66,7 @@ const ProcessParameters = (params) => {
     for (const paramkey of Object.keys(params)) {
         let name = paramkey
         if (name == "eventName") params[paramkey] = "GameEvent"
-        if(name == "...") {
+        if (name == "...") {
             returnParams.push("...args: any[]");
         } else returnParams.push(`${name}: ${GetType(params[paramkey]).replace(/\//g, "|").slice(0, -1)}`)
     }
@@ -64,7 +77,8 @@ const ProcessParameters = (params) => {
 const GenerateClassProperties = (properties) => {
     const props = []
     for (const [propertyName, propertyValues] of Object.entries(properties)) {
-        props.push(`    ${propertyValues.writable == false ? "readonly " : ""}${propertyName}: ${GetType(propertyValues.type)}`)
+        if (propertyName == "IsValid") continue;
+        props.push(`    ${propertyValues.writable == false ? "readonly " : ""}"${propertyName}": ${GetType(propertyValues.type)}`)
     }
 
     if (props.length == 0) return "";
@@ -82,7 +96,7 @@ const GenerateClassFunctions = (key, data) => {
             name = fnc.split("/")[1];
         }
 
-        if(forlang == "js") {
+        if (forlang == "js") {
             const params = ProcessParameters(fncData.params)
             functions.push(`    ${name}: (${params}) => ${GetType(fncData.return['js'])}`)
         }
@@ -104,30 +118,31 @@ const ProcessData = (data, subfolder, className) => {
                 if (!functionStxPoll[dir]) {
                     let classVariable = data[key].variable["js"].split(":")[0].split(".")[0]
                     if (classVariable.includes('[')) classVariable = classVariable.split('[')[0]
+                    if (classVariable.toLowerCase() == "console") continue;
 
                     functionStxPoll[dir] = { className: (className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")), file: [] };
 
-                    functionStxPoll[dir].file.push(`interface ${functionStxPoll[dir].className} {`);
+                    functionStxPoll[dir].file.push(`interface I${functionStxPoll[dir].className} {`);
                     functionStxPoll[dir].file.push(`}`);
 
-                    if(data[key].variable["js"].split(":").length >= 2 || data[key].variable["js"].split(".").length >= 2 || key == "constructor")
-                        functionStxPoll[dir].file.push(`declare const ${classVariable.toLowerCase()} : ${className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")}`)
+                    if (data[key].variable["js"].split(":").length >= 2 || data[key].variable["js"].split(".").length >= 2 || key == "constructor")
+                        functionStxPoll[dir].file.push(`declare const ${classVariable.toLowerCase()} : I${className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")}`)
                 }
 
                 if (subfolder.endsWith("database")) {
                     if (!functionStxPoll[dir].file.join("\n").includes("function Database")) {
-                        functionStxPoll[dir].file.push(`\ndeclare function Database(connection_name: string): Database;`)
+                        functionStxPoll[dir].file.push(`\ndeclare function Database(connection_name: string): IDatabase;`)
                     }
                 }
                 if (subfolder.endsWith("memory")) {
                     if (!functionStxPoll[dir].file.join("\n").includes("function Memory")) {
-                        functionStxPoll[dir].file.push(`\ndeclare function Memory(): Memory;`)
+                        functionStxPoll[dir].file.push(`\ndeclare function Memory(): IMemory;`)
                     }
                 }
-                if(!data[key].variable['js']) continue;
+                if (!data[key].variable['js']) continue;
                 const splitted = data[key].variable['js'].split(".");
-                if(splitted.length > 1) {
-                    if(splitted[1] == "EXPORT_NAME") splitted[1] = `[plugin_name: string]`;
+                if (splitted.length > 1) {
+                    if (splitted[1] == "EXPORT_NAME") splitted[1] = `[plugin_name: string]`;
                     AddInArray(functionStxPoll[dir].file, 1, `    ${splitted[1]}: (${ProcessParameters(data[key].params)}) => ${GetType(data[key].return['js'])}`);
                 } else {
                     functionStxPoll[dir].file.push(`declare function ${data[key].variable['js']}(${ProcessParameters(data[key].params)}) : ${GetType(data[key].return['js'])}`);
@@ -137,36 +152,36 @@ const ProcessData = (data, subfolder, className) => {
                     writeFileSync(subfolder + "/types.d.ts", "")
                     existsTypes = true
                 }
-                appendFileSync(subfolder + "/types.d.ts", `\n\nconst enum ${data[key].title} {\n${Object.keys(data[key].values).map((val) => `    ${val} = ${data[key].values[val]}`).join(",\n")}\n}`)
+                appendFileSync(subfolder + "/types.d.ts", `\n\ndeclare const enum ${data[key].title} {\n${Object.keys(data[key].values).map((val) => `    ${val} = ${data[key].values[val]}`).join(",\n")}\n}`)
             } else if (data[key].template.includes("event-syntax")) {
-                var subfld = `../JSDocs/events/list.d.ts`
+                var subfld = `../types/events/list.d.ts`
                 let created = false;
-                if (!existsSync("../JSDocs/events")) mkdirSync("../JSDocs/events")
+                if (!existsSync("../types/events")) mkdirSync("../types/events")
                 if (!existsSync(subfld)) {
                     created = true;
                     writeFileSync(subfld, `type GameEvent =`);
                 }
                 appendFileSync(subfld, `\n    ${!created ? "| " : "  "}"${data[key].title}"`)
             } else if (data[key].template == "class-syntax") {
-                if (!existsSync("../JSDocs/classes")) mkdirSync("../JSDocs/classes")
+                if (!existsSync("../types/classes")) mkdirSync("../types/classes")
                 if (key.startsWith("c_")) continue;
-                writeFileSync("../JSDocs/classes" + `/${key}.d.ts`, `interface ${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("")};` : ""}`)
-            
+                writeFileSync("../types/classes" + `/${key}.d.ts`, `interface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
+
                 let created = false;
-                if (!existsSync("../JSDocs/sdkclassalias.d.ts")) {
+                if (!existsSync("../types/sdkclassalias.d.ts")) {
                     created = true;
-                    writeFileSync("../JSDocs/sdkclassalias.d.ts", `type AnySDKClass = `)
+                    writeFileSync("../types/sdkclassalias.d.ts", `type AnySDKClass = `)
                 }
-                if (data[key].description == "") appendFileSync("../JSDocs/sdkclassalias.d.ts", `\n    ${!created ? "| " : "  "}${data[key].title.split(" ").join("")}`)
+                if (data[key].description == "") appendFileSync("../types/sdkclassalias.d.ts", `\n    ${!created ? "| " : "  "}${data[key].title.split(" ").join("")}`)
             }
         }
     }
 }
 
 for (const dataFile of dataFiles) {
-    ProcessData(JSON.parse(readFileSync(dataFile)), __dirname + "/../JSDocs")
+    ProcessData(JSON.parse(readFileSync(dataFile)), __dirname + "/../types")
 }
 
-for(key in functionStxPoll) {
+for (key in functionStxPoll) {
     writeFileSync(key, functionStxPoll[key].file.join("\n"));
 }

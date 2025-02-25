@@ -1,0 +1,44 @@
+interface CFuncMover {
+    "CreateMovableNavMesh": boolean;
+    "PathName": string;
+    readonly "PathMover": CPathMover;
+    "PathNodeStart": string;
+    readonly "MoveType": any;
+    "IsReversing": boolean;
+    "Target": Vector;
+    "StartSpeed": number;
+    "PathLocation": number;
+    "T": number;
+    "CurrentNodeIndex": number;
+    "PreviousNodeIndex": number;
+    "FixedOrientation": boolean;
+    "FixedPitch": boolean;
+    "SolidType": number;
+    "IsMoving": boolean;
+    "TimeToReachMaxSpeed": number;
+    "DistanceToReachMaxSpeed": number;
+    "TimeToReachZeroSpeed": number;
+    "DistanceToReachZeroSpeed": number;
+    "TimeMovementStart": number;
+    "TimeMovementStop": number;
+    readonly "StopAtNode": CMoverPathNode;
+    "PathLocationToBeginStop": number;
+    "StartForwardSound": string;
+    "LoopForwardSound": string;
+    "StopForwardSound": string;
+    "StartReverseSound": string;
+    "LoopReverseSound": string;
+    "StopReverseSound": string;
+    "ArriveAtDestinationSound": string;
+    readonly "OnMovementEnd": CEntityIOOutput;
+    "StartAtEnd": boolean;
+    readonly "OrientationUpdate": any;
+    "TimeStartOrientationChange": number;
+    "TimeToBlendToNewOrientation": number;
+    "DurationBlendToNewOrientationRan": number;
+    readonly "Parent": CBaseModelEntity;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CFuncMover(ptr_or_class: string|AnySDKClass): CFuncMover;

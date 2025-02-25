@@ -1,0 +1,46 @@
+interface CHostage {
+    readonly "OnHostageBeginGrab": CEntityIOOutput;
+    readonly "OnFirstPickedUp": CEntityIOOutput;
+    readonly "OnDroppedNotRescued": CEntityIOOutput;
+    readonly "OnRescued": CEntityIOOutput;
+    readonly "EntitySpottedState": EntitySpottedState_t;
+    "SpotRules": number;
+    "UiHostageSpawnExclusionGroupMask": number;
+    "HostageSpawnRandomFactor": number;
+    "Remove": boolean;
+    "Vel": Vector;
+    "IsRescued": boolean;
+    "JumpedThisFrame": boolean;
+    "HostageState": number;
+    readonly "Leader": CBaseEntity;
+    readonly "LastLeader": CCSPlayerPawnBase;
+    readonly "ReuseTimer": CountdownTimer;
+    "HasBeenUsed": boolean;
+    "Accel": Vector;
+    "IsRunning": boolean;
+    "IsCrouching": boolean;
+    readonly "JumpTimer": CountdownTimer;
+    "IsWaitingForLeader": boolean;
+    readonly "RepathTimer": CountdownTimer;
+    readonly "InhibitDoorTimer": CountdownTimer;
+    readonly "InhibitObstacleAvoidanceTimer": CountdownTimer;
+    readonly "WiggleTimer": CountdownTimer;
+    "IsAdjusted": boolean;
+    "HandsHaveBeenCut": boolean;
+    readonly "HostageGrabber": CCSPlayerPawn;
+    "LastGrabTime": number;
+    "PositionWhenStartedDroppingToGround": Vector;
+    "GrabbedPos": Vector;
+    "RescueStartTime": number;
+    "GrabSuccessTime": number;
+    "DropStartTime": number;
+    "ApproachRewardPayouts": number;
+    "PickupEventCount": number;
+    "SpawnGroundPos": Vector;
+    "HostageResetPosition": Vector;
+    readonly "Parent": CHostageExpresserShim;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CHostage(ptr_or_class: string|AnySDKClass): CHostage;

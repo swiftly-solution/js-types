@@ -1,0 +1,40 @@
+interface CEnvVolumetricFogController {
+    "Scattering": number;
+    "Anisotropy": number;
+    "FadeSpeed": number;
+    "DrawDistance": number;
+    "FadeInStart": number;
+    "FadeInEnd": number;
+    "IndirectStrength": number;
+    "VolumeDepth": number;
+    "FirstVolumeSliceThickness": number;
+    "IndirectTextureDimX": number;
+    "IndirectTextureDimY": number;
+    "IndirectTextureDimZ": number;
+    "BoxMins": Vector;
+    "BoxMaxs": Vector;
+    "Active": boolean;
+    "StartAnisoTime": number;
+    "StartScatterTime": number;
+    "StartDrawDistanceTime": number;
+    "StartAnisotropy": number;
+    "StartScattering": number;
+    "StartDrawDistance": number;
+    "DefaultAnisotropy": number;
+    "DefaultScattering": number;
+    "DefaultDrawDistance": number;
+    "StartDisabled": boolean;
+    "EnableIndirect": boolean;
+    "IndirectUseLPVs": boolean;
+    "IsMaster": boolean;
+    "ForceRefreshCount": number;
+    "NoiseSpeed": number;
+    "NoiseStrength": number;
+    "NoiseScale": Vector;
+    "FirstTime": boolean;
+    readonly "Parent": CBaseEntity;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare function CEnvVolumetricFogController(ptr_or_class: string|AnySDKClass): CEnvVolumetricFogController;
