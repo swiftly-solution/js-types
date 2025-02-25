@@ -163,9 +163,9 @@ const ProcessData = (data, subfolder, className) => {
                 }
                 appendFileSync(subfld, `\n    ${!created ? "| " : "  "}"${data[key].title}"`)
             } else if (data[key].template == "class-syntax") {
-                if (!existsSync("../types/classes")) mkdirSync("../types/classes")
+                if (!existsSync("../types/classes.d.ts")) writeFileSync("../types/classes.d.ts", "")
                 if (key.startsWith("c_")) continue;
-                writeFileSync("../types/classes" + `/${key}.d.ts`, `interface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
+                appendFileSync("../types/classes.d.ts", `\n\ninterface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
 
                 let created = false;
                 if (!existsSync("../types/sdkclassalias.d.ts")) {
