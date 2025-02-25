@@ -1,0 +1,8 @@
+{
+	"name": "@types/swiftlycs2",
+	"version": "1.0.0",
+	"author": "Swiftly Solution",
+	"description": "SwiftlyCS2 TypeScript definition for plugins",
+	"license": "MIT",
+	"repository": "https://github.com/swiftly-solution/js-types.git"
+}
