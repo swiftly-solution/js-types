@@ -8,8 +8,8 @@ cd generator
 node index.js
 cd ..
 
-rm index.d.ts
-touch index.d.ts
+rm global.d.ts
+touch global.d.ts
 for filename in types/**/*.d.ts; do
-    echo "/// <reference path=\"$filename\" />" >> index.d.ts
+    echo "/// <reference path=\"$filename\" />" >> global.d.ts
 done
