@@ -35,7 +35,7 @@ const GetType = (type) => {
     else if (type == "Memory") return "IMemory;";
     else if (type == "WeaponManager") return "IWeaponManager;"
 
-    if (type.includes("EventResult|null")) type = type.replace("EventResult|null", "EventResult|null|undefined");
+    if (type.includes("EventResult|null")) type = type.replace("EventResult|null", "EventResult|void");
 
     if (type == "any") return "any;"
     else if (type == "void") return "null|undefined;"

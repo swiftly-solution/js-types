@@ -19864,7 +19864,7 @@ declare function FindEntitiesByClassname(className: string) : Object;
 declare function CreateEntityByName(className: string) : CEntityInstance;
 declare interface IFunctions {
 }
-declare function AddEventHandler(eventName: GameEvent,callback: (event:Event,...args: any[]) => EventResult|null|undefined) : EventHandler;
+declare function AddEventHandler(eventName: GameEvent,callback: (event:Event,...args: any[]) => EventResult|void) : EventHandler;
 declare function RemoveEventHandler(eventHandler: EventHandler) : null|undefined;
 declare function TriggerEvent(eventName: GameEvent,...args: any[]) : [EventResult, Event];
 type GameEvent =
