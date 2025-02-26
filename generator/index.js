@@ -144,8 +144,12 @@ const ProcessData = (data, subfolder, className) => {
                 if (!data[key].variable['js']) continue;
                 const splitted = data[key].variable['js'].split(".");
                 if (splitted.length > 1) {
-                    if (splitted[1] == "EXPORT_NAME") splitted[1] = `[plugin_name: string]`;
-                    AddInArray(functionStxPoll[dir].file, 1, `    ${splitted[1]}: (${ProcessParameters(data[key].params)}) => ${GetType(data[key].return['js'])}`);
+                    if (splitted[1] == "EXPORT_NAME") {
+                        splitted[1] = `[plugin_name: string]`;
+                        AddInArray(functionStxPoll[dir].file, 1, `    ${splitted[1]}: {\n        [function_name: string]: (${ProcessParameters(data[key].params)}) => ${GetType(data[key].return['js'])}\n    }`);
+                    } else {
+                        AddInArray(functionStxPoll[dir].file, 1, `    ${splitted[1]}: (${ProcessParameters(data[key].params)}) => ${GetType(data[key].return['js'])}`);
+                    }
                 } else {
                     functionStxPoll[dir].file.push(`declare function ${data[key].variable['js']}(${ProcessParameters(data[key].params)}) : ${GetType(data[key].return['js'])}`);
                 }
