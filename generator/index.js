@@ -122,7 +122,7 @@ const ProcessData = (data, subfolder, className) => {
 
                     functionStxPoll[dir] = { className: (className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")), file: [] };
 
-                    functionStxPoll[dir].file.push(`interface I${functionStxPoll[dir].className} {`);
+                    functionStxPoll[dir].file.push(`declare interface I${functionStxPoll[dir].className} {`);
                     functionStxPoll[dir].file.push(`}`);
 
                     if (data[key].variable["js"].split(":").length >= 2 || data[key].variable["js"].split(".").length >= 2 || key == "constructor")
@@ -165,7 +165,7 @@ const ProcessData = (data, subfolder, className) => {
             } else if (data[key].template == "class-syntax") {
                 if (!existsSync("../types/classes.d.ts")) writeFileSync("../types/classes.d.ts", "")
                 if (key.startsWith("c_")) continue;
-                appendFileSync("../types/classes.d.ts", `\n\ninterface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
+                appendFileSync("../types/classes.d.ts", `\n\ndeclare interface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
 
                 let created = false;
                 if (!existsSync("../types/sdkclassalias.d.ts")) {
