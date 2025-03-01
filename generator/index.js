@@ -27,7 +27,7 @@ const GetType = (type) => {
     if (type.startsWith("bitfield:")) {
         return "any;";
     }
-    for (t of anyTypes) {
+    for (const t of anyTypes) {
         if (type.includes(t)) return "any;"
     }
 
