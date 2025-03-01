@@ -161,8 +161,6 @@ declare interface CEntityKeyValues {
     SetQAngle: (key: string,value: QAngle) => null|undefined;
 }
 
-declare function CEntityKeyValues(): CEntityKeyValues;
-
 declare interface IEvent {
 
     GetInvokingPlugin: () => string;
@@ -344,16 +342,12 @@ declare interface AnimationDecodeDebugDumpElement_t {
     IsValid: () => boolean;
 }
 
-declare function AnimationDecodeDebugDumpElement_t(ptr_or_class: string|AnySDKClass): AnimationDecodeDebugDumpElement_t;
-
 declare interface AnimationDecodeDebugDump_t {
     "ProcessingType": number;
     readonly "Elems": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AnimationDecodeDebugDump_t(ptr_or_class: string|AnySDKClass): AnimationDecodeDebugDump_t;
 
 declare interface AnimationSnapshotBase_t {
     "RealTime": number;
@@ -367,8 +361,6 @@ declare interface AnimationSnapshotBase_t {
     IsValid: () => boolean;
 }
 
-declare function AnimationSnapshotBase_t(ptr_or_class: string|AnySDKClass): AnimationSnapshotBase_t;
-
 declare interface AnimationSnapshot_t {
     "EntIndex": number;
     "ModelName": string;
@@ -377,8 +369,6 @@ declare interface AnimationSnapshot_t {
     IsValid: () => boolean;
 }
 
-declare function AnimationSnapshot_t(ptr_or_class: string|AnySDKClass): AnimationSnapshot_t;
-
 declare interface CAnimActivity {
     "Activity": number;
     "Flags": number;
@@ -386,8 +376,6 @@ declare interface CAnimActivity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimActivity(ptr_or_class: string|AnySDKClass): CAnimActivity;
 
 declare interface CAnimBone {
     "Parent": number;
@@ -398,8 +386,6 @@ declare interface CAnimBone {
     IsValid: () => boolean;
 }
 
-declare function CAnimBone(ptr_or_class: string|AnySDKClass): CAnimBone;
-
 declare interface CAnimBoneDifference {
     "PosError": Vector;
     "HasRotation": boolean;
@@ -407,8 +393,6 @@ declare interface CAnimBoneDifference {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimBoneDifference(ptr_or_class: string|AnySDKClass): CAnimBoneDifference;
 
 declare interface CAnimData {
     readonly "AnimArray": Object;
@@ -419,8 +403,6 @@ declare interface CAnimData {
     IsValid: () => boolean;
 }
 
-declare function CAnimData(ptr_or_class: string|AnySDKClass): CAnimData;
-
 declare interface CAnimDataChannelDesc {
     "Flags": number;
     "Type": number;
@@ -430,16 +412,12 @@ declare interface CAnimDataChannelDesc {
     IsValid: () => boolean;
 }
 
-declare function CAnimDataChannelDesc(ptr_or_class: string|AnySDKClass): CAnimDataChannelDesc;
-
 declare interface CAnimDecoder {
     "Version": number;
     "Type": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimDecoder(ptr_or_class: string|AnySDKClass): CAnimDecoder;
 
 declare interface CAnimDesc {
     readonly "Flags": CAnimDesc_Flag;
@@ -459,8 +437,6 @@ declare interface CAnimDesc {
     IsValid: () => boolean;
 }
 
-declare function CAnimDesc(ptr_or_class: string|AnySDKClass): CAnimDesc;
-
 declare interface CAnimDesc_Flag {
     "Looping": boolean;
     "AllZeros": boolean;
@@ -474,8 +450,6 @@ declare interface CAnimDesc_Flag {
     IsValid: () => boolean;
 }
 
-declare function CAnimDesc_Flag(ptr_or_class: string|AnySDKClass): CAnimDesc_Flag;
-
 declare interface CAnimEncodeDifference {
     readonly "BoneArray": Object;
     readonly "MorphArray": Object;
@@ -488,8 +462,6 @@ declare interface CAnimEncodeDifference {
     IsValid: () => boolean;
 }
 
-declare function CAnimEncodeDifference(ptr_or_class: string|AnySDKClass): CAnimEncodeDifference;
-
 declare interface CAnimEncodedFrames {
     "Frames": number;
     "FramesPerBlock": number;
@@ -499,15 +471,11 @@ declare interface CAnimEncodedFrames {
     IsValid: () => boolean;
 }
 
-declare function CAnimEncodedFrames(ptr_or_class: string|AnySDKClass): CAnimEncodedFrames;
-
 declare interface CAnimEnum {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimEnum(ptr_or_class: string|AnySDKClass): CAnimEnum;
 
 declare interface CAnimEventDefinition {
     "Frame": number;
@@ -518,8 +486,6 @@ declare interface CAnimEventDefinition {
     IsValid: () => boolean;
 }
 
-declare function CAnimEventDefinition(ptr_or_class: string|AnySDKClass): CAnimEventDefinition;
-
 declare interface CAnimFrameBlockAnim {
     "StartFrame": number;
     "EndFrame": number;
@@ -528,8 +494,6 @@ declare interface CAnimFrameBlockAnim {
     IsValid: () => boolean;
 }
 
-declare function CAnimFrameBlockAnim(ptr_or_class: string|AnySDKClass): CAnimFrameBlockAnim;
-
 declare interface CAnimFrameSegment {
     "UniqueFrameIndex": number;
     "LocalElementMasks": number;
@@ -537,8 +501,6 @@ declare interface CAnimFrameSegment {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimFrameSegment(ptr_or_class: string|AnySDKClass): CAnimFrameSegment;
 
 declare interface CAnimKeyData {
     readonly "BoneArray": Object;
@@ -549,8 +511,6 @@ declare interface CAnimKeyData {
     IsValid: () => boolean;
 }
 
-declare function CAnimKeyData(ptr_or_class: string|AnySDKClass): CAnimKeyData;
-
 declare interface CAnimLocalHierarchy {
     "StartFrame": number;
     "PeakFrame": number;
@@ -560,15 +520,11 @@ declare interface CAnimLocalHierarchy {
     IsValid: () => boolean;
 }
 
-declare function CAnimLocalHierarchy(ptr_or_class: string|AnySDKClass): CAnimLocalHierarchy;
-
 declare interface CAnimMorphDifference {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimMorphDifference(ptr_or_class: string|AnySDKClass): CAnimMorphDifference;
 
 declare interface CAnimMovement {
     "0": number;
@@ -582,8 +538,6 @@ declare interface CAnimMovement {
     IsValid: () => boolean;
 }
 
-declare function CAnimMovement(ptr_or_class: string|AnySDKClass): CAnimMovement;
-
 declare interface CAnimSequenceParams {
     "FadeInTime": number;
     "FadeOutTime": number;
@@ -591,23 +545,17 @@ declare interface CAnimSequenceParams {
     IsValid: () => boolean;
 }
 
-declare function CAnimSequenceParams(ptr_or_class: string|AnySDKClass): CAnimSequenceParams;
-
 declare interface CAnimUser {
     "Type": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CAnimUser(ptr_or_class: string|AnySDKClass): CAnimUser;
-
 declare interface CAnimUserDifference {
     "Type": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimUserDifference(ptr_or_class: string|AnySDKClass): CAnimUserDifference;
 
 declare interface CAnimationGroup {
     "Flags": number;
@@ -616,15 +564,11 @@ declare interface CAnimationGroup {
     IsValid: () => boolean;
 }
 
-declare function CAnimationGroup(ptr_or_class: string|AnySDKClass): CAnimationGroup;
-
 declare interface CMoodVData {
     "MoodType": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMoodVData(ptr_or_class: string|AnySDKClass): CMoodVData;
 
 declare interface CSeqAutoLayer {
     "LocalReference": number;
@@ -637,8 +581,6 @@ declare interface CSeqAutoLayer {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqAutoLayer(ptr_or_class: string|AnySDKClass): CSeqAutoLayer;
 
 declare interface CSeqAutoLayerFlag {
     "Post": boolean;
@@ -653,8 +595,6 @@ declare interface CSeqAutoLayerFlag {
     IsValid: () => boolean;
 }
 
-declare function CSeqAutoLayerFlag(ptr_or_class: string|AnySDKClass): CSeqAutoLayerFlag;
-
 declare interface CSeqBoneMaskList {
     readonly "LocalBoneArray": Object;
     readonly "BoneWeightArray": Object;
@@ -662,8 +602,6 @@ declare interface CSeqBoneMaskList {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqBoneMaskList(ptr_or_class: string|AnySDKClass): CSeqBoneMaskList;
 
 declare interface CSeqCmdLayer {
     "Cmd": number;
@@ -678,8 +616,6 @@ declare interface CSeqCmdLayer {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqCmdLayer(ptr_or_class: string|AnySDKClass): CSeqCmdLayer;
 
 declare interface CSeqCmdSeqDesc {
     readonly "Flags": CSeqSeqDescFlag;
@@ -697,8 +633,6 @@ declare interface CSeqCmdSeqDesc {
     IsValid: () => boolean;
 }
 
-declare function CSeqCmdSeqDesc(ptr_or_class: string|AnySDKClass): CSeqCmdSeqDesc;
-
 declare interface CSeqIKLock {
     "PosWeight": number;
     "AngleWeight": number;
@@ -707,8 +641,6 @@ declare interface CSeqIKLock {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqIKLock(ptr_or_class: string|AnySDKClass): CSeqIKLock;
 
 declare interface CSeqMultiFetch {
     readonly "Flags": CSeqMultiFetchFlag;
@@ -725,8 +657,6 @@ declare interface CSeqMultiFetch {
     IsValid: () => boolean;
 }
 
-declare function CSeqMultiFetch(ptr_or_class: string|AnySDKClass): CSeqMultiFetch;
-
 declare interface CSeqMultiFetchFlag {
     "Realtime": boolean;
     "Cylepose": boolean;
@@ -738,8 +668,6 @@ declare interface CSeqMultiFetchFlag {
     IsValid: () => boolean;
 }
 
-declare function CSeqMultiFetchFlag(ptr_or_class: string|AnySDKClass): CSeqMultiFetchFlag;
-
 declare interface CSeqPoseParamDesc {
     "Start": number;
     "End": number;
@@ -748,8 +676,6 @@ declare interface CSeqPoseParamDesc {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqPoseParamDesc(ptr_or_class: string|AnySDKClass): CSeqPoseParamDesc;
 
 declare interface CSeqPoseSetting {
     "Value": number;
@@ -760,8 +686,6 @@ declare interface CSeqPoseSetting {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqPoseSetting(ptr_or_class: string|AnySDKClass): CSeqPoseSetting;
 
 declare interface CSeqS1SeqDesc {
     readonly "Flags": CSeqSeqDescFlag;
@@ -776,8 +700,6 @@ declare interface CSeqS1SeqDesc {
     IsValid: () => boolean;
 }
 
-declare function CSeqS1SeqDesc(ptr_or_class: string|AnySDKClass): CSeqS1SeqDesc;
-
 declare interface CSeqScaleSet {
     "RootOffset": boolean;
     "RootOffset1": Vector;
@@ -786,8 +708,6 @@ declare interface CSeqScaleSet {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqScaleSet(ptr_or_class: string|AnySDKClass): CSeqScaleSet;
 
 declare interface CSeqSeqDescFlag {
     "Looping": boolean;
@@ -805,8 +725,6 @@ declare interface CSeqSeqDescFlag {
     IsValid: () => boolean;
 }
 
-declare function CSeqSeqDescFlag(ptr_or_class: string|AnySDKClass): CSeqSeqDescFlag;
-
 declare interface CSeqSynthAnimDesc {
     readonly "Flags": CSeqSeqDescFlag;
     readonly "Transition": CSeqTransition;
@@ -817,16 +735,12 @@ declare interface CSeqSynthAnimDesc {
     IsValid: () => boolean;
 }
 
-declare function CSeqSynthAnimDesc(ptr_or_class: string|AnySDKClass): CSeqSynthAnimDesc;
-
 declare interface CSeqTransition {
     "FadeInTime": number;
     "FadeOutTime": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSeqTransition(ptr_or_class: string|AnySDKClass): CSeqTransition;
 
 declare interface CSequenceGroupData {
     "Flags": number;
@@ -842,16 +756,12 @@ declare interface CSequenceGroupData {
     IsValid: () => boolean;
 }
 
-declare function CSequenceGroupData(ptr_or_class: string|AnySDKClass): CSequenceGroupData;
-
 declare interface MoodAnimation_t {
     "Name": string;
     "Weight": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MoodAnimation_t(ptr_or_class: string|AnySDKClass): MoodAnimation_t;
 
 declare interface AimCameraOpFixedSettings_t {
     "ChainIndex": number;
@@ -864,8 +774,6 @@ declare interface AimCameraOpFixedSettings_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AimCameraOpFixedSettings_t(ptr_or_class: string|AnySDKClass): AimCameraOpFixedSettings_t;
 
 declare interface AimMatrixOpFixedSettings_t {
     readonly "Attachment": CAnimAttachment;
@@ -885,8 +793,6 @@ declare interface AimMatrixOpFixedSettings_t {
     IsValid: () => boolean;
 }
 
-declare function AimMatrixOpFixedSettings_t(ptr_or_class: string|AnySDKClass): AimMatrixOpFixedSettings_t;
-
 declare interface BlendItem_t {
     readonly "Tags": Object;
     readonly "Child": CAnimUpdateNodeRef;
@@ -897,8 +803,6 @@ declare interface BlendItem_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function BlendItem_t(ptr_or_class: string|AnySDKClass): BlendItem_t;
 
 declare interface BoneDemoCaptureSettings_t {
     "BoneName": string;
@@ -912,15 +816,11 @@ declare interface BoneDemoCaptureSettings_t {
     IsValid: () => boolean;
 }
 
-declare function BoneDemoCaptureSettings_t(ptr_or_class: string|AnySDKClass): BoneDemoCaptureSettings_t;
-
 declare interface CActionComponentUpdater {
     readonly "Parent": CAnimComponentUpdater;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CActionComponentUpdater(ptr_or_class: string|AnySDKClass): CActionComponentUpdater;
 
 declare interface CAddUpdateNode {
     "FootMotionTiming": number;
@@ -932,8 +832,6 @@ declare interface CAddUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAddUpdateNode(ptr_or_class: string|AnySDKClass): CAddUpdateNode;
 
 declare interface CAimCameraUpdateNode {
     readonly "ParameterPosition": CAnimParamHandle;
@@ -951,8 +849,6 @@ declare interface CAimCameraUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CAimCameraUpdateNode(ptr_or_class: string|AnySDKClass): CAimCameraUpdateNode;
-
 declare interface CAimMatrixUpdateNode {
     readonly "OpFixedSettings": AimMatrixOpFixedSettings_t;
     "Target": number;
@@ -965,15 +861,11 @@ declare interface CAimMatrixUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CAimMatrixUpdateNode(ptr_or_class: string|AnySDKClass): CAimMatrixUpdateNode;
-
 declare interface CAnimActionUpdater {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimActionUpdater(ptr_or_class: string|AnySDKClass): CAnimActionUpdater;
 
 declare interface CAnimComponentUpdater {
     "Name": string;
@@ -983,8 +875,6 @@ declare interface CAnimComponentUpdater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimComponentUpdater(ptr_or_class: string|AnySDKClass): CAnimComponentUpdater;
 
 declare interface CAnimDemoCaptureSettings {
     "ErrorRangeSplineRotation": Vector2D;
@@ -1006,8 +896,6 @@ declare interface CAnimDemoCaptureSettings {
     IsValid: () => boolean;
 }
 
-declare function CAnimDemoCaptureSettings(ptr_or_class: string|AnySDKClass): CAnimDemoCaptureSettings;
-
 declare interface CAnimGraphDebugReplay {
     "AnimGraphFileName": string;
     "StartIndex": number;
@@ -1017,15 +905,11 @@ declare interface CAnimGraphDebugReplay {
     IsValid: () => boolean;
 }
 
-declare function CAnimGraphDebugReplay(ptr_or_class: string|AnySDKClass): CAnimGraphDebugReplay;
-
 declare interface CAnimGraphModelBinding {
     "ModelName": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimGraphModelBinding(ptr_or_class: string|AnySDKClass): CAnimGraphModelBinding;
 
 declare interface CAnimGraphNetworkSettings {
     "NetworkingEnabled": boolean;
@@ -1034,23 +918,17 @@ declare interface CAnimGraphNetworkSettings {
     IsValid: () => boolean;
 }
 
-declare function CAnimGraphNetworkSettings(ptr_or_class: string|AnySDKClass): CAnimGraphNetworkSettings;
-
 declare interface CAnimGraphSettingsGroup {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CAnimGraphSettingsGroup(ptr_or_class: string|AnySDKClass): CAnimGraphSettingsGroup;
-
 declare interface CAnimGraphSettingsManager {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimGraphSettingsManager(ptr_or_class: string|AnySDKClass): CAnimGraphSettingsManager;
 
 declare interface CAnimInputDamping {
     "SpeedFunction": number;
@@ -1059,16 +937,12 @@ declare interface CAnimInputDamping {
     IsValid: () => boolean;
 }
 
-declare function CAnimInputDamping(ptr_or_class: string|AnySDKClass): CAnimInputDamping;
-
 declare interface CAnimMotorUpdaterBase {
     "Name": string;
     "Default": boolean;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimMotorUpdaterBase(ptr_or_class: string|AnySDKClass): CAnimMotorUpdaterBase;
 
 declare interface CAnimNodePath {
     readonly "Path": Object;
@@ -1077,8 +951,6 @@ declare interface CAnimNodePath {
     IsValid: () => boolean;
 }
 
-declare function CAnimNodePath(ptr_or_class: string|AnySDKClass): CAnimNodePath;
-
 declare interface CAnimParamHandle {
     "Type": number;
     "Index": number;
@@ -1086,15 +958,11 @@ declare interface CAnimParamHandle {
     IsValid: () => boolean;
 }
 
-declare function CAnimParamHandle(ptr_or_class: string|AnySDKClass): CAnimParamHandle;
-
 declare interface CAnimParamHandleMap {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimParamHandleMap(ptr_or_class: string|AnySDKClass): CAnimParamHandleMap;
 
 declare interface CAnimParameterBase {
     "Comment": string;
@@ -1107,23 +975,17 @@ declare interface CAnimParameterBase {
     IsValid: () => boolean;
 }
 
-declare function CAnimParameterBase(ptr_or_class: string|AnySDKClass): CAnimParameterBase;
-
 declare interface CAnimParameterManagerUpdater {
     readonly "IndexToHandle": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CAnimParameterManagerUpdater(ptr_or_class: string|AnySDKClass): CAnimParameterManagerUpdater;
-
 declare interface CAnimReplayFrame {
     "TimeStamp": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimReplayFrame(ptr_or_class: string|AnySDKClass): CAnimReplayFrame;
 
 declare interface CAnimScriptComponentUpdater {
     readonly "Script": AnimScriptHandle;
@@ -1132,15 +994,11 @@ declare interface CAnimScriptComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CAnimScriptComponentUpdater(ptr_or_class: string|AnySDKClass): CAnimScriptComponentUpdater;
-
 declare interface CAnimScriptManager {
     readonly "ScriptInfo": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimScriptManager(ptr_or_class: string|AnySDKClass): CAnimScriptManager;
 
 declare interface CAnimStateMachineUpdater {
     readonly "States": Object;
@@ -1150,8 +1008,6 @@ declare interface CAnimStateMachineUpdater {
     IsValid: () => boolean;
 }
 
-declare function CAnimStateMachineUpdater(ptr_or_class: string|AnySDKClass): CAnimStateMachineUpdater;
-
 declare interface CAnimTagBase {
     "Comment": string;
     readonly "TagID": AnimTagID;
@@ -1160,15 +1016,11 @@ declare interface CAnimTagBase {
     IsValid: () => boolean;
 }
 
-declare function CAnimTagBase(ptr_or_class: string|AnySDKClass): CAnimTagBase;
-
 declare interface CAnimTagManagerUpdater {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimTagManagerUpdater(ptr_or_class: string|AnySDKClass): CAnimTagManagerUpdater;
 
 declare interface CAnimUpdateNodeBase {
     readonly "NodePath": CAnimNodePath;
@@ -1178,15 +1030,11 @@ declare interface CAnimUpdateNodeBase {
     IsValid: () => boolean;
 }
 
-declare function CAnimUpdateNodeBase(ptr_or_class: string|AnySDKClass): CAnimUpdateNodeBase;
-
 declare interface CAnimUpdateNodeRef {
     "NodeIndex": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimUpdateNodeRef(ptr_or_class: string|AnySDKClass): CAnimUpdateNodeRef;
 
 declare interface CAnimUpdateSharedData {
     readonly "Settings": CAnimGraphSettingsManager;
@@ -1195,16 +1043,12 @@ declare interface CAnimUpdateSharedData {
     IsValid: () => boolean;
 }
 
-declare function CAnimUpdateSharedData(ptr_or_class: string|AnySDKClass): CAnimUpdateSharedData;
-
 declare interface CAnimationGraphVisualizerAxis {
     "AxisSize": number;
     readonly "Parent": CAnimationGraphVisualizerPrimitiveBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimationGraphVisualizerAxis(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerAxis;
 
 declare interface CAnimationGraphVisualizerLine {
     "WsPositionStart": Vector;
@@ -1214,8 +1058,6 @@ declare interface CAnimationGraphVisualizerLine {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimationGraphVisualizerLine(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerLine;
 
 declare interface CAnimationGraphVisualizerPie {
     "WsCenter": Vector;
@@ -1227,8 +1069,6 @@ declare interface CAnimationGraphVisualizerPie {
     IsValid: () => boolean;
 }
 
-declare function CAnimationGraphVisualizerPie(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerPie;
-
 declare interface CAnimationGraphVisualizerPrimitiveBase {
     "Type": number;
     readonly "OwningAnimNodePaths": Object;
@@ -1236,8 +1076,6 @@ declare interface CAnimationGraphVisualizerPrimitiveBase {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimationGraphVisualizerPrimitiveBase(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerPrimitiveBase;
 
 declare interface CAnimationGraphVisualizerSphere {
     "WsPosition": Vector;
@@ -1248,8 +1086,6 @@ declare interface CAnimationGraphVisualizerSphere {
     IsValid: () => boolean;
 }
 
-declare function CAnimationGraphVisualizerSphere(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerSphere;
-
 declare interface CAnimationGraphVisualizerText {
     "WsPosition": Vector;
     "Color": Color;
@@ -1258,8 +1094,6 @@ declare interface CAnimationGraphVisualizerText {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimationGraphVisualizerText(ptr_or_class: string|AnySDKClass): CAnimationGraphVisualizerText;
 
 declare interface CAudioAnimTag {
     "ClipName": string;
@@ -1274,8 +1108,6 @@ declare interface CAudioAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CAudioAnimTag(ptr_or_class: string|AnySDKClass): CAudioAnimTag;
-
 declare interface CBinaryUpdateNode {
     readonly "Child1": CAnimUpdateNodeRef;
     readonly "Child2": CAnimUpdateNodeRef;
@@ -1288,15 +1120,11 @@ declare interface CBinaryUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CBinaryUpdateNode(ptr_or_class: string|AnySDKClass): CBinaryUpdateNode;
-
 declare interface CBindPoseUpdateNode {
     readonly "Parent": CLeafUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBindPoseUpdateNode(ptr_or_class: string|AnySDKClass): CBindPoseUpdateNode;
 
 declare interface CBlend2DUpdateNode {
     readonly "Items": Object;
@@ -1319,16 +1147,12 @@ declare interface CBlend2DUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CBlend2DUpdateNode(ptr_or_class: string|AnySDKClass): CBlend2DUpdateNode;
-
 declare interface CBlendCurve {
     "ControlPoint1": number;
     "ControlPoint2": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBlendCurve(ptr_or_class: string|AnySDKClass): CBlendCurve;
 
 declare interface CBlendUpdateNode {
     readonly "Children": Object;
@@ -1347,15 +1171,11 @@ declare interface CBlendUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CBlendUpdateNode(ptr_or_class: string|AnySDKClass): CBlendUpdateNode;
-
 declare interface CBlockSelectionMetricEvaluator {
     readonly "Parent": CMotionMetricEvaluator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBlockSelectionMetricEvaluator(ptr_or_class: string|AnySDKClass): CBlockSelectionMetricEvaluator;
 
 declare interface CBodyGroupAnimTag {
     "Priority": number;
@@ -1365,16 +1185,12 @@ declare interface CBodyGroupAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CBodyGroupAnimTag(ptr_or_class: string|AnySDKClass): CBodyGroupAnimTag;
-
 declare interface CBodyGroupSetting {
     "BodyGroupName": string;
     "BodyGroupOption": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBodyGroupSetting(ptr_or_class: string|AnySDKClass): CBodyGroupSetting;
 
 declare interface CBoneMaskUpdateNode {
     "WeightListIndex": number;
@@ -1389,16 +1205,12 @@ declare interface CBoneMaskUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CBoneMaskUpdateNode(ptr_or_class: string|AnySDKClass): CBoneMaskUpdateNode;
-
 declare interface CBonePositionMetricEvaluator {
     "BoneIndex": number;
     readonly "Parent": CMotionMetricEvaluator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBonePositionMetricEvaluator(ptr_or_class: string|AnySDKClass): CBonePositionMetricEvaluator;
 
 declare interface CBoneVelocityMetricEvaluator {
     "BoneIndex": number;
@@ -1407,8 +1219,6 @@ declare interface CBoneVelocityMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CBoneVelocityMetricEvaluator(ptr_or_class: string|AnySDKClass): CBoneVelocityMetricEvaluator;
-
 declare interface CBoolAnimParameter {
     "DefaultValue": boolean;
     readonly "Parent": CConcreteAnimParameter;
@@ -1416,15 +1226,11 @@ declare interface CBoolAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CBoolAnimParameter(ptr_or_class: string|AnySDKClass): CBoolAnimParameter;
-
 declare interface CCPPScriptComponentUpdater {
     readonly "Parent": CAnimComponentUpdater;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCPPScriptComponentUpdater(ptr_or_class: string|AnySDKClass): CCPPScriptComponentUpdater;
 
 declare interface CCachedPose {
     readonly "MorphWeights": Object;
@@ -1433,8 +1239,6 @@ declare interface CCachedPose {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCachedPose(ptr_or_class: string|AnySDKClass): CCachedPose;
 
 declare interface CChoiceUpdateNode {
     readonly "Children": Object;
@@ -1452,15 +1256,11 @@ declare interface CChoiceUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CChoiceUpdateNode(ptr_or_class: string|AnySDKClass): CChoiceUpdateNode;
-
 declare interface CChoreoUpdateNode {
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CChoreoUpdateNode(ptr_or_class: string|AnySDKClass): CChoreoUpdateNode;
 
 declare interface CClothSettingsAnimTag {
     "Stiffness": number;
@@ -1471,8 +1271,6 @@ declare interface CClothSettingsAnimTag {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CClothSettingsAnimTag(ptr_or_class: string|AnySDKClass): CClothSettingsAnimTag;
 
 declare interface CConcreteAnimParameter {
     "PreviewButton": number;
@@ -1486,23 +1284,17 @@ declare interface CConcreteAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CConcreteAnimParameter(ptr_or_class: string|AnySDKClass): CConcreteAnimParameter;
-
 declare interface CCurrentRotationVelocityMetricEvaluator {
     readonly "Parent": CMotionMetricEvaluator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CCurrentRotationVelocityMetricEvaluator(ptr_or_class: string|AnySDKClass): CCurrentRotationVelocityMetricEvaluator;
-
 declare interface CCurrentVelocityMetricEvaluator {
     readonly "Parent": CMotionMetricEvaluator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCurrentVelocityMetricEvaluator(ptr_or_class: string|AnySDKClass): CCurrentVelocityMetricEvaluator;
 
 declare interface CCycleControlClipUpdateNode {
     readonly "Tags": Object;
@@ -1515,8 +1307,6 @@ declare interface CCycleControlClipUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CCycleControlClipUpdateNode(ptr_or_class: string|AnySDKClass): CCycleControlClipUpdateNode;
-
 declare interface CCycleControlUpdateNode {
     "ValueSource": number;
     readonly "ParamIndex": CAnimParamHandle;
@@ -1524,8 +1314,6 @@ declare interface CCycleControlUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCycleControlUpdateNode(ptr_or_class: string|AnySDKClass): CCycleControlUpdateNode;
 
 declare interface CDampedPathAnimMotorUpdater {
     "AnticipationTime": number;
@@ -1540,16 +1328,12 @@ declare interface CDampedPathAnimMotorUpdater {
     IsValid: () => boolean;
 }
 
-declare function CDampedPathAnimMotorUpdater(ptr_or_class: string|AnySDKClass): CDampedPathAnimMotorUpdater;
-
 declare interface CDampedValueComponentUpdater {
     readonly "Items": Object;
     readonly "Parent": CAnimComponentUpdater;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDampedValueComponentUpdater(ptr_or_class: string|AnySDKClass): CDampedValueComponentUpdater;
 
 declare interface CDampedValueUpdateItem {
     readonly "Damping": CAnimInputDamping;
@@ -1559,8 +1343,6 @@ declare interface CDampedValueUpdateItem {
     IsValid: () => boolean;
 }
 
-declare function CDampedValueUpdateItem(ptr_or_class: string|AnySDKClass): CDampedValueUpdateItem;
-
 declare interface CDemoSettingsComponentUpdater {
     readonly "Settings": CAnimDemoCaptureSettings;
     readonly "Parent": CAnimComponentUpdater;
@@ -1568,16 +1350,12 @@ declare interface CDemoSettingsComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CDemoSettingsComponentUpdater(ptr_or_class: string|AnySDKClass): CDemoSettingsComponentUpdater;
-
 declare interface CDirectPlaybackTagData {
     "SequenceName": string;
     readonly "Tags": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDirectPlaybackTagData(ptr_or_class: string|AnySDKClass): CDirectPlaybackTagData;
 
 declare interface CDirectPlaybackUpdateNode {
     "FinishEarly": boolean;
@@ -1587,8 +1365,6 @@ declare interface CDirectPlaybackUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDirectPlaybackUpdateNode(ptr_or_class: string|AnySDKClass): CDirectPlaybackUpdateNode;
 
 declare interface CDirectionalBlendUpdateNode {
     "Sequences": Object;
@@ -1604,8 +1380,6 @@ declare interface CDirectionalBlendUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CDirectionalBlendUpdateNode(ptr_or_class: string|AnySDKClass): CDirectionalBlendUpdateNode;
-
 declare interface CDistanceRemainingMetricEvaluator {
     "MaxDistance": number;
     "MinDistance": number;
@@ -1619,15 +1393,11 @@ declare interface CDistanceRemainingMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CDistanceRemainingMetricEvaluator(ptr_or_class: string|AnySDKClass): CDistanceRemainingMetricEvaluator;
-
 declare interface CEditableMotionGraph {
     readonly "Parent": CMotionGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEditableMotionGraph(ptr_or_class: string|AnySDKClass): CEditableMotionGraph;
 
 declare interface CEmitTagActionUpdater {
     "TagIndex": number;
@@ -1636,8 +1406,6 @@ declare interface CEmitTagActionUpdater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEmitTagActionUpdater(ptr_or_class: string|AnySDKClass): CEmitTagActionUpdater;
 
 declare interface CEnumAnimParameter {
     "DefaultValue": number;
@@ -1648,8 +1416,6 @@ declare interface CEnumAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CEnumAnimParameter(ptr_or_class: string|AnySDKClass): CEnumAnimParameter;
-
 declare interface CExpressionActionUpdater {
     readonly "Param": CAnimParamHandle;
     "ParamType": number;
@@ -1658,8 +1424,6 @@ declare interface CExpressionActionUpdater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CExpressionActionUpdater(ptr_or_class: string|AnySDKClass): CExpressionActionUpdater;
 
 declare interface CFloatAnimParameter {
     "DefaultValue": number;
@@ -1671,16 +1435,12 @@ declare interface CFloatAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CFloatAnimParameter(ptr_or_class: string|AnySDKClass): CFloatAnimParameter;
-
 declare interface CFollowAttachmentUpdateNode {
     readonly "OpFixedData": FollowAttachmentSettings_t;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFollowAttachmentUpdateNode(ptr_or_class: string|AnySDKClass): CFollowAttachmentUpdateNode;
 
 declare interface CFollowPathUpdateNode {
     "BlendOutTime": number;
@@ -1701,8 +1461,6 @@ declare interface CFollowPathUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CFollowPathUpdateNode(ptr_or_class: string|AnySDKClass): CFollowPathUpdateNode;
-
 declare interface CFollowTargetUpdateNode {
     readonly "OpFixedData": FollowTargetOpFixedSettings_t;
     readonly "ParameterPosition": CAnimParamHandle;
@@ -1711,8 +1469,6 @@ declare interface CFollowTargetUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFollowTargetUpdateNode(ptr_or_class: string|AnySDKClass): CFollowTargetUpdateNode;
 
 declare interface CFootAdjustmentUpdateNode {
     readonly "Clips": Object;
@@ -1729,8 +1485,6 @@ declare interface CFootAdjustmentUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CFootAdjustmentUpdateNode(ptr_or_class: string|AnySDKClass): CFootAdjustmentUpdateNode;
-
 declare interface CFootCycleMetricEvaluator {
     readonly "FootIndices": Object;
     readonly "Parent": CMotionMetricEvaluator;
@@ -1738,16 +1492,12 @@ declare interface CFootCycleMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CFootCycleMetricEvaluator(ptr_or_class: string|AnySDKClass): CFootCycleMetricEvaluator;
-
 declare interface CFootFallAnimTag {
     "Foot": number;
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootFallAnimTag(ptr_or_class: string|AnySDKClass): CFootFallAnimTag;
 
 declare interface CFootLockUpdateNode {
     readonly "OpFixedSettings": FootLockPoseOpFixedSettings;
@@ -1775,8 +1525,6 @@ declare interface CFootLockUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CFootLockUpdateNode(ptr_or_class: string|AnySDKClass): CFootLockUpdateNode;
-
 declare interface CFootPinningUpdateNode {
     readonly "PoseOpFixedData": FootPinningPoseOpFixedData_t;
     "TimingSource": number;
@@ -1787,8 +1535,6 @@ declare interface CFootPinningUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CFootPinningUpdateNode(ptr_or_class: string|AnySDKClass): CFootPinningUpdateNode;
-
 declare interface CFootPositionMetricEvaluator {
     readonly "FootIndices": Object;
     "IgnoreSlope": boolean;
@@ -1797,8 +1543,6 @@ declare interface CFootPositionMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CFootPositionMetricEvaluator(ptr_or_class: string|AnySDKClass): CFootPositionMetricEvaluator;
-
 declare interface CFootStepTriggerUpdateNode {
     readonly "Triggers": Object;
     "Tolerance": number;
@@ -1806,8 +1550,6 @@ declare interface CFootStepTriggerUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootStepTriggerUpdateNode(ptr_or_class: string|AnySDKClass): CFootStepTriggerUpdateNode;
 
 declare interface CFootstepLandedAnimTag {
     "FootstepType": number;
@@ -1819,8 +1561,6 @@ declare interface CFootstepLandedAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CFootstepLandedAnimTag(ptr_or_class: string|AnySDKClass): CFootstepLandedAnimTag;
-
 declare interface CFutureFacingMetricEvaluator {
     "Distance": number;
     "Time": number;
@@ -1828,8 +1568,6 @@ declare interface CFutureFacingMetricEvaluator {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFutureFacingMetricEvaluator(ptr_or_class: string|AnySDKClass): CFutureFacingMetricEvaluator;
 
 declare interface CFutureVelocityMetricEvaluator {
     "Distance": number;
@@ -1841,16 +1579,12 @@ declare interface CFutureVelocityMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CFutureVelocityMetricEvaluator(ptr_or_class: string|AnySDKClass): CFutureVelocityMetricEvaluator;
-
 declare interface CHandshakeAnimTagBase {
     "IsDisableTag": boolean;
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHandshakeAnimTagBase(ptr_or_class: string|AnySDKClass): CHandshakeAnimTagBase;
 
 declare interface CHitReactUpdateNode {
     readonly "OpFixedSettings": HitReactFixedSettings_t;
@@ -1866,15 +1600,11 @@ declare interface CHitReactUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CHitReactUpdateNode(ptr_or_class: string|AnySDKClass): CHitReactUpdateNode;
-
 declare interface CInputStreamUpdateNode {
     readonly "Parent": CLeafUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInputStreamUpdateNode(ptr_or_class: string|AnySDKClass): CInputStreamUpdateNode;
 
 declare interface CIntAnimParameter {
     "DefaultValue": number;
@@ -1885,16 +1615,12 @@ declare interface CIntAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CIntAnimParameter(ptr_or_class: string|AnySDKClass): CIntAnimParameter;
-
 declare interface CJiggleBoneUpdateNode {
     readonly "OpFixedData": JiggleBoneSettingsList_t;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CJiggleBoneUpdateNode(ptr_or_class: string|AnySDKClass): CJiggleBoneUpdateNode;
 
 declare interface CJumpHelperUpdateNode {
     readonly "TargetParam": CAnimParamHandle;
@@ -1910,8 +1636,6 @@ declare interface CJumpHelperUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CJumpHelperUpdateNode(ptr_or_class: string|AnySDKClass): CJumpHelperUpdateNode;
-
 declare interface CLODComponentUpdater {
     "ServerLOD": number;
     readonly "Parent": CAnimComponentUpdater;
@@ -1919,15 +1643,11 @@ declare interface CLODComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CLODComponentUpdater(ptr_or_class: string|AnySDKClass): CLODComponentUpdater;
-
 declare interface CLeafUpdateNode {
     readonly "Parent": CAnimUpdateNodeBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLeafUpdateNode(ptr_or_class: string|AnySDKClass): CLeafUpdateNode;
 
 declare interface CLeanMatrixUpdateNode {
     readonly "Poses": Object;
@@ -1944,8 +1664,6 @@ declare interface CLeanMatrixUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CLeanMatrixUpdateNode(ptr_or_class: string|AnySDKClass): CLeanMatrixUpdateNode;
-
 declare interface CLookAtUpdateNode {
     readonly "OpFixedSettings": LookAtOpFixedSettings_t;
     "Target": number;
@@ -1957,8 +1675,6 @@ declare interface CLookAtUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLookAtUpdateNode(ptr_or_class: string|AnySDKClass): CLookAtUpdateNode;
 
 declare interface CLookComponentUpdater {
     readonly "LookHeading": CAnimParamHandle;
@@ -1974,8 +1690,6 @@ declare interface CLookComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CLookComponentUpdater(ptr_or_class: string|AnySDKClass): CLookComponentUpdater;
-
 declare interface CMaterialAttributeAnimTag {
     "AttributeName": string;
     "AttributeType": number;
@@ -1986,16 +1700,12 @@ declare interface CMaterialAttributeAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CMaterialAttributeAnimTag(ptr_or_class: string|AnySDKClass): CMaterialAttributeAnimTag;
-
 declare interface CMotionDataSet {
     readonly "Groups": Object;
     "DimensionCount": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotionDataSet(ptr_or_class: string|AnySDKClass): CMotionDataSet;
 
 declare interface CMotionGraph {
     readonly "ParamSpans": CParamSpanUpdater;
@@ -2008,8 +1718,6 @@ declare interface CMotionGraph {
     IsValid: () => boolean;
 }
 
-declare function CMotionGraph(ptr_or_class: string|AnySDKClass): CMotionGraph;
-
 declare interface CMotionGraphConfig {
     "ParamValues": Object;
     "Duration": number;
@@ -2020,8 +1728,6 @@ declare interface CMotionGraphConfig {
     IsValid: () => boolean;
 }
 
-declare function CMotionGraphConfig(ptr_or_class: string|AnySDKClass): CMotionGraphConfig;
-
 declare interface CMotionGraphGroup {
     readonly "SearchDB": CMotionSearchDB;
     readonly "MotionGraphConfigs": Object;
@@ -2031,15 +1737,11 @@ declare interface CMotionGraphGroup {
     IsValid: () => boolean;
 }
 
-declare function CMotionGraphGroup(ptr_or_class: string|AnySDKClass): CMotionGraphGroup;
-
 declare interface CMotionGraphUpdateNode {
     readonly "Parent": CLeafUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotionGraphUpdateNode(ptr_or_class: string|AnySDKClass): CMotionGraphUpdateNode;
 
 declare interface CMotionMatchingUpdateNode {
     readonly "DataSet": CMotionDataSet;
@@ -2069,8 +1771,6 @@ declare interface CMotionMatchingUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CMotionMatchingUpdateNode(ptr_or_class: string|AnySDKClass): CMotionMatchingUpdateNode;
-
 declare interface CMotionMetricEvaluator {
     readonly "Means": Object;
     readonly "StandardDeviations": Object;
@@ -2080,16 +1780,12 @@ declare interface CMotionMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CMotionMetricEvaluator(ptr_or_class: string|AnySDKClass): CMotionMetricEvaluator;
-
 declare interface CMotionNode {
     "Name": string;
     readonly "Id": AnimNodeID;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotionNode(ptr_or_class: string|AnySDKClass): CMotionNode;
 
 declare interface CMotionNodeBlend1D {
     readonly "BlendItems": Object;
@@ -2098,8 +1794,6 @@ declare interface CMotionNodeBlend1D {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotionNodeBlend1D(ptr_or_class: string|AnySDKClass): CMotionNodeBlend1D;
 
 declare interface CMotionNodeSequence {
     readonly "Tags": Object;
@@ -2110,8 +1804,6 @@ declare interface CMotionNodeSequence {
     IsValid: () => boolean;
 }
 
-declare function CMotionNodeSequence(ptr_or_class: string|AnySDKClass): CMotionNodeSequence;
-
 declare interface CMotionSearchDB {
     readonly "RootNode": CMotionSearchNode;
     readonly "ResidualQuantizer": CProductQuantizer;
@@ -2120,8 +1812,6 @@ declare interface CMotionSearchDB {
     IsValid: () => boolean;
 }
 
-declare function CMotionSearchDB(ptr_or_class: string|AnySDKClass): CMotionSearchDB;
-
 declare interface CMotionSearchNode {
     readonly "Children": Object;
     readonly "Quantizer": CVectorQuantizer;
@@ -2129,8 +1819,6 @@ declare interface CMotionSearchNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotionSearchNode(ptr_or_class: string|AnySDKClass): CMotionSearchNode;
 
 declare interface CMovementComponentUpdater {
     readonly "FacingDamping": CAnimInputDamping;
@@ -2145,15 +1833,11 @@ declare interface CMovementComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CMovementComponentUpdater(ptr_or_class: string|AnySDKClass): CMovementComponentUpdater;
-
 declare interface CMovementHandshakeAnimTag {
     readonly "Parent": CHandshakeAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMovementHandshakeAnimTag(ptr_or_class: string|AnySDKClass): CMovementHandshakeAnimTag;
 
 declare interface CMoverUpdateNode {
     readonly "Damping": CAnimInputDamping;
@@ -2173,8 +1857,6 @@ declare interface CMoverUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CMoverUpdateNode(ptr_or_class: string|AnySDKClass): CMoverUpdateNode;
-
 declare interface COrientationWarpUpdateNode {
     readonly "FacingPositionParameter": CAnimParamHandle;
     readonly "TurnDamping": CAnimInputDamping;
@@ -2183,15 +1865,11 @@ declare interface COrientationWarpUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function COrientationWarpUpdateNode(ptr_or_class: string|AnySDKClass): COrientationWarpUpdateNode;
-
 declare interface CPairedSequenceComponentUpdater {
     readonly "Parent": CAnimComponentUpdater;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPairedSequenceComponentUpdater(ptr_or_class: string|AnySDKClass): CPairedSequenceComponentUpdater;
 
 declare interface CPairedSequenceUpdateNode {
     readonly "Parent": CSequenceUpdateNodeBase;
@@ -2199,15 +1877,11 @@ declare interface CPairedSequenceUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CPairedSequenceUpdateNode(ptr_or_class: string|AnySDKClass): CPairedSequenceUpdateNode;
-
 declare interface CParamSpanUpdater {
     readonly "Spans": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParamSpanUpdater(ptr_or_class: string|AnySDKClass): CParamSpanUpdater;
 
 declare interface CParticleAnimTag {
     "ParticleSystemName": string;
@@ -2224,15 +1898,11 @@ declare interface CParticleAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CParticleAnimTag(ptr_or_class: string|AnySDKClass): CParticleAnimTag;
-
 declare interface CPathAnimMotorUpdater {
     readonly "Parent": CPathAnimMotorUpdaterBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathAnimMotorUpdater(ptr_or_class: string|AnySDKClass): CPathAnimMotorUpdater;
 
 declare interface CPathAnimMotorUpdaterBase {
     "LockToPath": boolean;
@@ -2241,8 +1911,6 @@ declare interface CPathAnimMotorUpdaterBase {
     IsValid: () => boolean;
 }
 
-declare function CPathAnimMotorUpdaterBase(ptr_or_class: string|AnySDKClass): CPathAnimMotorUpdaterBase;
-
 declare interface CPathHelperUpdateNode {
     "StoppingRadius": number;
     "StoppingSpeedScale": number;
@@ -2250,8 +1918,6 @@ declare interface CPathHelperUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathHelperUpdateNode(ptr_or_class: string|AnySDKClass): CPathHelperUpdateNode;
 
 declare interface CPathMetricEvaluator {
     readonly "PathTimeSamples": Object;
@@ -2262,8 +1928,6 @@ declare interface CPathMetricEvaluator {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathMetricEvaluator(ptr_or_class: string|AnySDKClass): CPathMetricEvaluator;
 
 declare interface CPlayerInputAnimMotorUpdater {
     readonly "SampleTimes": Object;
@@ -2277,8 +1941,6 @@ declare interface CPlayerInputAnimMotorUpdater {
     IsValid: () => boolean;
 }
 
-declare function CPlayerInputAnimMotorUpdater(ptr_or_class: string|AnySDKClass): CPlayerInputAnimMotorUpdater;
-
 declare interface CPoseHandle {
     "Index": number;
     "Type": number;
@@ -2286,16 +1948,12 @@ declare interface CPoseHandle {
     IsValid: () => boolean;
 }
 
-declare function CPoseHandle(ptr_or_class: string|AnySDKClass): CPoseHandle;
-
 declare interface CProductQuantizer {
     readonly "SubQuantizers": Object;
     "Dimensions": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CProductQuantizer(ptr_or_class: string|AnySDKClass): CProductQuantizer;
 
 declare interface CRagdollAnimTag {
     "PoseControl": number;
@@ -2308,8 +1966,6 @@ declare interface CRagdollAnimTag {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRagdollAnimTag(ptr_or_class: string|AnySDKClass): CRagdollAnimTag;
 
 declare interface CRagdollComponentUpdater {
     readonly "RagdollNodePaths": Object;
@@ -2325,8 +1981,6 @@ declare interface CRagdollComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CRagdollComponentUpdater(ptr_or_class: string|AnySDKClass): CRagdollComponentUpdater;
-
 declare interface CRagdollUpdateNode {
     "WeightListIndex": number;
     "PoseControlMethod": number;
@@ -2335,15 +1989,11 @@ declare interface CRagdollUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CRagdollUpdateNode(ptr_or_class: string|AnySDKClass): CRagdollUpdateNode;
-
 declare interface CRootUpdateNode {
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRootUpdateNode(ptr_or_class: string|AnySDKClass): CRootUpdateNode;
 
 declare interface CSelectorUpdateNode {
     readonly "Children": Object;
@@ -2360,8 +2010,6 @@ declare interface CSelectorUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CSelectorUpdateNode(ptr_or_class: string|AnySDKClass): CSelectorUpdateNode;
-
 declare interface CSequenceFinishedAnimTag {
     "SequenceName": string;
     readonly "Parent": CAnimTagBase;
@@ -2369,15 +2017,11 @@ declare interface CSequenceFinishedAnimTag {
     IsValid: () => boolean;
 }
 
-declare function CSequenceFinishedAnimTag(ptr_or_class: string|AnySDKClass): CSequenceFinishedAnimTag;
-
 declare interface CSequenceTagSpans {
     readonly "Tags": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSequenceTagSpans(ptr_or_class: string|AnySDKClass): CSequenceTagSpans;
 
 declare interface CSequenceUpdateNode {
     "Sequence": number;
@@ -2389,8 +2033,6 @@ declare interface CSequenceUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CSequenceUpdateNode(ptr_or_class: string|AnySDKClass): CSequenceUpdateNode;
-
 declare interface CSequenceUpdateNodeBase {
     "PlaybackSpeed": number;
     "Loop": boolean;
@@ -2399,16 +2041,12 @@ declare interface CSequenceUpdateNodeBase {
     IsValid: () => boolean;
 }
 
-declare function CSequenceUpdateNodeBase(ptr_or_class: string|AnySDKClass): CSequenceUpdateNodeBase;
-
 declare interface CSetParameterActionUpdater {
     readonly "Param": CAnimParamHandle;
     readonly "Parent": CAnimActionUpdater;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSetParameterActionUpdater(ptr_or_class: string|AnySDKClass): CSetParameterActionUpdater;
 
 declare interface CSingleFrameUpdateNode {
     readonly "PoseCacheHandle": CPoseHandle;
@@ -2418,8 +2056,6 @@ declare interface CSingleFrameUpdateNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSingleFrameUpdateNode(ptr_or_class: string|AnySDKClass): CSingleFrameUpdateNode;
 
 declare interface CSlopeComponentUpdater {
     "TraceDistance": number;
@@ -2434,16 +2070,12 @@ declare interface CSlopeComponentUpdater {
     IsValid: () => boolean;
 }
 
-declare function CSlopeComponentUpdater(ptr_or_class: string|AnySDKClass): CSlopeComponentUpdater;
-
 declare interface CSlowDownOnSlopesUpdateNode {
     "SlowDownStrength": number;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSlowDownOnSlopesUpdateNode(ptr_or_class: string|AnySDKClass): CSlowDownOnSlopesUpdateNode;
 
 declare interface CSolveIKChainUpdateNode {
     readonly "TargetHandles": Object;
@@ -2453,8 +2085,6 @@ declare interface CSolveIKChainUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CSolveIKChainUpdateNode(ptr_or_class: string|AnySDKClass): CSolveIKChainUpdateNode;
-
 declare interface CSolveIKTargetHandle_t {
     readonly "PositionHandle": CAnimParamHandle;
     readonly "OrientationHandle": CAnimParamHandle;
@@ -2462,16 +2092,12 @@ declare interface CSolveIKTargetHandle_t {
     IsValid: () => boolean;
 }
 
-declare function CSolveIKTargetHandle_t(ptr_or_class: string|AnySDKClass): CSolveIKTargetHandle_t;
-
 declare interface CSpeedScaleUpdateNode {
     readonly "ParamIndex": CAnimParamHandle;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSpeedScaleUpdateNode(ptr_or_class: string|AnySDKClass): CSpeedScaleUpdateNode;
 
 declare interface CStanceOverrideUpdateNode {
     readonly "FootStanceInfo": Object;
@@ -2483,8 +2109,6 @@ declare interface CStanceOverrideUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CStanceOverrideUpdateNode(ptr_or_class: string|AnySDKClass): CStanceOverrideUpdateNode;
-
 declare interface CStanceScaleUpdateNode {
     readonly "Param": CAnimParamHandle;
     readonly "Parent": CUnaryUpdateNode;
@@ -2492,15 +2116,11 @@ declare interface CStanceScaleUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CStanceScaleUpdateNode(ptr_or_class: string|AnySDKClass): CStanceScaleUpdateNode;
-
 declare interface CStateActionUpdater {
     "Behavior": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStateActionUpdater(ptr_or_class: string|AnySDKClass): CStateActionUpdater;
 
 declare interface CStateMachineComponentUpdater {
     readonly "StateMachine": CAnimStateMachineUpdater;
@@ -2508,8 +2128,6 @@ declare interface CStateMachineComponentUpdater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStateMachineComponentUpdater(ptr_or_class: string|AnySDKClass): CStateMachineComponentUpdater;
 
 declare interface CStateMachineUpdateNode {
     readonly "StateMachine": CAnimStateMachineUpdater;
@@ -2522,8 +2140,6 @@ declare interface CStateMachineUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CStateMachineUpdateNode(ptr_or_class: string|AnySDKClass): CStateMachineUpdateNode;
-
 declare interface CStateNodeStateData {
     readonly "Child": CAnimUpdateNodeRef;
     "ExclusiveRootMotion": any;
@@ -2532,8 +2148,6 @@ declare interface CStateNodeStateData {
     IsValid: () => boolean;
 }
 
-declare function CStateNodeStateData(ptr_or_class: string|AnySDKClass): CStateNodeStateData;
-
 declare interface CStateNodeTransitionData {
     readonly "Curve": CBlendCurve;
     "Reset": any;
@@ -2541,8 +2155,6 @@ declare interface CStateNodeTransitionData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStateNodeTransitionData(ptr_or_class: string|AnySDKClass): CStateNodeTransitionData;
 
 declare interface CStateUpdateData {
     "Name": string;
@@ -2557,8 +2169,6 @@ declare interface CStateUpdateData {
     IsValid: () => boolean;
 }
 
-declare function CStateUpdateData(ptr_or_class: string|AnySDKClass): CStateUpdateData;
-
 declare interface CStaticPoseCache {
     readonly "Poses": Object;
     "BoneCount": number;
@@ -2567,15 +2177,11 @@ declare interface CStaticPoseCache {
     IsValid: () => boolean;
 }
 
-declare function CStaticPoseCache(ptr_or_class: string|AnySDKClass): CStaticPoseCache;
-
 declare interface CStaticPoseCacheBuilder {
     readonly "Parent": CStaticPoseCache;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStaticPoseCacheBuilder(ptr_or_class: string|AnySDKClass): CStaticPoseCacheBuilder;
 
 declare interface CStepsRemainingMetricEvaluator {
     readonly "FootIndices": Object;
@@ -2584,8 +2190,6 @@ declare interface CStepsRemainingMetricEvaluator {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStepsRemainingMetricEvaluator(ptr_or_class: string|AnySDKClass): CStepsRemainingMetricEvaluator;
 
 declare interface CStopAtGoalUpdateNode {
     "OuterRadius": number;
@@ -2598,15 +2202,11 @@ declare interface CStopAtGoalUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CStopAtGoalUpdateNode(ptr_or_class: string|AnySDKClass): CStopAtGoalUpdateNode;
-
 declare interface CStringAnimTag {
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CStringAnimTag(ptr_or_class: string|AnySDKClass): CStringAnimTag;
 
 declare interface CSubtractUpdateNode {
     "FootMotionTiming": number;
@@ -2618,15 +2218,11 @@ declare interface CSubtractUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CSubtractUpdateNode(ptr_or_class: string|AnySDKClass): CSubtractUpdateNode;
-
 declare interface CSymbolAnimParameter {
     readonly "Parent": CConcreteAnimParameter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSymbolAnimParameter(ptr_or_class: string|AnySDKClass): CSymbolAnimParameter;
 
 declare interface CTargetSelectorUpdateNode {
     readonly "Children": Object;
@@ -2637,8 +2233,6 @@ declare interface CTargetSelectorUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CTargetSelectorUpdateNode(ptr_or_class: string|AnySDKClass): CTargetSelectorUpdateNode;
-
 declare interface CTargetWarpUpdateNode {
     readonly "PositionParameter": CAnimParamHandle;
     readonly "FacePositionParameter": CAnimParamHandle;
@@ -2647,23 +2241,17 @@ declare interface CTargetWarpUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CTargetWarpUpdateNode(ptr_or_class: string|AnySDKClass): CTargetWarpUpdateNode;
-
 declare interface CTaskHandshakeAnimTag {
     readonly "Parent": CHandshakeAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CTaskHandshakeAnimTag(ptr_or_class: string|AnySDKClass): CTaskHandshakeAnimTag;
-
 declare interface CTaskStatusAnimTag {
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTaskStatusAnimTag(ptr_or_class: string|AnySDKClass): CTaskStatusAnimTag;
 
 declare interface CTimeRemainingMetricEvaluator {
     "MatchByTimeRemaining": boolean;
@@ -2675,8 +2263,6 @@ declare interface CTimeRemainingMetricEvaluator {
     IsValid: () => boolean;
 }
 
-declare function CTimeRemainingMetricEvaluator(ptr_or_class: string|AnySDKClass): CTimeRemainingMetricEvaluator;
-
 declare interface CToggleComponentActionUpdater {
     readonly "ComponentID": AnimComponentID;
     "SetEnabled": boolean;
@@ -2684,8 +2270,6 @@ declare interface CToggleComponentActionUpdater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CToggleComponentActionUpdater(ptr_or_class: string|AnySDKClass): CToggleComponentActionUpdater;
 
 declare interface CTransitionUpdateData {
     "SrcStateIndex": number;
@@ -2695,8 +2279,6 @@ declare interface CTransitionUpdateData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTransitionUpdateData(ptr_or_class: string|AnySDKClass): CTransitionUpdateData;
 
 declare interface CTurnHelperUpdateNode {
     "FacingTarget": number;
@@ -2710,8 +2292,6 @@ declare interface CTurnHelperUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CTurnHelperUpdateNode(ptr_or_class: string|AnySDKClass): CTurnHelperUpdateNode;
-
 declare interface CTwoBoneIKUpdateNode {
     readonly "OpFixedData": TwoBoneIKSettings_t;
     readonly "Parent": CUnaryUpdateNode;
@@ -2719,16 +2299,12 @@ declare interface CTwoBoneIKUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CTwoBoneIKUpdateNode(ptr_or_class: string|AnySDKClass): CTwoBoneIKUpdateNode;
-
 declare interface CUnaryUpdateNode {
     readonly "ChildNode": CAnimUpdateNodeRef;
     readonly "Parent": CAnimUpdateNodeBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CUnaryUpdateNode(ptr_or_class: string|AnySDKClass): CUnaryUpdateNode;
 
 declare interface CVectorAnimParameter {
     "DefaultValue": Vector;
@@ -2738,8 +2314,6 @@ declare interface CVectorAnimParameter {
     IsValid: () => boolean;
 }
 
-declare function CVectorAnimParameter(ptr_or_class: string|AnySDKClass): CVectorAnimParameter;
-
 declare interface CVectorQuantizer {
     readonly "CentroidVectors": Object;
     "Centroids": number;
@@ -2748,8 +2322,6 @@ declare interface CVectorQuantizer {
     IsValid: () => boolean;
 }
 
-declare function CVectorQuantizer(ptr_or_class: string|AnySDKClass): CVectorQuantizer;
-
 declare interface CVirtualAnimParameter {
     "ExpressionString": string;
     "ParamType": number;
@@ -2757,8 +2329,6 @@ declare interface CVirtualAnimParameter {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVirtualAnimParameter(ptr_or_class: string|AnySDKClass): CVirtualAnimParameter;
 
 declare interface CWayPointHelperUpdateNode {
     "StartCycle": number;
@@ -2771,15 +2341,11 @@ declare interface CWayPointHelperUpdateNode {
     IsValid: () => boolean;
 }
 
-declare function CWayPointHelperUpdateNode(ptr_or_class: string|AnySDKClass): CWayPointHelperUpdateNode;
-
 declare interface CZeroPoseUpdateNode {
     readonly "Parent": CLeafUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CZeroPoseUpdateNode(ptr_or_class: string|AnySDKClass): CZeroPoseUpdateNode;
 
 declare interface ChainToSolveData_t {
     "ChainIndex": number;
@@ -2792,16 +2358,12 @@ declare interface ChainToSolveData_t {
     IsValid: () => boolean;
 }
 
-declare function ChainToSolveData_t(ptr_or_class: string|AnySDKClass): ChainToSolveData_t;
-
 declare interface ConfigIndex {
     "Group": number;
     "Config": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ConfigIndex(ptr_or_class: string|AnySDKClass): ConfigIndex;
 
 declare interface FollowAttachmentSettings_t {
     readonly "Attachment": CAnimAttachment;
@@ -2812,8 +2374,6 @@ declare interface FollowAttachmentSettings_t {
     IsValid: () => boolean;
 }
 
-declare function FollowAttachmentSettings_t(ptr_or_class: string|AnySDKClass): FollowAttachmentSettings_t;
-
 declare interface FollowTargetOpFixedSettings_t {
     "BoneIndex": number;
     "BoneTarget": boolean;
@@ -2823,8 +2383,6 @@ declare interface FollowTargetOpFixedSettings_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FollowTargetOpFixedSettings_t(ptr_or_class: string|AnySDKClass): FollowTargetOpFixedSettings_t;
 
 declare interface FootFixedData_t {
     "ToeOffset": Vector;
@@ -2842,8 +2400,6 @@ declare interface FootFixedData_t {
     IsValid: () => boolean;
 }
 
-declare function FootFixedData_t(ptr_or_class: string|AnySDKClass): FootFixedData_t;
-
 declare interface FootFixedSettings {
     readonly "TraceSettings": TraceSettings_t;
     "FootBaseBindPosePositionMS": Vector;
@@ -2858,8 +2414,6 @@ declare interface FootFixedSettings {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FootFixedSettings(ptr_or_class: string|AnySDKClass): FootFixedSettings;
 
 declare interface FootLockPoseOpFixedSettings {
     readonly "FootInfo": Object;
@@ -2884,8 +2438,6 @@ declare interface FootLockPoseOpFixedSettings {
     IsValid: () => boolean;
 }
 
-declare function FootLockPoseOpFixedSettings(ptr_or_class: string|AnySDKClass): FootLockPoseOpFixedSettings;
-
 declare interface FootPinningPoseOpFixedData_t {
     readonly "FootInfo": Object;
     "BlendTime": number;
@@ -2898,8 +2450,6 @@ declare interface FootPinningPoseOpFixedData_t {
     IsValid: () => boolean;
 }
 
-declare function FootPinningPoseOpFixedData_t(ptr_or_class: string|AnySDKClass): FootPinningPoseOpFixedData_t;
-
 declare interface FootStepTrigger {
     readonly "Tags": Object;
     "FootIndex": number;
@@ -2907,8 +2457,6 @@ declare interface FootStepTrigger {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FootStepTrigger(ptr_or_class: string|AnySDKClass): FootStepTrigger;
 
 declare interface HitReactFixedSettings_t {
     "WeightListIndex": number;
@@ -2932,15 +2480,11 @@ declare interface HitReactFixedSettings_t {
     IsValid: () => boolean;
 }
 
-declare function HitReactFixedSettings_t(ptr_or_class: string|AnySDKClass): HitReactFixedSettings_t;
-
 declare interface IKBoneNameAndIndex_t {
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IKBoneNameAndIndex_t(ptr_or_class: string|AnySDKClass): IKBoneNameAndIndex_t;
 
 declare interface IKDemoCaptureSettings_t {
     "ParentBoneName": string;
@@ -2952,8 +2496,6 @@ declare interface IKDemoCaptureSettings_t {
     IsValid: () => boolean;
 }
 
-declare function IKDemoCaptureSettings_t(ptr_or_class: string|AnySDKClass): IKDemoCaptureSettings_t;
-
 declare interface IKSolverSettings_t {
     "SolverType": number;
     "NumIterations": number;
@@ -2961,8 +2503,6 @@ declare interface IKSolverSettings_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IKSolverSettings_t(ptr_or_class: string|AnySDKClass): IKSolverSettings_t;
 
 declare interface IKTargetSettings_t {
     "TargetSource": number;
@@ -2974,15 +2514,11 @@ declare interface IKTargetSettings_t {
     IsValid: () => boolean;
 }
 
-declare function IKTargetSettings_t(ptr_or_class: string|AnySDKClass): IKTargetSettings_t;
-
 declare interface JiggleBoneSettingsList_t {
     readonly "BoneSettings": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function JiggleBoneSettingsList_t(ptr_or_class: string|AnySDKClass): JiggleBoneSettingsList_t;
 
 declare interface JiggleBoneSettings_t {
     "BoneIndex": number;
@@ -2996,16 +2532,12 @@ declare interface JiggleBoneSettings_t {
     IsValid: () => boolean;
 }
 
-declare function JiggleBoneSettings_t(ptr_or_class: string|AnySDKClass): JiggleBoneSettings_t;
-
 declare interface LookAtBone_t {
     "Index": number;
     "Weight": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function LookAtBone_t(ptr_or_class: string|AnySDKClass): LookAtBone_t;
 
 declare interface LookAtOpFixedSettings_t {
     readonly "Attachment": CAnimAttachment;
@@ -3023,23 +2555,17 @@ declare interface LookAtOpFixedSettings_t {
     IsValid: () => boolean;
 }
 
-declare function LookAtOpFixedSettings_t(ptr_or_class: string|AnySDKClass): LookAtOpFixedSettings_t;
-
 declare interface MotionBlendItem {
     "KeyValue": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function MotionBlendItem(ptr_or_class: string|AnySDKClass): MotionBlendItem;
-
 declare interface MotionDBIndex {
     "Index": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MotionDBIndex(ptr_or_class: string|AnySDKClass): MotionDBIndex;
 
 declare interface MotionIndex {
     "Group": number;
@@ -3048,15 +2574,11 @@ declare interface MotionIndex {
     IsValid: () => boolean;
 }
 
-declare function MotionIndex(ptr_or_class: string|AnySDKClass): MotionIndex;
-
 declare interface ParamSpanSample_t {
     "Cycle": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ParamSpanSample_t(ptr_or_class: string|AnySDKClass): ParamSpanSample_t;
 
 declare interface ParamSpan_t {
     readonly "Samples": Object;
@@ -3068,15 +2590,11 @@ declare interface ParamSpan_t {
     IsValid: () => boolean;
 }
 
-declare function ParamSpan_t(ptr_or_class: string|AnySDKClass): ParamSpan_t;
-
 declare interface SampleCode {
     "SubCode": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SampleCode(ptr_or_class: string|AnySDKClass): SampleCode;
 
 declare interface ScriptInfo_t {
     "Code": string;
@@ -3088,15 +2606,11 @@ declare interface ScriptInfo_t {
     IsValid: () => boolean;
 }
 
-declare function ScriptInfo_t(ptr_or_class: string|AnySDKClass): ScriptInfo_t;
-
 declare interface SolveIKChainPoseOpFixedSettings_t {
     readonly "ChainsToSolveData": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SolveIKChainPoseOpFixedSettings_t(ptr_or_class: string|AnySDKClass): SolveIKChainPoseOpFixedSettings_t;
 
 declare interface StanceInfo_t {
     "Position": Vector;
@@ -3104,8 +2618,6 @@ declare interface StanceInfo_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function StanceInfo_t(ptr_or_class: string|AnySDKClass): StanceInfo_t;
 
 declare interface TagSpan_t {
     "TagIndex": number;
@@ -3115,16 +2627,12 @@ declare interface TagSpan_t {
     IsValid: () => boolean;
 }
 
-declare function TagSpan_t(ptr_or_class: string|AnySDKClass): TagSpan_t;
-
 declare interface TraceSettings_t {
     "TraceHeight": number;
     "TraceRadius": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function TraceSettings_t(ptr_or_class: string|AnySDKClass): TraceSettings_t;
 
 declare interface TwoBoneIKSettings_t {
     "EndEffectorType": number;
@@ -3146,8 +2654,6 @@ declare interface TwoBoneIKSettings_t {
     IsValid: () => boolean;
 }
 
-declare function TwoBoneIKSettings_t(ptr_or_class: string|AnySDKClass): TwoBoneIKSettings_t;
-
 declare interface WeightList {
     "Name": string;
     readonly "Weights": Object;
@@ -3155,15 +2661,11 @@ declare interface WeightList {
     IsValid: () => boolean;
 }
 
-declare function WeightList(ptr_or_class: string|AnySDKClass): WeightList;
-
 declare interface CNmAdditiveBlendTask {
     readonly "Parent": CNmBlendTaskBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmAdditiveBlendTask(ptr_or_class: string|AnySDKClass): CNmAdditiveBlendTask;
 
 declare interface CNmBitFlags {
     "Flags": number;
@@ -3171,23 +2673,17 @@ declare interface CNmBitFlags {
     IsValid: () => boolean;
 }
 
-declare function CNmBitFlags(ptr_or_class: string|AnySDKClass): CNmBitFlags;
-
 declare interface CNmBlendTask {
     readonly "Parent": CNmBlendTaskBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CNmBlendTask(ptr_or_class: string|AnySDKClass): CNmBlendTask;
-
 declare interface CNmBlendTaskBase {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmBlendTaskBase(ptr_or_class: string|AnySDKClass): CNmBlendTaskBase;
 
 declare interface CNmBoneMask {
     readonly "WeightInfo": any;
@@ -3196,23 +2692,17 @@ declare interface CNmBoneMask {
     IsValid: () => boolean;
 }
 
-declare function CNmBoneMask(ptr_or_class: string|AnySDKClass): CNmBoneMask;
-
 declare interface CNmCachedPoseReadTask {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CNmCachedPoseReadTask(ptr_or_class: string|AnySDKClass): CNmCachedPoseReadTask;
-
 declare interface CNmCachedPoseWriteTask {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmCachedPoseWriteTask(ptr_or_class: string|AnySDKClass): CNmCachedPoseWriteTask;
 
 declare interface CNmClip {
     "NumFrames": number;
@@ -3226,16 +2716,12 @@ declare interface CNmClip {
     IsValid: () => boolean;
 }
 
-declare function CNmClip(ptr_or_class: string|AnySDKClass): CNmClip;
-
 declare interface CNmEvent {
     "StartTimeSeconds": number;
     "DurationSeconds": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmEvent(ptr_or_class: string|AnySDKClass): CNmEvent;
 
 declare interface CNmFootEvent {
     "Phase": number;
@@ -3244,16 +2730,12 @@ declare interface CNmFootEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmFootEvent(ptr_or_class: string|AnySDKClass): CNmFootEvent;
-
 declare interface CNmFrameSnapEvent {
     "FrameSnapMode": number;
     readonly "Parent": CNmEvent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmFrameSnapEvent(ptr_or_class: string|AnySDKClass): CNmFrameSnapEvent;
 
 declare interface CNmGraphDefinition {
     readonly "PersistentNodeIndices": Object;
@@ -3265,15 +2747,11 @@ declare interface CNmGraphDefinition {
     IsValid: () => boolean;
 }
 
-declare function CNmGraphDefinition(ptr_or_class: string|AnySDKClass): CNmGraphDefinition;
-
 declare interface CNmGraphVariation {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmGraphVariation(ptr_or_class: string|AnySDKClass): CNmGraphVariation;
 
 declare interface CNmIDEvent {
     readonly "Parent": CNmEvent;
@@ -3281,15 +2759,11 @@ declare interface CNmIDEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmIDEvent(ptr_or_class: string|AnySDKClass): CNmIDEvent;
-
 declare interface CNmIKRig {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmIKRig(ptr_or_class: string|AnySDKClass): CNmIKRig;
 
 declare interface CNmLegacyEvent {
     "AnimEventClassName": string;
@@ -3298,15 +2772,11 @@ declare interface CNmLegacyEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmLegacyEvent(ptr_or_class: string|AnySDKClass): CNmLegacyEvent;
-
 declare interface CNmModelSpaceBlendTask {
     readonly "Parent": CNmBlendTaskBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmModelSpaceBlendTask(ptr_or_class: string|AnySDKClass): CNmModelSpaceBlendTask;
 
 declare interface CNmOrientationWarpEvent {
     readonly "Parent": CNmEvent;
@@ -3314,23 +2784,17 @@ declare interface CNmOrientationWarpEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmOrientationWarpEvent(ptr_or_class: string|AnySDKClass): CNmOrientationWarpEvent;
-
 declare interface CNmOverlayBlendTask {
     readonly "Parent": CNmBlendTaskBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CNmOverlayBlendTask(ptr_or_class: string|AnySDKClass): CNmOverlayBlendTask;
-
 declare interface CNmReferencePoseTask {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmReferencePoseTask(ptr_or_class: string|AnySDKClass): CNmReferencePoseTask;
 
 declare interface CNmRootMotionData {
     "NumFrames": number;
@@ -3340,8 +2804,6 @@ declare interface CNmRootMotionData {
     IsValid: () => boolean;
 }
 
-declare function CNmRootMotionData(ptr_or_class: string|AnySDKClass): CNmRootMotionData;
-
 declare interface CNmRootMotionEvent {
     "BlendTimeSeconds": number;
     readonly "Parent": CNmEvent;
@@ -3349,15 +2811,11 @@ declare interface CNmRootMotionEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmRootMotionEvent(ptr_or_class: string|AnySDKClass): CNmRootMotionEvent;
-
 declare interface CNmSampleTask {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmSampleTask(ptr_or_class: string|AnySDKClass): CNmSampleTask;
 
 declare interface CNmSkeleton {
     readonly "ParentIndices": Object;
@@ -3366,15 +2824,11 @@ declare interface CNmSkeleton {
     IsValid: () => boolean;
 }
 
-declare function CNmSkeleton(ptr_or_class: string|AnySDKClass): CNmSkeleton;
-
 declare interface CNmSyncTrack {
     "StartEventOffset": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmSyncTrack(ptr_or_class: string|AnySDKClass): CNmSyncTrack;
 
 declare interface CNmTarget {
     "IsBoneTarget": boolean;
@@ -3385,8 +2839,6 @@ declare interface CNmTarget {
     IsValid: () => boolean;
 }
 
-declare function CNmTarget(ptr_or_class: string|AnySDKClass): CNmTarget;
-
 declare interface CNmTargetWarpEvent {
     "Rule": number;
     "Algorithm": number;
@@ -3395,15 +2847,11 @@ declare interface CNmTargetWarpEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmTargetWarpEvent(ptr_or_class: string|AnySDKClass): CNmTargetWarpEvent;
-
 declare interface CNmTask {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmTask(ptr_or_class: string|AnySDKClass): CNmTask;
 
 declare interface CNmTransitionEvent {
     "Rule": number;
@@ -3412,15 +2860,11 @@ declare interface CNmTransitionEvent {
     IsValid: () => boolean;
 }
 
-declare function CNmTransitionEvent(ptr_or_class: string|AnySDKClass): CNmTransitionEvent;
-
 declare interface CNmZeroPoseTask {
     readonly "Parent": CNmTask;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNmZeroPoseTask(ptr_or_class: string|AnySDKClass): CNmZeroPoseTask;
 
 declare interface NmCompressionSettings_t {
     "IsRotationStatic": boolean;
@@ -3430,15 +2874,11 @@ declare interface NmCompressionSettings_t {
     IsValid: () => boolean;
 }
 
-declare function NmCompressionSettings_t(ptr_or_class: string|AnySDKClass): NmCompressionSettings_t;
-
 declare interface NmPercent_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function NmPercent_t(ptr_or_class: string|AnySDKClass): NmPercent_t;
 
 declare interface NmSyncTrackTimeRange_t {
     readonly "StartTime": NmSyncTrackTime_t;
@@ -3447,16 +2887,12 @@ declare interface NmSyncTrackTimeRange_t {
     IsValid: () => boolean;
 }
 
-declare function NmSyncTrackTimeRange_t(ptr_or_class: string|AnySDKClass): NmSyncTrackTimeRange_t;
-
 declare interface NmSyncTrackTime_t {
     "EventIdx": number;
     readonly "PercentageThrough": NmPercent_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function NmSyncTrackTime_t(ptr_or_class: string|AnySDKClass): NmSyncTrackTime_t;
 
 declare interface ActiveModelConfig_t {
     readonly "Handle": ModelConfigHandle_t;
@@ -3466,15 +2902,11 @@ declare interface ActiveModelConfig_t {
     IsValid: () => boolean;
 }
 
-declare function ActiveModelConfig_t(ptr_or_class: string|AnySDKClass): ActiveModelConfig_t;
-
 declare interface AmmoIndex_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AmmoIndex_t(ptr_or_class: string|AnySDKClass): AmmoIndex_t;
 
 declare interface AmmoTypeInfo_t {
     "MaxCarry": number;
@@ -3486,15 +2918,11 @@ declare interface AmmoTypeInfo_t {
     IsValid: () => boolean;
 }
 
-declare function AmmoTypeInfo_t(ptr_or_class: string|AnySDKClass): AmmoTypeInfo_t;
-
 declare interface CAnimEventListener {
     readonly "Parent": CAnimEventListenerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimEventListener(ptr_or_class: string|AnySDKClass): CAnimEventListener;
 
 declare interface CAnimEventListenerBase {
 
@@ -3502,23 +2930,17 @@ declare interface CAnimEventListenerBase {
     IsValid: () => boolean;
 }
 
-declare function CAnimEventListenerBase(ptr_or_class: string|AnySDKClass): CAnimEventListenerBase;
-
 declare interface CAnimEventQueueListener {
     readonly "Parent": CAnimEventListenerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CAnimEventQueueListener(ptr_or_class: string|AnySDKClass): CAnimEventQueueListener;
-
 declare interface CAnimGraphControllerBase {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimGraphControllerBase(ptr_or_class: string|AnySDKClass): CAnimGraphControllerBase;
 
 declare interface CAnimGraphNetworkedVariables {
     readonly "PredNetBoolVariables": Object;
@@ -3545,8 +2967,6 @@ declare interface CAnimGraphNetworkedVariables {
     IsValid: () => boolean;
 }
 
-declare function CAnimGraphNetworkedVariables(ptr_or_class: string|AnySDKClass): CAnimGraphNetworkedVariables;
-
 declare interface CAttributeList {
     readonly "Attributes": Object;
     readonly "Manager": CAttributeManager;
@@ -3554,8 +2974,6 @@ declare interface CAttributeList {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAttributeList(ptr_or_class: string|AnySDKClass): CAttributeList;
 
 declare interface CAttributeManager {
     "ReapplyProvisionParity": number;
@@ -3565,8 +2983,6 @@ declare interface CAttributeManager {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAttributeManager(ptr_or_class: string|AnySDKClass): CAttributeManager;
 
 declare interface CBaseAnimGraph {
     "InitiallyPopulateInterpHistory": boolean;
@@ -3584,8 +3000,6 @@ declare interface CBaseAnimGraph {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseAnimGraph(ptr_or_class: string|AnySDKClass): CBaseAnimGraph;
 
 declare interface CBaseAnimGraphController {
     readonly "AnimGraphNetworkedVars": CAnimGraphNetworkedVariables;
@@ -3606,8 +3020,6 @@ declare interface CBaseAnimGraphController {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseAnimGraphController(ptr_or_class: string|AnySDKClass): CBaseAnimGraphController;
 
 declare interface CBasePlayerController {
     "InButtonsWhichAreToggles": number;
@@ -3638,15 +3050,11 @@ declare interface CBasePlayerController {
     IsValid: () => boolean;
 }
 
-declare function CBasePlayerController(ptr_or_class: string|AnySDKClass): CBasePlayerController;
-
 declare interface CBasePlayerControllerAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBasePlayerControllerAPI(ptr_or_class: string|AnySDKClass): CBasePlayerControllerAPI;
 
 declare interface CBasePlayerVData {
     readonly "HeadDamageMultiplier": CSkillFloat;
@@ -3666,8 +3074,6 @@ declare interface CBasePlayerVData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBasePlayerVData(ptr_or_class: string|AnySDKClass): CBasePlayerVData;
 
 declare interface CBasePlayerWeaponVData {
     "BuiltRightHanded": boolean;
@@ -3693,8 +3099,6 @@ declare interface CBasePlayerWeaponVData {
     IsValid: () => boolean;
 }
 
-declare function CBasePlayerWeaponVData(ptr_or_class: string|AnySDKClass): CBasePlayerWeaponVData;
-
 declare interface CBaseProp {
     "ModelOverrodeBlockLOS": boolean;
     "ShapeType": number;
@@ -3704,8 +3108,6 @@ declare interface CBaseProp {
     IsValid: () => boolean;
 }
 
-declare function CBaseProp(ptr_or_class: string|AnySDKClass): CBaseProp;
-
 declare interface CBodyComponent {
     readonly "SceneNode": CGameSceneNode;
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -3714,8 +3116,6 @@ declare interface CBodyComponent {
     IsValid: () => boolean;
 }
 
-declare function CBodyComponent(ptr_or_class: string|AnySDKClass): CBodyComponent;
-
 declare interface CBodyComponentBaseAnimGraph {
     readonly "AnimationController": CBaseAnimGraphController;
     readonly "Parent": CBodyComponentSkeletonInstance;
@@ -3723,15 +3123,11 @@ declare interface CBodyComponentBaseAnimGraph {
     IsValid: () => boolean;
 }
 
-declare function CBodyComponentBaseAnimGraph(ptr_or_class: string|AnySDKClass): CBodyComponentBaseAnimGraph;
-
 declare interface CBodyComponentBaseModelEntity {
     readonly "Parent": CBodyComponentSkeletonInstance;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBodyComponentBaseModelEntity(ptr_or_class: string|AnySDKClass): CBodyComponentBaseModelEntity;
 
 declare interface CBodyComponentPoint {
     readonly "SceneNode": CGameSceneNode;
@@ -3740,16 +3136,12 @@ declare interface CBodyComponentPoint {
     IsValid: () => boolean;
 }
 
-declare function CBodyComponentPoint(ptr_or_class: string|AnySDKClass): CBodyComponentPoint;
-
 declare interface CBodyComponentSkeletonInstance {
     readonly "SkeletonInstance": CSkeletonInstance;
     readonly "Parent": CBodyComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBodyComponentSkeletonInstance(ptr_or_class: string|AnySDKClass): CBodyComponentSkeletonInstance;
 
 declare interface CBombTarget {
     readonly "OnBombExplode": CEntityIOOutput;
@@ -3766,23 +3158,17 @@ declare interface CBombTarget {
     IsValid: () => boolean;
 }
 
-declare function CBombTarget(ptr_or_class: string|AnySDKClass): CBombTarget;
-
 declare interface CBreachCharge {
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CBreachCharge(ptr_or_class: string|AnySDKClass): CBreachCharge;
-
 declare interface CBreachChargeProjectile {
     readonly "Parent": CBaseGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBreachChargeProjectile(ptr_or_class: string|AnySDKClass): CBreachChargeProjectile;
 
 declare interface CBreakableStageHelper {
     "CurrentStage": number;
@@ -3791,23 +3177,17 @@ declare interface CBreakableStageHelper {
     IsValid: () => boolean;
 }
 
-declare function CBreakableStageHelper(ptr_or_class: string|AnySDKClass): CBreakableStageHelper;
-
 declare interface CBumpMine {
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CBumpMine(ptr_or_class: string|AnySDKClass): CBumpMine;
-
 declare interface CBumpMineProjectile {
     readonly "Parent": CBaseGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBumpMineProjectile(ptr_or_class: string|AnySDKClass): CBumpMineProjectile;
 
 declare interface CBuoyancyHelper {
     "FluidType": number;
@@ -3820,23 +3200,17 @@ declare interface CBuoyancyHelper {
     IsValid: () => boolean;
 }
 
-declare function CBuoyancyHelper(ptr_or_class: string|AnySDKClass): CBuoyancyHelper;
-
 declare interface CCSClientPointScriptEntity {
     readonly "Parent": CCSPointScriptEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CCSClientPointScriptEntity(ptr_or_class: string|AnySDKClass): CCSClientPointScriptEntity;
-
 declare interface CCSGOPlayerAnimGraphState {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGOPlayerAnimGraphState(ptr_or_class: string|AnySDKClass): CCSGOPlayerAnimGraphState;
 
 declare interface CCSGOViewModel_GraphController {
     "ReloadComplete": any;
@@ -3845,15 +3219,11 @@ declare interface CCSGOViewModel_GraphController {
     IsValid: () => boolean;
 }
 
-declare function CCSGOViewModel_GraphController(ptr_or_class: string|AnySDKClass): CCSGOViewModel_GraphController;
-
 declare interface CCSGO_WingmanIntroCharacterPosition {
     readonly "Parent": CCSGO_TeamIntroCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_WingmanIntroCharacterPosition(ptr_or_class: string|AnySDKClass): CCSGO_WingmanIntroCharacterPosition;
 
 declare interface CCSGO_WingmanIntroCounterTerroristPosition {
     readonly "Parent": CCSGO_WingmanIntroCharacterPosition;
@@ -3861,15 +3231,11 @@ declare interface CCSGO_WingmanIntroCounterTerroristPosition {
     IsValid: () => boolean;
 }
 
-declare function CCSGO_WingmanIntroCounterTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_WingmanIntroCounterTerroristPosition;
-
 declare interface CCSGO_WingmanIntroTerroristPosition {
     readonly "Parent": CCSGO_WingmanIntroCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_WingmanIntroTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_WingmanIntroTerroristPosition;
 
 declare interface CCSGameModeRules {
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -3877,16 +3243,12 @@ declare interface CCSGameModeRules {
     IsValid: () => boolean;
 }
 
-declare function CCSGameModeRules(ptr_or_class: string|AnySDKClass): CCSGameModeRules;
-
 declare interface CCSGameModeRules_ArmsRace {
     readonly "WeaponSequence": Object;
     readonly "Parent": CCSGameModeRules;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGameModeRules_ArmsRace(ptr_or_class: string|AnySDKClass): CCSGameModeRules_ArmsRace;
 
 declare interface CCSGameModeRules_Deathmatch {
     "DMBonusStartTime": number;
@@ -3897,15 +3259,11 @@ declare interface CCSGameModeRules_Deathmatch {
     IsValid: () => boolean;
 }
 
-declare function CCSGameModeRules_Deathmatch(ptr_or_class: string|AnySDKClass): CCSGameModeRules_Deathmatch;
-
 declare interface CCSGameModeRules_Noop {
     readonly "Parent": CCSGameModeRules;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGameModeRules_Noop(ptr_or_class: string|AnySDKClass): CCSGameModeRules_Noop;
 
 declare interface CCSObserver_CameraServices {
     readonly "Parent": CCSPlayerBase_CameraServices;
@@ -3913,15 +3271,11 @@ declare interface CCSObserver_CameraServices {
     IsValid: () => boolean;
 }
 
-declare function CCSObserver_CameraServices(ptr_or_class: string|AnySDKClass): CCSObserver_CameraServices;
-
 declare interface CCSObserver_MovementServices {
     readonly "Parent": CPlayer_MovementServices;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSObserver_MovementServices(ptr_or_class: string|AnySDKClass): CCSObserver_MovementServices;
 
 declare interface CCSObserver_ObserverServices {
     readonly "Parent": CPlayer_ObserverServices;
@@ -3929,23 +3283,17 @@ declare interface CCSObserver_ObserverServices {
     IsValid: () => boolean;
 }
 
-declare function CCSObserver_ObserverServices(ptr_or_class: string|AnySDKClass): CCSObserver_ObserverServices;
-
 declare interface CCSObserver_UseServices {
     readonly "Parent": CPlayer_UseServices;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CCSObserver_UseServices(ptr_or_class: string|AnySDKClass): CCSObserver_UseServices;
-
 declare interface CCSObserver_ViewModelServices {
     readonly "Parent": CPlayer_ViewModelServices;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSObserver_ViewModelServices(ptr_or_class: string|AnySDKClass): CCSObserver_ViewModelServices;
 
 declare interface CCSPlayerBase_CameraServices {
     "FOV": number;
@@ -3958,8 +3306,6 @@ declare interface CCSPlayerBase_CameraServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayerBase_CameraServices(ptr_or_class: string|AnySDKClass): CCSPlayerBase_CameraServices;
 
 declare interface CCSPlayerController {
     readonly "InGameMoneyServices": CCSPlayerController_InGameMoneyServices;
@@ -4056,8 +3402,6 @@ declare interface CCSPlayerController {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerController(ptr_or_class: string|AnySDKClass): CCSPlayerController;
-
 declare interface CCSPlayerController_ActionTrackingServices {
     readonly "PerRoundStats": Object;
     readonly "MatchStats": CSMatchStats_t;
@@ -4069,8 +3413,6 @@ declare interface CCSPlayerController_ActionTrackingServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerController_ActionTrackingServices(ptr_or_class: string|AnySDKClass): CCSPlayerController_ActionTrackingServices;
-
 declare interface CCSPlayerController_DamageServices {
     "SendUpdate": number;
     readonly "DamageList": Object;
@@ -4078,8 +3420,6 @@ declare interface CCSPlayerController_DamageServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayerController_DamageServices(ptr_or_class: string|AnySDKClass): CCSPlayerController_DamageServices;
 
 declare interface CCSPlayerController_InGameMoneyServices {
     "ReceivesMoneyNextRound": boolean;
@@ -4092,8 +3432,6 @@ declare interface CCSPlayerController_InGameMoneyServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayerController_InGameMoneyServices(ptr_or_class: string|AnySDKClass): CCSPlayerController_InGameMoneyServices;
 
 declare interface CCSPlayerController_InventoryServices {
     "MusicID": number;
@@ -4110,8 +3448,6 @@ declare interface CCSPlayerController_InventoryServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerController_InventoryServices(ptr_or_class: string|AnySDKClass): CCSPlayerController_InventoryServices;
-
 declare interface CCSPlayer_ActionTrackingServices {
     readonly "LastWeaponBeforeC4AutoSwitch": CBasePlayerWeapon;
     "IsRescuing": boolean;
@@ -4122,16 +3458,12 @@ declare interface CCSPlayer_ActionTrackingServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_ActionTrackingServices(ptr_or_class: string|AnySDKClass): CCSPlayer_ActionTrackingServices;
-
 declare interface CCSPlayer_BulletServices {
     "TotalHitsOnServer": number;
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_BulletServices(ptr_or_class: string|AnySDKClass): CCSPlayer_BulletServices;
 
 declare interface CCSPlayer_BuyServices {
     readonly "SellbackPurchaseEntries": Object;
@@ -4140,15 +3472,11 @@ declare interface CCSPlayer_BuyServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_BuyServices(ptr_or_class: string|AnySDKClass): CCSPlayer_BuyServices;
-
 declare interface CCSPlayer_CameraServices {
     readonly "Parent": CCSPlayerBase_CameraServices;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_CameraServices(ptr_or_class: string|AnySDKClass): CCSPlayer_CameraServices;
 
 declare interface CCSPlayer_DamageReactServices {
     readonly "Parent": CPlayerPawnComponent;
@@ -4156,15 +3484,11 @@ declare interface CCSPlayer_DamageReactServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_DamageReactServices(ptr_or_class: string|AnySDKClass): CCSPlayer_DamageReactServices;
-
 declare interface CCSPlayer_GlowServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_GlowServices(ptr_or_class: string|AnySDKClass): CCSPlayer_GlowServices;
 
 declare interface CCSPlayer_HostageServices {
     readonly "CarriedHostage": CBaseEntity;
@@ -4174,8 +3498,6 @@ declare interface CCSPlayer_HostageServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_HostageServices(ptr_or_class: string|AnySDKClass): CCSPlayer_HostageServices;
-
 declare interface CCSPlayer_ItemServices {
     "HasDefuser": boolean;
     "HasHelmet": boolean;
@@ -4184,8 +3506,6 @@ declare interface CCSPlayer_ItemServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_ItemServices(ptr_or_class: string|AnySDKClass): CCSPlayer_ItemServices;
 
 declare interface CCSPlayer_MovementServices {
     "LadderNormal": Vector;
@@ -4232,8 +3552,6 @@ declare interface CCSPlayer_MovementServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_MovementServices(ptr_or_class: string|AnySDKClass): CCSPlayer_MovementServices;
-
 declare interface CCSPlayer_PingServices {
     "PlayerPingTokens": Object;
     readonly "PlayerPing": CBaseEntity;
@@ -4241,8 +3559,6 @@ declare interface CCSPlayer_PingServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_PingServices(ptr_or_class: string|AnySDKClass): CCSPlayer_PingServices;
 
 declare interface CCSPlayer_UseServices {
     readonly "LastKnownUseEntity": CBaseEntity;
@@ -4253,16 +3569,12 @@ declare interface CCSPlayer_UseServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_UseServices(ptr_or_class: string|AnySDKClass): CCSPlayer_UseServices;
-
 declare interface CCSPlayer_ViewModelServices {
     readonly "ViewModel": Object;
     readonly "Parent": CPlayer_ViewModelServices;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_ViewModelServices(ptr_or_class: string|AnySDKClass): CCSPlayer_ViewModelServices;
 
 declare interface CCSPlayer_WaterServices {
     "NextDrownDamageTime": number;
@@ -4275,8 +3587,6 @@ declare interface CCSPlayer_WaterServices {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlayer_WaterServices(ptr_or_class: string|AnySDKClass): CCSPlayer_WaterServices;
 
 declare interface CCSPlayer_WeaponServices {
     "NextAttack": number;
@@ -4299,15 +3609,11 @@ declare interface CCSPlayer_WeaponServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_WeaponServices(ptr_or_class: string|AnySDKClass): CCSPlayer_WeaponServices;
-
 declare interface CCSPointScript {
     readonly "Parent": CCSPointScriptEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPointScript(ptr_or_class: string|AnySDKClass): CCSPointScript;
 
 declare interface CCSPointScriptEntity {
     readonly "Parent": CBaseEntity;
@@ -4315,15 +3621,11 @@ declare interface CCSPointScriptEntity {
     IsValid: () => boolean;
 }
 
-declare function CCSPointScriptEntity(ptr_or_class: string|AnySDKClass): CCSPointScriptEntity;
-
 declare interface CCSPointScriptExtensions_CCSWeaponBaseVData {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPointScriptExtensions_CCSWeaponBaseVData(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_CCSWeaponBaseVData;
 
 declare interface CCSPointScriptExtensions_entity {
 
@@ -4331,15 +3633,11 @@ declare interface CCSPointScriptExtensions_entity {
     IsValid: () => boolean;
 }
 
-declare function CCSPointScriptExtensions_entity(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_entity;
-
 declare interface CCSPointScriptExtensions_observer {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPointScriptExtensions_observer(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_observer;
 
 declare interface CCSPointScriptExtensions_player {
 
@@ -4347,23 +3645,17 @@ declare interface CCSPointScriptExtensions_player {
     IsValid: () => boolean;
 }
 
-declare function CCSPointScriptExtensions_player(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_player;
-
 declare interface CCSPointScriptExtensions_player_controller {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CCSPointScriptExtensions_player_controller(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_player_controller;
-
 declare interface CCSPointScriptExtensions_weapon_cs_base {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPointScriptExtensions_weapon_cs_base(ptr_or_class: string|AnySDKClass): CCSPointScriptExtensions_weapon_cs_base;
 
 declare interface CCSWeaponBaseVData {
     "WeaponType": number;
@@ -4450,8 +3742,6 @@ declare interface CCSWeaponBaseVData {
     IsValid: () => boolean;
 }
 
-declare function CCSWeaponBaseVData(ptr_or_class: string|AnySDKClass): CCSWeaponBaseVData;
-
 declare interface CCitadelSoundOpvarSetOBB {
     "StackName": string;
     "OperatorName": string;
@@ -4465,8 +3755,6 @@ declare interface CCitadelSoundOpvarSetOBB {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCitadelSoundOpvarSetOBB(ptr_or_class: string|AnySDKClass): CCitadelSoundOpvarSetOBB;
 
 declare interface CClientAlphaProperty {
     "RenderFX": number;
@@ -4487,15 +3775,11 @@ declare interface CClientAlphaProperty {
     IsValid: () => boolean;
 }
 
-declare function CClientAlphaProperty(ptr_or_class: string|AnySDKClass): CClientAlphaProperty;
-
 declare interface CClientGapTypeQueryRegistration {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CClientGapTypeQueryRegistration(ptr_or_class: string|AnySDKClass): CClientGapTypeQueryRegistration;
 
 declare interface CCollisionProperty {
     readonly "CollisionAttribute": VPhysicsCollisionAttribute_t;
@@ -4519,8 +3803,6 @@ declare interface CCollisionProperty {
     IsValid: () => boolean;
 }
 
-declare function CCollisionProperty(ptr_or_class: string|AnySDKClass): CCollisionProperty;
-
 declare interface CCompositeMaterialEditorDoc {
     "Version": number;
     readonly "Points": Object;
@@ -4528,16 +3810,12 @@ declare interface CCompositeMaterialEditorDoc {
     IsValid: () => boolean;
 }
 
-declare function CCompositeMaterialEditorDoc(ptr_or_class: string|AnySDKClass): CCompositeMaterialEditorDoc;
-
 declare interface CCopyRecipientFilter {
     "Flags": number;
     readonly "Recipients": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCopyRecipientFilter(ptr_or_class: string|AnySDKClass): CCopyRecipientFilter;
 
 declare interface CDamageRecord {
     readonly "PlayerDamager": CCSPlayerPawn;
@@ -4559,8 +3837,6 @@ declare interface CDamageRecord {
     IsValid: () => boolean;
 }
 
-declare function CDamageRecord(ptr_or_class: string|AnySDKClass): CDamageRecord;
-
 declare interface CDecalInfo {
     "AnimationScale": number;
     "AnimationLifeSpan": number;
@@ -4578,15 +3854,11 @@ declare interface CDecalInfo {
     IsValid: () => boolean;
 }
 
-declare function CDecalInfo(ptr_or_class: string|AnySDKClass): CDecalInfo;
-
 declare interface CDestructiblePartRuntimeData {
     "HealthRemaining": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDestructiblePartRuntimeData(ptr_or_class: string|AnySDKClass): CDestructiblePartRuntimeData;
 
 declare interface CDestructiblePartRuntimeDataVector {
     readonly "DestructiblePartsRuntimeData": Object;
@@ -4594,15 +3866,11 @@ declare interface CDestructiblePartRuntimeDataVector {
     IsValid: () => boolean;
 }
 
-declare function CDestructiblePartRuntimeDataVector(ptr_or_class: string|AnySDKClass): CDestructiblePartRuntimeDataVector;
-
 declare interface CDestructiblePartsSystemData {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDestructiblePartsSystemData(ptr_or_class: string|AnySDKClass): CDestructiblePartsSystemData;
 
 declare interface CDestructiblePartsSystemData_HitGroupInfoAndPartData {
     "Name": string;
@@ -4611,8 +3879,6 @@ declare interface CDestructiblePartsSystemData_HitGroupInfoAndPartData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDestructiblePartsSystemData_HitGroupInfoAndPartData(ptr_or_class: string|AnySDKClass): CDestructiblePartsSystemData_HitGroupInfoAndPartData;
 
 declare interface CDestructiblePartsSystemData_PartData {
     "Name": string;
@@ -4624,8 +3890,6 @@ declare interface CDestructiblePartsSystemData_PartData {
     IsValid: () => boolean;
 }
 
-declare function CDestructiblePartsSystemData_PartData(ptr_or_class: string|AnySDKClass): CDestructiblePartsSystemData_PartData;
-
 declare interface CEconItemAttribute {
     "AttributeDefinitionIndex": number;
     "Value": number;
@@ -4635,8 +3899,6 @@ declare interface CEconItemAttribute {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEconItemAttribute(ptr_or_class: string|AnySDKClass): CEconItemAttribute;
 
 declare interface CEffectData {
     "Origin": Vector;
@@ -4662,15 +3924,11 @@ declare interface CEffectData {
     IsValid: () => boolean;
 }
 
-declare function CEffectData(ptr_or_class: string|AnySDKClass): CEffectData;
-
 declare interface CEntitySubclassVDataBase {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEntitySubclassVDataBase(ptr_or_class: string|AnySDKClass): CEntitySubclassVDataBase;
 
 declare interface CEnvSoundscape {
     readonly "OnPlay": CEntityIOOutput;
@@ -4689,15 +3947,11 @@ declare interface CEnvSoundscape {
     IsValid: () => boolean;
 }
 
-declare function CEnvSoundscape(ptr_or_class: string|AnySDKClass): CEnvSoundscape;
-
 declare interface CEnvSoundscapeAlias_snd_soundscape {
     readonly "Parent": CEnvSoundscape;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvSoundscapeAlias_snd_soundscape(ptr_or_class: string|AnySDKClass): CEnvSoundscapeAlias_snd_soundscape;
 
 declare interface CEnvSoundscapeProxy {
     "MainSoundscapeName": string;
@@ -4706,15 +3960,11 @@ declare interface CEnvSoundscapeProxy {
     IsValid: () => boolean;
 }
 
-declare function CEnvSoundscapeProxy(ptr_or_class: string|AnySDKClass): CEnvSoundscapeProxy;
-
 declare interface CEnvSoundscapeProxyAlias_snd_soundscape_proxy {
     readonly "Parent": CEnvSoundscapeProxy;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvSoundscapeProxyAlias_snd_soundscape_proxy(ptr_or_class: string|AnySDKClass): CEnvSoundscapeProxyAlias_snd_soundscape_proxy;
 
 declare interface CEnvSoundscapeTriggerable {
     readonly "Parent": CEnvSoundscape;
@@ -4722,15 +3972,11 @@ declare interface CEnvSoundscapeTriggerable {
     IsValid: () => boolean;
 }
 
-declare function CEnvSoundscapeTriggerable(ptr_or_class: string|AnySDKClass): CEnvSoundscapeTriggerable;
-
 declare interface CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable {
     readonly "Parent": CEnvSoundscapeTriggerable;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable(ptr_or_class: string|AnySDKClass): CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable;
 
 declare interface CFireOverlay {
     readonly "Owner": any;
@@ -4742,23 +3988,17 @@ declare interface CFireOverlay {
     IsValid: () => boolean;
 }
 
-declare function CFireOverlay(ptr_or_class: string|AnySDKClass): CFireOverlay;
-
 declare interface CFiringModeFloat {
     "Values": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CFiringModeFloat(ptr_or_class: string|AnySDKClass): CFiringModeFloat;
-
 declare interface CFiringModeInt {
     "Values": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFiringModeInt(ptr_or_class: string|AnySDKClass): CFiringModeInt;
 
 declare interface CFlashlightEffect {
     "IsOn": boolean;
@@ -4775,15 +4015,11 @@ declare interface CFlashlightEffect {
     IsValid: () => boolean;
 }
 
-declare function CFlashlightEffect(ptr_or_class: string|AnySDKClass): CFlashlightEffect;
-
 declare interface CFootstepTableHandle {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootstepTableHandle(ptr_or_class: string|AnySDKClass): CFootstepTableHandle;
 
 declare interface CFuncWater {
     readonly "BuoyancyHelper": CBuoyancyHelper;
@@ -4791,8 +4027,6 @@ declare interface CFuncWater {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncWater(ptr_or_class: string|AnySDKClass): CFuncWater;
 
 declare interface CGameSceneNode {
     readonly "Owner": CEntityInstance;
@@ -4830,8 +4064,6 @@ declare interface CGameSceneNode {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGameSceneNode(ptr_or_class: string|AnySDKClass): CGameSceneNode;
 
 declare interface CGlobalLightBase {
     "SpotLight": boolean;
@@ -4881,8 +4113,6 @@ declare interface CGlobalLightBase {
     IsValid: () => boolean;
 }
 
-declare function CGlobalLightBase(ptr_or_class: string|AnySDKClass): CGlobalLightBase;
-
 declare interface CGlowOverlay {
     "Pos": Vector;
     "Directional": boolean;
@@ -4903,8 +4133,6 @@ declare interface CGlowOverlay {
     IsValid: () => boolean;
 }
 
-declare function CGlowOverlay(ptr_or_class: string|AnySDKClass): CGlowOverlay;
-
 declare interface CGlowProperty {
     "GlowColor": Vector;
     "GlowType": number;
@@ -4921,8 +4149,6 @@ declare interface CGlowProperty {
     IsValid: () => boolean;
 }
 
-declare function CGlowProperty(ptr_or_class: string|AnySDKClass): CGlowProperty;
-
 declare interface CGlowSprite {
     "Color": Vector;
     "HorzSize": number;
@@ -4931,16 +4157,12 @@ declare interface CGlowSprite {
     IsValid: () => boolean;
 }
 
-declare function CGlowSprite(ptr_or_class: string|AnySDKClass): CGlowSprite;
-
 declare interface CGrenadeTracer {
     "TracerDuration": number;
     "Type": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGrenadeTracer(ptr_or_class: string|AnySDKClass): CGrenadeTracer;
 
 declare interface CHitboxComponent {
     "DisabledHitGroups": Object;
@@ -4949,15 +4171,11 @@ declare interface CHitboxComponent {
     IsValid: () => boolean;
 }
 
-declare function CHitboxComponent(ptr_or_class: string|AnySDKClass): CHitboxComponent;
-
 declare interface CHostageRescueZone {
     readonly "Parent": CHostageRescueZoneShim;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHostageRescueZone(ptr_or_class: string|AnySDKClass): CHostageRescueZone;
 
 declare interface CHostageRescueZoneShim {
     readonly "Parent": CBaseTrigger;
@@ -4965,15 +4183,11 @@ declare interface CHostageRescueZoneShim {
     IsValid: () => boolean;
 }
 
-declare function CHostageRescueZoneShim(ptr_or_class: string|AnySDKClass): CHostageRescueZoneShim;
-
 declare interface CInButtonState {
     "ButtonStates": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInButtonState(ptr_or_class: string|AnySDKClass): CInButtonState;
 
 declare interface CInfoDynamicShadowHint {
     "Disabled": boolean;
@@ -4986,8 +4200,6 @@ declare interface CInfoDynamicShadowHint {
     IsValid: () => boolean;
 }
 
-declare function CInfoDynamicShadowHint(ptr_or_class: string|AnySDKClass): CInfoDynamicShadowHint;
-
 declare interface CInfoDynamicShadowHintBox {
     "BoxMins": Vector;
     "BoxMaxs": Vector;
@@ -4995,8 +4207,6 @@ declare interface CInfoDynamicShadowHintBox {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoDynamicShadowHintBox(ptr_or_class: string|AnySDKClass): CInfoDynamicShadowHintBox;
 
 declare interface CInfoOffscreenPanoramaTexture {
     "Disabled": boolean;
@@ -5012,23 +4222,17 @@ declare interface CInfoOffscreenPanoramaTexture {
     IsValid: () => boolean;
 }
 
-declare function CInfoOffscreenPanoramaTexture(ptr_or_class: string|AnySDKClass): CInfoOffscreenPanoramaTexture;
-
 declare interface CInfoParticleTarget {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CInfoParticleTarget(ptr_or_class: string|AnySDKClass): CInfoParticleTarget;
-
 declare interface CInfoTarget {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoTarget(ptr_or_class: string|AnySDKClass): CInfoTarget;
 
 declare interface CInfoWorldLayer {
     readonly "OutputOnEntitiesSpawned": CEntityIOOutput;
@@ -5043,8 +4247,6 @@ declare interface CInfoWorldLayer {
     IsValid: () => boolean;
 }
 
-declare function CInfoWorldLayer(ptr_or_class: string|AnySDKClass): CInfoWorldLayer;
-
 declare interface CInterpolatedValue {
     "StartTime": number;
     "EndTime": number;
@@ -5054,8 +4256,6 @@ declare interface CInterpolatedValue {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInterpolatedValue(ptr_or_class: string|AnySDKClass): CInterpolatedValue;
 
 declare interface CLightComponent {
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -5129,8 +4329,6 @@ declare interface CLightComponent {
     IsValid: () => boolean;
 }
 
-declare function CLightComponent(ptr_or_class: string|AnySDKClass): CLightComponent;
-
 declare interface CLogicRelay {
     readonly "OnTrigger": CEntityIOOutput;
     readonly "OnSpawn": CEntityIOOutput;
@@ -5144,15 +4342,11 @@ declare interface CLogicRelay {
     IsValid: () => boolean;
 }
 
-declare function CLogicRelay(ptr_or_class: string|AnySDKClass): CLogicRelay;
-
 declare interface CLogicalEntity {
     readonly "Parent": CServerOnlyEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicalEntity(ptr_or_class: string|AnySDKClass): CLogicalEntity;
 
 declare interface CMapInfo {
     "BuyingStatus": number;
@@ -5169,8 +4363,6 @@ declare interface CMapInfo {
     IsValid: () => boolean;
 }
 
-declare function CMapInfo(ptr_or_class: string|AnySDKClass): CMapInfo;
-
 declare interface CModelState {
     "ModelName": string;
     "ClientClothCreationSuppressed": boolean;
@@ -5182,15 +4374,11 @@ declare interface CModelState {
     IsValid: () => boolean;
 }
 
-declare function CModelState(ptr_or_class: string|AnySDKClass): CModelState;
-
 declare interface CNavLinkAnimgraphVar {
     "AlignmentDegrees": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavLinkAnimgraphVar(ptr_or_class: string|AnySDKClass): CNavLinkAnimgraphVar;
 
 declare interface CNavLinkMovementVData {
     "IsInterpolated": boolean;
@@ -5199,8 +4387,6 @@ declare interface CNavLinkMovementVData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavLinkMovementVData(ptr_or_class: string|AnySDKClass): CNavLinkMovementVData;
 
 declare interface CNetworkOriginCellCoordQuantizedVector {
     "CellX": number;
@@ -5214,8 +4400,6 @@ declare interface CNetworkOriginCellCoordQuantizedVector {
     IsValid: () => boolean;
 }
 
-declare function CNetworkOriginCellCoordQuantizedVector(ptr_or_class: string|AnySDKClass): CNetworkOriginCellCoordQuantizedVector;
-
 declare interface CNetworkOriginQuantizedVector {
     "X": number;
     "Y": number;
@@ -5224,15 +4408,11 @@ declare interface CNetworkOriginQuantizedVector {
     IsValid: () => boolean;
 }
 
-declare function CNetworkOriginQuantizedVector(ptr_or_class: string|AnySDKClass): CNetworkOriginQuantizedVector;
-
 declare interface CNetworkTransmitComponent {
     "TransmitStateOwnedCounter": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNetworkTransmitComponent(ptr_or_class: string|AnySDKClass): CNetworkTransmitComponent;
 
 declare interface CNetworkVelocityVector {
     "X": number;
@@ -5242,8 +4422,6 @@ declare interface CNetworkVelocityVector {
     IsValid: () => boolean;
 }
 
-declare function CNetworkVelocityVector(ptr_or_class: string|AnySDKClass): CNetworkVelocityVector;
-
 declare interface CNetworkViewOffsetVector {
     "X": number;
     "Y": number;
@@ -5251,8 +4429,6 @@ declare interface CNetworkViewOffsetVector {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNetworkViewOffsetVector(ptr_or_class: string|AnySDKClass): CNetworkViewOffsetVector;
 
 declare interface CNetworkedSequenceOperation {
     "Sequence": number;
@@ -5267,8 +4443,6 @@ declare interface CNetworkedSequenceOperation {
     IsValid: () => boolean;
 }
 
-declare function CNetworkedSequenceOperation(ptr_or_class: string|AnySDKClass): CNetworkedSequenceOperation;
-
 declare interface CPathSimple {
     "PathString": string;
     readonly "Parent": CBaseEntity;
@@ -5276,23 +4450,17 @@ declare interface CPathSimple {
     IsValid: () => boolean;
 }
 
-declare function CPathSimple(ptr_or_class: string|AnySDKClass): CPathSimple;
-
 declare interface CPathSimpleAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CPathSimpleAPI(ptr_or_class: string|AnySDKClass): CPathSimpleAPI;
-
 declare interface CPlayerControllerComponent {
     readonly "__pChainEntity": CNetworkVarChainer;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayerControllerComponent(ptr_or_class: string|AnySDKClass): CPlayerControllerComponent;
 
 declare interface CPlayerPawnComponent {
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -5301,23 +4469,17 @@ declare interface CPlayerPawnComponent {
     IsValid: () => boolean;
 }
 
-declare function CPlayerPawnComponent(ptr_or_class: string|AnySDKClass): CPlayerPawnComponent;
-
 declare interface CPlayerSprayDecalRenderHelper {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CPlayerSprayDecalRenderHelper(ptr_or_class: string|AnySDKClass): CPlayerSprayDecalRenderHelper;
-
 declare interface CPlayer_AutoaimServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayer_AutoaimServices(ptr_or_class: string|AnySDKClass): CPlayer_AutoaimServices;
 
 declare interface CPlayer_CameraServices {
     "CsViewPunchAngle": QAngle;
@@ -5335,23 +4497,17 @@ declare interface CPlayer_CameraServices {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_CameraServices(ptr_or_class: string|AnySDKClass): CPlayer_CameraServices;
-
 declare interface CPlayer_FlashlightServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CPlayer_FlashlightServices(ptr_or_class: string|AnySDKClass): CPlayer_FlashlightServices;
-
 declare interface CPlayer_ItemServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayer_ItemServices(ptr_or_class: string|AnySDKClass): CPlayer_ItemServices;
 
 declare interface CPlayer_MovementServices {
     "Impulse": number;
@@ -5374,8 +4530,6 @@ declare interface CPlayer_MovementServices {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_MovementServices(ptr_or_class: string|AnySDKClass): CPlayer_MovementServices;
-
 declare interface CPlayer_MovementServices_Humanoid {
     "StepSoundTime": number;
     "FallVelocity": number;
@@ -5396,8 +4550,6 @@ declare interface CPlayer_MovementServices_Humanoid {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_MovementServices_Humanoid(ptr_or_class: string|AnySDKClass): CPlayer_MovementServices_Humanoid;
-
 declare interface CPlayer_ObserverServices {
     "ObserverMode": number;
     readonly "ObserverTarget": CBaseEntity;
@@ -5408,15 +4560,11 @@ declare interface CPlayer_ObserverServices {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_ObserverServices(ptr_or_class: string|AnySDKClass): CPlayer_ObserverServices;
-
 declare interface CPlayer_UseServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayer_UseServices(ptr_or_class: string|AnySDKClass): CPlayer_UseServices;
 
 declare interface CPlayer_ViewModelServices {
     readonly "Parent": CPlayerPawnComponent;
@@ -5424,15 +4572,11 @@ declare interface CPlayer_ViewModelServices {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_ViewModelServices(ptr_or_class: string|AnySDKClass): CPlayer_ViewModelServices;
-
 declare interface CPlayer_WaterServices {
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayer_WaterServices(ptr_or_class: string|AnySDKClass): CPlayer_WaterServices;
 
 declare interface CPlayer_WeaponServices {
     readonly "ActiveWeapon": CBasePlayerWeapon;
@@ -5444,16 +4588,12 @@ declare interface CPlayer_WeaponServices {
     IsValid: () => boolean;
 }
 
-declare function CPlayer_WeaponServices(ptr_or_class: string|AnySDKClass): CPlayer_WeaponServices;
-
 declare interface CPointChildModifier {
     "OrphanInsteadOfDeletingChildrenOnRemove": boolean;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointChildModifier(ptr_or_class: string|AnySDKClass): CPointChildModifier;
 
 declare interface CPointOffScreenIndicatorUi {
     "BeenEnabled": boolean;
@@ -5463,8 +4603,6 @@ declare interface CPointOffScreenIndicatorUi {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointOffScreenIndicatorUi(ptr_or_class: string|AnySDKClass): CPointOffScreenIndicatorUi;
 
 declare interface CPointTemplate {
     "WorldName": string;
@@ -5481,15 +4619,11 @@ declare interface CPointTemplate {
     IsValid: () => boolean;
 }
 
-declare function CPointTemplate(ptr_or_class: string|AnySDKClass): CPointTemplate;
-
 declare interface CPointTemplateAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointTemplateAPI(ptr_or_class: string|AnySDKClass): CPointTemplateAPI;
 
 declare interface CPrecipitationVData {
     "InnerDistance": number;
@@ -5502,8 +4636,6 @@ declare interface CPrecipitationVData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPrecipitationVData(ptr_or_class: string|AnySDKClass): CPrecipitationVData;
 
 declare interface CProjectedTextureBase {
     readonly "TargetEntity": any;
@@ -5540,8 +4672,6 @@ declare interface CProjectedTextureBase {
     IsValid: () => boolean;
 }
 
-declare function CProjectedTextureBase(ptr_or_class: string|AnySDKClass): CProjectedTextureBase;
-
 declare interface CPropDataComponent {
     "DmgModBullet": number;
     "DmgModClub": number;
@@ -5558,8 +4688,6 @@ declare interface CPropDataComponent {
     IsValid: () => boolean;
 }
 
-declare function CPropDataComponent(ptr_or_class: string|AnySDKClass): CPropDataComponent;
-
 declare interface CRagdollManager {
     "CurrentMaxRagdollCount": number;
     "MaxRagdollCount": number;
@@ -5570,8 +4698,6 @@ declare interface CRagdollManager {
     IsValid: () => boolean;
 }
 
-declare function CRagdollManager(ptr_or_class: string|AnySDKClass): CRagdollManager;
-
 declare interface CRandSimTimer {
     "MinInterval": number;
     "MaxInterval": number;
@@ -5579,8 +4705,6 @@ declare interface CRandSimTimer {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRandSimTimer(ptr_or_class: string|AnySDKClass): CRandSimTimer;
 
 declare interface CRandStopwatch {
     "MinInterval": number;
@@ -5590,15 +4714,11 @@ declare interface CRandStopwatch {
     IsValid: () => boolean;
 }
 
-declare function CRandStopwatch(ptr_or_class: string|AnySDKClass): CRandStopwatch;
-
 declare interface CRemapFloat {
     "Value": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRemapFloat(ptr_or_class: string|AnySDKClass): CRemapFloat;
 
 declare interface CRenderComponent {
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -5611,8 +4731,6 @@ declare interface CRenderComponent {
     IsValid: () => boolean;
 }
 
-declare function CRenderComponent(ptr_or_class: string|AnySDKClass): CRenderComponent;
-
 declare interface CResponseCriteriaSet {
     "NumPrefixedContexts": number;
     "OverrideOnAppend": boolean;
@@ -5620,16 +4738,12 @@ declare interface CResponseCriteriaSet {
     IsValid: () => boolean;
 }
 
-declare function CResponseCriteriaSet(ptr_or_class: string|AnySDKClass): CResponseCriteriaSet;
-
 declare interface CRopeOverlapHit {
     readonly "Entity": any;
     readonly "OverlappingLinks": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRopeOverlapHit(ptr_or_class: string|AnySDKClass): CRopeOverlapHit;
 
 declare interface CSMatchStats_t {
     "Enemy5Ks": number;
@@ -5658,8 +4772,6 @@ declare interface CSMatchStats_t {
     IsValid: () => boolean;
 }
 
-declare function CSMatchStats_t(ptr_or_class: string|AnySDKClass): CSMatchStats_t;
-
 declare interface CSPerRoundStats_t {
     "Kills": number;
     "Deaths": number;
@@ -5677,8 +4789,6 @@ declare interface CSPerRoundStats_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSPerRoundStats_t(ptr_or_class: string|AnySDKClass): CSPerRoundStats_t;
 
 declare interface CSceneEventInfo {
     "Layer": number;
@@ -5698,15 +4808,11 @@ declare interface CSceneEventInfo {
     IsValid: () => boolean;
 }
 
-declare function CSceneEventInfo(ptr_or_class: string|AnySDKClass): CSceneEventInfo;
-
 declare interface CScriptUniformRandomStream {
     "InitialSeed": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CScriptUniformRandomStream(ptr_or_class: string|AnySDKClass): CScriptUniformRandomStream;
 
 declare interface CServerOnlyModelEntity {
     readonly "Parent": CBaseModelEntity;
@@ -5714,15 +4820,11 @@ declare interface CServerOnlyModelEntity {
     IsValid: () => boolean;
 }
 
-declare function CServerOnlyModelEntity(ptr_or_class: string|AnySDKClass): CServerOnlyModelEntity;
-
 declare interface CSharedGapTypeQueryRegistration {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSharedGapTypeQueryRegistration(ptr_or_class: string|AnySDKClass): CSharedGapTypeQueryRegistration;
 
 declare interface CSimTimer {
     "Interval": number;
@@ -5731,8 +4833,6 @@ declare interface CSimTimer {
     IsValid: () => boolean;
 }
 
-declare function CSimTimer(ptr_or_class: string|AnySDKClass): CSimTimer;
-
 declare interface CSimpleSimTimer {
     "Next": number;
     "WorldGroupId": number;
@@ -5740,15 +4840,11 @@ declare interface CSimpleSimTimer {
     IsValid: () => boolean;
 }
 
-declare function CSimpleSimTimer(ptr_or_class: string|AnySDKClass): CSimpleSimTimer;
-
 declare interface CSimpleStopwatch {
     readonly "Parent": CStopwatchBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSimpleStopwatch(ptr_or_class: string|AnySDKClass): CSimpleStopwatch;
 
 declare interface CSkeletonAnimationController {
     readonly "SkeletonInstance": CSkeletonInstance;
@@ -5756,8 +4852,6 @@ declare interface CSkeletonAnimationController {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSkeletonAnimationController(ptr_or_class: string|AnySDKClass): CSkeletonAnimationController;
 
 declare interface CSkeletonInstance {
     readonly "ModelState": CModelState;
@@ -5773,8 +4867,6 @@ declare interface CSkeletonInstance {
     IsValid: () => boolean;
 }
 
-declare function CSkeletonInstance(ptr_or_class: string|AnySDKClass): CSkeletonInstance;
-
 declare interface CSkillDamage {
     readonly "Damage": CSkillFloat;
     "NPCDamageScalarVsNPC": number;
@@ -5783,23 +4875,17 @@ declare interface CSkillDamage {
     IsValid: () => boolean;
 }
 
-declare function CSkillDamage(ptr_or_class: string|AnySDKClass): CSkillDamage;
-
 declare interface CSkillFloat {
     "Value": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CSkillFloat(ptr_or_class: string|AnySDKClass): CSkillFloat;
-
 declare interface CSkillInt {
     "Value": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSkillInt(ptr_or_class: string|AnySDKClass): CSkillInt;
 
 declare interface CSkyboxReference {
     "WorldGroupId": number;
@@ -5809,8 +4895,6 @@ declare interface CSkyboxReference {
     IsValid: () => boolean;
 }
 
-declare function CSkyboxReference(ptr_or_class: string|AnySDKClass): CSkyboxReference;
-
 declare interface CSoundEnvelope {
     "Current": number;
     "Target": number;
@@ -5819,8 +4903,6 @@ declare interface CSoundEnvelope {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEnvelope(ptr_or_class: string|AnySDKClass): CSoundEnvelope;
 
 declare interface CSoundPatch {
     readonly "Pitch": CSoundEnvelope;
@@ -5840,15 +4922,11 @@ declare interface CSoundPatch {
     IsValid: () => boolean;
 }
 
-declare function CSoundPatch(ptr_or_class: string|AnySDKClass): CSoundPatch;
-
 declare interface CSpriteOriented {
     readonly "Parent": CSprite;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSpriteOriented(ptr_or_class: string|AnySDKClass): CSpriteOriented;
 
 declare interface CStopwatch {
     "Interval": number;
@@ -5857,8 +4935,6 @@ declare interface CStopwatch {
     IsValid: () => boolean;
 }
 
-declare function CStopwatch(ptr_or_class: string|AnySDKClass): CStopwatch;
-
 declare interface CStopwatchBase {
     "IsRunning": boolean;
     readonly "Parent": CSimpleSimTimer;
@@ -5866,15 +4942,11 @@ declare interface CStopwatchBase {
     IsValid: () => boolean;
 }
 
-declare function CStopwatchBase(ptr_or_class: string|AnySDKClass): CStopwatchBase;
-
 declare interface CTablet {
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTablet(ptr_or_class: string|AnySDKClass): CTablet;
 
 declare interface CTakeDamageInfo {
     "DamageForce": Vector;
@@ -5902,15 +4974,11 @@ declare interface CTakeDamageInfo {
     IsValid: () => boolean;
 }
 
-declare function CTakeDamageInfo(ptr_or_class: string|AnySDKClass): CTakeDamageInfo;
-
 declare interface CTakeDamageInfoAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTakeDamageInfoAPI(ptr_or_class: string|AnySDKClass): CTakeDamageInfoAPI;
 
 declare interface CTakeDamageResult {
     readonly "OriginatingInfo": CTakeDamageInfo;
@@ -5923,15 +4991,11 @@ declare interface CTakeDamageResult {
     IsValid: () => boolean;
 }
 
-declare function CTakeDamageResult(ptr_or_class: string|AnySDKClass): CTakeDamageResult;
-
 declare interface CTakeDamageSummaryScopeGuard {
     readonly "Summaries": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTakeDamageSummaryScopeGuard(ptr_or_class: string|AnySDKClass): CTakeDamageSummaryScopeGuard;
 
 declare interface CTimeline {
     "Values": Object;
@@ -5946,15 +5010,11 @@ declare interface CTimeline {
     IsValid: () => boolean;
 }
 
-declare function CTimeline(ptr_or_class: string|AnySDKClass): CTimeline;
-
 declare interface CTripWireFire {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTripWireFire(ptr_or_class: string|AnySDKClass): CTripWireFire;
 
 declare interface CTripWireFireProjectile {
     readonly "Parent": CBaseGrenade;
@@ -5962,15 +5022,11 @@ declare interface CTripWireFireProjectile {
     IsValid: () => boolean;
 }
 
-declare function CTripWireFireProjectile(ptr_or_class: string|AnySDKClass): CTripWireFireProjectile;
-
 declare interface CWaterSplasher {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWaterSplasher(ptr_or_class: string|AnySDKClass): CWaterSplasher;
 
 declare interface CWeaponZoneRepulsor {
     readonly "Parent": CCSWeaponBaseGun;
@@ -5978,16 +5034,12 @@ declare interface CWeaponZoneRepulsor {
     IsValid: () => boolean;
 }
 
-declare function CWeaponZoneRepulsor(ptr_or_class: string|AnySDKClass): CWeaponZoneRepulsor;
-
 declare interface CWorldCompositionChunkReferenceElement_t {
     "StrMapToLoad": string;
     "StrLandmarkName": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWorldCompositionChunkReferenceElement_t(ptr_or_class: string|AnySDKClass): CWorldCompositionChunkReferenceElement_t;
 
 declare interface CommandToolCommand_t {
     "Enabled": boolean;
@@ -6006,8 +5058,6 @@ declare interface CommandToolCommand_t {
     IsValid: () => boolean;
 }
 
-declare function CommandToolCommand_t(ptr_or_class: string|AnySDKClass): CommandToolCommand_t;
-
 declare interface CompMatMutatorCondition_t {
     "MutatorCondition": number;
     "StrMutatorConditionContainerName": string;
@@ -6017,8 +5067,6 @@ declare interface CompMatMutatorCondition_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CompMatMutatorCondition_t(ptr_or_class: string|AnySDKClass): CompMatMutatorCondition_t;
 
 declare interface CompMatPropertyMutator_t {
     "Enabled": boolean;
@@ -6053,8 +5101,6 @@ declare interface CompMatPropertyMutator_t {
     IsValid: () => boolean;
 }
 
-declare function CompMatPropertyMutator_t(ptr_or_class: string|AnySDKClass): CompMatPropertyMutator_t;
-
 declare interface CompositeMaterialAssemblyProcedure_t {
     readonly "MatchFilters": Object;
     readonly "CompositeInputContainers": Object;
@@ -6062,8 +5108,6 @@ declare interface CompositeMaterialAssemblyProcedure_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CompositeMaterialAssemblyProcedure_t(ptr_or_class: string|AnySDKClass): CompositeMaterialAssemblyProcedure_t;
 
 declare interface CompositeMaterialEditorPoint_t {
     "SequenceIndex": number;
@@ -6074,8 +5118,6 @@ declare interface CompositeMaterialEditorPoint_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CompositeMaterialEditorPoint_t(ptr_or_class: string|AnySDKClass): CompositeMaterialEditorPoint_t;
 
 declare interface CompositeMaterialInputContainer_t {
     "Enabled": boolean;
@@ -6088,8 +5130,6 @@ declare interface CompositeMaterialInputContainer_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CompositeMaterialInputContainer_t(ptr_or_class: string|AnySDKClass): CompositeMaterialInputContainer_t;
 
 declare interface CompositeMaterialInputLooseVariable_t {
     "StrName": string;
@@ -6131,8 +5171,6 @@ declare interface CompositeMaterialInputLooseVariable_t {
     IsValid: () => boolean;
 }
 
-declare function CompositeMaterialInputLooseVariable_t(ptr_or_class: string|AnySDKClass): CompositeMaterialInputLooseVariable_t;
-
 declare interface CompositeMaterialMatchFilter_t {
     "CompositeMaterialMatchFilterType": number;
     "StrMatchFilter": string;
@@ -6142,15 +5180,11 @@ declare interface CompositeMaterialMatchFilter_t {
     IsValid: () => boolean;
 }
 
-declare function CompositeMaterialMatchFilter_t(ptr_or_class: string|AnySDKClass): CompositeMaterialMatchFilter_t;
-
 declare interface CompositeMaterial_t {
     readonly "GeneratedTextures": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CompositeMaterial_t(ptr_or_class: string|AnySDKClass): CompositeMaterial_t;
 
 declare interface CountdownTimer {
     "Duration": number;
@@ -6161,8 +5195,6 @@ declare interface CountdownTimer {
     IsValid: () => boolean;
 }
 
-declare function CountdownTimer(ptr_or_class: string|AnySDKClass): CountdownTimer;
-
 declare interface EngineCountdownTimer {
     "Duration": number;
     "Timestamp": number;
@@ -6170,8 +5202,6 @@ declare interface EngineCountdownTimer {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EngineCountdownTimer(ptr_or_class: string|AnySDKClass): EngineCountdownTimer;
 
 declare interface EngineLoopState_t {
     "PlatWindowWidth": number;
@@ -6182,8 +5212,6 @@ declare interface EngineLoopState_t {
     IsValid: () => boolean;
 }
 
-declare function EngineLoopState_t(ptr_or_class: string|AnySDKClass): EngineLoopState_t;
-
 declare interface EntityRenderAttribute_t {
     "ID": number;
     "Values": Vector4D;
@@ -6191,16 +5219,12 @@ declare interface EntityRenderAttribute_t {
     IsValid: () => boolean;
 }
 
-declare function EntityRenderAttribute_t(ptr_or_class: string|AnySDKClass): EntityRenderAttribute_t;
-
 declare interface EntitySpottedState_t {
     "Spotted": boolean;
     "SpottedByMask": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EntitySpottedState_t(ptr_or_class: string|AnySDKClass): EntitySpottedState_t;
 
 declare interface EventAdvanceTick_t {
     "CurrentTick": number;
@@ -6212,15 +5236,11 @@ declare interface EventAdvanceTick_t {
     IsValid: () => boolean;
 }
 
-declare function EventAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventAdvanceTick_t;
-
 declare interface EventAppShutdown_t {
     "Dummy0": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventAppShutdown_t(ptr_or_class: string|AnySDKClass): EventAppShutdown_t;
 
 declare interface EventClientAdvanceNonRenderedFrame_t {
 
@@ -6228,15 +5248,11 @@ declare interface EventClientAdvanceNonRenderedFrame_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientAdvanceNonRenderedFrame_t(ptr_or_class: string|AnySDKClass): EventClientAdvanceNonRenderedFrame_t;
-
 declare interface EventClientAdvanceTick_t {
     readonly "Parent": EventAdvanceTick_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventClientAdvanceTick_t;
 
 declare interface EventClientFrameSimulate_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6246,8 +5262,6 @@ declare interface EventClientFrameSimulate_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientFrameSimulate_t(ptr_or_class: string|AnySDKClass): EventClientFrameSimulate_t;
 
 declare interface EventClientOutput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6259,15 +5273,11 @@ declare interface EventClientOutput_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientOutput_t(ptr_or_class: string|AnySDKClass): EventClientOutput_t;
-
 declare interface EventClientPauseSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientPauseSimulate_t(ptr_or_class: string|AnySDKClass): EventClientPauseSimulate_t;
 
 declare interface EventClientPollInput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6276,23 +5286,17 @@ declare interface EventClientPollInput_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientPollInput_t(ptr_or_class: string|AnySDKClass): EventClientPollInput_t;
-
 declare interface EventClientPollNetworking_t {
     "TickCount": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function EventClientPollNetworking_t(ptr_or_class: string|AnySDKClass): EventClientPollNetworking_t;
-
 declare interface EventClientPostAdvanceTick_t {
     readonly "Parent": EventPostAdvanceTick_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientPostAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventClientPostAdvanceTick_t;
 
 declare interface EventClientPostOutput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6304,15 +5308,11 @@ declare interface EventClientPostOutput_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientPostOutput_t(ptr_or_class: string|AnySDKClass): EventClientPostOutput_t;
-
 declare interface EventClientPostSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientPostSimulate_t(ptr_or_class: string|AnySDKClass): EventClientPostSimulate_t;
 
 declare interface EventClientPreOutput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6325,15 +5325,11 @@ declare interface EventClientPreOutput_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientPreOutput_t(ptr_or_class: string|AnySDKClass): EventClientPreOutput_t;
-
 declare interface EventClientPreSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientPreSimulate_t(ptr_or_class: string|AnySDKClass): EventClientPreSimulate_t;
 
 declare interface EventClientProcessGameInput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6342,8 +5338,6 @@ declare interface EventClientProcessGameInput_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientProcessGameInput_t(ptr_or_class: string|AnySDKClass): EventClientProcessGameInput_t;
 
 declare interface EventClientProcessInput_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6354,15 +5348,11 @@ declare interface EventClientProcessInput_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientProcessInput_t(ptr_or_class: string|AnySDKClass): EventClientProcessInput_t;
-
 declare interface EventClientProcessNetworking_t {
     "TickCount": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientProcessNetworking_t(ptr_or_class: string|AnySDKClass): EventClientProcessNetworking_t;
 
 declare interface EventClientSceneSystemThreadStateChange_t {
     "ThreadsActive": boolean;
@@ -6370,15 +5360,11 @@ declare interface EventClientSceneSystemThreadStateChange_t {
     IsValid: () => boolean;
 }
 
-declare function EventClientSceneSystemThreadStateChange_t(ptr_or_class: string|AnySDKClass): EventClientSceneSystemThreadStateChange_t;
-
 declare interface EventClientSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventClientSimulate_t(ptr_or_class: string|AnySDKClass): EventClientSimulate_t;
 
 declare interface EventFrameBoundary_t {
     "FrameTime": number;
@@ -6386,15 +5372,11 @@ declare interface EventFrameBoundary_t {
     IsValid: () => boolean;
 }
 
-declare function EventFrameBoundary_t(ptr_or_class: string|AnySDKClass): EventFrameBoundary_t;
-
 declare interface EventModInitialized_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventModInitialized_t(ptr_or_class: string|AnySDKClass): EventModInitialized_t;
 
 declare interface EventPostAdvanceTick_t {
     "CurrentTick": number;
@@ -6406,15 +5388,11 @@ declare interface EventPostAdvanceTick_t {
     IsValid: () => boolean;
 }
 
-declare function EventPostAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventPostAdvanceTick_t;
-
 declare interface EventPostDataUpdate_t {
     "Count": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventPostDataUpdate_t(ptr_or_class: string|AnySDKClass): EventPostDataUpdate_t;
 
 declare interface EventPreDataUpdate_t {
     "Count": number;
@@ -6422,15 +5400,11 @@ declare interface EventPreDataUpdate_t {
     IsValid: () => boolean;
 }
 
-declare function EventPreDataUpdate_t(ptr_or_class: string|AnySDKClass): EventPreDataUpdate_t;
-
 declare interface EventProfileStorageAvailable_t {
     "SplitScreenSlot": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventProfileStorageAvailable_t(ptr_or_class: string|AnySDKClass): EventProfileStorageAvailable_t;
 
 declare interface EventServerAdvanceTick_t {
     readonly "Parent": EventAdvanceTick_t;
@@ -6438,15 +5412,11 @@ declare interface EventServerAdvanceTick_t {
     IsValid: () => boolean;
 }
 
-declare function EventServerAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventServerAdvanceTick_t;
-
 declare interface EventServerBeginAsyncPostTickWork_t {
     readonly "Parent": EventPostAdvanceTick_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventServerBeginAsyncPostTickWork_t(ptr_or_class: string|AnySDKClass): EventServerBeginAsyncPostTickWork_t;
 
 declare interface EventServerEndAsyncPostTickWork_t {
 
@@ -6454,15 +5424,11 @@ declare interface EventServerEndAsyncPostTickWork_t {
     IsValid: () => boolean;
 }
 
-declare function EventServerEndAsyncPostTickWork_t(ptr_or_class: string|AnySDKClass): EventServerEndAsyncPostTickWork_t;
-
 declare interface EventServerPollNetworking_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventServerPollNetworking_t(ptr_or_class: string|AnySDKClass): EventServerPollNetworking_t;
 
 declare interface EventServerPostAdvanceTick_t {
     readonly "Parent": EventPostAdvanceTick_t;
@@ -6470,15 +5436,11 @@ declare interface EventServerPostAdvanceTick_t {
     IsValid: () => boolean;
 }
 
-declare function EventServerPostAdvanceTick_t(ptr_or_class: string|AnySDKClass): EventServerPostAdvanceTick_t;
-
 declare interface EventServerPostSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventServerPostSimulate_t(ptr_or_class: string|AnySDKClass): EventServerPostSimulate_t;
 
 declare interface EventServerProcessNetworking_t {
     readonly "Parent": EventSimulate_t;
@@ -6486,15 +5448,11 @@ declare interface EventServerProcessNetworking_t {
     IsValid: () => boolean;
 }
 
-declare function EventServerProcessNetworking_t(ptr_or_class: string|AnySDKClass): EventServerProcessNetworking_t;
-
 declare interface EventServerSimulate_t {
     readonly "Parent": EventSimulate_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventServerSimulate_t(ptr_or_class: string|AnySDKClass): EventServerSimulate_t;
 
 declare interface EventSetTime_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6509,8 +5467,6 @@ declare interface EventSetTime_t {
     IsValid: () => boolean;
 }
 
-declare function EventSetTime_t(ptr_or_class: string|AnySDKClass): EventSetTime_t;
-
 declare interface EventSimpleLoopFrameUpdate_t {
     readonly "LoopState": EngineLoopState_t;
     "RealTime": number;
@@ -6518,8 +5474,6 @@ declare interface EventSimpleLoopFrameUpdate_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventSimpleLoopFrameUpdate_t(ptr_or_class: string|AnySDKClass): EventSimpleLoopFrameUpdate_t;
 
 declare interface EventSimulate_t {
     readonly "LoopState": EngineLoopState_t;
@@ -6529,15 +5483,11 @@ declare interface EventSimulate_t {
     IsValid: () => boolean;
 }
 
-declare function EventSimulate_t(ptr_or_class: string|AnySDKClass): EventSimulate_t;
-
 declare interface EventSplitScreenStateChanged_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EventSplitScreenStateChanged_t(ptr_or_class: string|AnySDKClass): EventSplitScreenStateChanged_t;
 
 declare interface GameAmmoTypeInfo_t {
     "BuySize": number;
@@ -6547,15 +5497,11 @@ declare interface GameAmmoTypeInfo_t {
     IsValid: () => boolean;
 }
 
-declare function GameAmmoTypeInfo_t(ptr_or_class: string|AnySDKClass): GameAmmoTypeInfo_t;
-
 declare interface GeneratedTextureHandle_t {
     "StrBitmapName": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function GeneratedTextureHandle_t(ptr_or_class: string|AnySDKClass): GeneratedTextureHandle_t;
 
 declare interface HullFlags_t {
     "Hull_Human": boolean;
@@ -6572,15 +5518,11 @@ declare interface HullFlags_t {
     IsValid: () => boolean;
 }
 
-declare function HullFlags_t(ptr_or_class: string|AnySDKClass): HullFlags_t;
-
 declare interface IChoreoServices {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IChoreoServices(ptr_or_class: string|AnySDKClass): IChoreoServices;
 
 declare interface IClientAlphaProperty {
 
@@ -6588,15 +5530,11 @@ declare interface IClientAlphaProperty {
     IsValid: () => boolean;
 }
 
-declare function IClientAlphaProperty(ptr_or_class: string|AnySDKClass): IClientAlphaProperty;
-
 declare interface IEconItemInterface {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IEconItemInterface(ptr_or_class: string|AnySDKClass): IEconItemInterface;
 
 declare interface IGapHost_GameEntity {
 
@@ -6604,15 +5542,11 @@ declare interface IGapHost_GameEntity {
     IsValid: () => boolean;
 }
 
-declare function IGapHost_GameEntity(ptr_or_class: string|AnySDKClass): IGapHost_GameEntity;
-
 declare interface IHasAttributes {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IHasAttributes(ptr_or_class: string|AnySDKClass): IHasAttributes;
 
 declare interface IRagdoll {
 
@@ -6620,15 +5554,11 @@ declare interface IRagdoll {
     IsValid: () => boolean;
 }
 
-declare function IRagdoll(ptr_or_class: string|AnySDKClass): IRagdoll;
-
 declare interface ISkeletonAnimationController {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ISkeletonAnimationController(ptr_or_class: string|AnySDKClass): ISkeletonAnimationController;
 
 declare interface IntervalTimer {
     "Timestamp": number;
@@ -6637,15 +5567,11 @@ declare interface IntervalTimer {
     IsValid: () => boolean;
 }
 
-declare function IntervalTimer(ptr_or_class: string|AnySDKClass): IntervalTimer;
-
 declare interface ModelConfigHandle_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ModelConfigHandle_t(ptr_or_class: string|AnySDKClass): ModelConfigHandle_t;
 
 declare interface ParticleIndex_t {
     "Value": number;
@@ -6653,15 +5579,11 @@ declare interface ParticleIndex_t {
     IsValid: () => boolean;
 }
 
-declare function ParticleIndex_t(ptr_or_class: string|AnySDKClass): ParticleIndex_t;
-
 declare interface PhysicsRagdollPose_t {
     readonly "Owner": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PhysicsRagdollPose_t(ptr_or_class: string|AnySDKClass): PhysicsRagdollPose_t;
 
 declare interface PointCameraSettings_t {
     "NearBlurryDistance": number;
@@ -6672,8 +5594,6 @@ declare interface PointCameraSettings_t {
     IsValid: () => boolean;
 }
 
-declare function PointCameraSettings_t(ptr_or_class: string|AnySDKClass): PointCameraSettings_t;
-
 declare interface PredictedDamageTag_t {
     "TagTick": number;
     "FlinchModSmall": number;
@@ -6683,15 +5603,11 @@ declare interface PredictedDamageTag_t {
     IsValid: () => boolean;
 }
 
-declare function PredictedDamageTag_t(ptr_or_class: string|AnySDKClass): PredictedDamageTag_t;
-
 declare interface QuestProgress {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function QuestProgress(ptr_or_class: string|AnySDKClass): QuestProgress;
 
 declare interface RagdollCreationParams_t {
     "Force": Vector;
@@ -6701,8 +5617,6 @@ declare interface RagdollCreationParams_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RagdollCreationParams_t(ptr_or_class: string|AnySDKClass): RagdollCreationParams_t;
 
 declare interface ResponseFollowup {
     "Followup_concept": string;
@@ -6717,8 +5631,6 @@ declare interface ResponseFollowup {
     IsValid: () => boolean;
 }
 
-declare function ResponseFollowup(ptr_or_class: string|AnySDKClass): ResponseFollowup;
-
 declare interface ResponseParams {
     "Odds": number;
     "Flags": number;
@@ -6727,15 +5639,11 @@ declare interface ResponseParams {
     IsValid: () => boolean;
 }
 
-declare function ResponseParams(ptr_or_class: string|AnySDKClass): ResponseParams;
-
 declare interface SceneEventId_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SceneEventId_t(ptr_or_class: string|AnySDKClass): SceneEventId_t;
 
 declare interface SellbackPurchaseEntry_t {
     "DefIdx": number;
@@ -6746,8 +5654,6 @@ declare interface SellbackPurchaseEntry_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SellbackPurchaseEntry_t(ptr_or_class: string|AnySDKClass): SellbackPurchaseEntry_t;
 
 declare interface SequenceHistory_t {
     "Sequence": number;
@@ -6760,8 +5666,6 @@ declare interface SequenceHistory_t {
     IsValid: () => boolean;
 }
 
-declare function SequenceHistory_t(ptr_or_class: string|AnySDKClass): SequenceHistory_t;
-
 declare interface ServerAuthoritativeWeaponSlot_t {
     "Class": number;
     "Slot": number;
@@ -6769,8 +5673,6 @@ declare interface ServerAuthoritativeWeaponSlot_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ServerAuthoritativeWeaponSlot_t(ptr_or_class: string|AnySDKClass): ServerAuthoritativeWeaponSlot_t;
 
 declare interface SummaryTakeDamageInfo_t {
     "SummarisedCount": number;
@@ -6781,16 +5683,12 @@ declare interface SummaryTakeDamageInfo_t {
     IsValid: () => boolean;
 }
 
-declare function SummaryTakeDamageInfo_t(ptr_or_class: string|AnySDKClass): SummaryTakeDamageInfo_t;
-
 declare interface TimedEvent {
     "TimeBetweenEvents": number;
     "NextEvent": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function TimedEvent(ptr_or_class: string|AnySDKClass): TimedEvent;
 
 declare interface VPhysicsCollisionAttribute_t {
     "InteractsAs": number;
@@ -6805,8 +5703,6 @@ declare interface VPhysicsCollisionAttribute_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysicsCollisionAttribute_t(ptr_or_class: string|AnySDKClass): VPhysicsCollisionAttribute_t;
-
 declare interface ViewAngleServerChange_t {
     "Type": number;
     "Angle": QAngle;
@@ -6815,16 +5711,12 @@ declare interface ViewAngleServerChange_t {
     IsValid: () => boolean;
 }
 
-declare function ViewAngleServerChange_t(ptr_or_class: string|AnySDKClass): ViewAngleServerChange_t;
-
 declare interface WaterWheelDrag_t {
     "FractionOfWheelSubmerged": number;
     "WheelDrag": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function WaterWheelDrag_t(ptr_or_class: string|AnySDKClass): WaterWheelDrag_t;
 
 declare interface WaterWheelFrictionScale_t {
     "FractionOfWheelSubmerged": number;
@@ -6833,8 +5725,6 @@ declare interface WaterWheelFrictionScale_t {
     IsValid: () => boolean;
 }
 
-declare function WaterWheelFrictionScale_t(ptr_or_class: string|AnySDKClass): WaterWheelFrictionScale_t;
-
 declare interface WeaponPurchaseCount_t {
     "ItemDefIndex": number;
     "Count": number;
@@ -6842,23 +5732,17 @@ declare interface WeaponPurchaseCount_t {
     IsValid: () => boolean;
 }
 
-declare function WeaponPurchaseCount_t(ptr_or_class: string|AnySDKClass): WeaponPurchaseCount_t;
-
 declare interface WeaponPurchaseTracker_t {
     readonly "WeaponPurchases": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function WeaponPurchaseTracker_t(ptr_or_class: string|AnySDKClass): WeaponPurchaseTracker_t;
-
 declare interface WrappedPhysicsJoint_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function WrappedPhysicsJoint_t(ptr_or_class: string|AnySDKClass): WrappedPhysicsJoint_t;
 
 declare interface audioparams_t {
     "LocalSound": Object;
@@ -6869,8 +5753,6 @@ declare interface audioparams_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function audioparams_t(ptr_or_class: string|AnySDKClass): audioparams_t;
 
 declare interface fogparams_t {
     "DirPrimary": Vector;
@@ -6902,8 +5784,6 @@ declare interface fogparams_t {
     IsValid: () => boolean;
 }
 
-declare function fogparams_t(ptr_or_class: string|AnySDKClass): fogparams_t;
-
 declare interface hudtextparms_t {
     "Color1": Color;
     "Color2": Color;
@@ -6915,8 +5795,6 @@ declare interface hudtextparms_t {
     IsValid: () => boolean;
 }
 
-declare function hudtextparms_t(ptr_or_class: string|AnySDKClass): hudtextparms_t;
-
 declare interface ragdoll_t {
     readonly "List": Object;
     readonly "BoneIndex": Object;
@@ -6926,8 +5804,6 @@ declare interface ragdoll_t {
     IsValid: () => boolean;
 }
 
-declare function ragdoll_t(ptr_or_class: string|AnySDKClass): ragdoll_t;
-
 declare interface ragdollelement_t {
     "OriginParentSpace": Vector;
     "ParentIndex": number;
@@ -6935,8 +5811,6 @@ declare interface ragdollelement_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ragdollelement_t(ptr_or_class: string|AnySDKClass): ragdollelement_t;
 
 declare interface shard_model_desc_t {
     "ModelID": number;
@@ -6954,8 +5828,6 @@ declare interface shard_model_desc_t {
     IsValid: () => boolean;
 }
 
-declare function shard_model_desc_t(ptr_or_class: string|AnySDKClass): shard_model_desc_t;
-
 declare interface sky3dparams_t {
     "Scale": number;
     "Origin": Vector;
@@ -6967,8 +5839,6 @@ declare interface sky3dparams_t {
     IsValid: () => boolean;
 }
 
-declare function sky3dparams_t(ptr_or_class: string|AnySDKClass): sky3dparams_t;
-
 declare interface sndopvarlatchdata_t {
     "Stack": string;
     "Operator": string;
@@ -6979,8 +5849,6 @@ declare interface sndopvarlatchdata_t {
     IsValid: () => boolean;
 }
 
-declare function sndopvarlatchdata_t(ptr_or_class: string|AnySDKClass): sndopvarlatchdata_t;
-
 declare interface thinkfunc_t {
     "Context": number;
     "NextThinkTick": number;
@@ -6989,23 +5857,17 @@ declare interface thinkfunc_t {
     IsValid: () => boolean;
 }
 
-declare function thinkfunc_t(ptr_or_class: string|AnySDKClass): thinkfunc_t;
-
 declare interface CEmptyEntityInstance {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CEmptyEntityInstance(ptr_or_class: string|AnySDKClass): CEmptyEntityInstance;
-
 declare interface CEntityComponent {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEntityComponent(ptr_or_class: string|AnySDKClass): CEntityComponent;
 
 declare interface CEntityComponentHelper {
     "Flags": number;
@@ -7016,15 +5878,11 @@ declare interface CEntityComponentHelper {
     IsValid: () => boolean;
 }
 
-declare function CEntityComponentHelper(ptr_or_class: string|AnySDKClass): CEntityComponentHelper;
-
 declare interface CEntityIOOutput {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEntityIOOutput(ptr_or_class: string|AnySDKClass): CEntityIOOutput;
 
 declare interface CEntityIdentity {
     "NameStringableIndex": number;
@@ -7042,8 +5900,6 @@ declare interface CEntityIdentity {
     IsValid: () => boolean;
 }
 
-declare function CEntityIdentity(ptr_or_class: string|AnySDKClass): CEntityIdentity;
-
 declare interface CEntityInstance {
     "PrivateVScripts": string;
     readonly "Entity": CEntityIdentity;
@@ -7053,15 +5909,11 @@ declare interface CEntityInstance {
     IsValid: () => boolean;
 }
 
-declare function CEntityInstance(ptr_or_class: string|AnySDKClass): CEntityInstance;
-
 declare interface CNetworkVarChainer {
     readonly "PathIndex": ChangeAccessorFieldPathIndex_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNetworkVarChainer(ptr_or_class: string|AnySDKClass): CNetworkVarChainer;
 
 declare interface CScriptComponent {
     "ScriptClassName": string;
@@ -7070,15 +5922,11 @@ declare interface CScriptComponent {
     IsValid: () => boolean;
 }
 
-declare function CScriptComponent(ptr_or_class: string|AnySDKClass): CScriptComponent;
-
 declare interface CVariantDefaultAllocator {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVariantDefaultAllocator(ptr_or_class: string|AnySDKClass): CVariantDefaultAllocator;
 
 declare interface EntComponentInfo_t {
     "Name": string;
@@ -7092,15 +5940,11 @@ declare interface EntComponentInfo_t {
     IsValid: () => boolean;
 }
 
-declare function EntComponentInfo_t(ptr_or_class: string|AnySDKClass): EntComponentInfo_t;
-
 declare interface EntInput_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EntInput_t(ptr_or_class: string|AnySDKClass): EntInput_t;
 
 declare interface EntOutput_t {
 
@@ -7108,23 +5952,17 @@ declare interface EntOutput_t {
     IsValid: () => boolean;
 }
 
-declare function EntOutput_t(ptr_or_class: string|AnySDKClass): EntOutput_t;
-
 declare interface CAnimScriptBase {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CAnimScriptBase(ptr_or_class: string|AnySDKClass): CAnimScriptBase;
-
 declare interface MaterialParamBuffer_t {
     readonly "Parent": MaterialParam_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialParamBuffer_t(ptr_or_class: string|AnySDKClass): MaterialParamBuffer_t;
 
 declare interface MaterialParamFloat_t {
     "Value": number;
@@ -7133,16 +5971,12 @@ declare interface MaterialParamFloat_t {
     IsValid: () => boolean;
 }
 
-declare function MaterialParamFloat_t(ptr_or_class: string|AnySDKClass): MaterialParamFloat_t;
-
 declare interface MaterialParamInt_t {
     "Value": number;
     readonly "Parent": MaterialParam_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialParamInt_t(ptr_or_class: string|AnySDKClass): MaterialParamInt_t;
 
 declare interface MaterialParamString_t {
     "Value": string;
@@ -7151,15 +5985,11 @@ declare interface MaterialParamString_t {
     IsValid: () => boolean;
 }
 
-declare function MaterialParamString_t(ptr_or_class: string|AnySDKClass): MaterialParamString_t;
-
 declare interface MaterialParamTexture_t {
     readonly "Parent": MaterialParam_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialParamTexture_t(ptr_or_class: string|AnySDKClass): MaterialParamTexture_t;
 
 declare interface MaterialParamVector_t {
     "Value": Vector4D;
@@ -7168,15 +5998,11 @@ declare interface MaterialParamVector_t {
     IsValid: () => boolean;
 }
 
-declare function MaterialParamVector_t(ptr_or_class: string|AnySDKClass): MaterialParamVector_t;
-
 declare interface MaterialParam_t {
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialParam_t(ptr_or_class: string|AnySDKClass): MaterialParam_t;
 
 declare interface MaterialResourceData_t {
     "MaterialName": string;
@@ -7197,8 +6023,6 @@ declare interface MaterialResourceData_t {
     IsValid: () => boolean;
 }
 
-declare function MaterialResourceData_t(ptr_or_class: string|AnySDKClass): MaterialResourceData_t;
-
 declare interface PostProcessingBloomParameters_t {
     "BlendMode": number;
     "BloomStrength": number;
@@ -7214,8 +6038,6 @@ declare interface PostProcessingBloomParameters_t {
     IsValid: () => boolean;
 }
 
-declare function PostProcessingBloomParameters_t(ptr_or_class: string|AnySDKClass): PostProcessingBloomParameters_t;
-
 declare interface PostProcessingLocalContrastParameters_t {
     "LocalContrastStrength": number;
     "LocalContrastEdgeStrength": number;
@@ -7225,8 +6047,6 @@ declare interface PostProcessingLocalContrastParameters_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PostProcessingLocalContrastParameters_t(ptr_or_class: string|AnySDKClass): PostProcessingLocalContrastParameters_t;
 
 declare interface PostProcessingResource_t {
     "HasTonemapParams": boolean;
@@ -7242,8 +6062,6 @@ declare interface PostProcessingResource_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PostProcessingResource_t(ptr_or_class: string|AnySDKClass): PostProcessingResource_t;
 
 declare interface PostProcessingTonemapParameters_t {
     "ExposureBias": number;
@@ -7265,8 +6083,6 @@ declare interface PostProcessingTonemapParameters_t {
     IsValid: () => boolean;
 }
 
-declare function PostProcessingTonemapParameters_t(ptr_or_class: string|AnySDKClass): PostProcessingTonemapParameters_t;
-
 declare interface PostProcessingVignetteParameters_t {
     "VignetteStrength": number;
     "Center": Vector2D;
@@ -7278,16 +6094,12 @@ declare interface PostProcessingVignetteParameters_t {
     IsValid: () => boolean;
 }
 
-declare function PostProcessingVignetteParameters_t(ptr_or_class: string|AnySDKClass): PostProcessingVignetteParameters_t;
-
 declare interface AABB_t {
     "MinBounds": Vector;
     "MaxBounds": Vector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AABB_t(ptr_or_class: string|AnySDKClass): AABB_t;
 
 declare interface CFuseProgram {
     readonly "ProgramBuffer": Object;
@@ -7298,8 +6110,6 @@ declare interface CFuseProgram {
     IsValid: () => boolean;
 }
 
-declare function CFuseProgram(ptr_or_class: string|AnySDKClass): CFuseProgram;
-
 declare interface CFuseSymbolTable {
     readonly "Constants": Object;
     readonly "Variables": Object;
@@ -7308,8 +6118,6 @@ declare interface CFuseSymbolTable {
     IsValid: () => boolean;
 }
 
-declare function CFuseSymbolTable(ptr_or_class: string|AnySDKClass): CFuseSymbolTable;
-
 declare interface ConstantInfo_t {
     "Name": string;
     "NameToken": number;
@@ -7317,8 +6125,6 @@ declare interface ConstantInfo_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ConstantInfo_t(ptr_or_class: string|AnySDKClass): ConstantInfo_t;
 
 declare interface FunctionInfo_t {
     "Name": string;
@@ -7330,23 +6136,17 @@ declare interface FunctionInfo_t {
     IsValid: () => boolean;
 }
 
-declare function FunctionInfo_t(ptr_or_class: string|AnySDKClass): FunctionInfo_t;
-
 declare interface FuseFunctionIndex_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function FuseFunctionIndex_t(ptr_or_class: string|AnySDKClass): FuseFunctionIndex_t;
-
 declare interface FuseVariableIndex_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FuseVariableIndex_t(ptr_or_class: string|AnySDKClass): FuseVariableIndex_t;
 
 declare interface VariableInfo_t {
     "Name": string;
@@ -7359,15 +6159,11 @@ declare interface VariableInfo_t {
     IsValid: () => boolean;
 }
 
-declare function VariableInfo_t(ptr_or_class: string|AnySDKClass): VariableInfo_t;
-
 declare interface AnimComponentID {
     "Id": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AnimComponentID(ptr_or_class: string|AnySDKClass): AnimComponentID;
 
 declare interface AnimNodeID {
     "Id": number;
@@ -7375,15 +6171,11 @@ declare interface AnimNodeID {
     IsValid: () => boolean;
 }
 
-declare function AnimNodeID(ptr_or_class: string|AnySDKClass): AnimNodeID;
-
 declare interface AnimNodeOutputID {
     "Id": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AnimNodeOutputID(ptr_or_class: string|AnySDKClass): AnimNodeOutputID;
 
 declare interface AnimParamID {
     "Id": number;
@@ -7391,15 +6183,11 @@ declare interface AnimParamID {
     IsValid: () => boolean;
 }
 
-declare function AnimParamID(ptr_or_class: string|AnySDKClass): AnimParamID;
-
 declare interface AnimScriptHandle {
     "Id": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AnimScriptHandle(ptr_or_class: string|AnySDKClass): AnimScriptHandle;
 
 declare interface AnimStateID {
     "Id": number;
@@ -7407,15 +6195,11 @@ declare interface AnimStateID {
     IsValid: () => boolean;
 }
 
-declare function AnimStateID(ptr_or_class: string|AnySDKClass): AnimStateID;
-
 declare interface AnimTagID {
     "Id": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AnimTagID(ptr_or_class: string|AnySDKClass): AnimTagID;
 
 declare interface CAimConstraint {
     "UpType": number;
@@ -7423,8 +6207,6 @@ declare interface CAimConstraint {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAimConstraint(ptr_or_class: string|AnySDKClass): CAimConstraint;
 
 declare interface CAnimAttachment {
     "InfluenceOffsets": Object;
@@ -7435,15 +6217,11 @@ declare interface CAnimAttachment {
     IsValid: () => boolean;
 }
 
-declare function CAnimAttachment(ptr_or_class: string|AnySDKClass): CAnimAttachment;
-
 declare interface CAnimCycle {
     readonly "Parent": CCycleBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimCycle(ptr_or_class: string|AnySDKClass): CAnimCycle;
 
 declare interface CAnimFoot {
     "Name": string;
@@ -7455,8 +6233,6 @@ declare interface CAnimFoot {
     IsValid: () => boolean;
 }
 
-declare function CAnimFoot(ptr_or_class: string|AnySDKClass): CAnimFoot;
-
 declare interface CAnimSkeleton {
     readonly "BoneNames": Object;
     readonly "Parents": Object;
@@ -7466,8 +6242,6 @@ declare interface CAnimSkeleton {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAnimSkeleton(ptr_or_class: string|AnySDKClass): CAnimSkeleton;
 
 declare interface CAttachment {
     "Name": string;
@@ -7481,8 +6255,6 @@ declare interface CAttachment {
     IsValid: () => boolean;
 }
 
-declare function CAttachment(ptr_or_class: string|AnySDKClass): CAttachment;
-
 declare interface CBaseConstraint {
     "Name": string;
     "UpVector": Vector;
@@ -7492,15 +6264,11 @@ declare interface CBaseConstraint {
     IsValid: () => boolean;
 }
 
-declare function CBaseConstraint(ptr_or_class: string|AnySDKClass): CBaseConstraint;
-
 declare interface CBoneConstraintBase {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBoneConstraintBase(ptr_or_class: string|AnySDKClass): CBoneConstraintBase;
 
 declare interface CBoneConstraintDotToMorph {
     "BoneName": string;
@@ -7512,15 +6280,11 @@ declare interface CBoneConstraintDotToMorph {
     IsValid: () => boolean;
 }
 
-declare function CBoneConstraintDotToMorph(ptr_or_class: string|AnySDKClass): CBoneConstraintDotToMorph;
-
 declare interface CBoneConstraintPoseSpaceBone {
     readonly "Parent": CBaseConstraint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBoneConstraintPoseSpaceBone(ptr_or_class: string|AnySDKClass): CBoneConstraintPoseSpaceBone;
 
 declare interface CBoneConstraintPoseSpaceMorph {
     "BoneName": string;
@@ -7532,8 +6296,6 @@ declare interface CBoneConstraintPoseSpaceMorph {
     IsValid: () => boolean;
 }
 
-declare function CBoneConstraintPoseSpaceMorph(ptr_or_class: string|AnySDKClass): CBoneConstraintPoseSpaceMorph;
-
 declare interface CConstraintSlave {
     "BasePosition": Vector;
     "BoneHash": number;
@@ -7542,8 +6304,6 @@ declare interface CConstraintSlave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CConstraintSlave(ptr_or_class: string|AnySDKClass): CConstraintSlave;
 
 declare interface CConstraintTarget {
     "Offset": Vector;
@@ -7555,15 +6315,11 @@ declare interface CConstraintTarget {
     IsValid: () => boolean;
 }
 
-declare function CConstraintTarget(ptr_or_class: string|AnySDKClass): CConstraintTarget;
-
 declare interface CCycleBase {
     "Cycle": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCycleBase(ptr_or_class: string|AnySDKClass): CCycleBase;
 
 declare interface CDrawCullingData {
     "ConeApex": Vector;
@@ -7572,8 +6328,6 @@ declare interface CDrawCullingData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDrawCullingData(ptr_or_class: string|AnySDKClass): CDrawCullingData;
 
 declare interface CFlexController {
     "Name": string;
@@ -7584,15 +6338,11 @@ declare interface CFlexController {
     IsValid: () => boolean;
 }
 
-declare function CFlexController(ptr_or_class: string|AnySDKClass): CFlexController;
-
 declare interface CFlexDesc {
     "Facs": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFlexDesc(ptr_or_class: string|AnySDKClass): CFlexDesc;
 
 declare interface CFlexOp {
     "OpCode": number;
@@ -7601,8 +6351,6 @@ declare interface CFlexOp {
     IsValid: () => boolean;
 }
 
-declare function CFlexOp(ptr_or_class: string|AnySDKClass): CFlexOp;
-
 declare interface CFlexRule {
     "Flex": number;
     readonly "FlexOps": Object;
@@ -7610,15 +6358,11 @@ declare interface CFlexRule {
     IsValid: () => boolean;
 }
 
-declare function CFlexRule(ptr_or_class: string|AnySDKClass): CFlexRule;
-
 declare interface CFootCycle {
     readonly "Parent": CCycleBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootCycle(ptr_or_class: string|AnySDKClass): CFootCycle;
 
 declare interface CFootCycleDefinition {
     "StancePositionMS": Vector;
@@ -7634,8 +6378,6 @@ declare interface CFootCycleDefinition {
     IsValid: () => boolean;
 }
 
-declare function CFootCycleDefinition(ptr_or_class: string|AnySDKClass): CFootCycleDefinition;
-
 declare interface CFootDefinition {
     "Name": string;
     "AnkleBoneName": string;
@@ -7650,8 +6392,6 @@ declare interface CFootDefinition {
     IsValid: () => boolean;
 }
 
-declare function CFootDefinition(ptr_or_class: string|AnySDKClass): CFootDefinition;
-
 declare interface CFootMotion {
     readonly "Strides": Object;
     "Name": string;
@@ -7660,8 +6400,6 @@ declare interface CFootMotion {
     IsValid: () => boolean;
 }
 
-declare function CFootMotion(ptr_or_class: string|AnySDKClass): CFootMotion;
-
 declare interface CFootStride {
     readonly "Definition": CFootCycleDefinition;
     readonly "Trajectories": CFootTrajectories;
@@ -7669,15 +6407,11 @@ declare interface CFootStride {
     IsValid: () => boolean;
 }
 
-declare function CFootStride(ptr_or_class: string|AnySDKClass): CFootStride;
-
 declare interface CFootTrajectories {
     readonly "Trajectories": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootTrajectories(ptr_or_class: string|AnySDKClass): CFootTrajectories;
 
 declare interface CFootTrajectory {
     "Offset": Vector;
@@ -7686,8 +6420,6 @@ declare interface CFootTrajectory {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootTrajectory(ptr_or_class: string|AnySDKClass): CFootTrajectory;
 
 declare interface CHitBox {
     "Name": string;
@@ -7707,8 +6439,6 @@ declare interface CHitBox {
     IsValid: () => boolean;
 }
 
-declare function CHitBox(ptr_or_class: string|AnySDKClass): CHitBox;
-
 declare interface CHitBoxSet {
     "Name": string;
     "NameHash": number;
@@ -7718,15 +6448,11 @@ declare interface CHitBoxSet {
     IsValid: () => boolean;
 }
 
-declare function CHitBoxSet(ptr_or_class: string|AnySDKClass): CHitBoxSet;
-
 declare interface CHitBoxSetList {
     readonly "HitBoxSets": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHitBoxSetList(ptr_or_class: string|AnySDKClass): CHitBoxSetList;
 
 declare interface CMaterialDrawDescriptor {
     "UvDensity": number;
@@ -7744,15 +6470,11 @@ declare interface CMaterialDrawDescriptor {
     IsValid: () => boolean;
 }
 
-declare function CMaterialDrawDescriptor(ptr_or_class: string|AnySDKClass): CMaterialDrawDescriptor;
-
 declare interface CMeshletDescriptor {
     readonly "CullingData": CDrawCullingData;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMeshletDescriptor(ptr_or_class: string|AnySDKClass): CMeshletDescriptor;
 
 declare interface CModelConfig {
     "ConfigName": string;
@@ -7762,16 +6484,12 @@ declare interface CModelConfig {
     IsValid: () => boolean;
 }
 
-declare function CModelConfig(ptr_or_class: string|AnySDKClass): CModelConfig;
-
 declare interface CModelConfigElement {
     "ElementName": string;
     readonly "NestedElements": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CModelConfigElement(ptr_or_class: string|AnySDKClass): CModelConfigElement;
 
 declare interface CModelConfigElement_AttachedModel {
     "InstanceName": string;
@@ -7792,8 +6510,6 @@ declare interface CModelConfigElement_AttachedModel {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_AttachedModel(ptr_or_class: string|AnySDKClass): CModelConfigElement_AttachedModel;
-
 declare interface CModelConfigElement_Command {
     "Command": string;
     readonly "Parent": CModelConfigElement;
@@ -7801,15 +6517,11 @@ declare interface CModelConfigElement_Command {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_Command(ptr_or_class: string|AnySDKClass): CModelConfigElement_Command;
-
 declare interface CModelConfigElement_RandomColor {
     readonly "Parent": CModelConfigElement;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CModelConfigElement_RandomColor(ptr_or_class: string|AnySDKClass): CModelConfigElement_RandomColor;
 
 declare interface CModelConfigElement_RandomPick {
     readonly "Choices": Object;
@@ -7819,8 +6531,6 @@ declare interface CModelConfigElement_RandomPick {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_RandomPick(ptr_or_class: string|AnySDKClass): CModelConfigElement_RandomPick;
-
 declare interface CModelConfigElement_SetBodygroup {
     "GroupName": string;
     "Choice": number;
@@ -7828,8 +6538,6 @@ declare interface CModelConfigElement_SetBodygroup {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CModelConfigElement_SetBodygroup(ptr_or_class: string|AnySDKClass): CModelConfigElement_SetBodygroup;
 
 declare interface CModelConfigElement_SetBodygroupOnAttachedModels {
     "GroupName": string;
@@ -7839,16 +6547,12 @@ declare interface CModelConfigElement_SetBodygroupOnAttachedModels {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_SetBodygroupOnAttachedModels(ptr_or_class: string|AnySDKClass): CModelConfigElement_SetBodygroupOnAttachedModels;
-
 declare interface CModelConfigElement_SetMaterialGroup {
     "MaterialGroupName": string;
     readonly "Parent": CModelConfigElement;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CModelConfigElement_SetMaterialGroup(ptr_or_class: string|AnySDKClass): CModelConfigElement_SetMaterialGroup;
 
 declare interface CModelConfigElement_SetMaterialGroupOnAttachedModels {
     "MaterialGroupName": string;
@@ -7857,8 +6561,6 @@ declare interface CModelConfigElement_SetMaterialGroupOnAttachedModels {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_SetMaterialGroupOnAttachedModels(ptr_or_class: string|AnySDKClass): CModelConfigElement_SetMaterialGroupOnAttachedModels;
-
 declare interface CModelConfigElement_SetRenderColor {
     "Color": Color;
     readonly "Parent": CModelConfigElement;
@@ -7866,16 +6568,12 @@ declare interface CModelConfigElement_SetRenderColor {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigElement_SetRenderColor(ptr_or_class: string|AnySDKClass): CModelConfigElement_SetRenderColor;
-
 declare interface CModelConfigElement_UserPick {
     readonly "Choices": Object;
     readonly "Parent": CModelConfigElement;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CModelConfigElement_UserPick(ptr_or_class: string|AnySDKClass): CModelConfigElement_UserPick;
 
 declare interface CModelConfigList {
     "HideMaterialGroupInTools": boolean;
@@ -7885,8 +6583,6 @@ declare interface CModelConfigList {
     IsValid: () => boolean;
 }
 
-declare function CModelConfigList(ptr_or_class: string|AnySDKClass): CModelConfigList;
-
 declare interface CMorphBundleData {
     "ULeftSrc": number;
     "VTopSrc": number;
@@ -7895,8 +6591,6 @@ declare interface CMorphBundleData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMorphBundleData(ptr_or_class: string|AnySDKClass): CMorphBundleData;
 
 declare interface CMorphConstraint {
     "TargetMorph": string;
@@ -7908,16 +6602,12 @@ declare interface CMorphConstraint {
     IsValid: () => boolean;
 }
 
-declare function CMorphConstraint(ptr_or_class: string|AnySDKClass): CMorphConstraint;
-
 declare interface CMorphData {
     "Name": string;
     readonly "MorphRectDatas": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMorphData(ptr_or_class: string|AnySDKClass): CMorphData;
 
 declare interface CMorphRectData {
     "XLeftDst": number;
@@ -7928,8 +6618,6 @@ declare interface CMorphRectData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMorphRectData(ptr_or_class: string|AnySDKClass): CMorphRectData;
 
 declare interface CMorphSetData {
     "Width": number;
@@ -7943,23 +6631,17 @@ declare interface CMorphSetData {
     IsValid: () => boolean;
 }
 
-declare function CMorphSetData(ptr_or_class: string|AnySDKClass): CMorphSetData;
-
 declare interface COrientConstraint {
     readonly "Parent": CBaseConstraint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function COrientConstraint(ptr_or_class: string|AnySDKClass): COrientConstraint;
-
 declare interface CParentConstraint {
     readonly "Parent": CBaseConstraint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParentConstraint(ptr_or_class: string|AnySDKClass): CParentConstraint;
 
 declare interface CPhysSurfaceProperties {
     "Name": string;
@@ -7974,8 +6656,6 @@ declare interface CPhysSurfaceProperties {
     IsValid: () => boolean;
 }
 
-declare function CPhysSurfaceProperties(ptr_or_class: string|AnySDKClass): CPhysSurfaceProperties;
-
 declare interface CPhysSurfacePropertiesAudio {
     "Reflectivity": number;
     "HardnessFactor": number;
@@ -7988,8 +6668,6 @@ declare interface CPhysSurfacePropertiesAudio {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysSurfacePropertiesAudio(ptr_or_class: string|AnySDKClass): CPhysSurfacePropertiesAudio;
 
 declare interface CPhysSurfacePropertiesPhysics {
     "Friction": number;
@@ -8004,8 +6682,6 @@ declare interface CPhysSurfacePropertiesPhysics {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysSurfacePropertiesPhysics(ptr_or_class: string|AnySDKClass): CPhysSurfacePropertiesPhysics;
 
 declare interface CPhysSurfacePropertiesSoundNames {
     "ImpactSoft": string;
@@ -8023,15 +6699,11 @@ declare interface CPhysSurfacePropertiesSoundNames {
     IsValid: () => boolean;
 }
 
-declare function CPhysSurfacePropertiesSoundNames(ptr_or_class: string|AnySDKClass): CPhysSurfacePropertiesSoundNames;
-
 declare interface CPointConstraint {
     readonly "Parent": CBaseConstraint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointConstraint(ptr_or_class: string|AnySDKClass): CPointConstraint;
 
 declare interface CRenderBufferBinding {
     "Buffer": number;
@@ -8039,8 +6711,6 @@ declare interface CRenderBufferBinding {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRenderBufferBinding(ptr_or_class: string|AnySDKClass): CRenderBufferBinding;
 
 declare interface CRenderGroom {
     readonly "Hairs": Object;
@@ -8057,8 +6727,6 @@ declare interface CRenderGroom {
     IsValid: () => boolean;
 }
 
-declare function CRenderGroom(ptr_or_class: string|AnySDKClass): CRenderGroom;
-
 declare interface CRenderMesh {
     readonly "Skeleton": CRenderSkeleton;
     readonly "MeshDeformParams": DynamicMeshDeformParams_t;
@@ -8066,8 +6734,6 @@ declare interface CRenderMesh {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRenderMesh(ptr_or_class: string|AnySDKClass): CRenderMesh;
 
 declare interface CRenderSkeleton {
     readonly "Bones": Object;
@@ -8077,8 +6743,6 @@ declare interface CRenderSkeleton {
     IsValid: () => boolean;
 }
 
-declare function CRenderSkeleton(ptr_or_class: string|AnySDKClass): CRenderSkeleton;
-
 declare interface CSceneObjectData {
     "MinBounds": Vector;
     "MaxBounds": Vector;
@@ -8086,8 +6750,6 @@ declare interface CSceneObjectData {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSceneObjectData(ptr_or_class: string|AnySDKClass): CSceneObjectData;
 
 declare interface CTiltTwistConstraint {
     "TargetAxis": number;
@@ -8097,8 +6759,6 @@ declare interface CTiltTwistConstraint {
     IsValid: () => boolean;
 }
 
-declare function CTiltTwistConstraint(ptr_or_class: string|AnySDKClass): CTiltTwistConstraint;
-
 declare interface CTwistConstraint {
     "Inverse": boolean;
     readonly "Parent": CBaseConstraint;
@@ -8106,15 +6766,11 @@ declare interface CTwistConstraint {
     IsValid: () => boolean;
 }
 
-declare function CTwistConstraint(ptr_or_class: string|AnySDKClass): CTwistConstraint;
-
 declare interface CVPhysXSurfacePropertiesList {
     readonly "SurfacePropertiesList": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVPhysXSurfacePropertiesList(ptr_or_class: string|AnySDKClass): CVPhysXSurfacePropertiesList;
 
 declare interface DynamicMeshDeformParams_t {
     "TensionCompressScale": number;
@@ -8126,15 +6782,11 @@ declare interface DynamicMeshDeformParams_t {
     IsValid: () => boolean;
 }
 
-declare function DynamicMeshDeformParams_t(ptr_or_class: string|AnySDKClass): DynamicMeshDeformParams_t;
-
 declare interface MaterialGroup_t {
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialGroup_t(ptr_or_class: string|AnySDKClass): MaterialGroup_t;
 
 declare interface ModelBoneFlexDriverControl_t {
     "BoneComponent": number;
@@ -8146,8 +6798,6 @@ declare interface ModelBoneFlexDriverControl_t {
     IsValid: () => boolean;
 }
 
-declare function ModelBoneFlexDriverControl_t(ptr_or_class: string|AnySDKClass): ModelBoneFlexDriverControl_t;
-
 declare interface ModelBoneFlexDriver_t {
     "BoneName": string;
     "BoneNameToken": number;
@@ -8155,8 +6805,6 @@ declare interface ModelBoneFlexDriver_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ModelBoneFlexDriver_t(ptr_or_class: string|AnySDKClass): ModelBoneFlexDriver_t;
 
 declare interface ModelSkeletonData_t {
     readonly "BoneName": Object;
@@ -8169,16 +6817,12 @@ declare interface ModelSkeletonData_t {
     IsValid: () => boolean;
 }
 
-declare function ModelSkeletonData_t(ptr_or_class: string|AnySDKClass): ModelSkeletonData_t;
-
 declare interface PermModelDataAnimatedMaterialAttribute_t {
     "AttributeName": string;
     "NumChannels": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PermModelDataAnimatedMaterialAttribute_t(ptr_or_class: string|AnySDKClass): PermModelDataAnimatedMaterialAttribute_t;
 
 declare interface PermModelData_t {
     "Name": string;
@@ -8202,16 +6846,12 @@ declare interface PermModelData_t {
     IsValid: () => boolean;
 }
 
-declare function PermModelData_t(ptr_or_class: string|AnySDKClass): PermModelData_t;
-
 declare interface PermModelExtPart_t {
     "Name": string;
     "Parent": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PermModelExtPart_t(ptr_or_class: string|AnySDKClass): PermModelExtPart_t;
 
 declare interface PermModelInfo_t {
     "Flags": number;
@@ -8228,8 +6868,6 @@ declare interface PermModelInfo_t {
     IsValid: () => boolean;
 }
 
-declare function PermModelInfo_t(ptr_or_class: string|AnySDKClass): PermModelInfo_t;
-
 declare interface PhysSoftbodyDesc_t {
     readonly "ParticleBoneHash": Object;
     readonly "Particles": Object;
@@ -8239,8 +6877,6 @@ declare interface PhysSoftbodyDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PhysSoftbodyDesc_t(ptr_or_class: string|AnySDKClass): PhysSoftbodyDesc_t;
 
 declare interface RenderHairStrandInfo_t {
     "GuideHairIndices_nSurfaceTriIndex": Object;
@@ -8253,8 +6889,6 @@ declare interface RenderHairStrandInfo_t {
     IsValid: () => boolean;
 }
 
-declare function RenderHairStrandInfo_t(ptr_or_class: string|AnySDKClass): RenderHairStrandInfo_t;
-
 declare interface RenderSkeletonBone_t {
     "BoneName": string;
     "ParentName": string;
@@ -8263,8 +6897,6 @@ declare interface RenderSkeletonBone_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RenderSkeletonBone_t(ptr_or_class: string|AnySDKClass): RenderSkeletonBone_t;
 
 declare interface SkeletonAnimCapture_t {
     "EntIndex": number;
@@ -8278,8 +6910,6 @@ declare interface SkeletonAnimCapture_t {
     IsValid: () => boolean;
 }
 
-declare function SkeletonAnimCapture_t(ptr_or_class: string|AnySDKClass): SkeletonAnimCapture_t;
-
 declare interface SkeletonBoneBounds_t {
     "Center": Vector;
     "Size": Vector;
@@ -8287,16 +6917,12 @@ declare interface SkeletonBoneBounds_t {
     IsValid: () => boolean;
 }
 
-declare function SkeletonBoneBounds_t(ptr_or_class: string|AnySDKClass): SkeletonBoneBounds_t;
-
 declare interface SkeletonDemoDb_t {
     readonly "AnimCaptures": Object;
     "RecordingTime": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SkeletonDemoDb_t(ptr_or_class: string|AnySDKClass): SkeletonDemoDb_t;
 
 declare interface VPhysXAggregateData_t {
     "Flags": number;
@@ -8318,8 +6944,6 @@ declare interface VPhysXAggregateData_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysXAggregateData_t(ptr_or_class: string|AnySDKClass): VPhysXAggregateData_t;
-
 declare interface VPhysXBodyPart_t {
     "Flags": number;
     "Mass": number;
@@ -8335,8 +6959,6 @@ declare interface VPhysXBodyPart_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysXBodyPart_t(ptr_or_class: string|AnySDKClass): VPhysXBodyPart_t;
-
 declare interface VPhysXCollisionAttributes_t {
     "CollisionGroup": number;
     readonly "InteractAs": Object;
@@ -8350,8 +6972,6 @@ declare interface VPhysXCollisionAttributes_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysXCollisionAttributes_t(ptr_or_class: string|AnySDKClass): VPhysXCollisionAttributes_t;
-
 declare interface VPhysXConstraint2_t {
     "Flags": number;
     "Parent": number;
@@ -8360,8 +6980,6 @@ declare interface VPhysXConstraint2_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VPhysXConstraint2_t(ptr_or_class: string|AnySDKClass): VPhysXConstraint2_t;
 
 declare interface VPhysXConstraintParams_t {
     "Type": number;
@@ -8412,8 +7030,6 @@ declare interface VPhysXConstraintParams_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysXConstraintParams_t(ptr_or_class: string|AnySDKClass): VPhysXConstraintParams_t;
-
 declare interface VPhysXJoint_t {
     "Type": number;
     "Body1": number;
@@ -8444,16 +7060,12 @@ declare interface VPhysXJoint_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysXJoint_t(ptr_or_class: string|AnySDKClass): VPhysXJoint_t;
-
 declare interface VPhysXRange_t {
     "Min": number;
     "Max": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VPhysXRange_t(ptr_or_class: string|AnySDKClass): VPhysXRange_t;
 
 declare interface VPhysics2ShapeDef_t {
     readonly "Spheres": Object;
@@ -8465,15 +7077,11 @@ declare interface VPhysics2ShapeDef_t {
     IsValid: () => boolean;
 }
 
-declare function VPhysics2ShapeDef_t(ptr_or_class: string|AnySDKClass): VPhysics2ShapeDef_t;
-
 declare interface CNavHullPresetVData {
     readonly "NavHulls": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavHullPresetVData(ptr_or_class: string|AnySDKClass): CNavHullPresetVData;
 
 declare interface CNavHullVData {
     "AgentEnabled": boolean;
@@ -8493,23 +7101,17 @@ declare interface CNavHullVData {
     IsValid: () => boolean;
 }
 
-declare function CNavHullVData(ptr_or_class: string|AnySDKClass): CNavHullVData;
-
 declare interface CNavVolume {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CNavVolume(ptr_or_class: string|AnySDKClass): CNavVolume;
-
 declare interface CNavVolumeAll {
     readonly "Parent": CNavVolumeVector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavVolumeAll(ptr_or_class: string|AnySDKClass): CNavVolumeAll;
 
 declare interface CNavVolumeSphere {
     "Center": Vector;
@@ -8519,16 +7121,12 @@ declare interface CNavVolumeSphere {
     IsValid: () => boolean;
 }
 
-declare function CNavVolumeSphere(ptr_or_class: string|AnySDKClass): CNavVolumeSphere;
-
 declare interface CNavVolumeSphericalShell {
     "RadiusInner": number;
     readonly "Parent": CNavVolumeSphere;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavVolumeSphericalShell(ptr_or_class: string|AnySDKClass): CNavVolumeSphericalShell;
 
 declare interface CNavVolumeVector {
     "HasBeenPreFiltered": boolean;
@@ -8537,16 +7135,12 @@ declare interface CNavVolumeVector {
     IsValid: () => boolean;
 }
 
-declare function CNavVolumeVector(ptr_or_class: string|AnySDKClass): CNavVolumeVector;
-
 declare interface Extent {
     "Lo": Vector;
     "Hi": Vector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function Extent(ptr_or_class: string|AnySDKClass): Extent;
 
 declare interface NavGravity_t {
     "Gravity": Vector;
@@ -8555,15 +7149,11 @@ declare interface NavGravity_t {
     IsValid: () => boolean;
 }
 
-declare function NavGravity_t(ptr_or_class: string|AnySDKClass): NavGravity_t;
-
 declare interface ChangeAccessorFieldPathIndex_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ChangeAccessorFieldPathIndex_t(ptr_or_class: string|AnySDKClass): ChangeAccessorFieldPathIndex_t;
 
 declare interface CBaseRendererSource2 {
     readonly "RadiusScale": CParticleCollectionRendererFloatInput;
@@ -8635,8 +7225,6 @@ declare interface CBaseRendererSource2 {
     IsValid: () => boolean;
 }
 
-declare function CBaseRendererSource2(ptr_or_class: string|AnySDKClass): CBaseRendererSource2;
-
 declare interface CBaseTrailRenderer {
     "OrientationType": number;
     "OrientationControlPoint": number;
@@ -8650,8 +7238,6 @@ declare interface CBaseTrailRenderer {
     IsValid: () => boolean;
 }
 
-declare function CBaseTrailRenderer(ptr_or_class: string|AnySDKClass): CBaseTrailRenderer;
-
 declare interface CGeneralRandomRotation {
     readonly "FieldOutput": ParticleAttributeIndex_t;
     "Degrees": number;
@@ -8664,8 +7250,6 @@ declare interface CGeneralRandomRotation {
     IsValid: () => boolean;
 }
 
-declare function CGeneralRandomRotation(ptr_or_class: string|AnySDKClass): CGeneralRandomRotation;
-
 declare interface CGeneralSpin {
     "SpinRateDegrees": number;
     "SpinRateMinDegrees": number;
@@ -8674,8 +7258,6 @@ declare interface CGeneralSpin {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGeneralSpin(ptr_or_class: string|AnySDKClass): CGeneralSpin;
 
 declare interface CParticleFunction {
     readonly "OpStrength": CParticleCollectionFloatInput;
@@ -8698,15 +7280,11 @@ declare interface CParticleFunction {
     IsValid: () => boolean;
 }
 
-declare function CParticleFunction(ptr_or_class: string|AnySDKClass): CParticleFunction;
-
 declare interface CParticleFunctionConstraint {
     readonly "Parent": CParticleFunction;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleFunctionConstraint(ptr_or_class: string|AnySDKClass): CParticleFunctionConstraint;
 
 declare interface CParticleFunctionEmitter {
     "EmitterIndex": number;
@@ -8715,15 +7293,11 @@ declare interface CParticleFunctionEmitter {
     IsValid: () => boolean;
 }
 
-declare function CParticleFunctionEmitter(ptr_or_class: string|AnySDKClass): CParticleFunctionEmitter;
-
 declare interface CParticleFunctionForce {
     readonly "Parent": CParticleFunction;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleFunctionForce(ptr_or_class: string|AnySDKClass): CParticleFunctionForce;
 
 declare interface CParticleFunctionInitializer {
     "AssociatedEmitterIndex": number;
@@ -8732,15 +7306,11 @@ declare interface CParticleFunctionInitializer {
     IsValid: () => boolean;
 }
 
-declare function CParticleFunctionInitializer(ptr_or_class: string|AnySDKClass): CParticleFunctionInitializer;
-
 declare interface CParticleFunctionOperator {
     readonly "Parent": CParticleFunction;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleFunctionOperator(ptr_or_class: string|AnySDKClass): CParticleFunctionOperator;
 
 declare interface CParticleFunctionPreEmission {
     "RunOnce": boolean;
@@ -8748,8 +7318,6 @@ declare interface CParticleFunctionPreEmission {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleFunctionPreEmission(ptr_or_class: string|AnySDKClass): CParticleFunctionPreEmission;
 
 declare interface CParticleFunctionRenderer {
     readonly "VisibilityInputs": CParticleVisibilityInputs;
@@ -8760,8 +7328,6 @@ declare interface CParticleFunctionRenderer {
     IsValid: () => boolean;
 }
 
-declare function CParticleFunctionRenderer(ptr_or_class: string|AnySDKClass): CParticleFunctionRenderer;
-
 declare interface CParticleMassCalculationParameters {
     "MassMode": number;
     readonly "Radius": CPerParticleFloatInput;
@@ -8770,8 +7336,6 @@ declare interface CParticleMassCalculationParameters {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleMassCalculationParameters(ptr_or_class: string|AnySDKClass): CParticleMassCalculationParameters;
 
 declare interface CParticleSystemDefinition {
     "BehaviorVersion": number;
@@ -8838,8 +7402,6 @@ declare interface CParticleSystemDefinition {
     IsValid: () => boolean;
 }
 
-declare function CParticleSystemDefinition(ptr_or_class: string|AnySDKClass): CParticleSystemDefinition;
-
 declare interface CParticleVisibilityInputs {
     "CameraBias": number;
     "CPin": number;
@@ -8864,8 +7426,6 @@ declare interface CParticleVisibilityInputs {
     IsValid: () => boolean;
 }
 
-declare function CParticleVisibilityInputs(ptr_or_class: string|AnySDKClass): CParticleVisibilityInputs;
-
 declare interface CPathParameters {
     "StartControlPointNumber": number;
     "EndControlPointNumber": number;
@@ -8879,16 +7439,12 @@ declare interface CPathParameters {
     IsValid: () => boolean;
 }
 
-declare function CPathParameters(ptr_or_class: string|AnySDKClass): CPathParameters;
-
 declare interface CRandomNumberGeneratorParameters {
     "DistributeEvenly": boolean;
     "Seed": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRandomNumberGeneratorParameters(ptr_or_class: string|AnySDKClass): CRandomNumberGeneratorParameters;
 
 declare interface CReplicationParameters {
     "ReplicationMode": number;
@@ -8900,23 +7456,17 @@ declare interface CReplicationParameters {
     IsValid: () => boolean;
 }
 
-declare function CReplicationParameters(ptr_or_class: string|AnySDKClass): CReplicationParameters;
-
 declare interface CSpinUpdateBase {
     readonly "Parent": CParticleFunctionOperator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CSpinUpdateBase(ptr_or_class: string|AnySDKClass): CSpinUpdateBase;
-
 declare interface CollisionGroupContext_t {
     "CollisionGroupNumber": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CollisionGroupContext_t(ptr_or_class: string|AnySDKClass): CollisionGroupContext_t;
 
 declare interface ControlPointReference_t {
     "ControlPointNameString": number;
@@ -8926,15 +7476,11 @@ declare interface ControlPointReference_t {
     IsValid: () => boolean;
 }
 
-declare function ControlPointReference_t(ptr_or_class: string|AnySDKClass): ControlPointReference_t;
-
 declare interface IParticleCollection {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IParticleCollection(ptr_or_class: string|AnySDKClass): IParticleCollection;
 
 declare interface MaterialVariable_t {
     "StrVariable": string;
@@ -8944,23 +7490,17 @@ declare interface MaterialVariable_t {
     IsValid: () => boolean;
 }
 
-declare function MaterialVariable_t(ptr_or_class: string|AnySDKClass): MaterialVariable_t;
-
 declare interface ModelReference_t {
     "RelativeProbabilityOfSpawn": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function ModelReference_t(ptr_or_class: string|AnySDKClass): ModelReference_t;
-
 declare interface ParticleAttributeIndex_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ParticleAttributeIndex_t(ptr_or_class: string|AnySDKClass): ParticleAttributeIndex_t;
 
 declare interface ParticleChildrenInfo_t {
     "Delay": number;
@@ -8971,8 +7511,6 @@ declare interface ParticleChildrenInfo_t {
     IsValid: () => boolean;
 }
 
-declare function ParticleChildrenInfo_t(ptr_or_class: string|AnySDKClass): ParticleChildrenInfo_t;
-
 declare interface ParticleControlPointConfiguration_t {
     "Name": string;
     readonly "Drivers": Object;
@@ -8980,8 +7518,6 @@ declare interface ParticleControlPointConfiguration_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ParticleControlPointConfiguration_t(ptr_or_class: string|AnySDKClass): ParticleControlPointConfiguration_t;
 
 declare interface ParticleControlPointDriver_t {
     "ControlPoint": number;
@@ -8994,16 +7530,12 @@ declare interface ParticleControlPointDriver_t {
     IsValid: () => boolean;
 }
 
-declare function ParticleControlPointDriver_t(ptr_or_class: string|AnySDKClass): ParticleControlPointDriver_t;
-
 declare interface ParticlePreviewBodyGroup_t {
     "BodyGroupName": string;
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ParticlePreviewBodyGroup_t(ptr_or_class: string|AnySDKClass): ParticlePreviewBodyGroup_t;
 
 declare interface ParticlePreviewState_t {
     "PreviewModel": string;
@@ -9026,16 +7558,12 @@ declare interface ParticlePreviewState_t {
     IsValid: () => boolean;
 }
 
-declare function ParticlePreviewState_t(ptr_or_class: string|AnySDKClass): ParticlePreviewState_t;
-
 declare interface PointDefinitionWithTimeValues_t {
     "TimeDuration": number;
     readonly "Parent": PointDefinition_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PointDefinitionWithTimeValues_t(ptr_or_class: string|AnySDKClass): PointDefinitionWithTimeValues_t;
 
 declare interface PointDefinition_t {
     "ControlPoint": number;
@@ -9045,15 +7573,11 @@ declare interface PointDefinition_t {
     IsValid: () => boolean;
 }
 
-declare function PointDefinition_t(ptr_or_class: string|AnySDKClass): PointDefinition_t;
-
 declare interface RenderProjectedMaterial_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RenderProjectedMaterial_t(ptr_or_class: string|AnySDKClass): RenderProjectedMaterial_t;
 
 declare interface SequenceWeightedList_t {
     "Sequence": number;
@@ -9061,8 +7585,6 @@ declare interface SequenceWeightedList_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SequenceWeightedList_t(ptr_or_class: string|AnySDKClass): SequenceWeightedList_t;
 
 declare interface TextureControls_t {
     readonly "FinalTextureScaleU": CParticleCollectionRendererFloatInput;
@@ -9085,8 +7607,6 @@ declare interface TextureControls_t {
     IsValid: () => boolean;
 }
 
-declare function TextureControls_t(ptr_or_class: string|AnySDKClass): TextureControls_t;
-
 declare interface TextureGroup_t {
     "Enabled": boolean;
     "ReplaceTextureWithGradient": boolean;
@@ -9099,15 +7619,11 @@ declare interface TextureGroup_t {
     IsValid: () => boolean;
 }
 
-declare function TextureGroup_t(ptr_or_class: string|AnySDKClass): TextureGroup_t;
-
 declare interface VecInputMaterialVariable_t {
     "StrVariable": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VecInputMaterialVariable_t(ptr_or_class: string|AnySDKClass): VecInputMaterialVariable_t;
 
 declare interface CNewParticleEffect {
     readonly "Next": CNewParticleEffect;
@@ -9147,15 +7663,11 @@ declare interface CNewParticleEffect {
     IsValid: () => boolean;
 }
 
-declare function CNewParticleEffect(ptr_or_class: string|AnySDKClass): CNewParticleEffect;
-
 declare interface CParticleCollectionBindingInstance {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleCollectionBindingInstance(ptr_or_class: string|AnySDKClass): CParticleCollectionBindingInstance;
 
 declare interface CParticleCollectionFloatInput {
     readonly "Parent": CParticleFloatInput;
@@ -9163,23 +7675,17 @@ declare interface CParticleCollectionFloatInput {
     IsValid: () => boolean;
 }
 
-declare function CParticleCollectionFloatInput(ptr_or_class: string|AnySDKClass): CParticleCollectionFloatInput;
-
 declare interface CParticleCollectionRendererFloatInput {
     readonly "Parent": CParticleCollectionFloatInput;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CParticleCollectionRendererFloatInput(ptr_or_class: string|AnySDKClass): CParticleCollectionRendererFloatInput;
-
 declare interface CParticleCollectionRendererVecInput {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleCollectionRendererVecInput(ptr_or_class: string|AnySDKClass): CParticleCollectionRendererVecInput;
 
 declare interface CParticleFloatInput {
     "Type": number;
@@ -9232,15 +7738,11 @@ declare interface CParticleFloatInput {
     IsValid: () => boolean;
 }
 
-declare function CParticleFloatInput(ptr_or_class: string|AnySDKClass): CParticleFloatInput;
-
 declare interface CParticleInput {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleInput(ptr_or_class: string|AnySDKClass): CParticleInput;
 
 declare interface CParticleModelInput {
     "Type": number;
@@ -9250,23 +7752,17 @@ declare interface CParticleModelInput {
     IsValid: () => boolean;
 }
 
-declare function CParticleModelInput(ptr_or_class: string|AnySDKClass): CParticleModelInput;
-
 declare interface CParticleProperty {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CParticleProperty(ptr_or_class: string|AnySDKClass): CParticleProperty;
-
 declare interface CParticleRemapFloatInput {
     readonly "Parent": CParticleFloatInput;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleRemapFloatInput(ptr_or_class: string|AnySDKClass): CParticleRemapFloatInput;
 
 declare interface CParticleTransformInput {
     "Type": number;
@@ -9280,8 +7776,6 @@ declare interface CParticleTransformInput {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CParticleTransformInput(ptr_or_class: string|AnySDKClass): CParticleTransformInput;
 
 declare interface CParticleVecInput {
     "Type": number;
@@ -9310,15 +7804,11 @@ declare interface CParticleVecInput {
     IsValid: () => boolean;
 }
 
-declare function CParticleVecInput(ptr_or_class: string|AnySDKClass): CParticleVecInput;
-
 declare interface CPerParticleFloatInput {
     readonly "Parent": CParticleFloatInput;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPerParticleFloatInput(ptr_or_class: string|AnySDKClass): CPerParticleFloatInput;
 
 declare interface CPerParticleVecInput {
     readonly "Parent": CParticleVecInput;
@@ -9326,15 +7816,11 @@ declare interface CPerParticleVecInput {
     IsValid: () => boolean;
 }
 
-declare function CPerParticleVecInput(ptr_or_class: string|AnySDKClass): CPerParticleVecInput;
-
 declare interface IParticleEffect {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IParticleEffect(ptr_or_class: string|AnySDKClass): IParticleEffect;
 
 declare interface PARTICLE_EHANDLE__ {
     "Unused": number;
@@ -9342,15 +7828,11 @@ declare interface PARTICLE_EHANDLE__ {
     IsValid: () => boolean;
 }
 
-declare function PARTICLE_EHANDLE__(ptr_or_class: string|AnySDKClass): PARTICLE_EHANDLE__;
-
 declare interface PARTICLE_WORLD_HANDLE__ {
     "Unused": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PARTICLE_WORLD_HANDLE__(ptr_or_class: string|AnySDKClass): PARTICLE_WORLD_HANDLE__;
 
 declare interface ParticleNamedValueConfiguration_t {
     "ConfigName": string;
@@ -9362,8 +7844,6 @@ declare interface ParticleNamedValueConfiguration_t {
     IsValid: () => boolean;
 }
 
-declare function ParticleNamedValueConfiguration_t(ptr_or_class: string|AnySDKClass): ParticleNamedValueConfiguration_t;
-
 declare interface ParticleNamedValueSource_t {
     "Name": string;
     "IsPublic": boolean;
@@ -9374,8 +7854,6 @@ declare interface ParticleNamedValueSource_t {
     IsValid: () => boolean;
 }
 
-declare function ParticleNamedValueSource_t(ptr_or_class: string|AnySDKClass): ParticleNamedValueSource_t;
-
 declare interface CFeIndexedJiggleBone {
     "Node": number;
     "JiggleParent": number;
@@ -9383,8 +7861,6 @@ declare interface CFeIndexedJiggleBone {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFeIndexedJiggleBone(ptr_or_class: string|AnySDKClass): CFeIndexedJiggleBone;
 
 declare interface CFeJiggleBone {
     "Flags": number;
@@ -9426,8 +7902,6 @@ declare interface CFeJiggleBone {
     IsValid: () => boolean;
 }
 
-declare function CFeJiggleBone(ptr_or_class: string|AnySDKClass): CFeJiggleBone;
-
 declare interface CFeMorphLayer {
     "Name": string;
     "NameHash": number;
@@ -9440,8 +7914,6 @@ declare interface CFeMorphLayer {
     IsValid: () => boolean;
 }
 
-declare function CFeMorphLayer(ptr_or_class: string|AnySDKClass): CFeMorphLayer;
-
 declare interface CFeNamedJiggleBone {
     "StrParentBone": string;
     "JiggleParent": number;
@@ -9450,15 +7922,11 @@ declare interface CFeNamedJiggleBone {
     IsValid: () => boolean;
 }
 
-declare function CFeNamedJiggleBone(ptr_or_class: string|AnySDKClass): CFeNamedJiggleBone;
-
 declare interface CFeVertexMapBuildArray {
     readonly "Array": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFeVertexMapBuildArray(ptr_or_class: string|AnySDKClass): CFeVertexMapBuildArray;
 
 declare interface CRegionSVM {
     readonly "Planes": Object;
@@ -9466,8 +7934,6 @@ declare interface CRegionSVM {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRegionSVM(ptr_or_class: string|AnySDKClass): CRegionSVM;
 
 declare interface CastSphereSATParams_t {
     "RayStart": Vector;
@@ -9480,8 +7946,6 @@ declare interface CastSphereSATParams_t {
     IsValid: () => boolean;
 }
 
-declare function CastSphereSATParams_t(ptr_or_class: string|AnySDKClass): CastSphereSATParams_t;
-
 declare interface CovMatrix3 {
     "Diag": Vector;
     "XY": number;
@@ -9491,15 +7955,11 @@ declare interface CovMatrix3 {
     IsValid: () => boolean;
 }
 
-declare function CovMatrix3(ptr_or_class: string|AnySDKClass): CovMatrix3;
-
 declare interface Dop26_t {
     "Support": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function Dop26_t(ptr_or_class: string|AnySDKClass): Dop26_t;
 
 declare interface FeAnimStrayRadius_t {
     "Node": Object;
@@ -9508,8 +7968,6 @@ declare interface FeAnimStrayRadius_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeAnimStrayRadius_t(ptr_or_class: string|AnySDKClass): FeAnimStrayRadius_t;
 
 declare interface FeAntiTunnelProbeBuild_t {
     "Weight": number;
@@ -9522,8 +7980,6 @@ declare interface FeAntiTunnelProbeBuild_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeAntiTunnelProbeBuild_t(ptr_or_class: string|AnySDKClass): FeAntiTunnelProbeBuild_t;
 
 declare interface FeAntiTunnelProbe_t {
     "Weight": number;
@@ -9538,8 +7994,6 @@ declare interface FeAntiTunnelProbe_t {
     IsValid: () => boolean;
 }
 
-declare function FeAntiTunnelProbe_t(ptr_or_class: string|AnySDKClass): FeAntiTunnelProbe_t;
-
 declare interface FeAxialEdgeBend_t {
     "Te": number;
     "Tv": number;
@@ -9550,8 +8004,6 @@ declare interface FeAxialEdgeBend_t {
     IsValid: () => boolean;
 }
 
-declare function FeAxialEdgeBend_t(ptr_or_class: string|AnySDKClass): FeAxialEdgeBend_t;
-
 declare interface FeBandBendLimit_t {
     "DistMin": number;
     "DistMax": number;
@@ -9559,8 +8011,6 @@ declare interface FeBandBendLimit_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeBandBendLimit_t(ptr_or_class: string|AnySDKClass): FeBandBendLimit_t;
 
 declare interface FeBoxRigid_t {
     "Node": number;
@@ -9572,8 +8022,6 @@ declare interface FeBoxRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeBoxRigid_t(ptr_or_class: string|AnySDKClass): FeBoxRigid_t;
-
 declare interface FeBuildBoxRigid_t {
     "Priority": number;
     "VertexMapHash": number;
@@ -9581,8 +8029,6 @@ declare interface FeBuildBoxRigid_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeBuildBoxRigid_t(ptr_or_class: string|AnySDKClass): FeBuildBoxRigid_t;
 
 declare interface FeBuildSDFRigid_t {
     "Priority": number;
@@ -9592,8 +8038,6 @@ declare interface FeBuildSDFRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeBuildSDFRigid_t(ptr_or_class: string|AnySDKClass): FeBuildSDFRigid_t;
-
 declare interface FeBuildSphereRigid_t {
     "Priority": number;
     "VertexMapHash": number;
@@ -9602,8 +8046,6 @@ declare interface FeBuildSphereRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeBuildSphereRigid_t(ptr_or_class: string|AnySDKClass): FeBuildSphereRigid_t;
-
 declare interface FeBuildTaperedCapsuleRigid_t {
     "Priority": number;
     "VertexMapHash": number;
@@ -9611,8 +8053,6 @@ declare interface FeBuildTaperedCapsuleRigid_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeBuildTaperedCapsuleRigid_t(ptr_or_class: string|AnySDKClass): FeBuildTaperedCapsuleRigid_t;
 
 declare interface FeCollisionPlane_t {
     "CtrlParent": number;
@@ -9623,8 +8063,6 @@ declare interface FeCollisionPlane_t {
     IsValid: () => boolean;
 }
 
-declare function FeCollisionPlane_t(ptr_or_class: string|AnySDKClass): FeCollisionPlane_t;
-
 declare interface FeCtrlOffset_t {
     "Offset": Vector;
     "CtrlParent": number;
@@ -9633,16 +8071,12 @@ declare interface FeCtrlOffset_t {
     IsValid: () => boolean;
 }
 
-declare function FeCtrlOffset_t(ptr_or_class: string|AnySDKClass): FeCtrlOffset_t;
-
 declare interface FeCtrlOsOffset_t {
     "CtrlParent": number;
     "CtrlChild": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeCtrlOsOffset_t(ptr_or_class: string|AnySDKClass): FeCtrlOsOffset_t;
 
 declare interface FeCtrlSoftOffset_t {
     "CtrlParent": number;
@@ -9653,16 +8087,12 @@ declare interface FeCtrlSoftOffset_t {
     IsValid: () => boolean;
 }
 
-declare function FeCtrlSoftOffset_t(ptr_or_class: string|AnySDKClass): FeCtrlSoftOffset_t;
-
 declare interface FeEdgeDesc_t {
     "Edge": Object;
     "VirtElem": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeEdgeDesc_t(ptr_or_class: string|AnySDKClass): FeEdgeDesc_t;
 
 declare interface FeEffectDesc_t {
     "Name": string;
@@ -9672,8 +8102,6 @@ declare interface FeEffectDesc_t {
     IsValid: () => boolean;
 }
 
-declare function FeEffectDesc_t(ptr_or_class: string|AnySDKClass): FeEffectDesc_t;
-
 declare interface FeFitInfluence_t {
     "VertexNode": number;
     "Weight": number;
@@ -9681,8 +8109,6 @@ declare interface FeFitInfluence_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeFitInfluence_t(ptr_or_class: string|AnySDKClass): FeFitInfluence_t;
 
 declare interface FeFitMatrix_t {
     "Center": Vector;
@@ -9693,8 +8119,6 @@ declare interface FeFitMatrix_t {
     IsValid: () => boolean;
 }
 
-declare function FeFitMatrix_t(ptr_or_class: string|AnySDKClass): FeFitMatrix_t;
-
 declare interface FeFitWeight_t {
     "Weight": number;
     "Node": number;
@@ -9702,8 +8126,6 @@ declare interface FeFitWeight_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeFitWeight_t(ptr_or_class: string|AnySDKClass): FeFitWeight_t;
 
 declare interface FeFollowNode_t {
     "ParentNode": number;
@@ -9713,8 +8135,6 @@ declare interface FeFollowNode_t {
     IsValid: () => boolean;
 }
 
-declare function FeFollowNode_t(ptr_or_class: string|AnySDKClass): FeFollowNode_t;
-
 declare interface FeHingeLimitBuild_t {
     "Node": Object;
     "Flags": number;
@@ -9723,8 +8143,6 @@ declare interface FeHingeLimitBuild_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeHingeLimitBuild_t(ptr_or_class: string|AnySDKClass): FeHingeLimitBuild_t;
 
 declare interface FeHingeLimit_t {
     "Node": Object;
@@ -9737,8 +8155,6 @@ declare interface FeHingeLimit_t {
     IsValid: () => boolean;
 }
 
-declare function FeHingeLimit_t(ptr_or_class: string|AnySDKClass): FeHingeLimit_t;
-
 declare interface FeKelagerBend2_t {
     "Weight": Object;
     "Height0": number;
@@ -9747,8 +8163,6 @@ declare interface FeKelagerBend2_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeKelagerBend2_t(ptr_or_class: string|AnySDKClass): FeKelagerBend2_t;
 
 declare interface FeMorphLayerDepr_t {
     "Name": string;
@@ -9763,8 +8177,6 @@ declare interface FeMorphLayerDepr_t {
     IsValid: () => boolean;
 }
 
-declare function FeMorphLayerDepr_t(ptr_or_class: string|AnySDKClass): FeMorphLayerDepr_t;
-
 declare interface FeNodeBase_t {
     "Node": number;
     "Dummy": Object;
@@ -9776,8 +8188,6 @@ declare interface FeNodeBase_t {
     IsValid: () => boolean;
 }
 
-declare function FeNodeBase_t(ptr_or_class: string|AnySDKClass): FeNodeBase_t;
-
 declare interface FeNodeIntegrator_t {
     "PointDamping": number;
     "AnimationForceAttraction": number;
@@ -9787,8 +8197,6 @@ declare interface FeNodeIntegrator_t {
     IsValid: () => boolean;
 }
 
-declare function FeNodeIntegrator_t(ptr_or_class: string|AnySDKClass): FeNodeIntegrator_t;
-
 declare interface FeNodeReverseOffset_t {
     "Offset": Vector;
     "BoneCtrl": number;
@@ -9796,8 +8204,6 @@ declare interface FeNodeReverseOffset_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeNodeReverseOffset_t(ptr_or_class: string|AnySDKClass): FeNodeReverseOffset_t;
 
 declare interface FeNodeWindBase_t {
     "NodeX0": number;
@@ -9808,16 +8214,12 @@ declare interface FeNodeWindBase_t {
     IsValid: () => boolean;
 }
 
-declare function FeNodeWindBase_t(ptr_or_class: string|AnySDKClass): FeNodeWindBase_t;
-
 declare interface FeProxyVertexMap_t {
     "Name": string;
     "Weight": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeProxyVertexMap_t(ptr_or_class: string|AnySDKClass): FeProxyVertexMap_t;
 
 declare interface FeQuad_t {
     "Node": Object;
@@ -9826,8 +8228,6 @@ declare interface FeQuad_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeQuad_t(ptr_or_class: string|AnySDKClass): FeQuad_t;
 
 declare interface FeRigidColliderIndices_t {
     "TaperedCapsuleRigidIndex": number;
@@ -9839,8 +8239,6 @@ declare interface FeRigidColliderIndices_t {
     IsValid: () => boolean;
 }
 
-declare function FeRigidColliderIndices_t(ptr_or_class: string|AnySDKClass): FeRigidColliderIndices_t;
-
 declare interface FeRodConstraint_t {
     "Node": Object;
     "MaxDist": number;
@@ -9850,8 +8248,6 @@ declare interface FeRodConstraint_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeRodConstraint_t(ptr_or_class: string|AnySDKClass): FeRodConstraint_t;
 
 declare interface FeSDFRigid_t {
     "LocalMin": Vector;
@@ -9869,16 +8265,12 @@ declare interface FeSDFRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeSDFRigid_t(ptr_or_class: string|AnySDKClass): FeSDFRigid_t;
-
 declare interface FeSimdAnimStrayRadius_t {
     "MaxDist": number;
     "RelaxationFactor": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeSimdAnimStrayRadius_t(ptr_or_class: string|AnySDKClass): FeSimdAnimStrayRadius_t;
 
 declare interface FeSimdNodeBase_t {
     "Node": Object;
@@ -9891,8 +8283,6 @@ declare interface FeSimdNodeBase_t {
     IsValid: () => boolean;
 }
 
-declare function FeSimdNodeBase_t(ptr_or_class: string|AnySDKClass): FeSimdNodeBase_t;
-
 declare interface FeSimdQuad_t {
     "4Slack": number;
     "4Weights": Object;
@@ -9900,16 +8290,12 @@ declare interface FeSimdQuad_t {
     IsValid: () => boolean;
 }
 
-declare function FeSimdQuad_t(ptr_or_class: string|AnySDKClass): FeSimdQuad_t;
-
 declare interface FeSimdRodConstraintAnim_t {
     "4Weight0": number;
     "4RelaxationFactor": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeSimdRodConstraintAnim_t(ptr_or_class: string|AnySDKClass): FeSimdRodConstraintAnim_t;
 
 declare interface FeSimdRodConstraint_t {
     "4MaxDist": number;
@@ -9920,8 +8306,6 @@ declare interface FeSimdRodConstraint_t {
     IsValid: () => boolean;
 }
 
-declare function FeSimdRodConstraint_t(ptr_or_class: string|AnySDKClass): FeSimdRodConstraint_t;
-
 declare interface FeSimdSpringIntegrator_t {
     "SpringRestLength": number;
     "SpringConstant": number;
@@ -9931,8 +8315,6 @@ declare interface FeSimdSpringIntegrator_t {
     IsValid: () => boolean;
 }
 
-declare function FeSimdSpringIntegrator_t(ptr_or_class: string|AnySDKClass): FeSimdSpringIntegrator_t;
-
 declare interface FeSimdTri_t {
     "W1": number;
     "W2": number;
@@ -9941,8 +8323,6 @@ declare interface FeSimdTri_t {
     IsValid: () => boolean;
 }
 
-declare function FeSimdTri_t(ptr_or_class: string|AnySDKClass): FeSimdTri_t;
-
 declare interface FeSoftParent_t {
     "Parent": number;
     "Alpha": number;
@@ -9950,15 +8330,11 @@ declare interface FeSoftParent_t {
     IsValid: () => boolean;
 }
 
-declare function FeSoftParent_t(ptr_or_class: string|AnySDKClass): FeSoftParent_t;
-
 declare interface FeSourceEdge_t {
     "Node": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeSourceEdge_t(ptr_or_class: string|AnySDKClass): FeSourceEdge_t;
 
 declare interface FeSphereRigid_t {
     "Sphere": number;
@@ -9970,8 +8346,6 @@ declare interface FeSphereRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeSphereRigid_t(ptr_or_class: string|AnySDKClass): FeSphereRigid_t;
-
 declare interface FeSpringIntegrator_t {
     "Node": Object;
     "SpringRestLength": number;
@@ -9982,8 +8356,6 @@ declare interface FeSpringIntegrator_t {
     IsValid: () => boolean;
 }
 
-declare function FeSpringIntegrator_t(ptr_or_class: string|AnySDKClass): FeSpringIntegrator_t;
-
 declare interface FeStiffHingeBuild_t {
     "MaxAngle": number;
     "Strength": number;
@@ -9992,8 +8364,6 @@ declare interface FeStiffHingeBuild_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeStiffHingeBuild_t(ptr_or_class: string|AnySDKClass): FeStiffHingeBuild_t;
 
 declare interface FeTaperedCapsuleRigid_t {
     "Sphere": Object;
@@ -10005,8 +8375,6 @@ declare interface FeTaperedCapsuleRigid_t {
     IsValid: () => boolean;
 }
 
-declare function FeTaperedCapsuleRigid_t(ptr_or_class: string|AnySDKClass): FeTaperedCapsuleRigid_t;
-
 declare interface FeTaperedCapsuleStretch_t {
     "Node": Object;
     "CollisionMask": number;
@@ -10016,15 +8384,11 @@ declare interface FeTaperedCapsuleStretch_t {
     IsValid: () => boolean;
 }
 
-declare function FeTaperedCapsuleStretch_t(ptr_or_class: string|AnySDKClass): FeTaperedCapsuleStretch_t;
-
 declare interface FeTreeChildren_t {
     "Child": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeTreeChildren_t(ptr_or_class: string|AnySDKClass): FeTreeChildren_t;
 
 declare interface FeTri_t {
     "2": Vector2D;
@@ -10036,8 +8400,6 @@ declare interface FeTri_t {
     IsValid: () => boolean;
 }
 
-declare function FeTri_t(ptr_or_class: string|AnySDKClass): FeTri_t;
-
 declare interface FeTwistConstraint_t {
     "NodeOrient": number;
     "NodeEnd": number;
@@ -10046,8 +8408,6 @@ declare interface FeTwistConstraint_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeTwistConstraint_t(ptr_or_class: string|AnySDKClass): FeTwistConstraint_t;
 
 declare interface FeVertexMapBuild_t {
     "VertexMapName": string;
@@ -10059,8 +8419,6 @@ declare interface FeVertexMapBuild_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeVertexMapBuild_t(ptr_or_class: string|AnySDKClass): FeVertexMapBuild_t;
 
 declare interface FeVertexMapDesc_t {
     "Name": string;
@@ -10079,16 +8437,12 @@ declare interface FeVertexMapDesc_t {
     IsValid: () => boolean;
 }
 
-declare function FeVertexMapDesc_t(ptr_or_class: string|AnySDKClass): FeVertexMapDesc_t;
-
 declare interface FeWeightedNode_t {
     "Node": number;
     "Weight": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FeWeightedNode_t(ptr_or_class: string|AnySDKClass): FeWeightedNode_t;
 
 declare interface FeWorldCollisionParams_t {
     "WorldFriction": number;
@@ -10099,8 +8453,6 @@ declare interface FeWorldCollisionParams_t {
     IsValid: () => boolean;
 }
 
-declare function FeWorldCollisionParams_t(ptr_or_class: string|AnySDKClass): FeWorldCollisionParams_t;
-
 declare interface FourCovMatrices3 {
     "XY": number;
     "XZ": number;
@@ -10108,8 +8460,6 @@ declare interface FourCovMatrices3 {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FourCovMatrices3(ptr_or_class: string|AnySDKClass): FourCovMatrices3;
 
 declare interface OldFeEdge_t {
     "K": Object;
@@ -10127,8 +8477,6 @@ declare interface OldFeEdge_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function OldFeEdge_t(ptr_or_class: string|AnySDKClass): OldFeEdge_t;
 
 declare interface PhysFeModelDesc_t {
     readonly "CtrlHash": Object;
@@ -10240,8 +8588,6 @@ declare interface PhysFeModelDesc_t {
     IsValid: () => boolean;
 }
 
-declare function PhysFeModelDesc_t(ptr_or_class: string|AnySDKClass): PhysFeModelDesc_t;
-
 declare interface RnBlendVertex_t {
     "Weight0": number;
     "Index0": number;
@@ -10254,8 +8600,6 @@ declare interface RnBlendVertex_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnBlendVertex_t(ptr_or_class: string|AnySDKClass): RnBlendVertex_t;
 
 declare interface RnBodyDesc_t {
     "DebugName": string;
@@ -10296,16 +8640,12 @@ declare interface RnBodyDesc_t {
     IsValid: () => boolean;
 }
 
-declare function RnBodyDesc_t(ptr_or_class: string|AnySDKClass): RnBodyDesc_t;
-
 declare interface RnCapsuleDesc_t {
     readonly "Capsule": RnCapsule_t;
     readonly "Parent": RnShapeDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnCapsuleDesc_t(ptr_or_class: string|AnySDKClass): RnCapsuleDesc_t;
 
 declare interface RnCapsule_t {
     "Center": Object;
@@ -10314,15 +8654,11 @@ declare interface RnCapsule_t {
     IsValid: () => boolean;
 }
 
-declare function RnCapsule_t(ptr_or_class: string|AnySDKClass): RnCapsule_t;
-
 declare interface RnFace_t {
     "Edge": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnFace_t(ptr_or_class: string|AnySDKClass): RnFace_t;
 
 declare interface RnHalfEdge_t {
     "Next": number;
@@ -10333,16 +8669,12 @@ declare interface RnHalfEdge_t {
     IsValid: () => boolean;
 }
 
-declare function RnHalfEdge_t(ptr_or_class: string|AnySDKClass): RnHalfEdge_t;
-
 declare interface RnHullDesc_t {
     readonly "Hull": any;
     readonly "Parent": RnShapeDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnHullDesc_t(ptr_or_class: string|AnySDKClass): RnHullDesc_t;
 
 declare interface RnHull_t {
     "Centroid": Vector;
@@ -10362,16 +8694,12 @@ declare interface RnHull_t {
     IsValid: () => boolean;
 }
 
-declare function RnHull_t(ptr_or_class: string|AnySDKClass): RnHull_t;
-
 declare interface RnMeshDesc_t {
     readonly "Mesh": RnMesh_t;
     readonly "Parent": RnShapeDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnMeshDesc_t(ptr_or_class: string|AnySDKClass): RnMeshDesc_t;
 
 declare interface RnMesh_t {
     "Min": Vector;
@@ -10387,8 +8715,6 @@ declare interface RnMesh_t {
     IsValid: () => boolean;
 }
 
-declare function RnMesh_t(ptr_or_class: string|AnySDKClass): RnMesh_t;
-
 declare interface RnNode_t {
     "Min": Vector;
     "Children": number;
@@ -10398,16 +8724,12 @@ declare interface RnNode_t {
     IsValid: () => boolean;
 }
 
-declare function RnNode_t(ptr_or_class: string|AnySDKClass): RnNode_t;
-
 declare interface RnPlane_t {
     "Normal": Vector;
     "Offset": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnPlane_t(ptr_or_class: string|AnySDKClass): RnPlane_t;
 
 declare interface RnShapeDesc_t {
     "CollisionAttributeIndex": number;
@@ -10420,8 +8742,6 @@ declare interface RnShapeDesc_t {
     IsValid: () => boolean;
 }
 
-declare function RnShapeDesc_t(ptr_or_class: string|AnySDKClass): RnShapeDesc_t;
-
 declare interface RnSoftbodyCapsule_t {
     "Center": Object;
     "Radius": number;
@@ -10430,15 +8750,11 @@ declare interface RnSoftbodyCapsule_t {
     IsValid: () => boolean;
 }
 
-declare function RnSoftbodyCapsule_t(ptr_or_class: string|AnySDKClass): RnSoftbodyCapsule_t;
-
 declare interface RnSoftbodyParticle_t {
     "MassInv": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnSoftbodyParticle_t(ptr_or_class: string|AnySDKClass): RnSoftbodyParticle_t;
 
 declare interface RnSoftbodySpring_t {
     "Particle": Object;
@@ -10447,15 +8763,11 @@ declare interface RnSoftbodySpring_t {
     IsValid: () => boolean;
 }
 
-declare function RnSoftbodySpring_t(ptr_or_class: string|AnySDKClass): RnSoftbodySpring_t;
-
 declare interface RnSphereDesc_t {
     readonly "Parent": RnShapeDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnSphereDesc_t(ptr_or_class: string|AnySDKClass): RnSphereDesc_t;
 
 declare interface RnTriangle_t {
     "Index": Object;
@@ -10463,15 +8775,11 @@ declare interface RnTriangle_t {
     IsValid: () => boolean;
 }
 
-declare function RnTriangle_t(ptr_or_class: string|AnySDKClass): RnTriangle_t;
-
 declare interface RnVertex_t {
     "Edge": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function RnVertex_t(ptr_or_class: string|AnySDKClass): RnVertex_t;
 
 declare interface RnWing_t {
     "Index": Object;
@@ -10479,15 +8787,11 @@ declare interface RnWing_t {
     IsValid: () => boolean;
 }
 
-declare function RnWing_t(ptr_or_class: string|AnySDKClass): RnWing_t;
-
 declare interface VertexPositionColor_t {
     "Position": Vector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VertexPositionColor_t(ptr_or_class: string|AnySDKClass): VertexPositionColor_t;
 
 declare interface VertexPositionNormal_t {
     "Position": Vector;
@@ -10496,8 +8800,6 @@ declare interface VertexPositionNormal_t {
     IsValid: () => boolean;
 }
 
-declare function VertexPositionNormal_t(ptr_or_class: string|AnySDKClass): VertexPositionNormal_t;
-
 declare interface CTestDomainDerived_Cursor {
     "CursorValueA": number;
     "CursorValueB": number;
@@ -10505,15 +8807,11 @@ declare interface CTestDomainDerived_Cursor {
     IsValid: () => boolean;
 }
 
-declare function CTestDomainDerived_Cursor(ptr_or_class: string|AnySDKClass): CTestDomainDerived_Cursor;
-
 declare interface FakeEntityDerivedA_tAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FakeEntityDerivedA_tAPI(ptr_or_class: string|AnySDKClass): FakeEntityDerivedA_tAPI;
 
 declare interface FakeEntityDerivedB_tAPI {
 
@@ -10521,15 +8819,11 @@ declare interface FakeEntityDerivedB_tAPI {
     IsValid: () => boolean;
 }
 
-declare function FakeEntityDerivedB_tAPI(ptr_or_class: string|AnySDKClass): FakeEntityDerivedB_tAPI;
-
 declare interface FakeEntity_tAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FakeEntity_tAPI(ptr_or_class: string|AnySDKClass): FakeEntity_tAPI;
 
 declare interface IGapHost_Cursor {
     readonly "Parent": IGapHost_ExecLog;
@@ -10537,15 +8831,11 @@ declare interface IGapHost_Cursor {
     IsValid: () => boolean;
 }
 
-declare function IGapHost_Cursor(ptr_or_class: string|AnySDKClass): IGapHost_Cursor;
-
 declare interface IGapHost_ExecLog {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IGapHost_ExecLog(ptr_or_class: string|AnySDKClass): IGapHost_ExecLog;
 
 declare interface IGapHost_YieldingCursor {
     readonly "Parent": IGapHost_Cursor;
@@ -10553,23 +8843,17 @@ declare interface IGapHost_YieldingCursor {
     IsValid: () => boolean;
 }
 
-declare function IGapHost_YieldingCursor(ptr_or_class: string|AnySDKClass): IGapHost_YieldingCursor;
-
 declare interface SignatureOutflow_Continue {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function SignatureOutflow_Continue(ptr_or_class: string|AnySDKClass): SignatureOutflow_Continue;
-
 declare interface SignatureOutflow_Resume {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SignatureOutflow_Resume(ptr_or_class: string|AnySDKClass): SignatureOutflow_Resume;
 
 declare interface RenderInputLayoutField_t {
     "SemanticName": Object;
@@ -10583,8 +8867,6 @@ declare interface RenderInputLayoutField_t {
     IsValid: () => boolean;
 }
 
-declare function RenderInputLayoutField_t(ptr_or_class: string|AnySDKClass): RenderInputLayoutField_t;
-
 declare interface VsInputSignatureElement_t {
     "Name": string;
     "Semantic": string;
@@ -10594,15 +8876,11 @@ declare interface VsInputSignatureElement_t {
     IsValid: () => boolean;
 }
 
-declare function VsInputSignatureElement_t(ptr_or_class: string|AnySDKClass): VsInputSignatureElement_t;
-
 declare interface VsInputSignature_t {
     readonly "Elems": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VsInputSignature_t(ptr_or_class: string|AnySDKClass): VsInputSignature_t;
 
 declare interface CExampleSchemaVData_Monomorphic {
     "Example1": number;
@@ -10611,15 +8889,11 @@ declare interface CExampleSchemaVData_Monomorphic {
     IsValid: () => boolean;
 }
 
-declare function CExampleSchemaVData_Monomorphic(ptr_or_class: string|AnySDKClass): CExampleSchemaVData_Monomorphic;
-
 declare interface CExampleSchemaVData_PolymorphicBase {
     "Base": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CExampleSchemaVData_PolymorphicBase(ptr_or_class: string|AnySDKClass): CExampleSchemaVData_PolymorphicBase;
 
 declare interface CExampleSchemaVData_PolymorphicDerivedA {
     "DerivedA": number;
@@ -10628,8 +8902,6 @@ declare interface CExampleSchemaVData_PolymorphicDerivedA {
     IsValid: () => boolean;
 }
 
-declare function CExampleSchemaVData_PolymorphicDerivedA(ptr_or_class: string|AnySDKClass): CExampleSchemaVData_PolymorphicDerivedA;
-
 declare interface CExampleSchemaVData_PolymorphicDerivedB {
     "DerivedB": number;
     readonly "Parent": CExampleSchemaVData_PolymorphicBase;
@@ -10637,15 +8909,11 @@ declare interface CExampleSchemaVData_PolymorphicDerivedB {
     IsValid: () => boolean;
 }
 
-declare function CExampleSchemaVData_PolymorphicDerivedB(ptr_or_class: string|AnySDKClass): CExampleSchemaVData_PolymorphicDerivedB;
-
 declare interface ResourceId_t {
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ResourceId_t(ptr_or_class: string|AnySDKClass): ResourceId_t;
 
 declare interface ManifestTestResource_t {
     "Name": string;
@@ -10653,15 +8921,11 @@ declare interface ManifestTestResource_t {
     IsValid: () => boolean;
 }
 
-declare function ManifestTestResource_t(ptr_or_class: string|AnySDKClass): ManifestTestResource_t;
-
 declare interface TestResource_t {
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function TestResource_t(ptr_or_class: string|AnySDKClass): TestResource_t;
 
 declare interface CSSDSEndFrameViewInfo {
     "ViewId": number;
@@ -10670,15 +8934,11 @@ declare interface CSSDSEndFrameViewInfo {
     IsValid: () => boolean;
 }
 
-declare function CSSDSEndFrameViewInfo(ptr_or_class: string|AnySDKClass): CSSDSEndFrameViewInfo;
-
 declare interface CSSDSMsg_EndFrame {
     readonly "Views": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSSDSMsg_EndFrame(ptr_or_class: string|AnySDKClass): CSSDSMsg_EndFrame;
 
 declare interface CSSDSMsg_LayerBase {
     readonly "ViewId": SceneViewId_t;
@@ -10691,15 +8951,11 @@ declare interface CSSDSMsg_LayerBase {
     IsValid: () => boolean;
 }
 
-declare function CSSDSMsg_LayerBase(ptr_or_class: string|AnySDKClass): CSSDSMsg_LayerBase;
-
 declare interface CSSDSMsg_PostLayer {
     readonly "Parent": CSSDSMsg_LayerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSSDSMsg_PostLayer(ptr_or_class: string|AnySDKClass): CSSDSMsg_PostLayer;
 
 declare interface CSSDSMsg_PreLayer {
     readonly "Parent": CSSDSMsg_LayerBase;
@@ -10707,16 +8963,12 @@ declare interface CSSDSMsg_PreLayer {
     IsValid: () => boolean;
 }
 
-declare function CSSDSMsg_PreLayer(ptr_or_class: string|AnySDKClass): CSSDSMsg_PreLayer;
-
 declare interface CSSDSMsg_ViewRender {
     readonly "ViewId": SceneViewId_t;
     "ViewName": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSSDSMsg_ViewRender(ptr_or_class: string|AnySDKClass): CSSDSMsg_ViewRender;
 
 declare interface CSSDSMsg_ViewTarget {
     "Name": string;
@@ -10733,8 +8985,6 @@ declare interface CSSDSMsg_ViewTarget {
     IsValid: () => boolean;
 }
 
-declare function CSSDSMsg_ViewTarget(ptr_or_class: string|AnySDKClass): CSSDSMsg_ViewTarget;
-
 declare interface CSSDSMsg_ViewTargetList {
     readonly "ViewId": SceneViewId_t;
     "ViewName": string;
@@ -10743,8 +8993,6 @@ declare interface CSSDSMsg_ViewTargetList {
     IsValid: () => boolean;
 }
 
-declare function CSSDSMsg_ViewTargetList(ptr_or_class: string|AnySDKClass): CSSDSMsg_ViewTargetList;
-
 declare interface SceneViewId_t {
     "ViewId": number;
     "FrameCount": number;
@@ -10752,16 +9000,12 @@ declare interface SceneViewId_t {
     IsValid: () => boolean;
 }
 
-declare function SceneViewId_t(ptr_or_class: string|AnySDKClass): SceneViewId_t;
-
 declare interface AutoRoomDoorwayPairs_t {
     "P1": Vector;
     "P2": Vector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AutoRoomDoorwayPairs_t(ptr_or_class: string|AnySDKClass): AutoRoomDoorwayPairs_t;
 
 declare interface CAISound {
     "SoundType": number;
@@ -10775,8 +9019,6 @@ declare interface CAISound {
     IsValid: () => boolean;
 }
 
-declare function CAISound(ptr_or_class: string|AnySDKClass): CAISound;
-
 declare interface CAI_ChangeHintGroup {
     "SearchType": number;
     "StrSearchName": string;
@@ -10786,8 +9028,6 @@ declare interface CAI_ChangeHintGroup {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAI_ChangeHintGroup(ptr_or_class: string|AnySDKClass): CAI_ChangeHintGroup;
 
 declare interface CAI_Expresser {
     "StopTalkTime": number;
@@ -10804,8 +9044,6 @@ declare interface CAI_Expresser {
     IsValid: () => boolean;
 }
 
-declare function CAI_Expresser(ptr_or_class: string|AnySDKClass): CAI_Expresser;
-
 declare interface CAI_ExpresserWithFollowup {
     readonly "PostponedFollowup": ResponseFollowup;
     readonly "Parent": CAI_Expresser;
@@ -10813,15 +9051,11 @@ declare interface CAI_ExpresserWithFollowup {
     IsValid: () => boolean;
 }
 
-declare function CAI_ExpresserWithFollowup(ptr_or_class: string|AnySDKClass): CAI_ExpresserWithFollowup;
-
 declare interface CAK47 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAK47(ptr_or_class: string|AnySDKClass): CAK47;
 
 declare interface CAmbientGeneric {
     "Radius": number;
@@ -10839,16 +9073,12 @@ declare interface CAmbientGeneric {
     IsValid: () => boolean;
 }
 
-declare function CAmbientGeneric(ptr_or_class: string|AnySDKClass): CAmbientGeneric;
-
 declare interface CAttributeContainer {
     readonly "Item": CEconItemView;
     readonly "Parent": CAttributeManager;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAttributeContainer(ptr_or_class: string|AnySDKClass): CAttributeContainer;
 
 declare interface CBarnLight {
     "Enabled": boolean;
@@ -10927,8 +9157,6 @@ declare interface CBarnLight {
     IsValid: () => boolean;
 }
 
-declare function CBarnLight(ptr_or_class: string|AnySDKClass): CBarnLight;
-
 declare interface CBaseButton {
     "MoveEntitySpace": QAngle;
     "StayPushed": boolean;
@@ -10960,8 +9188,6 @@ declare interface CBaseButton {
     IsValid: () => boolean;
 }
 
-declare function CBaseButton(ptr_or_class: string|AnySDKClass): CBaseButton;
-
 declare interface CBaseCSGrenade {
     "Redraw": boolean;
     "IsHeldByPlayer": boolean;
@@ -10981,8 +9207,6 @@ declare interface CBaseCSGrenade {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseCSGrenade(ptr_or_class: string|AnySDKClass): CBaseCSGrenade;
 
 declare interface CBaseCSGrenadeProjectile {
     "InitialPosition": Vector;
@@ -11005,8 +9229,6 @@ declare interface CBaseCSGrenadeProjectile {
     IsValid: () => boolean;
 }
 
-declare function CBaseCSGrenadeProjectile(ptr_or_class: string|AnySDKClass): CBaseCSGrenadeProjectile;
-
 declare interface CBaseClientUIEntity {
     "Enabled": boolean;
     "DialogXMLName": string;
@@ -11027,8 +9249,6 @@ declare interface CBaseClientUIEntity {
     IsValid: () => boolean;
 }
 
-declare function CBaseClientUIEntity(ptr_or_class: string|AnySDKClass): CBaseClientUIEntity;
-
 declare interface CBaseCombatCharacter {
     "ForceServerRagdoll": boolean;
     "ImpactEnergyScale": number;
@@ -11043,16 +9263,12 @@ declare interface CBaseCombatCharacter {
     IsValid: () => boolean;
 }
 
-declare function CBaseCombatCharacter(ptr_or_class: string|AnySDKClass): CBaseCombatCharacter;
-
 declare interface CBaseDMStart {
     "Master": string;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseDMStart(ptr_or_class: string|AnySDKClass): CBaseDMStart;
 
 declare interface CBaseDoor {
     "MoveEntitySpace": QAngle;
@@ -11086,8 +9302,6 @@ declare interface CBaseDoor {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseDoor(ptr_or_class: string|AnySDKClass): CBaseDoor;
 
 declare interface CBaseEntity {
     readonly "CBodyComponent": CBodyComponent;
@@ -11181,15 +9395,11 @@ declare interface CBaseEntity {
     IsValid: () => boolean;
 }
 
-declare function CBaseEntity(ptr_or_class: string|AnySDKClass): CBaseEntity;
-
 declare interface CBaseEntityAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseEntityAPI(ptr_or_class: string|AnySDKClass): CBaseEntityAPI;
 
 declare interface CBaseFilter {
     "Negated": boolean;
@@ -11200,8 +9410,6 @@ declare interface CBaseFilter {
     IsValid: () => boolean;
 }
 
-declare function CBaseFilter(ptr_or_class: string|AnySDKClass): CBaseFilter;
-
 declare interface CBaseFire {
     "Scale": number;
     "StartScale": number;
@@ -11211,8 +9419,6 @@ declare interface CBaseFire {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseFire(ptr_or_class: string|AnySDKClass): CBaseFire;
 
 declare interface CBaseFlex {
     readonly "FlexWeight": Object;
@@ -11227,15 +9433,11 @@ declare interface CBaseFlex {
     IsValid: () => boolean;
 }
 
-declare function CBaseFlex(ptr_or_class: string|AnySDKClass): CBaseFlex;
-
 declare interface CBaseFlexAlias_funCBaseFlex {
     readonly "Parent": CBaseFlex;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseFlexAlias_funCBaseFlex(ptr_or_class: string|AnySDKClass): CBaseFlexAlias_funCBaseFlex;
 
 declare interface CBaseGrenade {
     readonly "OnPlayerPickup": CEntityIOOutput;
@@ -11257,8 +9459,6 @@ declare interface CBaseGrenade {
     IsValid: () => boolean;
 }
 
-declare function CBaseGrenade(ptr_or_class: string|AnySDKClass): CBaseGrenade;
-
 declare interface CBaseIssue {
     "TypeString": string;
     "DetailsString": string;
@@ -11268,8 +9468,6 @@ declare interface CBaseIssue {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseIssue(ptr_or_class: string|AnySDKClass): CBaseIssue;
 
 declare interface CBaseModelEntity {
     readonly "CRenderComponent": CRenderComponent;
@@ -11312,8 +9510,6 @@ declare interface CBaseModelEntity {
     IsValid: () => boolean;
 }
 
-declare function CBaseModelEntity(ptr_or_class: string|AnySDKClass): CBaseModelEntity;
-
 declare interface CBaseMoveBehavior {
     "PositionInterpolator": number;
     "RotationInterpolator": number;
@@ -11331,8 +9527,6 @@ declare interface CBaseMoveBehavior {
     IsValid: () => boolean;
 }
 
-declare function CBaseMoveBehavior(ptr_or_class: string|AnySDKClass): CBaseMoveBehavior;
-
 declare interface CBasePlatTrain {
     "NoiseMoving": string;
     "NoiseArrived": string;
@@ -11343,8 +9537,6 @@ declare interface CBasePlatTrain {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBasePlatTrain(ptr_or_class: string|AnySDKClass): CBasePlatTrain;
 
 declare interface CBasePlayerPawn {
     readonly "WeaponServices": CPlayer_WeaponServices;
@@ -11377,8 +9569,6 @@ declare interface CBasePlayerPawn {
     IsValid: () => boolean;
 }
 
-declare function CBasePlayerPawn(ptr_or_class: string|AnySDKClass): CBasePlayerPawn;
-
 declare interface CBasePlayerWeapon {
     "NextPrimaryAttackTick": number;
     "NextPrimaryAttackTickRatio": number;
@@ -11392,8 +9582,6 @@ declare interface CBasePlayerWeapon {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBasePlayerWeapon(ptr_or_class: string|AnySDKClass): CBasePlayerWeapon;
 
 declare interface CBasePropDoor {
     "AutoReturnDelay": number;
@@ -11437,8 +9625,6 @@ declare interface CBasePropDoor {
     IsValid: () => boolean;
 }
 
-declare function CBasePropDoor(ptr_or_class: string|AnySDKClass): CBasePropDoor;
-
 declare interface CBaseToggle {
     "Toggle_state": number;
     "MoveDistance": number;
@@ -11461,8 +9647,6 @@ declare interface CBaseToggle {
     IsValid: () => boolean;
 }
 
-declare function CBaseToggle(ptr_or_class: string|AnySDKClass): CBaseToggle;
-
 declare interface CBaseTrigger {
     "Disabled": boolean;
     "FilterName": string;
@@ -11480,8 +9664,6 @@ declare interface CBaseTrigger {
     IsValid: () => boolean;
 }
 
-declare function CBaseTrigger(ptr_or_class: string|AnySDKClass): CBaseTrigger;
-
 declare interface CBaseViewModel {
     "LastFacing": Vector;
     "ViewModelIndex": number;
@@ -11498,8 +9680,6 @@ declare interface CBaseViewModel {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBaseViewModel(ptr_or_class: string|AnySDKClass): CBaseViewModel;
 
 declare interface CBeam {
     "FrameRate": number;
@@ -11528,8 +9708,6 @@ declare interface CBeam {
     IsValid: () => boolean;
 }
 
-declare function CBeam(ptr_or_class: string|AnySDKClass): CBeam;
-
 declare interface CBlood {
     "SprayAngles": QAngle;
     "SprayDir": Vector;
@@ -11539,8 +9717,6 @@ declare interface CBlood {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBlood(ptr_or_class: string|AnySDKClass): CBlood;
 
 declare interface CBot {
     readonly "Controller": CCSPlayerController;
@@ -11559,8 +9735,6 @@ declare interface CBot {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBot(ptr_or_class: string|AnySDKClass): CBot;
 
 declare interface CBreakable {
     readonly "CPropDataComponent": CPropDataComponent;
@@ -11581,8 +9755,6 @@ declare interface CBreakable {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBreakable(ptr_or_class: string|AnySDKClass): CBreakable;
 
 declare interface CBreakableProp {
     readonly "CPropDataComponent": CPropDataComponent;
@@ -11622,8 +9794,6 @@ declare interface CBreakableProp {
     IsValid: () => boolean;
 }
 
-declare function CBreakableProp(ptr_or_class: string|AnySDKClass): CBreakableProp;
-
 declare interface CBtActionAim {
     "SensorInputKey": string;
     "AimReadyKey": string;
@@ -11642,8 +9812,6 @@ declare interface CBtActionAim {
     IsValid: () => boolean;
 }
 
-declare function CBtActionAim(ptr_or_class: string|AnySDKClass): CBtActionAim;
-
 declare interface CBtActionCombatPositioning {
     "SensorInputKey": string;
     "IsAttackingKey": string;
@@ -11653,8 +9821,6 @@ declare interface CBtActionCombatPositioning {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBtActionCombatPositioning(ptr_or_class: string|AnySDKClass): CBtActionCombatPositioning;
 
 declare interface CBtActionMoveTo {
     "DestinationInputKey": string;
@@ -11676,8 +9842,6 @@ declare interface CBtActionMoveTo {
     IsValid: () => boolean;
 }
 
-declare function CBtActionMoveTo(ptr_or_class: string|AnySDKClass): CBtActionMoveTo;
-
 declare interface CBtActionParachutePositioning {
     readonly "ActionTimer": CountdownTimer;
     readonly "Parent": CBtNode;
@@ -11685,15 +9849,11 @@ declare interface CBtActionParachutePositioning {
     IsValid: () => boolean;
 }
 
-declare function CBtActionParachutePositioning(ptr_or_class: string|AnySDKClass): CBtActionParachutePositioning;
-
 declare interface CBtNode {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBtNode(ptr_or_class: string|AnySDKClass): CBtNode;
 
 declare interface CBtNodeComposite {
     readonly "Parent": CBtNode;
@@ -11701,16 +9861,12 @@ declare interface CBtNodeComposite {
     IsValid: () => boolean;
 }
 
-declare function CBtNodeComposite(ptr_or_class: string|AnySDKClass): CBtNodeComposite;
-
 declare interface CBtNodeCondition {
     "Negated": boolean;
     readonly "Parent": CBtNodeDecorator;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBtNodeCondition(ptr_or_class: string|AnySDKClass): CBtNodeCondition;
 
 declare interface CBtNodeConditionInactive {
     "RoundStartThresholdSeconds": number;
@@ -11721,15 +9877,11 @@ declare interface CBtNodeConditionInactive {
     IsValid: () => boolean;
 }
 
-declare function CBtNodeConditionInactive(ptr_or_class: string|AnySDKClass): CBtNodeConditionInactive;
-
 declare interface CBtNodeDecorator {
     readonly "Parent": CBtNode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBtNodeDecorator(ptr_or_class: string|AnySDKClass): CBtNodeDecorator;
 
 declare interface CBubbling {
     "Density": number;
@@ -11740,16 +9892,12 @@ declare interface CBubbling {
     IsValid: () => boolean;
 }
 
-declare function CBubbling(ptr_or_class: string|AnySDKClass): CBubbling;
-
 declare interface CBuyZone {
     "LegacyTeamNum": number;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CBuyZone(ptr_or_class: string|AnySDKClass): CBuyZone;
 
 declare interface CC4 {
     "LastValidPlayerHeldPosition": Vector;
@@ -11767,8 +9915,6 @@ declare interface CC4 {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CC4(ptr_or_class: string|AnySDKClass): CC4;
 
 declare interface CCSBot {
     "EyePosition": Vector;
@@ -11915,8 +10061,6 @@ declare interface CCSBot {
     IsValid: () => boolean;
 }
 
-declare function CCSBot(ptr_or_class: string|AnySDKClass): CCSBot;
-
 declare interface CCSGOViewModel {
     "ShouldIgnoreOffsetAndAccuracy": boolean;
     readonly "Parent": CPredictedViewModel;
@@ -11924,15 +10068,11 @@ declare interface CCSGOViewModel {
     IsValid: () => boolean;
 }
 
-declare function CCSGOViewModel(ptr_or_class: string|AnySDKClass): CCSGOViewModel;
-
 declare interface CCSGO_TeamIntroCharacterPosition {
     readonly "Parent": CCSGO_TeamPreviewCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_TeamIntroCharacterPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamIntroCharacterPosition;
 
 declare interface CCSGO_TeamIntroCounterTerroristPosition {
     readonly "Parent": CCSGO_TeamIntroCharacterPosition;
@@ -11940,15 +10080,11 @@ declare interface CCSGO_TeamIntroCounterTerroristPosition {
     IsValid: () => boolean;
 }
 
-declare function CCSGO_TeamIntroCounterTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamIntroCounterTerroristPosition;
-
 declare interface CCSGO_TeamIntroTerroristPosition {
     readonly "Parent": CCSGO_TeamIntroCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_TeamIntroTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamIntroTerroristPosition;
 
 declare interface CCSGO_TeamPreviewCharacterPosition {
     "Variant": number;
@@ -11964,15 +10100,11 @@ declare interface CCSGO_TeamPreviewCharacterPosition {
     IsValid: () => boolean;
 }
 
-declare function CCSGO_TeamPreviewCharacterPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamPreviewCharacterPosition;
-
 declare interface CCSGO_TeamSelectCharacterPosition {
     readonly "Parent": CCSGO_TeamPreviewCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_TeamSelectCharacterPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamSelectCharacterPosition;
 
 declare interface CCSGO_TeamSelectCounterTerroristPosition {
     readonly "Parent": CCSGO_TeamSelectCharacterPosition;
@@ -11980,15 +10112,11 @@ declare interface CCSGO_TeamSelectCounterTerroristPosition {
     IsValid: () => boolean;
 }
 
-declare function CCSGO_TeamSelectCounterTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamSelectCounterTerroristPosition;
-
 declare interface CCSGO_TeamSelectTerroristPosition {
     readonly "Parent": CCSGO_TeamSelectCharacterPosition;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSGO_TeamSelectTerroristPosition(ptr_or_class: string|AnySDKClass): CCSGO_TeamSelectTerroristPosition;
 
 declare interface CCSGameRules {
     "FreezePeriod": boolean;
@@ -12183,8 +10311,6 @@ declare interface CCSGameRules {
     IsValid: () => boolean;
 }
 
-declare function CCSGameRules(ptr_or_class: string|AnySDKClass): CCSGameRules;
-
 declare interface CCSGameRulesProxy {
     readonly "GameRules": CCSGameRules;
     readonly "Parent": CGameRulesProxy;
@@ -12192,15 +10318,11 @@ declare interface CCSGameRulesProxy {
     IsValid: () => boolean;
 }
 
-declare function CCSGameRulesProxy(ptr_or_class: string|AnySDKClass): CCSGameRulesProxy;
-
 declare interface CCSMinimapBoundary {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSMinimapBoundary(ptr_or_class: string|AnySDKClass): CCSMinimapBoundary;
 
 declare interface CCSObserverPawn {
     readonly "Parent": CCSPlayerPawnBase;
@@ -12208,16 +10330,12 @@ declare interface CCSObserverPawn {
     IsValid: () => boolean;
 }
 
-declare function CCSObserverPawn(ptr_or_class: string|AnySDKClass): CCSObserverPawn;
-
 declare interface CCSPlace {
     "Name": string;
     readonly "Parent": CServerOnlyModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSPlace(ptr_or_class: string|AnySDKClass): CCSPlace;
 
 declare interface CCSPlayerPawn {
     readonly "BulletServices": CCSPlayer_BulletServices;
@@ -12341,8 +10459,6 @@ declare interface CCSPlayerPawn {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerPawn(ptr_or_class: string|AnySDKClass): CCSPlayerPawn;
-
 declare interface CCSPlayerPawnBase {
     readonly "CTouchExpansionComponent": CTouchExpansionComponent;
     readonly "PingServices": CCSPlayer_PingServices;
@@ -12371,8 +10487,6 @@ declare interface CCSPlayerPawnBase {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerPawnBase(ptr_or_class: string|AnySDKClass): CCSPlayerPawnBase;
-
 declare interface CCSPlayerResource {
     "HostageAlive": Object;
     "IsHostageFollowingSomeone": Object;
@@ -12389,8 +10503,6 @@ declare interface CCSPlayerResource {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayerResource(ptr_or_class: string|AnySDKClass): CCSPlayerResource;
-
 declare interface CCSPlayer_RadioServices {
     "GotHostageTalkTimer": number;
     "DefusingTalkTimer": number;
@@ -12402,23 +10514,17 @@ declare interface CCSPlayer_RadioServices {
     IsValid: () => boolean;
 }
 
-declare function CCSPlayer_RadioServices(ptr_or_class: string|AnySDKClass): CCSPlayer_RadioServices;
-
 declare interface CCSServerPointScriptEntity {
     readonly "Parent": CCSPointScriptEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CCSServerPointScriptEntity(ptr_or_class: string|AnySDKClass): CCSServerPointScriptEntity;
-
 declare interface CCSSprite {
     readonly "Parent": CSprite;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSSprite(ptr_or_class: string|AnySDKClass): CCSSprite;
 
 declare interface CCSTeam {
     "LastRecievedShorthandedRoundBonus": number;
@@ -12439,8 +10545,6 @@ declare interface CCSTeam {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCSTeam(ptr_or_class: string|AnySDKClass): CCSTeam;
 
 declare interface CCSWeaponBase {
     "Removeable": boolean;
@@ -12513,8 +10617,6 @@ declare interface CCSWeaponBase {
     IsValid: () => boolean;
 }
 
-declare function CCSWeaponBase(ptr_or_class: string|AnySDKClass): CCSWeaponBase;
-
 declare interface CCSWeaponBaseGun {
     "ZoomLevel": number;
     "BurstShotsRemaining": number;
@@ -12530,8 +10632,6 @@ declare interface CCSWeaponBaseGun {
     IsValid: () => boolean;
 }
 
-declare function CCSWeaponBaseGun(ptr_or_class: string|AnySDKClass): CCSWeaponBaseGun;
-
 declare interface CChangeLevel {
     "MapName": string;
     "LandmarkName": string;
@@ -12544,8 +10644,6 @@ declare interface CChangeLevel {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CChangeLevel(ptr_or_class: string|AnySDKClass): CChangeLevel;
 
 declare interface CChicken {
     readonly "AttributeManager": CAttributeContainer;
@@ -12581,8 +10679,6 @@ declare interface CChicken {
     IsValid: () => boolean;
 }
 
-declare function CChicken(ptr_or_class: string|AnySDKClass): CChicken;
-
 declare interface CColorCorrection {
     "FadeInDuration": number;
     "FadeOutDuration": number;
@@ -12606,8 +10702,6 @@ declare interface CColorCorrection {
     IsValid: () => boolean;
 }
 
-declare function CColorCorrection(ptr_or_class: string|AnySDKClass): CColorCorrection;
-
 declare interface CColorCorrectionVolume {
     "Enabled": boolean;
     "MaxWeight": number;
@@ -12624,8 +10718,6 @@ declare interface CColorCorrectionVolume {
     IsValid: () => boolean;
 }
 
-declare function CColorCorrectionVolume(ptr_or_class: string|AnySDKClass): CColorCorrectionVolume;
-
 declare interface CCommentaryAuto {
     readonly "OnCommentaryNewGame": CEntityIOOutput;
     readonly "OnCommentaryMidGame": CEntityIOOutput;
@@ -12634,8 +10726,6 @@ declare interface CCommentaryAuto {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCommentaryAuto(ptr_or_class: string|AnySDKClass): CCommentaryAuto;
 
 declare interface CCommentarySystem {
     "CommentaryConvarsChanging": boolean;
@@ -12648,15 +10738,11 @@ declare interface CCommentarySystem {
     IsValid: () => boolean;
 }
 
-declare function CCommentarySystem(ptr_or_class: string|AnySDKClass): CCommentarySystem;
-
 declare interface CCommentaryViewPosition {
     readonly "Parent": CSprite;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CCommentaryViewPosition(ptr_or_class: string|AnySDKClass): CCommentaryViewPosition;
 
 declare interface CConstantForceController {
     "Linear": Vector;
@@ -12667,16 +10753,12 @@ declare interface CConstantForceController {
     IsValid: () => boolean;
 }
 
-declare function CConstantForceController(ptr_or_class: string|AnySDKClass): CConstantForceController;
-
 declare interface CConstraintAnchor {
     "MassScale": number;
     readonly "Parent": CBaseAnimGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CConstraintAnchor(ptr_or_class: string|AnySDKClass): CConstraintAnchor;
 
 declare interface CCredits {
     readonly "OnCreditsDone": CEntityIOOutput;
@@ -12687,15 +10769,11 @@ declare interface CCredits {
     IsValid: () => boolean;
 }
 
-declare function CCredits(ptr_or_class: string|AnySDKClass): CCredits;
-
 declare interface CDEagle {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDEagle(ptr_or_class: string|AnySDKClass): CDEagle;
 
 declare interface CDebugHistory {
     "NpcEvents": number;
@@ -12704,15 +10782,11 @@ declare interface CDebugHistory {
     IsValid: () => boolean;
 }
 
-declare function CDebugHistory(ptr_or_class: string|AnySDKClass): CDebugHistory;
-
 declare interface CDecoyGrenade {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDecoyGrenade(ptr_or_class: string|AnySDKClass): CDecoyGrenade;
 
 declare interface CDecoyProjectile {
     "DecoyShotTick": number;
@@ -12723,8 +10797,6 @@ declare interface CDecoyProjectile {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDecoyProjectile(ptr_or_class: string|AnySDKClass): CDecoyProjectile;
 
 declare interface CDynamicLight {
     "ActualFlags": number;
@@ -12740,8 +10812,6 @@ declare interface CDynamicLight {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDynamicLight(ptr_or_class: string|AnySDKClass): CDynamicLight;
 
 declare interface CDynamicProp {
     "CreateNavObstacle": boolean;
@@ -12771,15 +10841,11 @@ declare interface CDynamicProp {
     IsValid: () => boolean;
 }
 
-declare function CDynamicProp(ptr_or_class: string|AnySDKClass): CDynamicProp;
-
 declare interface CDynamicPropAlias_cable_dynamic {
     readonly "Parent": CDynamicProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDynamicPropAlias_cable_dynamic(ptr_or_class: string|AnySDKClass): CDynamicPropAlias_cable_dynamic;
 
 declare interface CDynamicPropAlias_dynamic_prop {
     readonly "Parent": CDynamicProp;
@@ -12787,15 +10853,11 @@ declare interface CDynamicPropAlias_dynamic_prop {
     IsValid: () => boolean;
 }
 
-declare function CDynamicPropAlias_dynamic_prop(ptr_or_class: string|AnySDKClass): CDynamicPropAlias_dynamic_prop;
-
 declare interface CDynamicPropAlias_prop_dynamic_override {
     readonly "Parent": CDynamicProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDynamicPropAlias_prop_dynamic_override(ptr_or_class: string|AnySDKClass): CDynamicPropAlias_prop_dynamic_override;
 
 declare interface CEconEntity {
     readonly "AttributeManager": CAttributeContainer;
@@ -12811,8 +10873,6 @@ declare interface CEconEntity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEconEntity(ptr_or_class: string|AnySDKClass): CEconEntity;
 
 declare interface CEconItemView {
     "ItemDefinitionIndex": number;
@@ -12833,8 +10893,6 @@ declare interface CEconItemView {
     IsValid: () => boolean;
 }
 
-declare function CEconItemView(ptr_or_class: string|AnySDKClass): CEconItemView;
-
 declare interface CEconWearable {
     "ForceSkin": number;
     "AlwaysAllow": boolean;
@@ -12843,23 +10901,17 @@ declare interface CEconWearable {
     IsValid: () => boolean;
 }
 
-declare function CEconWearable(ptr_or_class: string|AnySDKClass): CEconWearable;
-
 declare interface CEnableMotionFixup {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CEnableMotionFixup(ptr_or_class: string|AnySDKClass): CEnableMotionFixup;
-
 declare interface CEntityBlocker {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEntityBlocker(ptr_or_class: string|AnySDKClass): CEntityBlocker;
 
 declare interface CEntityDissolve {
     "FadeInStart": number;
@@ -12877,8 +10929,6 @@ declare interface CEntityDissolve {
     IsValid: () => boolean;
 }
 
-declare function CEntityDissolve(ptr_or_class: string|AnySDKClass): CEntityDissolve;
-
 declare interface CEntityFlame {
     readonly "EntAttached": CBaseEntity;
     "CheapEffect": boolean;
@@ -12895,8 +10945,6 @@ declare interface CEntityFlame {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEntityFlame(ptr_or_class: string|AnySDKClass): CEntityFlame;
 
 declare interface CEnvBeam {
     "Active": number;
@@ -12922,8 +10970,6 @@ declare interface CEnvBeam {
     IsValid: () => boolean;
 }
 
-declare function CEnvBeam(ptr_or_class: string|AnySDKClass): CEnvBeam;
-
 declare interface CEnvBeverage {
     "CanInDispenser": boolean;
     "BeverageType": number;
@@ -12931,8 +10977,6 @@ declare interface CEnvBeverage {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvBeverage(ptr_or_class: string|AnySDKClass): CEnvBeverage;
 
 declare interface CEnvCombinedLightProbeVolume {
     "Entity_Color": Color;
@@ -12959,8 +11003,6 @@ declare interface CEnvCombinedLightProbeVolume {
     IsValid: () => boolean;
 }
 
-declare function CEnvCombinedLightProbeVolume(ptr_or_class: string|AnySDKClass): CEnvCombinedLightProbeVolume;
-
 declare interface CEnvCubemap {
     "Entity_bCustomCubemapTexture": boolean;
     "Entity_flInfluenceRadius": number;
@@ -12984,15 +11026,11 @@ declare interface CEnvCubemap {
     IsValid: () => boolean;
 }
 
-declare function CEnvCubemap(ptr_or_class: string|AnySDKClass): CEnvCubemap;
-
 declare interface CEnvCubemapBox {
     readonly "Parent": CEnvCubemap;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvCubemapBox(ptr_or_class: string|AnySDKClass): CEnvCubemapBox;
 
 declare interface CEnvCubemapFog {
     "EndDistance": number;
@@ -13016,8 +11054,6 @@ declare interface CEnvCubemapFog {
     IsValid: () => boolean;
 }
 
-declare function CEnvCubemapFog(ptr_or_class: string|AnySDKClass): CEnvCubemapFog;
-
 declare interface CEnvDecal {
     "Width": number;
     "Height": number;
@@ -13032,8 +11068,6 @@ declare interface CEnvDecal {
     IsValid: () => boolean;
 }
 
-declare function CEnvDecal(ptr_or_class: string|AnySDKClass): CEnvDecal;
-
 declare interface CEnvDetailController {
     "FadeStartDist": number;
     "FadeEndDist": number;
@@ -13042,16 +11076,12 @@ declare interface CEnvDetailController {
     IsValid: () => boolean;
 }
 
-declare function CEnvDetailController(ptr_or_class: string|AnySDKClass): CEnvDetailController;
-
 declare interface CEnvEntityIgniter {
     "Lifetime": number;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvEntityIgniter(ptr_or_class: string|AnySDKClass): CEnvEntityIgniter;
 
 declare interface CEnvEntityMaker {
     "EntityMins": Vector;
@@ -13070,8 +11100,6 @@ declare interface CEnvEntityMaker {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvEntityMaker(ptr_or_class: string|AnySDKClass): CEnvEntityMaker;
 
 declare interface CEnvExplosion {
     "Magnitude": number;
@@ -13095,8 +11123,6 @@ declare interface CEnvExplosion {
     IsValid: () => boolean;
 }
 
-declare function CEnvExplosion(ptr_or_class: string|AnySDKClass): CEnvExplosion;
-
 declare interface CEnvFade {
     "FadeColor": Color;
     "Duration": number;
@@ -13106,8 +11132,6 @@ declare interface CEnvFade {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvFade(ptr_or_class: string|AnySDKClass): CEnvFade;
 
 declare interface CEnvFireSensor {
     "Enabled": boolean;
@@ -13123,8 +11147,6 @@ declare interface CEnvFireSensor {
     IsValid: () => boolean;
 }
 
-declare function CEnvFireSensor(ptr_or_class: string|AnySDKClass): CEnvFireSensor;
-
 declare interface CEnvFireSource {
     "Enabled": boolean;
     "Radius": number;
@@ -13134,15 +11156,11 @@ declare interface CEnvFireSource {
     IsValid: () => boolean;
 }
 
-declare function CEnvFireSource(ptr_or_class: string|AnySDKClass): CEnvFireSource;
-
 declare interface CEnvFunnel {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvFunnel(ptr_or_class: string|AnySDKClass): CEnvFunnel;
 
 declare interface CEnvGlobal {
     "Globalstate": string;
@@ -13154,16 +11172,12 @@ declare interface CEnvGlobal {
     IsValid: () => boolean;
 }
 
-declare function CEnvGlobal(ptr_or_class: string|AnySDKClass): CEnvGlobal;
-
 declare interface CEnvHudHint {
     "Message": string;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvHudHint(ptr_or_class: string|AnySDKClass): CEnvHudHint;
 
 declare interface CEnvInstructorHint {
     "Name": string;
@@ -13195,8 +11209,6 @@ declare interface CEnvInstructorHint {
     IsValid: () => boolean;
 }
 
-declare function CEnvInstructorHint(ptr_or_class: string|AnySDKClass): CEnvInstructorHint;
-
 declare interface CEnvInstructorVRHint {
     "Name": string;
     "HintTargetEntity": string;
@@ -13212,8 +11224,6 @@ declare interface CEnvInstructorVRHint {
     IsValid: () => boolean;
 }
 
-declare function CEnvInstructorVRHint(ptr_or_class: string|AnySDKClass): CEnvInstructorVRHint;
-
 declare interface CEnvLaser {
     "LaserTarget": string;
     readonly "Sprite": CSprite;
@@ -13224,8 +11234,6 @@ declare interface CEnvLaser {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvLaser(ptr_or_class: string|AnySDKClass): CEnvLaser;
 
 declare interface CEnvLightProbeVolume {
     "Entity_vBoxMins": Vector;
@@ -13245,8 +11253,6 @@ declare interface CEnvLightProbeVolume {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvLightProbeVolume(ptr_or_class: string|AnySDKClass): CEnvLightProbeVolume;
 
 declare interface CEnvMicrophone {
     "Disabled": boolean;
@@ -13271,8 +11277,6 @@ declare interface CEnvMicrophone {
     IsValid: () => boolean;
 }
 
-declare function CEnvMicrophone(ptr_or_class: string|AnySDKClass): CEnvMicrophone;
-
 declare interface CEnvMuzzleFlash {
     "Scale": number;
     "ParentAttachment": string;
@@ -13280,8 +11284,6 @@ declare interface CEnvMuzzleFlash {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvMuzzleFlash(ptr_or_class: string|AnySDKClass): CEnvMuzzleFlash;
 
 declare interface CEnvParticleGlow {
     "AlphaScale": number;
@@ -13292,8 +11294,6 @@ declare interface CEnvParticleGlow {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvParticleGlow(ptr_or_class: string|AnySDKClass): CEnvParticleGlow;
 
 declare interface CEnvProjectedTexture {
     readonly "TargetEntity": CBaseEntity;
@@ -13331,8 +11331,6 @@ declare interface CEnvProjectedTexture {
     IsValid: () => boolean;
 }
 
-declare function CEnvProjectedTexture(ptr_or_class: string|AnySDKClass): CEnvProjectedTexture;
-
 declare interface CEnvScreenOverlay {
     "OverlayNames": Object;
     "OverlayTimes": Object;
@@ -13343,8 +11341,6 @@ declare interface CEnvScreenOverlay {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvScreenOverlay(ptr_or_class: string|AnySDKClass): CEnvScreenOverlay;
 
 declare interface CEnvShake {
     "LimitToEntity": string;
@@ -13362,8 +11358,6 @@ declare interface CEnvShake {
     IsValid: () => boolean;
 }
 
-declare function CEnvShake(ptr_or_class: string|AnySDKClass): CEnvShake;
-
 declare interface CEnvSky {
     "StartDisabled": boolean;
     "TintColor": Color;
@@ -13380,8 +11374,6 @@ declare interface CEnvSky {
     IsValid: () => boolean;
 }
 
-declare function CEnvSky(ptr_or_class: string|AnySDKClass): CEnvSky;
-
 declare interface CEnvSpark {
     "Delay": number;
     "Magnitude": number;
@@ -13393,16 +11385,12 @@ declare interface CEnvSpark {
     IsValid: () => boolean;
 }
 
-declare function CEnvSpark(ptr_or_class: string|AnySDKClass): CEnvSpark;
-
 declare interface CEnvSplash {
     "Scale": number;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvSplash(ptr_or_class: string|AnySDKClass): CEnvSplash;
 
 declare interface CEnvTilt {
     "Duration": number;
@@ -13414,8 +11402,6 @@ declare interface CEnvTilt {
     IsValid: () => boolean;
 }
 
-declare function CEnvTilt(ptr_or_class: string|AnySDKClass): CEnvTilt;
-
 declare interface CEnvTracer {
     "End": Vector;
     "Delay": number;
@@ -13424,8 +11410,6 @@ declare interface CEnvTracer {
     IsValid: () => boolean;
 }
 
-declare function CEnvTracer(ptr_or_class: string|AnySDKClass): CEnvTracer;
-
 declare interface CEnvViewPunch {
     "Radius": number;
     "ViewPunch": QAngle;
@@ -13433,8 +11417,6 @@ declare interface CEnvViewPunch {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvViewPunch(ptr_or_class: string|AnySDKClass): CEnvViewPunch;
 
 declare interface CEnvVolumetricFogController {
     "Scattering": number;
@@ -13475,8 +11457,6 @@ declare interface CEnvVolumetricFogController {
     IsValid: () => boolean;
 }
 
-declare function CEnvVolumetricFogController(ptr_or_class: string|AnySDKClass): CEnvVolumetricFogController;
-
 declare interface CEnvVolumetricFogVolume {
     "Active": boolean;
     "BoxMins": Vector;
@@ -13499,16 +11479,12 @@ declare interface CEnvVolumetricFogVolume {
     IsValid: () => boolean;
 }
 
-declare function CEnvVolumetricFogVolume(ptr_or_class: string|AnySDKClass): CEnvVolumetricFogVolume;
-
 declare interface CEnvWind {
     readonly "EnvWindShared": CEnvWindShared;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CEnvWind(ptr_or_class: string|AnySDKClass): CEnvWind;
 
 declare interface CEnvWindShared {
     "StartTime": number;
@@ -13546,16 +11522,12 @@ declare interface CEnvWindShared {
     IsValid: () => boolean;
 }
 
-declare function CEnvWindShared(ptr_or_class: string|AnySDKClass): CEnvWindShared;
-
 declare interface CFilterAttributeInt {
     "AttributeName": number;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFilterAttributeInt(ptr_or_class: string|AnySDKClass): CFilterAttributeInt;
 
 declare interface CFilterClass {
     "FilterClass": string;
@@ -13564,16 +11536,12 @@ declare interface CFilterClass {
     IsValid: () => boolean;
 }
 
-declare function CFilterClass(ptr_or_class: string|AnySDKClass): CFilterClass;
-
 declare interface CFilterContext {
     "FilterContext": string;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFilterContext(ptr_or_class: string|AnySDKClass): CFilterContext;
 
 declare interface CFilterEnemy {
     "EnemyName": string;
@@ -13586,15 +11554,11 @@ declare interface CFilterEnemy {
     IsValid: () => boolean;
 }
 
-declare function CFilterEnemy(ptr_or_class: string|AnySDKClass): CFilterEnemy;
-
 declare interface CFilterLOS {
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFilterLOS(ptr_or_class: string|AnySDKClass): CFilterLOS;
 
 declare interface CFilterMassGreater {
     "FilterMass": number;
@@ -13603,16 +11567,12 @@ declare interface CFilterMassGreater {
     IsValid: () => boolean;
 }
 
-declare function CFilterMassGreater(ptr_or_class: string|AnySDKClass): CFilterMassGreater;
-
 declare interface CFilterModel {
     "FilterModel": string;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFilterModel(ptr_or_class: string|AnySDKClass): CFilterModel;
 
 declare interface CFilterMultiple {
     "FilterType": number;
@@ -13624,8 +11584,6 @@ declare interface CFilterMultiple {
     IsValid: () => boolean;
 }
 
-declare function CFilterMultiple(ptr_or_class: string|AnySDKClass): CFilterMultiple;
-
 declare interface CFilterName {
     "FilterName": string;
     readonly "Parent": CBaseFilter;
@@ -13633,16 +11591,12 @@ declare interface CFilterName {
     IsValid: () => boolean;
 }
 
-declare function CFilterName(ptr_or_class: string|AnySDKClass): CFilterName;
-
 declare interface CFilterProximity {
     "Radius": number;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFilterProximity(ptr_or_class: string|AnySDKClass): CFilterProximity;
 
 declare interface CFire {
     readonly "Effect": CBaseFire;
@@ -13669,15 +11623,11 @@ declare interface CFire {
     IsValid: () => boolean;
 }
 
-declare function CFire(ptr_or_class: string|AnySDKClass): CFire;
-
 declare interface CFireCrackerBlast {
     readonly "Parent": CInferno;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFireCrackerBlast(ptr_or_class: string|AnySDKClass): CFireCrackerBlast;
 
 declare interface CFireSmoke {
     "FlameModelIndex": number;
@@ -13686,8 +11636,6 @@ declare interface CFireSmoke {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFireSmoke(ptr_or_class: string|AnySDKClass): CFireSmoke;
 
 declare interface CFish {
     readonly "Pool": CFishPool;
@@ -13719,8 +11667,6 @@ declare interface CFish {
     IsValid: () => boolean;
 }
 
-declare function CFish(ptr_or_class: string|AnySDKClass): CFish;
-
 declare interface CFishPool {
     "FishCount": number;
     "MaxRange": number;
@@ -13732,8 +11678,6 @@ declare interface CFishPool {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFishPool(ptr_or_class: string|AnySDKClass): CFishPool;
 
 declare interface CFists {
     "PlayingUninterruptableAct": boolean;
@@ -13748,15 +11692,11 @@ declare interface CFists {
     IsValid: () => boolean;
 }
 
-declare function CFists(ptr_or_class: string|AnySDKClass): CFists;
-
 declare interface CFlashbang {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFlashbang(ptr_or_class: string|AnySDKClass): CFlashbang;
 
 declare interface CFlashbangProjectile {
     "TimeToDetonate": number;
@@ -13767,8 +11707,6 @@ declare interface CFlashbangProjectile {
     IsValid: () => boolean;
 }
 
-declare function CFlashbangProjectile(ptr_or_class: string|AnySDKClass): CFlashbangProjectile;
-
 declare interface CFogController {
     readonly "Fog": fogparams_t;
     "UseAngles": boolean;
@@ -13778,16 +11716,12 @@ declare interface CFogController {
     IsValid: () => boolean;
 }
 
-declare function CFogController(ptr_or_class: string|AnySDKClass): CFogController;
-
 declare interface CFogTrigger {
     readonly "Fog": fogparams_t;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFogTrigger(ptr_or_class: string|AnySDKClass): CFogTrigger;
 
 declare interface CFogVolume {
     "FogName": string;
@@ -13800,8 +11734,6 @@ declare interface CFogVolume {
     IsValid: () => boolean;
 }
 
-declare function CFogVolume(ptr_or_class: string|AnySDKClass): CFogVolume;
-
 declare interface CFootstepControl {
     "Source": string;
     "Destination": string;
@@ -13809,8 +11741,6 @@ declare interface CFootstepControl {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFootstepControl(ptr_or_class: string|AnySDKClass): CFootstepControl;
 
 declare interface CFuncBrush {
     "Solidity": number;
@@ -13823,8 +11753,6 @@ declare interface CFuncBrush {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncBrush(ptr_or_class: string|AnySDKClass): CFuncBrush;
 
 declare interface CFuncConveyor {
     "ConveyorModels": string;
@@ -13840,8 +11768,6 @@ declare interface CFuncConveyor {
     IsValid: () => boolean;
 }
 
-declare function CFuncConveyor(ptr_or_class: string|AnySDKClass): CFuncConveyor;
-
 declare interface CFuncElectrifiedVolume {
     "EffectName": string;
     "EffectInterpenetrateName": string;
@@ -13852,15 +11778,11 @@ declare interface CFuncElectrifiedVolume {
     IsValid: () => boolean;
 }
 
-declare function CFuncElectrifiedVolume(ptr_or_class: string|AnySDKClass): CFuncElectrifiedVolume;
-
 declare interface CFuncIllusionary {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncIllusionary(ptr_or_class: string|AnySDKClass): CFuncIllusionary;
 
 declare interface CFuncInteractionLayerClip {
     "Disabled": boolean;
@@ -13870,8 +11792,6 @@ declare interface CFuncInteractionLayerClip {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncInteractionLayerClip(ptr_or_class: string|AnySDKClass): CFuncInteractionLayerClip;
 
 declare interface CFuncLadder {
     "LadderDir": Vector;
@@ -13890,15 +11810,11 @@ declare interface CFuncLadder {
     IsValid: () => boolean;
 }
 
-declare function CFuncLadder(ptr_or_class: string|AnySDKClass): CFuncLadder;
-
 declare interface CFuncLadderAlias_func_useableladder {
     readonly "Parent": CFuncLadder;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncLadderAlias_func_useableladder(ptr_or_class: string|AnySDKClass): CFuncLadderAlias_func_useableladder;
 
 declare interface CFuncMonitor {
     "TargetCamera": string;
@@ -13914,8 +11830,6 @@ declare interface CFuncMonitor {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncMonitor(ptr_or_class: string|AnySDKClass): CFuncMonitor;
 
 declare interface CFuncMoveLinear {
     "AuthoredPosition": number;
@@ -13935,15 +11849,11 @@ declare interface CFuncMoveLinear {
     IsValid: () => boolean;
 }
 
-declare function CFuncMoveLinear(ptr_or_class: string|AnySDKClass): CFuncMoveLinear;
-
 declare interface CFuncMoveLinearAlias_momentary_door {
     readonly "Parent": CFuncMoveLinear;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncMoveLinearAlias_momentary_door(ptr_or_class: string|AnySDKClass): CFuncMoveLinearAlias_momentary_door;
 
 declare interface CFuncMover {
     "CreateMovableNavMesh": boolean;
@@ -13988,15 +11898,11 @@ declare interface CFuncMover {
     IsValid: () => boolean;
 }
 
-declare function CFuncMover(ptr_or_class: string|AnySDKClass): CFuncMover;
-
 declare interface CFuncMoverAPI {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncMoverAPI(ptr_or_class: string|AnySDKClass): CFuncMoverAPI;
 
 declare interface CFuncNavBlocker {
     "Disabled": boolean;
@@ -14006,8 +11912,6 @@ declare interface CFuncNavBlocker {
     IsValid: () => boolean;
 }
 
-declare function CFuncNavBlocker(ptr_or_class: string|AnySDKClass): CFuncNavBlocker;
-
 declare interface CFuncNavObstruction {
     "Disabled": boolean;
     readonly "Parent": CBaseModelEntity;
@@ -14015,16 +11919,12 @@ declare interface CFuncNavObstruction {
     IsValid: () => boolean;
 }
 
-declare function CFuncNavObstruction(ptr_or_class: string|AnySDKClass): CFuncNavObstruction;
-
 declare interface CFuncPlat {
     "Noise": string;
     readonly "Parent": CBasePlatTrain;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncPlat(ptr_or_class: string|AnySDKClass): CFuncPlat;
 
 declare interface CFuncPlatRot {
     "End": QAngle;
@@ -14034,15 +11934,11 @@ declare interface CFuncPlatRot {
     IsValid: () => boolean;
 }
 
-declare function CFuncPlatRot(ptr_or_class: string|AnySDKClass): CFuncPlatRot;
-
 declare interface CFuncPropRespawnZone {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncPropRespawnZone(ptr_or_class: string|AnySDKClass): CFuncPropRespawnZone;
 
 declare interface CFuncRotating {
     readonly "OnStopped": CEntityIOOutput;
@@ -14067,8 +11963,6 @@ declare interface CFuncRotating {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncRotating(ptr_or_class: string|AnySDKClass): CFuncRotating;
 
 declare interface CFuncShatterglass {
     readonly "ShatterGlassShards": Object;
@@ -14099,16 +11993,12 @@ declare interface CFuncShatterglass {
     IsValid: () => boolean;
 }
 
-declare function CFuncShatterglass(ptr_or_class: string|AnySDKClass): CFuncShatterglass;
-
 declare interface CFuncTankTrain {
     readonly "OnDeath": CEntityIOOutput;
     readonly "Parent": CFuncTrackTrain;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncTankTrain(ptr_or_class: string|AnySDKClass): CFuncTankTrain;
 
 declare interface CFuncTimescale {
     "DesiredTimescale": number;
@@ -14121,15 +12011,11 @@ declare interface CFuncTimescale {
     IsValid: () => boolean;
 }
 
-declare function CFuncTimescale(ptr_or_class: string|AnySDKClass): CFuncTimescale;
-
 declare interface CFuncTrackAuto {
     readonly "Parent": CFuncTrackChange;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncTrackAuto(ptr_or_class: string|AnySDKClass): CFuncTrackAuto;
 
 declare interface CFuncTrackChange {
     readonly "TrackTop": CPathTrack;
@@ -14145,8 +12031,6 @@ declare interface CFuncTrackChange {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncTrackChange(ptr_or_class: string|AnySDKClass): CFuncTrackChange;
 
 declare interface CFuncTrackTrain {
     readonly "Ppath": CPathTrack;
@@ -14191,8 +12075,6 @@ declare interface CFuncTrackTrain {
     IsValid: () => boolean;
 }
 
-declare function CFuncTrackTrain(ptr_or_class: string|AnySDKClass): CFuncTrackTrain;
-
 declare interface CFuncTrain {
     readonly "CurrentTarget": CBaseEntity;
     "Activated": boolean;
@@ -14205,15 +12087,11 @@ declare interface CFuncTrain {
     IsValid: () => boolean;
 }
 
-declare function CFuncTrain(ptr_or_class: string|AnySDKClass): CFuncTrain;
-
 declare interface CFuncTrainControls {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncTrainControls(ptr_or_class: string|AnySDKClass): CFuncTrainControls;
 
 declare interface CFuncVPhysicsClip {
     "Disabled": boolean;
@@ -14222,15 +12100,11 @@ declare interface CFuncVPhysicsClip {
     IsValid: () => boolean;
 }
 
-declare function CFuncVPhysicsClip(ptr_or_class: string|AnySDKClass): CFuncVPhysicsClip;
-
 declare interface CFuncVehicleClip {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncVehicleClip(ptr_or_class: string|AnySDKClass): CFuncVehicleClip;
 
 declare interface CFuncWall {
     "State": number;
@@ -14239,15 +12113,11 @@ declare interface CFuncWall {
     IsValid: () => boolean;
 }
 
-declare function CFuncWall(ptr_or_class: string|AnySDKClass): CFuncWall;
-
 declare interface CFuncWallToggle {
     readonly "Parent": CFuncWall;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CFuncWallToggle(ptr_or_class: string|AnySDKClass): CFuncWallToggle;
 
 declare interface CGameChoreoServices {
     readonly "Owner": CBaseAnimGraph;
@@ -14258,15 +12128,11 @@ declare interface CGameChoreoServices {
     IsValid: () => boolean;
 }
 
-declare function CGameChoreoServices(ptr_or_class: string|AnySDKClass): CGameChoreoServices;
-
 declare interface CGameEnd {
     readonly "Parent": CRulePointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGameEnd(ptr_or_class: string|AnySDKClass): CGameEnd;
 
 declare interface CGameGibManager {
     "AllowNewGibs": boolean;
@@ -14278,8 +12144,6 @@ declare interface CGameGibManager {
     IsValid: () => boolean;
 }
 
-declare function CGameGibManager(ptr_or_class: string|AnySDKClass): CGameGibManager;
-
 declare interface CGameMoney {
     readonly "OnMoneySpent": CEntityIOOutput;
     readonly "OnMoneySpentFail": CEntityIOOutput;
@@ -14290,15 +12154,11 @@ declare interface CGameMoney {
     IsValid: () => boolean;
 }
 
-declare function CGameMoney(ptr_or_class: string|AnySDKClass): CGameMoney;
-
 declare interface CGamePlayerEquip {
     readonly "Parent": CRulePointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGamePlayerEquip(ptr_or_class: string|AnySDKClass): CGamePlayerEquip;
 
 declare interface CGamePlayerZone {
     readonly "OnPlayerInZone": CEntityIOOutput;
@@ -14307,8 +12167,6 @@ declare interface CGamePlayerZone {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGamePlayerZone(ptr_or_class: string|AnySDKClass): CGamePlayerZone;
 
 declare interface CGameRules {
     readonly "__pChainEntity": CNetworkVarChainer;
@@ -14321,15 +12179,11 @@ declare interface CGameRules {
     IsValid: () => boolean;
 }
 
-declare function CGameRules(ptr_or_class: string|AnySDKClass): CGameRules;
-
 declare interface CGameRulesProxy {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGameRulesProxy(ptr_or_class: string|AnySDKClass): CGameRulesProxy;
 
 declare interface CGameScriptedMoveData {
     "AccumulatedRootMotion": Vector;
@@ -14354,8 +12208,6 @@ declare interface CGameScriptedMoveData {
     IsValid: () => boolean;
 }
 
-declare function CGameScriptedMoveData(ptr_or_class: string|AnySDKClass): CGameScriptedMoveData;
-
 declare interface CGameScriptedMoveDef_t {
     "Type": any;
     "DestOffset": Vector;
@@ -14367,8 +12219,6 @@ declare interface CGameScriptedMoveDef_t {
     IsValid: () => boolean;
 }
 
-declare function CGameScriptedMoveDef_t(ptr_or_class: string|AnySDKClass): CGameScriptedMoveDef_t;
-
 declare interface CGameText {
     "Message": string;
     readonly "TextParms": hudtextparms_t;
@@ -14376,8 +12226,6 @@ declare interface CGameText {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CGameText(ptr_or_class: string|AnySDKClass): CGameText;
 
 declare interface CGenericConstraint {
     "LinearMotionX": number;
@@ -14433,8 +12281,6 @@ declare interface CGenericConstraint {
     IsValid: () => boolean;
 }
 
-declare function CGenericConstraint(ptr_or_class: string|AnySDKClass): CGenericConstraint;
-
 declare interface CGradientFog {
     "FogStartDistance": number;
     "FogEndDistance": number;
@@ -14456,8 +12302,6 @@ declare interface CGradientFog {
     IsValid: () => boolean;
 }
 
-declare function CGradientFog(ptr_or_class: string|AnySDKClass): CGradientFog;
-
 declare interface CGunTarget {
     "On": boolean;
     readonly "TargetEnt": CBaseEntity;
@@ -14467,15 +12311,11 @@ declare interface CGunTarget {
     IsValid: () => boolean;
 }
 
-declare function CGunTarget(ptr_or_class: string|AnySDKClass): CGunTarget;
-
 declare interface CHEGrenade {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHEGrenade(ptr_or_class: string|AnySDKClass): CHEGrenade;
 
 declare interface CHEGrenadeProjectile {
     readonly "Parent": CBaseCSGrenadeProjectile;
@@ -14483,15 +12323,11 @@ declare interface CHEGrenadeProjectile {
     IsValid: () => boolean;
 }
 
-declare function CHEGrenadeProjectile(ptr_or_class: string|AnySDKClass): CHEGrenadeProjectile;
-
 declare interface CHandleDummy {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHandleDummy(ptr_or_class: string|AnySDKClass): CHandleDummy;
 
 declare interface CHandleTest {
     readonly "Handle": CBaseEntity;
@@ -14500,8 +12336,6 @@ declare interface CHandleTest {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHandleTest(ptr_or_class: string|AnySDKClass): CHandleTest;
 
 declare interface CHostage {
     readonly "OnHostageBeginGrab": CEntityIOOutput;
@@ -14548,23 +12382,17 @@ declare interface CHostage {
     IsValid: () => boolean;
 }
 
-declare function CHostage(ptr_or_class: string|AnySDKClass): CHostage;
-
 declare interface CHostageAlias_info_hostage_spawn {
     readonly "Parent": CHostage;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CHostageAlias_info_hostage_spawn(ptr_or_class: string|AnySDKClass): CHostageAlias_info_hostage_spawn;
-
 declare interface CHostageCarriableProp {
     readonly "Parent": CBaseAnimGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CHostageCarriableProp(ptr_or_class: string|AnySDKClass): CHostageCarriableProp;
 
 declare interface CHostageExpresserShim {
     readonly "Expresser": CAI_Expresser;
@@ -14573,15 +12401,11 @@ declare interface CHostageExpresserShim {
     IsValid: () => boolean;
 }
 
-declare function CHostageExpresserShim(ptr_or_class: string|AnySDKClass): CHostageExpresserShim;
-
 declare interface CIncendiaryGrenade {
     readonly "Parent": CMolotovGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CIncendiaryGrenade(ptr_or_class: string|AnySDKClass): CIncendiaryGrenade;
 
 declare interface CInferno {
     "FirePositions": Object;
@@ -14614,23 +12438,17 @@ declare interface CInferno {
     IsValid: () => boolean;
 }
 
-declare function CInferno(ptr_or_class: string|AnySDKClass): CInferno;
-
 declare interface CInfoData {
     readonly "Parent": CServerOnlyEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CInfoData(ptr_or_class: string|AnySDKClass): CInfoData;
-
 declare interface CInfoDeathmatchSpawn {
     readonly "Parent": SpawnPoint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoDeathmatchSpawn(ptr_or_class: string|AnySDKClass): CInfoDeathmatchSpawn;
 
 declare interface CInfoGameEventProxy {
     "EventName": string;
@@ -14640,15 +12458,11 @@ declare interface CInfoGameEventProxy {
     IsValid: () => boolean;
 }
 
-declare function CInfoGameEventProxy(ptr_or_class: string|AnySDKClass): CInfoGameEventProxy;
-
 declare interface CInfoInstructorHintBombTargetA {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoInstructorHintBombTargetA(ptr_or_class: string|AnySDKClass): CInfoInstructorHintBombTargetA;
 
 declare interface CInfoInstructorHintBombTargetB {
     readonly "Parent": CPointEntity;
@@ -14656,15 +12470,11 @@ declare interface CInfoInstructorHintBombTargetB {
     IsValid: () => boolean;
 }
 
-declare function CInfoInstructorHintBombTargetB(ptr_or_class: string|AnySDKClass): CInfoInstructorHintBombTargetB;
-
 declare interface CInfoInstructorHintHostageRescueZone {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoInstructorHintHostageRescueZone(ptr_or_class: string|AnySDKClass): CInfoInstructorHintHostageRescueZone;
 
 declare interface CInfoInstructorHintTarget {
     readonly "Parent": CPointEntity;
@@ -14672,15 +12482,11 @@ declare interface CInfoInstructorHintTarget {
     IsValid: () => boolean;
 }
 
-declare function CInfoInstructorHintTarget(ptr_or_class: string|AnySDKClass): CInfoInstructorHintTarget;
-
 declare interface CInfoLadderDismount {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoLadderDismount(ptr_or_class: string|AnySDKClass): CInfoLadderDismount;
 
 declare interface CInfoLandmark {
     readonly "Parent": CPointEntity;
@@ -14688,15 +12494,11 @@ declare interface CInfoLandmark {
     IsValid: () => boolean;
 }
 
-declare function CInfoLandmark(ptr_or_class: string|AnySDKClass): CInfoLandmark;
-
 declare interface CInfoPlayerCounterterrorist {
     readonly "Parent": SpawnPoint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoPlayerCounterterrorist(ptr_or_class: string|AnySDKClass): CInfoPlayerCounterterrorist;
 
 declare interface CInfoPlayerStart {
     "Disabled": boolean;
@@ -14706,23 +12508,17 @@ declare interface CInfoPlayerStart {
     IsValid: () => boolean;
 }
 
-declare function CInfoPlayerStart(ptr_or_class: string|AnySDKClass): CInfoPlayerStart;
-
 declare interface CInfoPlayerTerrorist {
     readonly "Parent": SpawnPoint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CInfoPlayerTerrorist(ptr_or_class: string|AnySDKClass): CInfoPlayerTerrorist;
-
 declare interface CInfoSpawnGroupLandmark {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoSpawnGroupLandmark(ptr_or_class: string|AnySDKClass): CInfoSpawnGroupLandmark;
 
 declare interface CInfoSpawnGroupLoadUnload {
     readonly "OnSpawnGroupLoadStarted": CEntityIOOutput;
@@ -14741,23 +12537,17 @@ declare interface CInfoSpawnGroupLoadUnload {
     IsValid: () => boolean;
 }
 
-declare function CInfoSpawnGroupLoadUnload(ptr_or_class: string|AnySDKClass): CInfoSpawnGroupLoadUnload;
-
 declare interface CInfoTargetServerOnly {
     readonly "Parent": CServerOnlyPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CInfoTargetServerOnly(ptr_or_class: string|AnySDKClass): CInfoTargetServerOnly;
-
 declare interface CInfoTeleportDestination {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoTeleportDestination(ptr_or_class: string|AnySDKClass): CInfoTeleportDestination;
 
 declare interface CInfoVisibilityBox {
     "Mode": number;
@@ -14767,8 +12557,6 @@ declare interface CInfoVisibilityBox {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CInfoVisibilityBox(ptr_or_class: string|AnySDKClass): CInfoVisibilityBox;
 
 declare interface CInstancedSceneEntity {
     readonly "Owner": CBaseEntity;
@@ -14783,8 +12571,6 @@ declare interface CInstancedSceneEntity {
     IsValid: () => boolean;
 }
 
-declare function CInstancedSceneEntity(ptr_or_class: string|AnySDKClass): CInstancedSceneEntity;
-
 declare interface CInstructorEventEntity {
     "Name": string;
     "HintTargetEntity": string;
@@ -14794,8 +12580,6 @@ declare interface CInstructorEventEntity {
     IsValid: () => boolean;
 }
 
-declare function CInstructorEventEntity(ptr_or_class: string|AnySDKClass): CInstructorEventEntity;
-
 declare interface CIronSightController {
     "IronSightAvailable": boolean;
     "IronSightAmount": number;
@@ -14804,8 +12588,6 @@ declare interface CIronSightController {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CIronSightController(ptr_or_class: string|AnySDKClass): CIronSightController;
 
 declare interface CItem {
     readonly "OnPlayerTouch": CEntityIOOutput;
@@ -14821,15 +12603,11 @@ declare interface CItem {
     IsValid: () => boolean;
 }
 
-declare function CItem(ptr_or_class: string|AnySDKClass): CItem;
-
 declare interface CItemAssaultSuit {
     readonly "Parent": CItem;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CItemAssaultSuit(ptr_or_class: string|AnySDKClass): CItemAssaultSuit;
 
 declare interface CItemDefuser {
     readonly "EntitySpottedState": EntitySpottedState_t;
@@ -14839,15 +12617,11 @@ declare interface CItemDefuser {
     IsValid: () => boolean;
 }
 
-declare function CItemDefuser(ptr_or_class: string|AnySDKClass): CItemDefuser;
-
 declare interface CItemDefuserAlias_item_defuser {
     readonly "Parent": CItemDefuser;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CItemDefuserAlias_item_defuser(ptr_or_class: string|AnySDKClass): CItemDefuserAlias_item_defuser;
 
 declare interface CItemDogtags {
     readonly "OwningPlayer": CCSPlayerPawn;
@@ -14857,15 +12631,11 @@ declare interface CItemDogtags {
     IsValid: () => boolean;
 }
 
-declare function CItemDogtags(ptr_or_class: string|AnySDKClass): CItemDogtags;
-
 declare interface CItemHeavyAssaultSuit {
     readonly "Parent": CItemAssaultSuit;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CItemHeavyAssaultSuit(ptr_or_class: string|AnySDKClass): CItemHeavyAssaultSuit;
 
 declare interface CItemKevlar {
     readonly "Parent": CItem;
@@ -14873,23 +12643,17 @@ declare interface CItemKevlar {
     IsValid: () => boolean;
 }
 
-declare function CItemKevlar(ptr_or_class: string|AnySDKClass): CItemKevlar;
-
 declare interface CItemSoda {
     readonly "Parent": CBaseAnimGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CItemSoda(ptr_or_class: string|AnySDKClass): CItemSoda;
-
 declare interface CItem_Healthshot {
     readonly "Parent": CWeaponBaseItem;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CItem_Healthshot(ptr_or_class: string|AnySDKClass): CItem_Healthshot;
 
 declare interface CKeepUpright {
     "WorldGoalAxis": Vector;
@@ -14904,8 +12668,6 @@ declare interface CKeepUpright {
     IsValid: () => boolean;
 }
 
-declare function CKeepUpright(ptr_or_class: string|AnySDKClass): CKeepUpright;
-
 declare interface CKnife {
     "FirstAttack": boolean;
     readonly "Parent": CCSWeaponBase;
@@ -14913,15 +12675,11 @@ declare interface CKnife {
     IsValid: () => boolean;
 }
 
-declare function CKnife(ptr_or_class: string|AnySDKClass): CKnife;
-
 declare interface CLightDirectionalEntity {
     readonly "Parent": CLightEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLightDirectionalEntity(ptr_or_class: string|AnySDKClass): CLightDirectionalEntity;
 
 declare interface CLightEntity {
     readonly "CLightComponent": CLightComponent;
@@ -14930,15 +12688,11 @@ declare interface CLightEntity {
     IsValid: () => boolean;
 }
 
-declare function CLightEntity(ptr_or_class: string|AnySDKClass): CLightEntity;
-
 declare interface CLightEnvironmentEntity {
     readonly "Parent": CLightDirectionalEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLightEnvironmentEntity(ptr_or_class: string|AnySDKClass): CLightEnvironmentEntity;
 
 declare interface CLightGlow {
     "HorizontalSize": number;
@@ -14953,23 +12707,17 @@ declare interface CLightGlow {
     IsValid: () => boolean;
 }
 
-declare function CLightGlow(ptr_or_class: string|AnySDKClass): CLightGlow;
-
 declare interface CLightOrthoEntity {
     readonly "Parent": CLightEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CLightOrthoEntity(ptr_or_class: string|AnySDKClass): CLightOrthoEntity;
-
 declare interface CLightSpotEntity {
     readonly "Parent": CLightEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLightSpotEntity(ptr_or_class: string|AnySDKClass): CLightSpotEntity;
 
 declare interface CLogicAchievement {
     "Disabled": boolean;
@@ -14980,8 +12728,6 @@ declare interface CLogicAchievement {
     IsValid: () => boolean;
 }
 
-declare function CLogicAchievement(ptr_or_class: string|AnySDKClass): CLogicAchievement;
-
 declare interface CLogicActiveAutosave {
     "TriggerHitPoints": number;
     "TimeToTrigger": number;
@@ -14991,8 +12737,6 @@ declare interface CLogicActiveAutosave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicActiveAutosave(ptr_or_class: string|AnySDKClass): CLogicActiveAutosave;
 
 declare interface CLogicAuto {
     readonly "OnMapSpawn": CEntityIOOutput;
@@ -15011,8 +12755,6 @@ declare interface CLogicAuto {
     IsValid: () => boolean;
 }
 
-declare function CLogicAuto(ptr_or_class: string|AnySDKClass): CLogicAuto;
-
 declare interface CLogicAutosave {
     "ForceNewLevelUnit": boolean;
     "MinHitPoints": number;
@@ -15021,8 +12763,6 @@ declare interface CLogicAutosave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicAutosave(ptr_or_class: string|AnySDKClass): CLogicAutosave;
 
 declare interface CLogicBranch {
     "InValue": boolean;
@@ -15033,8 +12773,6 @@ declare interface CLogicBranch {
     IsValid: () => boolean;
 }
 
-declare function CLogicBranch(ptr_or_class: string|AnySDKClass): CLogicBranch;
-
 declare interface CLogicBranchList {
     "LogicBranchNames": Object;
     readonly "OnAllTrue": CEntityIOOutput;
@@ -15044,8 +12782,6 @@ declare interface CLogicBranchList {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicBranchList(ptr_or_class: string|AnySDKClass): CLogicBranchList;
 
 declare interface CLogicCase {
     "Case": Object;
@@ -15058,8 +12794,6 @@ declare interface CLogicCase {
     IsValid: () => boolean;
 }
 
-declare function CLogicCase(ptr_or_class: string|AnySDKClass): CLogicCase;
-
 declare interface CLogicCollisionPair {
     "NameAttach1": string;
     "NameAttach2": string;
@@ -15071,8 +12805,6 @@ declare interface CLogicCollisionPair {
     IsValid: () => boolean;
 }
 
-declare function CLogicCollisionPair(ptr_or_class: string|AnySDKClass): CLogicCollisionPair;
-
 declare interface CLogicCompare {
     "InValue": number;
     "CompareValue": number;
@@ -15080,8 +12812,6 @@ declare interface CLogicCompare {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicCompare(ptr_or_class: string|AnySDKClass): CLogicCompare;
 
 declare interface CLogicDistanceAutosave {
     "TargetEntity": string;
@@ -15094,8 +12824,6 @@ declare interface CLogicDistanceAutosave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicDistanceAutosave(ptr_or_class: string|AnySDKClass): CLogicDistanceAutosave;
 
 declare interface CLogicDistanceCheck {
     "EntityA": string;
@@ -15110,8 +12838,6 @@ declare interface CLogicDistanceCheck {
     IsValid: () => boolean;
 }
 
-declare function CLogicDistanceCheck(ptr_or_class: string|AnySDKClass): CLogicDistanceCheck;
-
 declare interface CLogicEventListener {
     "StrEventName": string;
     "IsEnabled": boolean;
@@ -15122,16 +12848,12 @@ declare interface CLogicEventListener {
     IsValid: () => boolean;
 }
 
-declare function CLogicEventListener(ptr_or_class: string|AnySDKClass): CLogicEventListener;
-
 declare interface CLogicGameEvent {
     "EventName": string;
     readonly "Parent": CLogicalEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicGameEvent(ptr_or_class: string|AnySDKClass): CLogicGameEvent;
 
 declare interface CLogicGameEventListener {
     readonly "OnEventFired": CEntityIOOutput;
@@ -15144,8 +12866,6 @@ declare interface CLogicGameEventListener {
     IsValid: () => boolean;
 }
 
-declare function CLogicGameEventListener(ptr_or_class: string|AnySDKClass): CLogicGameEventListener;
-
 declare interface CLogicLineToEntity {
     "SourceName": string;
     readonly "StartEntity": CBaseEntity;
@@ -15154,8 +12874,6 @@ declare interface CLogicLineToEntity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicLineToEntity(ptr_or_class: string|AnySDKClass): CLogicLineToEntity;
 
 declare interface CLogicMeasureMovement {
     "StrMeasureTarget": string;
@@ -15171,8 +12889,6 @@ declare interface CLogicMeasureMovement {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicMeasureMovement(ptr_or_class: string|AnySDKClass): CLogicMeasureMovement;
 
 declare interface CLogicNPCCounter {
     readonly "OnMinCountAll": CEntityIOOutput;
@@ -15220,8 +12936,6 @@ declare interface CLogicNPCCounter {
     IsValid: () => boolean;
 }
 
-declare function CLogicNPCCounter(ptr_or_class: string|AnySDKClass): CLogicNPCCounter;
-
 declare interface CLogicNPCCounterAABB {
     "DistanceOuterMins": Vector;
     "DistanceOuterMaxs": Vector;
@@ -15232,15 +12946,11 @@ declare interface CLogicNPCCounterAABB {
     IsValid: () => boolean;
 }
 
-declare function CLogicNPCCounterAABB(ptr_or_class: string|AnySDKClass): CLogicNPCCounterAABB;
-
 declare interface CLogicNPCCounterOBB {
     readonly "Parent": CLogicNPCCounterAABB;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicNPCCounterOBB(ptr_or_class: string|AnySDKClass): CLogicNPCCounterOBB;
 
 declare interface CLogicNavigation {
     "IsOn": boolean;
@@ -15249,8 +12959,6 @@ declare interface CLogicNavigation {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicNavigation(ptr_or_class: string|AnySDKClass): CLogicNavigation;
 
 declare interface CLogicPlayerProxy {
     readonly "Player": CBaseEntity;
@@ -15262,23 +12970,17 @@ declare interface CLogicPlayerProxy {
     IsValid: () => boolean;
 }
 
-declare function CLogicPlayerProxy(ptr_or_class: string|AnySDKClass): CLogicPlayerProxy;
-
 declare interface CLogicProximity {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CLogicProximity(ptr_or_class: string|AnySDKClass): CLogicProximity;
-
 declare interface CLogicScript {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CLogicScript(ptr_or_class: string|AnySDKClass): CLogicScript;
 
 declare interface CMapVetoPickController {
     "PlayedIntroVcd": boolean;
@@ -15305,16 +13007,12 @@ declare interface CMapVetoPickController {
     IsValid: () => boolean;
 }
 
-declare function CMapVetoPickController(ptr_or_class: string|AnySDKClass): CMapVetoPickController;
-
 declare interface CMarkupVolume {
     "Disabled": boolean;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMarkupVolume(ptr_or_class: string|AnySDKClass): CMarkupVolume;
 
 declare interface CMarkupVolumeTagged {
     "IsGroup": boolean;
@@ -15327,15 +13025,11 @@ declare interface CMarkupVolumeTagged {
     IsValid: () => boolean;
 }
 
-declare function CMarkupVolumeTagged(ptr_or_class: string|AnySDKClass): CMarkupVolumeTagged;
-
 declare interface CMarkupVolumeTagged_Nav {
     readonly "Parent": CMarkupVolumeTagged;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMarkupVolumeTagged_Nav(ptr_or_class: string|AnySDKClass): CMarkupVolumeTagged_Nav;
 
 declare interface CMarkupVolumeTagged_NavGame {
     "FloodFillAttribute": boolean;
@@ -15343,8 +13037,6 @@ declare interface CMarkupVolumeTagged_NavGame {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMarkupVolumeTagged_NavGame(ptr_or_class: string|AnySDKClass): CMarkupVolumeTagged_NavGame;
 
 declare interface CMarkupVolumeWithRef {
     "UseRef": boolean;
@@ -15355,8 +13047,6 @@ declare interface CMarkupVolumeWithRef {
     IsValid: () => boolean;
 }
 
-declare function CMarkupVolumeWithRef(ptr_or_class: string|AnySDKClass): CMarkupVolumeWithRef;
-
 declare interface CMathColorBlend {
     "InMin": number;
     "InMax": number;
@@ -15366,8 +13056,6 @@ declare interface CMathColorBlend {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMathColorBlend(ptr_or_class: string|AnySDKClass): CMathColorBlend;
 
 declare interface CMathCounter {
     "Min": number;
@@ -15383,8 +13071,6 @@ declare interface CMathCounter {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMathCounter(ptr_or_class: string|AnySDKClass): CMathCounter;
 
 declare interface CMathRemap {
     "InMin": number;
@@ -15402,15 +13088,11 @@ declare interface CMathRemap {
     IsValid: () => boolean;
 }
 
-declare function CMathRemap(ptr_or_class: string|AnySDKClass): CMathRemap;
-
 declare interface CMelee {
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMelee(ptr_or_class: string|AnySDKClass): CMelee;
 
 declare interface CMessage {
     "Message": string;
@@ -15424,8 +13106,6 @@ declare interface CMessage {
     IsValid: () => boolean;
 }
 
-declare function CMessage(ptr_or_class: string|AnySDKClass): CMessage;
-
 declare interface CMessageEntity {
     "Radius": number;
     "MessageText": string;
@@ -15437,23 +13117,17 @@ declare interface CMessageEntity {
     IsValid: () => boolean;
 }
 
-declare function CMessageEntity(ptr_or_class: string|AnySDKClass): CMessageEntity;
-
 declare interface CModelPointEntity {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CModelPointEntity(ptr_or_class: string|AnySDKClass): CModelPointEntity;
-
 declare interface CMolotovGrenade {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMolotovGrenade(ptr_or_class: string|AnySDKClass): CMolotovGrenade;
 
 declare interface CMolotovProjectile {
     "IsIncGrenade": boolean;
@@ -15464,8 +13138,6 @@ declare interface CMolotovProjectile {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMolotovProjectile(ptr_or_class: string|AnySDKClass): CMolotovProjectile;
 
 declare interface CMomentaryRotButton {
     readonly "OnUnpressed": CEntityIOOutput;
@@ -15486,8 +13158,6 @@ declare interface CMomentaryRotButton {
     IsValid: () => boolean;
 }
 
-declare function CMomentaryRotButton(ptr_or_class: string|AnySDKClass): CMomentaryRotButton;
-
 declare interface CMotorController {
     "Speed": number;
     "MaxTorque": number;
@@ -15496,8 +13166,6 @@ declare interface CMotorController {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMotorController(ptr_or_class: string|AnySDKClass): CMotorController;
 
 declare interface CMoverPathNode {
     "InTangentLocal": Vector;
@@ -15512,8 +13180,6 @@ declare interface CMoverPathNode {
     IsValid: () => boolean;
 }
 
-declare function CMoverPathNode(ptr_or_class: string|AnySDKClass): CMoverPathNode;
-
 declare interface CMultiLightProxy {
     "LightNameFilter": string;
     "LightClassFilter": string;
@@ -15527,8 +13193,6 @@ declare interface CMultiLightProxy {
     IsValid: () => boolean;
 }
 
-declare function CMultiLightProxy(ptr_or_class: string|AnySDKClass): CMultiLightProxy;
-
 declare interface CMultiSource {
     readonly "RgEntities": Object;
     "RgTriggered": Object;
@@ -15540,15 +13204,11 @@ declare interface CMultiSource {
     IsValid: () => boolean;
 }
 
-declare function CMultiSource(ptr_or_class: string|AnySDKClass): CMultiSource;
-
 declare interface CMultiplayRules {
     readonly "Parent": CGameRules;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMultiplayRules(ptr_or_class: string|AnySDKClass): CMultiplayRules;
 
 declare interface CMultiplayer_Expresser {
     "AllowMultipleScenes": boolean;
@@ -15556,8 +13216,6 @@ declare interface CMultiplayer_Expresser {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CMultiplayer_Expresser(ptr_or_class: string|AnySDKClass): CMultiplayer_Expresser;
 
 declare interface CNavLinkAreaEntity {
     "Width": number;
@@ -15578,16 +13236,12 @@ declare interface CNavLinkAreaEntity {
     IsValid: () => boolean;
 }
 
-declare function CNavLinkAreaEntity(ptr_or_class: string|AnySDKClass): CNavLinkAreaEntity;
-
 declare interface CNavSpaceInfo {
     "CreateFlightSpace": boolean;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavSpaceInfo(ptr_or_class: string|AnySDKClass): CNavSpaceInfo;
 
 declare interface CNavVolumeBreadthFirstSearch {
     "StartPos": Vector;
@@ -15597,15 +13251,11 @@ declare interface CNavVolumeBreadthFirstSearch {
     IsValid: () => boolean;
 }
 
-declare function CNavVolumeBreadthFirstSearch(ptr_or_class: string|AnySDKClass): CNavVolumeBreadthFirstSearch;
-
 declare interface CNavVolumeCalculatedVector {
     readonly "Parent": CNavVolume;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNavVolumeCalculatedVector(ptr_or_class: string|AnySDKClass): CNavVolumeCalculatedVector;
 
 declare interface CNavVolumeMarkupVolume {
     readonly "Parent": CNavVolume;
@@ -15613,23 +13263,17 @@ declare interface CNavVolumeMarkupVolume {
     IsValid: () => boolean;
 }
 
-declare function CNavVolumeMarkupVolume(ptr_or_class: string|AnySDKClass): CNavVolumeMarkupVolume;
-
 declare interface CNavWalkable {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CNavWalkable(ptr_or_class: string|AnySDKClass): CNavWalkable;
-
 declare interface CNullEntity {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CNullEntity(ptr_or_class: string|AnySDKClass): CNullEntity;
 
 declare interface COmniLight {
     "InnerAngle": number;
@@ -15640,16 +13284,12 @@ declare interface COmniLight {
     IsValid: () => boolean;
 }
 
-declare function COmniLight(ptr_or_class: string|AnySDKClass): COmniLight;
-
 declare interface COrnamentProp {
     "InitialOwner": string;
     readonly "Parent": CDynamicProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function COrnamentProp(ptr_or_class: string|AnySDKClass): COrnamentProp;
 
 declare interface CParticleSystem {
     "SnapshotFileName": string;
@@ -15678,8 +13318,6 @@ declare interface CParticleSystem {
     IsValid: () => boolean;
 }
 
-declare function CParticleSystem(ptr_or_class: string|AnySDKClass): CParticleSystem;
-
 declare interface CPathCorner {
     "Wait": number;
     "Radius": number;
@@ -15689,15 +13327,11 @@ declare interface CPathCorner {
     IsValid: () => boolean;
 }
 
-declare function CPathCorner(ptr_or_class: string|AnySDKClass): CPathCorner;
-
 declare interface CPathCornerCrash {
     readonly "Parent": CPathCorner;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathCornerCrash(ptr_or_class: string|AnySDKClass): CPathCornerCrash;
 
 declare interface CPathKeyFrame {
     "Origin": Vector;
@@ -15712,8 +13346,6 @@ declare interface CPathKeyFrame {
     IsValid: () => boolean;
 }
 
-declare function CPathKeyFrame(ptr_or_class: string|AnySDKClass): CPathKeyFrame;
-
 declare interface CPathMover {
     "PathLength": number;
     "ClosedLoop": boolean;
@@ -15721,8 +13353,6 @@ declare interface CPathMover {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathMover(ptr_or_class: string|AnySDKClass): CPathMover;
 
 declare interface CPathParticleRope {
     "StartActive": boolean;
@@ -15745,15 +13375,11 @@ declare interface CPathParticleRope {
     IsValid: () => boolean;
 }
 
-declare function CPathParticleRope(ptr_or_class: string|AnySDKClass): CPathParticleRope;
-
 declare interface CPathParticleRopeAlias_path_particle_rope_clientside {
     readonly "Parent": CPathParticleRope;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPathParticleRopeAlias_path_particle_rope_clientside(ptr_or_class: string|AnySDKClass): CPathParticleRopeAlias_path_particle_rope_clientside;
 
 declare interface CPathTrack {
     readonly "Pnext": CPathTrack;
@@ -15770,8 +13396,6 @@ declare interface CPathTrack {
     IsValid: () => boolean;
 }
 
-declare function CPathTrack(ptr_or_class: string|AnySDKClass): CPathTrack;
-
 declare interface CPhysBallSocket {
     "JointFriction": number;
     "EnableSwingLimit": boolean;
@@ -15783,8 +13407,6 @@ declare interface CPhysBallSocket {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysBallSocket(ptr_or_class: string|AnySDKClass): CPhysBallSocket;
 
 declare interface CPhysBox {
     "DamageType": number;
@@ -15806,8 +13428,6 @@ declare interface CPhysBox {
     IsValid: () => boolean;
 }
 
-declare function CPhysBox(ptr_or_class: string|AnySDKClass): CPhysBox;
-
 declare interface CPhysConstraint {
     "NameAttach1": string;
     "NameAttach2": string;
@@ -15827,8 +13447,6 @@ declare interface CPhysConstraint {
     IsValid: () => boolean;
 }
 
-declare function CPhysConstraint(ptr_or_class: string|AnySDKClass): CPhysConstraint;
-
 declare interface CPhysExplosion {
     "ExplodeOnSpawn": boolean;
     "Magnitude": number;
@@ -15844,8 +13462,6 @@ declare interface CPhysExplosion {
     IsValid: () => boolean;
 }
 
-declare function CPhysExplosion(ptr_or_class: string|AnySDKClass): CPhysExplosion;
-
 declare interface CPhysFixed {
     "LinearFrequency": number;
     "LinearDampingRatio": number;
@@ -15858,8 +13474,6 @@ declare interface CPhysFixed {
     IsValid: () => boolean;
 }
 
-declare function CPhysFixed(ptr_or_class: string|AnySDKClass): CPhysFixed;
-
 declare interface CPhysForce {
     "NameAttach": string;
     "Force": number;
@@ -15871,8 +13485,6 @@ declare interface CPhysForce {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysForce(ptr_or_class: string|AnySDKClass): CPhysForce;
 
 declare interface CPhysHinge {
     readonly "SoundInfo": ConstraintSoundInfo;
@@ -15898,15 +13510,11 @@ declare interface CPhysHinge {
     IsValid: () => boolean;
 }
 
-declare function CPhysHinge(ptr_or_class: string|AnySDKClass): CPhysHinge;
-
 declare interface CPhysHingeAlias_phys_hinge_local {
     readonly "Parent": CPhysHinge;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysHingeAlias_phys_hinge_local(ptr_or_class: string|AnySDKClass): CPhysHingeAlias_phys_hinge_local;
 
 declare interface CPhysImpact {
     "Damage": number;
@@ -15916,8 +13524,6 @@ declare interface CPhysImpact {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysImpact(ptr_or_class: string|AnySDKClass): CPhysImpact;
 
 declare interface CPhysLength {
     "Offset": Object;
@@ -15930,8 +13536,6 @@ declare interface CPhysLength {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysLength(ptr_or_class: string|AnySDKClass): CPhysLength;
 
 declare interface CPhysMagnet {
     readonly "OnMagnetAttach": CEntityIOOutput;
@@ -15951,8 +13555,6 @@ declare interface CPhysMagnet {
     IsValid: () => boolean;
 }
 
-declare function CPhysMagnet(ptr_or_class: string|AnySDKClass): CPhysMagnet;
-
 declare interface CPhysMotor {
     "NameAttach": string;
     readonly "AttachedObject": CBaseEntity;
@@ -15966,8 +13568,6 @@ declare interface CPhysMotor {
     IsValid: () => boolean;
 }
 
-declare function CPhysMotor(ptr_or_class: string|AnySDKClass): CPhysMotor;
-
 declare interface CPhysPulley {
     "Position2": Vector;
     "Offset": Object;
@@ -15977,8 +13577,6 @@ declare interface CPhysPulley {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysPulley(ptr_or_class: string|AnySDKClass): CPhysPulley;
 
 declare interface CPhysSlideConstraint {
     "AxisEnd": Vector;
@@ -15996,8 +13594,6 @@ declare interface CPhysSlideConstraint {
     IsValid: () => boolean;
 }
 
-declare function CPhysSlideConstraint(ptr_or_class: string|AnySDKClass): CPhysSlideConstraint;
-
 declare interface CPhysThruster {
     "LocalOrigin": Vector;
     readonly "Parent": CPhysForce;
@@ -16005,16 +13601,12 @@ declare interface CPhysThruster {
     IsValid: () => boolean;
 }
 
-declare function CPhysThruster(ptr_or_class: string|AnySDKClass): CPhysThruster;
-
 declare interface CPhysTorque {
     "Axis": Vector;
     readonly "Parent": CPhysForce;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysTorque(ptr_or_class: string|AnySDKClass): CPhysTorque;
 
 declare interface CPhysWheelConstraint {
     "SuspensionFrequency": number;
@@ -16033,15 +13625,11 @@ declare interface CPhysWheelConstraint {
     IsValid: () => boolean;
 }
 
-declare function CPhysWheelConstraint(ptr_or_class: string|AnySDKClass): CPhysWheelConstraint;
-
 declare interface CPhysicalButton {
     readonly "Parent": CBaseButton;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysicalButton(ptr_or_class: string|AnySDKClass): CPhysicalButton;
 
 declare interface CPhysicsEntitySolver {
     readonly "MovingEntity": CBaseEntity;
@@ -16052,8 +13640,6 @@ declare interface CPhysicsEntitySolver {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysicsEntitySolver(ptr_or_class: string|AnySDKClass): CPhysicsEntitySolver;
 
 declare interface CPhysicsProp {
     readonly "MotionEnabled": CEntityIOOutput;
@@ -16098,23 +13684,17 @@ declare interface CPhysicsProp {
     IsValid: () => boolean;
 }
 
-declare function CPhysicsProp(ptr_or_class: string|AnySDKClass): CPhysicsProp;
-
 declare interface CPhysicsPropMultiplayer {
     readonly "Parent": CPhysicsProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CPhysicsPropMultiplayer(ptr_or_class: string|AnySDKClass): CPhysicsPropMultiplayer;
-
 declare interface CPhysicsPropOverride {
     readonly "Parent": CPhysicsProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysicsPropOverride(ptr_or_class: string|AnySDKClass): CPhysicsPropOverride;
 
 declare interface CPhysicsPropRespawnable {
     "OriginalSpawnOrigin": Vector;
@@ -16127,15 +13707,11 @@ declare interface CPhysicsPropRespawnable {
     IsValid: () => boolean;
 }
 
-declare function CPhysicsPropRespawnable(ptr_or_class: string|AnySDKClass): CPhysicsPropRespawnable;
-
 declare interface CPhysicsShake {
     "Force": Vector;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysicsShake(ptr_or_class: string|AnySDKClass): CPhysicsShake;
 
 declare interface CPhysicsSpring {
     "Frequency": number;
@@ -16151,16 +13727,12 @@ declare interface CPhysicsSpring {
     IsValid: () => boolean;
 }
 
-declare function CPhysicsSpring(ptr_or_class: string|AnySDKClass): CPhysicsSpring;
-
 declare interface CPhysicsWire {
     "Density": number;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPhysicsWire(ptr_or_class: string|AnySDKClass): CPhysicsWire;
 
 declare interface CPlantedC4 {
     "BombTicking": boolean;
@@ -16195,16 +13767,12 @@ declare interface CPlantedC4 {
     IsValid: () => boolean;
 }
 
-declare function CPlantedC4(ptr_or_class: string|AnySDKClass): CPlantedC4;
-
 declare interface CPlatTrigger {
     readonly "Platform": CFuncPlat;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlatTrigger(ptr_or_class: string|AnySDKClass): CPlatTrigger;
 
 declare interface CPlayerPing {
     readonly "Player": CCSPlayerPawn;
@@ -16216,8 +13784,6 @@ declare interface CPlayerPing {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayerPing(ptr_or_class: string|AnySDKClass): CPlayerPing;
 
 declare interface CPlayerSprayDecal {
     "UniqueID": number;
@@ -16240,8 +13806,6 @@ declare interface CPlayerSprayDecal {
     IsValid: () => boolean;
 }
 
-declare function CPlayerSprayDecal(ptr_or_class: string|AnySDKClass): CPlayerSprayDecal;
-
 declare interface CPlayerVisibility {
     "VisibilityStrength": number;
     "FogDistanceMultiplier": number;
@@ -16253,8 +13817,6 @@ declare interface CPlayerVisibility {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPlayerVisibility(ptr_or_class: string|AnySDKClass): CPlayerVisibility;
 
 declare interface CPointAngleSensor {
     "Disabled": boolean;
@@ -16271,8 +13833,6 @@ declare interface CPointAngleSensor {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointAngleSensor(ptr_or_class: string|AnySDKClass): CPointAngleSensor;
 
 declare interface CPointAngularVelocitySensor {
     readonly "TargetEntity": CBaseEntity;
@@ -16295,15 +13855,11 @@ declare interface CPointAngularVelocitySensor {
     IsValid: () => boolean;
 }
 
-declare function CPointAngularVelocitySensor(ptr_or_class: string|AnySDKClass): CPointAngularVelocitySensor;
-
 declare interface CPointBroadcastClientCommand {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointBroadcastClientCommand(ptr_or_class: string|AnySDKClass): CPointBroadcastClientCommand;
 
 declare interface CPointCamera {
     "FOV": number;
@@ -16337,8 +13893,6 @@ declare interface CPointCamera {
     IsValid: () => boolean;
 }
 
-declare function CPointCamera(ptr_or_class: string|AnySDKClass): CPointCamera;
-
 declare interface CPointCameraVFOV {
     "VerticalFOV": number;
     readonly "Parent": CPointCamera;
@@ -16346,15 +13900,11 @@ declare interface CPointCameraVFOV {
     IsValid: () => boolean;
 }
 
-declare function CPointCameraVFOV(ptr_or_class: string|AnySDKClass): CPointCameraVFOV;
-
 declare interface CPointClientCommand {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointClientCommand(ptr_or_class: string|AnySDKClass): CPointClientCommand;
 
 declare interface CPointClientUIDialog {
     readonly "Activator": CBaseEntity;
@@ -16363,8 +13913,6 @@ declare interface CPointClientUIDialog {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointClientUIDialog(ptr_or_class: string|AnySDKClass): CPointClientUIDialog;
 
 declare interface CPointClientUIWorldPanel {
     "IgnoreInput": boolean;
@@ -16395,8 +13943,6 @@ declare interface CPointClientUIWorldPanel {
     IsValid: () => boolean;
 }
 
-declare function CPointClientUIWorldPanel(ptr_or_class: string|AnySDKClass): CPointClientUIWorldPanel;
-
 declare interface CPointClientUIWorldTextPanel {
     "MessageText": string;
     readonly "Parent": CPointClientUIWorldPanel;
@@ -16404,15 +13950,11 @@ declare interface CPointClientUIWorldTextPanel {
     IsValid: () => boolean;
 }
 
-declare function CPointClientUIWorldTextPanel(ptr_or_class: string|AnySDKClass): CPointClientUIWorldTextPanel;
-
 declare interface CPointEntity {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointEntity(ptr_or_class: string|AnySDKClass): CPointEntity;
 
 declare interface CPointEntityFinder {
     readonly "Entity": CBaseEntity;
@@ -16427,8 +13969,6 @@ declare interface CPointEntityFinder {
     IsValid: () => boolean;
 }
 
-declare function CPointEntityFinder(ptr_or_class: string|AnySDKClass): CPointEntityFinder;
-
 declare interface CPointGamestatsCounter {
     "StrStatisticName": string;
     "Disabled": boolean;
@@ -16437,16 +13977,12 @@ declare interface CPointGamestatsCounter {
     IsValid: () => boolean;
 }
 
-declare function CPointGamestatsCounter(ptr_or_class: string|AnySDKClass): CPointGamestatsCounter;
-
 declare interface CPointGiveAmmo {
     readonly "Activator": CBaseEntity;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointGiveAmmo(ptr_or_class: string|AnySDKClass): CPointGiveAmmo;
 
 declare interface CPointHurt {
     "Damage": number;
@@ -16460,8 +13996,6 @@ declare interface CPointHurt {
     IsValid: () => boolean;
 }
 
-declare function CPointHurt(ptr_or_class: string|AnySDKClass): CPointHurt;
-
 declare interface CPointPrefab {
     "TargetMapName": string;
     "ForceWorldGroupID": string;
@@ -16474,8 +14008,6 @@ declare interface CPointPrefab {
     IsValid: () => boolean;
 }
 
-declare function CPointPrefab(ptr_or_class: string|AnySDKClass): CPointPrefab;
-
 declare interface CPointProximitySensor {
     "Disabled": boolean;
     readonly "TargetEntity": CBaseEntity;
@@ -16483,8 +14015,6 @@ declare interface CPointProximitySensor {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointProximitySensor(ptr_or_class: string|AnySDKClass): CPointProximitySensor;
 
 declare interface CPointPush {
     "Enabled": boolean;
@@ -16499,15 +14029,11 @@ declare interface CPointPush {
     IsValid: () => boolean;
 }
 
-declare function CPointPush(ptr_or_class: string|AnySDKClass): CPointPush;
-
 declare interface CPointServerCommand {
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointServerCommand(ptr_or_class: string|AnySDKClass): CPointServerCommand;
 
 declare interface CPointTeleport {
     "SaveOrigin": Vector;
@@ -16518,8 +14044,6 @@ declare interface CPointTeleport {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointTeleport(ptr_or_class: string|AnySDKClass): CPointTeleport;
 
 declare interface CPointValueRemapper {
     "Disabled": boolean;
@@ -16568,8 +14092,6 @@ declare interface CPointValueRemapper {
     IsValid: () => boolean;
 }
 
-declare function CPointValueRemapper(ptr_or_class: string|AnySDKClass): CPointValueRemapper;
-
 declare interface CPointVelocitySensor {
     readonly "TargetEntity": CBaseEntity;
     "Axis": Vector;
@@ -16580,8 +14102,6 @@ declare interface CPointVelocitySensor {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPointVelocitySensor(ptr_or_class: string|AnySDKClass): CPointVelocitySensor;
 
 declare interface CPointWorldText {
     "MessageText": string;
@@ -16605,8 +14125,6 @@ declare interface CPointWorldText {
     IsValid: () => boolean;
 }
 
-declare function CPointWorldText(ptr_or_class: string|AnySDKClass): CPointWorldText;
-
 declare interface CPostProcessingVolume {
     "FadeDuration": number;
     "MinLogExposure": number;
@@ -16628,15 +14146,11 @@ declare interface CPostProcessingVolume {
     IsValid: () => boolean;
 }
 
-declare function CPostProcessingVolume(ptr_or_class: string|AnySDKClass): CPostProcessingVolume;
-
 declare interface CPrecipitation {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPrecipitation(ptr_or_class: string|AnySDKClass): CPrecipitation;
 
 declare interface CPrecipitationBlocker {
     readonly "Parent": CBaseModelEntity;
@@ -16644,15 +14158,11 @@ declare interface CPrecipitationBlocker {
     IsValid: () => boolean;
 }
 
-declare function CPrecipitationBlocker(ptr_or_class: string|AnySDKClass): CPrecipitationBlocker;
-
 declare interface CPredictedViewModel {
     readonly "Parent": CBaseViewModel;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPredictedViewModel(ptr_or_class: string|AnySDKClass): CPredictedViewModel;
 
 declare interface CProjectedDecal {
     "Texture": number;
@@ -16661,8 +14171,6 @@ declare interface CProjectedDecal {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CProjectedDecal(ptr_or_class: string|AnySDKClass): CProjectedDecal;
 
 declare interface CPropDoorRotating {
     "Axis": Vector;
@@ -16687,8 +14195,6 @@ declare interface CPropDoorRotating {
     IsValid: () => boolean;
 }
 
-declare function CPropDoorRotating(ptr_or_class: string|AnySDKClass): CPropDoorRotating;
-
 declare interface CPropDoorRotatingBreakable {
     "Breakable": boolean;
     "IsAbleToCloseAreaPortals": boolean;
@@ -16699,15 +14205,11 @@ declare interface CPropDoorRotatingBreakable {
     IsValid: () => boolean;
 }
 
-declare function CPropDoorRotatingBreakable(ptr_or_class: string|AnySDKClass): CPropDoorRotatingBreakable;
-
 declare interface CPushable {
     readonly "Parent": CBreakable;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CPushable(ptr_or_class: string|AnySDKClass): CPushable;
 
 declare interface CRagdollConstraint {
     "Xmin": number;
@@ -16724,8 +14226,6 @@ declare interface CRagdollConstraint {
     IsValid: () => boolean;
 }
 
-declare function CRagdollConstraint(ptr_or_class: string|AnySDKClass): CRagdollConstraint;
-
 declare interface CRagdollMagnet {
     "Disabled": boolean;
     "Radius": number;
@@ -16735,8 +14235,6 @@ declare interface CRagdollMagnet {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRagdollMagnet(ptr_or_class: string|AnySDKClass): CRagdollMagnet;
 
 declare interface CRagdollProp {
     readonly "Ragdoll": ragdoll_t;
@@ -16771,15 +14269,11 @@ declare interface CRagdollProp {
     IsValid: () => boolean;
 }
 
-declare function CRagdollProp(ptr_or_class: string|AnySDKClass): CRagdollProp;
-
 declare interface CRagdollPropAlias_physics_prop_ragdoll {
     readonly "Parent": CRagdollProp;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRagdollPropAlias_physics_prop_ragdoll(ptr_or_class: string|AnySDKClass): CRagdollPropAlias_physics_prop_ragdoll;
 
 declare interface CRagdollPropAttached {
     "BoneIndexAttached": number;
@@ -16793,8 +14287,6 @@ declare interface CRagdollPropAttached {
     IsValid: () => boolean;
 }
 
-declare function CRagdollPropAttached(ptr_or_class: string|AnySDKClass): CRagdollPropAttached;
-
 declare interface CRectLight {
     "ShowLight": boolean;
     readonly "Parent": CBarnLight;
@@ -16802,15 +14294,11 @@ declare interface CRectLight {
     IsValid: () => boolean;
 }
 
-declare function CRectLight(ptr_or_class: string|AnySDKClass): CRectLight;
-
 declare interface CResponseQueue {
     readonly "ExpresserTargets": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CResponseQueue(ptr_or_class: string|AnySDKClass): CResponseQueue;
 
 declare interface CRetakeGameRules {
     "MatchSeed": number;
@@ -16822,8 +14310,6 @@ declare interface CRetakeGameRules {
     IsValid: () => boolean;
 }
 
-declare function CRetakeGameRules(ptr_or_class: string|AnySDKClass): CRetakeGameRules;
-
 declare interface CRevertSaved {
     "LoadTime": number;
     "Duration": number;
@@ -16832,8 +14318,6 @@ declare interface CRevertSaved {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRevertSaved(ptr_or_class: string|AnySDKClass): CRevertSaved;
 
 declare interface CRopeKeyframe {
     "RopeFlags": number;
@@ -16859,23 +14343,17 @@ declare interface CRopeKeyframe {
     IsValid: () => boolean;
 }
 
-declare function CRopeKeyframe(ptr_or_class: string|AnySDKClass): CRopeKeyframe;
-
 declare interface CRopeKeyframeAlias_move_rope {
     readonly "Parent": CRopeKeyframe;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CRopeKeyframeAlias_move_rope(ptr_or_class: string|AnySDKClass): CRopeKeyframeAlias_move_rope;
-
 declare interface CRotButton {
     readonly "Parent": CBaseButton;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRotButton(ptr_or_class: string|AnySDKClass): CRotButton;
 
 declare interface CRotDoor {
     "SolidBsp": boolean;
@@ -16884,15 +14362,11 @@ declare interface CRotDoor {
     IsValid: () => boolean;
 }
 
-declare function CRotDoor(ptr_or_class: string|AnySDKClass): CRotDoor;
-
 declare interface CRuleBrushEntity {
     readonly "Parent": CRuleEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRuleBrushEntity(ptr_or_class: string|AnySDKClass): CRuleBrushEntity;
 
 declare interface CRuleEntity {
     "Master": string;
@@ -16901,16 +14375,12 @@ declare interface CRuleEntity {
     IsValid: () => boolean;
 }
 
-declare function CRuleEntity(ptr_or_class: string|AnySDKClass): CRuleEntity;
-
 declare interface CRulePointEntity {
     "Score": number;
     readonly "Parent": CRuleEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRulePointEntity(ptr_or_class: string|AnySDKClass): CRulePointEntity;
 
 declare interface CSAdditionalMatchStats_t {
     "NumRoundsSurvived": number;
@@ -16930,8 +14400,6 @@ declare interface CSAdditionalMatchStats_t {
     IsValid: () => boolean;
 }
 
-declare function CSAdditionalMatchStats_t(ptr_or_class: string|AnySDKClass): CSAdditionalMatchStats_t;
-
 declare interface CSAdditionalPerRoundStats_t {
     "NumChickensKilled": number;
     "KillsWhileBlind": number;
@@ -16942,8 +14410,6 @@ declare interface CSAdditionalPerRoundStats_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSAdditionalPerRoundStats_t(ptr_or_class: string|AnySDKClass): CSAdditionalPerRoundStats_t;
 
 declare interface CSceneEntity {
     "SceneFile": string;
@@ -17013,15 +14479,11 @@ declare interface CSceneEntity {
     IsValid: () => boolean;
 }
 
-declare function CSceneEntity(ptr_or_class: string|AnySDKClass): CSceneEntity;
-
 declare interface CSceneEntityAlias_logic_choreographed_scene {
     readonly "Parent": CSceneEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSceneEntityAlias_logic_choreographed_scene(ptr_or_class: string|AnySDKClass): CSceneEntityAlias_logic_choreographed_scene;
 
 declare interface CSceneListManager {
     "Scenes": Object;
@@ -17031,16 +14493,12 @@ declare interface CSceneListManager {
     IsValid: () => boolean;
 }
 
-declare function CSceneListManager(ptr_or_class: string|AnySDKClass): CSceneListManager;
-
 declare interface CScriptItem {
     "MoveTypeOverride": number;
     readonly "Parent": CItem;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CScriptItem(ptr_or_class: string|AnySDKClass): CScriptItem;
 
 declare interface CScriptNavBlocker {
     "Extent": Vector;
@@ -17049,16 +14507,12 @@ declare interface CScriptNavBlocker {
     IsValid: () => boolean;
 }
 
-declare function CScriptNavBlocker(ptr_or_class: string|AnySDKClass): CScriptNavBlocker;
-
 declare interface CScriptTriggerHurt {
     "Extent": Vector;
     readonly "Parent": CTriggerHurt;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CScriptTriggerHurt(ptr_or_class: string|AnySDKClass): CScriptTriggerHurt;
 
 declare interface CScriptTriggerMultiple {
     "Extent": Vector;
@@ -17067,8 +14521,6 @@ declare interface CScriptTriggerMultiple {
     IsValid: () => boolean;
 }
 
-declare function CScriptTriggerMultiple(ptr_or_class: string|AnySDKClass): CScriptTriggerMultiple;
-
 declare interface CScriptTriggerOnce {
     "Extent": Vector;
     readonly "Parent": CTriggerOnce;
@@ -17076,16 +14528,12 @@ declare interface CScriptTriggerOnce {
     IsValid: () => boolean;
 }
 
-declare function CScriptTriggerOnce(ptr_or_class: string|AnySDKClass): CScriptTriggerOnce;
-
 declare interface CScriptTriggerPush {
     "Extent": Vector;
     readonly "Parent": CTriggerPush;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CScriptTriggerPush(ptr_or_class: string|AnySDKClass): CScriptTriggerPush;
 
 declare interface CScriptedSequence {
     "Entry": string;
@@ -17164,15 +14612,11 @@ declare interface CScriptedSequence {
     IsValid: () => boolean;
 }
 
-declare function CScriptedSequence(ptr_or_class: string|AnySDKClass): CScriptedSequence;
-
 declare interface CSensorGrenade {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSensorGrenade(ptr_or_class: string|AnySDKClass): CSensorGrenade;
 
 declare interface CSensorGrenadeProjectile {
     "ExpireTime": number;
@@ -17183,15 +14627,11 @@ declare interface CSensorGrenadeProjectile {
     IsValid: () => boolean;
 }
 
-declare function CSensorGrenadeProjectile(ptr_or_class: string|AnySDKClass): CSensorGrenadeProjectile;
-
 declare interface CServerOnlyEntity {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CServerOnlyEntity(ptr_or_class: string|AnySDKClass): CServerOnlyEntity;
 
 declare interface CServerOnlyPointEntity {
     readonly "Parent": CServerOnlyEntity;
@@ -17199,15 +14639,11 @@ declare interface CServerOnlyPointEntity {
     IsValid: () => boolean;
 }
 
-declare function CServerOnlyPointEntity(ptr_or_class: string|AnySDKClass): CServerOnlyPointEntity;
-
 declare interface CServerRagdollTrigger {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CServerRagdollTrigger(ptr_or_class: string|AnySDKClass): CServerRagdollTrigger;
 
 declare interface CShatterGlassShard {
     "ShardHandle": number;
@@ -17241,8 +14677,6 @@ declare interface CShatterGlassShard {
     IsValid: () => boolean;
 }
 
-declare function CShatterGlassShard(ptr_or_class: string|AnySDKClass): CShatterGlassShard;
-
 declare interface CShatterGlassShardPhysics {
     "Debris": boolean;
     "ParentShard": number;
@@ -17252,15 +14686,11 @@ declare interface CShatterGlassShardPhysics {
     IsValid: () => boolean;
 }
 
-declare function CShatterGlassShardPhysics(ptr_or_class: string|AnySDKClass): CShatterGlassShardPhysics;
-
 declare interface CShower {
     readonly "Parent": CModelPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CShower(ptr_or_class: string|AnySDKClass): CShower;
 
 declare interface CSimpleMarkupVolumeTagged {
     readonly "Parent": CMarkupVolumeTagged;
@@ -17268,16 +14698,12 @@ declare interface CSimpleMarkupVolumeTagged {
     IsValid: () => boolean;
 }
 
-declare function CSimpleMarkupVolumeTagged(ptr_or_class: string|AnySDKClass): CSimpleMarkupVolumeTagged;
-
 declare interface CSingleplayRules {
     "SinglePlayerGameEnding": boolean;
     readonly "Parent": CGameRules;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSingleplayRules(ptr_or_class: string|AnySDKClass): CSingleplayRules;
 
 declare interface CSkyCamera {
     readonly "SkyboxData": sky3dparams_t;
@@ -17289,15 +14715,11 @@ declare interface CSkyCamera {
     IsValid: () => boolean;
 }
 
-declare function CSkyCamera(ptr_or_class: string|AnySDKClass): CSkyCamera;
-
 declare interface CSmokeGrenade {
     readonly "Parent": CBaseCSGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSmokeGrenade(ptr_or_class: string|AnySDKClass): CSmokeGrenade;
 
 declare interface CSmokeGrenadeProjectile {
     "SmokeEffectTickBegin": number;
@@ -17316,8 +14738,6 @@ declare interface CSmokeGrenadeProjectile {
     IsValid: () => boolean;
 }
 
-declare function CSmokeGrenadeProjectile(ptr_or_class: string|AnySDKClass): CSmokeGrenadeProjectile;
-
 declare interface CSmoothFunc {
     "SmoothAmplitude": number;
     "SmoothBias": number;
@@ -17327,8 +14747,6 @@ declare interface CSmoothFunc {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSmoothFunc(ptr_or_class: string|AnySDKClass): CSmoothFunc;
 
 declare interface CSound {
     readonly "Owner": CBaseEntity;
@@ -17346,8 +14764,6 @@ declare interface CSound {
     IsValid: () => boolean;
 }
 
-declare function CSound(ptr_or_class: string|AnySDKClass): CSound;
-
 declare interface CSoundAreaEntityBase {
     "Disabled": boolean;
     "SoundAreaType": string;
@@ -17357,8 +14773,6 @@ declare interface CSoundAreaEntityBase {
     IsValid: () => boolean;
 }
 
-declare function CSoundAreaEntityBase(ptr_or_class: string|AnySDKClass): CSoundAreaEntityBase;
-
 declare interface CSoundAreaEntityOrientedBox {
     "Min": Vector;
     "Max": Vector;
@@ -17367,16 +14781,12 @@ declare interface CSoundAreaEntityOrientedBox {
     IsValid: () => boolean;
 }
 
-declare function CSoundAreaEntityOrientedBox(ptr_or_class: string|AnySDKClass): CSoundAreaEntityOrientedBox;
-
 declare interface CSoundAreaEntitySphere {
     "Radius": number;
     readonly "Parent": CSoundAreaEntityBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundAreaEntitySphere(ptr_or_class: string|AnySDKClass): CSoundAreaEntitySphere;
 
 declare interface CSoundEnt {
     "FreeSound": number;
@@ -17388,8 +14798,6 @@ declare interface CSoundEnt {
     IsValid: () => boolean;
 }
 
-declare function CSoundEnt(ptr_or_class: string|AnySDKClass): CSoundEnt;
-
 declare interface CSoundEventAABBEntity {
     "Mins": Vector;
     "Maxs": Vector;
@@ -17397,8 +14805,6 @@ declare interface CSoundEventAABBEntity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEventAABBEntity(ptr_or_class: string|AnySDKClass): CSoundEventAABBEntity;
 
 declare interface CSoundEventEntity {
     "StartOnSpawn": boolean;
@@ -17419,15 +14825,11 @@ declare interface CSoundEventEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundEventEntity(ptr_or_class: string|AnySDKClass): CSoundEventEntity;
-
 declare interface CSoundEventEntityAlias_snd_event_point {
     readonly "Parent": CSoundEventEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEventEntityAlias_snd_event_point(ptr_or_class: string|AnySDKClass): CSoundEventEntityAlias_snd_event_point;
 
 declare interface CSoundEventOBBEntity {
     "Mins": Vector;
@@ -17437,8 +14839,6 @@ declare interface CSoundEventOBBEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundEventOBBEntity(ptr_or_class: string|AnySDKClass): CSoundEventOBBEntity;
-
 declare interface CSoundEventParameter {
     "ParamName": string;
     "FloatValue": number;
@@ -17446,8 +14846,6 @@ declare interface CSoundEventParameter {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEventParameter(ptr_or_class: string|AnySDKClass): CSoundEventParameter;
 
 declare interface CSoundEventPathCornerEntity {
     "PathCorner": string;
@@ -17461,16 +14859,12 @@ declare interface CSoundEventPathCornerEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundEventPathCornerEntity(ptr_or_class: string|AnySDKClass): CSoundEventPathCornerEntity;
-
 declare interface CSoundEventSphereEntity {
     "Radius": number;
     readonly "Parent": CSoundEventEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEventSphereEntity(ptr_or_class: string|AnySDKClass): CSoundEventSphereEntity;
 
 declare interface CSoundOpvarSetAABBEntity {
     "DistanceInnerMins": Vector;
@@ -17487,8 +14881,6 @@ declare interface CSoundOpvarSetAABBEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundOpvarSetAABBEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetAABBEntity;
-
 declare interface CSoundOpvarSetAutoRoomEntity {
     readonly "TraceResults": Object;
     readonly "DoorwayPairs": Object;
@@ -17499,8 +14891,6 @@ declare interface CSoundOpvarSetAutoRoomEntity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundOpvarSetAutoRoomEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetAutoRoomEntity;
 
 declare interface CSoundOpvarSetEntity {
     "StackName": string;
@@ -17516,15 +14906,11 @@ declare interface CSoundOpvarSetEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundOpvarSetEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetEntity;
-
 declare interface CSoundOpvarSetOBBEntity {
     readonly "Parent": CSoundOpvarSetAABBEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundOpvarSetOBBEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetOBBEntity;
 
 declare interface CSoundOpvarSetOBBWindEntity {
     "Mins": Vector;
@@ -17540,8 +14926,6 @@ declare interface CSoundOpvarSetOBBWindEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundOpvarSetOBBWindEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetOBBWindEntity;
-
 declare interface CSoundOpvarSetPathCornerEntity {
     "DistMinSqr": number;
     "DistMaxSqr": number;
@@ -17550,8 +14934,6 @@ declare interface CSoundOpvarSetPathCornerEntity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundOpvarSetPathCornerEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetPathCornerEntity;
 
 declare interface CSoundOpvarSetPointBase {
     "Disabled": boolean;
@@ -17567,8 +14949,6 @@ declare interface CSoundOpvarSetPointBase {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundOpvarSetPointBase(ptr_or_class: string|AnySDKClass): CSoundOpvarSetPointBase;
 
 declare interface CSoundOpvarSetPointEntity {
     readonly "OnEnter": CEntityIOOutput;
@@ -17600,8 +14980,6 @@ declare interface CSoundOpvarSetPointEntity {
     IsValid: () => boolean;
 }
 
-declare function CSoundOpvarSetPointEntity(ptr_or_class: string|AnySDKClass): CSoundOpvarSetPointEntity;
-
 declare interface CSoundStackSave {
     "StackName": string;
     readonly "Parent": CLogicalEntity;
@@ -17609,16 +14987,12 @@ declare interface CSoundStackSave {
     IsValid: () => boolean;
 }
 
-declare function CSoundStackSave(ptr_or_class: string|AnySDKClass): CSoundStackSave;
-
 declare interface CSplineConstraint {
     "AnchorOffsetRestore": Vector;
     readonly "Parent": CPhysConstraint;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSplineConstraint(ptr_or_class: string|AnySDKClass): CSplineConstraint;
 
 declare interface CSpotlightEnd {
     "LightScale": number;
@@ -17629,8 +15003,6 @@ declare interface CSpotlightEnd {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSpotlightEnd(ptr_or_class: string|AnySDKClass): CSpotlightEnd;
 
 declare interface CSprite {
     readonly "AttachedToEntity": CBaseEntity;
@@ -17659,15 +15031,11 @@ declare interface CSprite {
     IsValid: () => boolean;
 }
 
-declare function CSprite(ptr_or_class: string|AnySDKClass): CSprite;
-
 declare interface CSpriteAlias_env_glow {
     readonly "Parent": CSprite;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSpriteAlias_env_glow(ptr_or_class: string|AnySDKClass): CSpriteAlias_env_glow;
 
 declare interface CSun {
     "Direction": Vector;
@@ -17689,16 +15057,12 @@ declare interface CSun {
     IsValid: () => boolean;
 }
 
-declare function CSun(ptr_or_class: string|AnySDKClass): CSun;
-
 declare interface CTankTargetChange {
     "NewTargetName": string;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTankTargetChange(ptr_or_class: string|AnySDKClass): CTankTargetChange;
 
 declare interface CTankTrainAI {
     readonly "Train": CFuncTrackTrain;
@@ -17713,8 +15077,6 @@ declare interface CTankTrainAI {
     IsValid: () => boolean;
 }
 
-declare function CTankTrainAI(ptr_or_class: string|AnySDKClass): CTankTrainAI;
-
 declare interface CTeam {
     "Score": number;
     "Teamname": string;
@@ -17723,15 +15085,11 @@ declare interface CTeam {
     IsValid: () => boolean;
 }
 
-declare function CTeam(ptr_or_class: string|AnySDKClass): CTeam;
-
 declare interface CTeamplayRules {
     readonly "Parent": CMultiplayRules;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTeamplayRules(ptr_or_class: string|AnySDKClass): CTeamplayRules;
 
 declare interface CTestEffect {
     "Loop": number;
@@ -17744,8 +15102,6 @@ declare interface CTestEffect {
     IsValid: () => boolean;
 }
 
-declare function CTestEffect(ptr_or_class: string|AnySDKClass): CTestEffect;
-
 declare interface CTextureBasedAnimatable {
     "Loop": boolean;
     "FPS": number;
@@ -17757,8 +15113,6 @@ declare interface CTextureBasedAnimatable {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTextureBasedAnimatable(ptr_or_class: string|AnySDKClass): CTextureBasedAnimatable;
 
 declare interface CTimerEntity {
     readonly "OnTimer": CEntityIOOutput;
@@ -17779,8 +15133,6 @@ declare interface CTimerEntity {
     IsValid: () => boolean;
 }
 
-declare function CTimerEntity(ptr_or_class: string|AnySDKClass): CTimerEntity;
-
 declare interface CTonemapController2 {
     "AutoExposureMin": number;
     "AutoExposureMax": number;
@@ -17795,15 +15147,11 @@ declare interface CTonemapController2 {
     IsValid: () => boolean;
 }
 
-declare function CTonemapController2(ptr_or_class: string|AnySDKClass): CTonemapController2;
-
 declare interface CTonemapController2Alias_env_tonemap_controller2 {
     readonly "Parent": CTonemapController2;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTonemapController2Alias_env_tonemap_controller2(ptr_or_class: string|AnySDKClass): CTonemapController2Alias_env_tonemap_controller2;
 
 declare interface CTonemapTrigger {
     "TonemapControllerName": string;
@@ -17813,15 +15161,11 @@ declare interface CTonemapTrigger {
     IsValid: () => boolean;
 }
 
-declare function CTonemapTrigger(ptr_or_class: string|AnySDKClass): CTonemapTrigger;
-
 declare interface CTouchExpansionComponent {
     readonly "Parent": CEntityComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTouchExpansionComponent(ptr_or_class: string|AnySDKClass): CTouchExpansionComponent;
 
 declare interface CTriggerActiveWeaponDetect {
     readonly "OnTouchedActiveWeapon": CEntityIOOutput;
@@ -17831,15 +15175,11 @@ declare interface CTriggerActiveWeaponDetect {
     IsValid: () => boolean;
 }
 
-declare function CTriggerActiveWeaponDetect(ptr_or_class: string|AnySDKClass): CTriggerActiveWeaponDetect;
-
 declare interface CTriggerBombReset {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerBombReset(ptr_or_class: string|AnySDKClass): CTriggerBombReset;
 
 declare interface CTriggerBrush {
     readonly "OnStartTouch": CEntityIOOutput;
@@ -17852,8 +15192,6 @@ declare interface CTriggerBrush {
     IsValid: () => boolean;
 }
 
-declare function CTriggerBrush(ptr_or_class: string|AnySDKClass): CTriggerBrush;
-
 declare interface CTriggerBuoyancy {
     readonly "BuoyancyHelper": CBuoyancyHelper;
     "FluidDensity": number;
@@ -17862,15 +15200,11 @@ declare interface CTriggerBuoyancy {
     IsValid: () => boolean;
 }
 
-declare function CTriggerBuoyancy(ptr_or_class: string|AnySDKClass): CTriggerBuoyancy;
-
 declare interface CTriggerCallback {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerCallback(ptr_or_class: string|AnySDKClass): CTriggerCallback;
 
 declare interface CTriggerDetectBulletFire {
     "PlayerFireOnly": boolean;
@@ -17880,16 +15214,12 @@ declare interface CTriggerDetectBulletFire {
     IsValid: () => boolean;
 }
 
-declare function CTriggerDetectBulletFire(ptr_or_class: string|AnySDKClass): CTriggerDetectBulletFire;
-
 declare interface CTriggerDetectExplosion {
     readonly "OnDetectedExplosion": CEntityIOOutput;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerDetectExplosion(ptr_or_class: string|AnySDKClass): CTriggerDetectExplosion;
 
 declare interface CTriggerFan {
     "FanOrigin": Vector;
@@ -17909,8 +15239,6 @@ declare interface CTriggerFan {
     IsValid: () => boolean;
 }
 
-declare function CTriggerFan(ptr_or_class: string|AnySDKClass): CTriggerFan;
-
 declare interface CTriggerGameEvent {
     "StrStartTouchEventName": string;
     "StrEndTouchEventName": string;
@@ -17920,23 +15248,17 @@ declare interface CTriggerGameEvent {
     IsValid: () => boolean;
 }
 
-declare function CTriggerGameEvent(ptr_or_class: string|AnySDKClass): CTriggerGameEvent;
-
 declare interface CTriggerGravity {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CTriggerGravity(ptr_or_class: string|AnySDKClass): CTriggerGravity;
-
 declare interface CTriggerHostageReset {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerHostageReset(ptr_or_class: string|AnySDKClass): CTriggerHostageReset;
 
 declare interface CTriggerHurt {
     "OriginalDamage": number;
@@ -17957,8 +15279,6 @@ declare interface CTriggerHurt {
     IsValid: () => boolean;
 }
 
-declare function CTriggerHurt(ptr_or_class: string|AnySDKClass): CTriggerHurt;
-
 declare interface CTriggerImpact {
     "Magnitude": number;
     "Noise": number;
@@ -17967,8 +15287,6 @@ declare interface CTriggerImpact {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerImpact(ptr_or_class: string|AnySDKClass): CTriggerImpact;
 
 declare interface CTriggerLerpObject {
     "LerpTarget": string;
@@ -17988,8 +15306,6 @@ declare interface CTriggerLerpObject {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerLerpObject(ptr_or_class: string|AnySDKClass): CTriggerLerpObject;
 
 declare interface CTriggerLook {
     readonly "LookTarget": CBaseEntity;
@@ -18011,8 +15327,6 @@ declare interface CTriggerLook {
     IsValid: () => boolean;
 }
 
-declare function CTriggerLook(ptr_or_class: string|AnySDKClass): CTriggerLook;
-
 declare interface CTriggerMultiple {
     readonly "OnTrigger": CEntityIOOutput;
     readonly "Parent": CBaseTrigger;
@@ -18020,15 +15334,11 @@ declare interface CTriggerMultiple {
     IsValid: () => boolean;
 }
 
-declare function CTriggerMultiple(ptr_or_class: string|AnySDKClass): CTriggerMultiple;
-
 declare interface CTriggerOnce {
     readonly "Parent": CTriggerMultiple;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerOnce(ptr_or_class: string|AnySDKClass): CTriggerOnce;
 
 declare interface CTriggerPhysics {
     "GravityScale": number;
@@ -18049,8 +15359,6 @@ declare interface CTriggerPhysics {
     IsValid: () => boolean;
 }
 
-declare function CTriggerPhysics(ptr_or_class: string|AnySDKClass): CTriggerPhysics;
-
 declare interface CTriggerProximity {
     readonly "MeasureTarget": CBaseEntity;
     "MeasureTarget1": string;
@@ -18060,8 +15368,6 @@ declare interface CTriggerProximity {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerProximity(ptr_or_class: string|AnySDKClass): CTriggerProximity;
 
 declare interface CTriggerPush {
     "PushEntitySpace": QAngle;
@@ -18076,16 +15382,12 @@ declare interface CTriggerPush {
     IsValid: () => boolean;
 }
 
-declare function CTriggerPush(ptr_or_class: string|AnySDKClass): CTriggerPush;
-
 declare interface CTriggerRemove {
     readonly "OnRemove": CEntityIOOutput;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerRemove(ptr_or_class: string|AnySDKClass): CTriggerRemove;
 
 declare interface CTriggerSave {
     "ForceNewLevelUnit": boolean;
@@ -18095,8 +15397,6 @@ declare interface CTriggerSave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerSave(ptr_or_class: string|AnySDKClass): CTriggerSave;
 
 declare interface CTriggerSndSosOpvar {
     "Position": Vector;
@@ -18117,8 +15417,6 @@ declare interface CTriggerSndSosOpvar {
     IsValid: () => boolean;
 }
 
-declare function CTriggerSndSosOpvar(ptr_or_class: string|AnySDKClass): CTriggerSndSosOpvar;
-
 declare interface CTriggerSoundscape {
     readonly "Soundscape": CEnvSoundscapeTriggerable;
     "SoundscapeName": string;
@@ -18126,8 +15424,6 @@ declare interface CTriggerSoundscape {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerSoundscape(ptr_or_class: string|AnySDKClass): CTriggerSoundscape;
 
 declare interface CTriggerTeleport {
     "Landmark": string;
@@ -18139,23 +15435,17 @@ declare interface CTriggerTeleport {
     IsValid: () => boolean;
 }
 
-declare function CTriggerTeleport(ptr_or_class: string|AnySDKClass): CTriggerTeleport;
-
 declare interface CTriggerToggleSave {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CTriggerToggleSave(ptr_or_class: string|AnySDKClass): CTriggerToggleSave;
-
 declare interface CTriggerTripWire {
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CTriggerTripWire(ptr_or_class: string|AnySDKClass): CTriggerTripWire;
 
 declare interface CTriggerVolume {
     "FilterName": string;
@@ -18165,15 +15455,11 @@ declare interface CTriggerVolume {
     IsValid: () => boolean;
 }
 
-declare function CTriggerVolume(ptr_or_class: string|AnySDKClass): CTriggerVolume;
-
 declare interface CWaterBullet {
     readonly "Parent": CBaseAnimGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWaterBullet(ptr_or_class: string|AnySDKClass): CWaterBullet;
 
 declare interface CWeaponAWP {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18181,15 +15467,11 @@ declare interface CWeaponAWP {
     IsValid: () => boolean;
 }
 
-declare function CWeaponAWP(ptr_or_class: string|AnySDKClass): CWeaponAWP;
-
 declare interface CWeaponAug {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponAug(ptr_or_class: string|AnySDKClass): CWeaponAug;
 
 declare interface CWeaponBaseItem {
     readonly "SequenceCompleteTimer": CountdownTimer;
@@ -18199,15 +15481,11 @@ declare interface CWeaponBaseItem {
     IsValid: () => boolean;
 }
 
-declare function CWeaponBaseItem(ptr_or_class: string|AnySDKClass): CWeaponBaseItem;
-
 declare interface CWeaponBizon {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponBizon(ptr_or_class: string|AnySDKClass): CWeaponBizon;
 
 declare interface CWeaponCZ75a {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18215,15 +15493,11 @@ declare interface CWeaponCZ75a {
     IsValid: () => boolean;
 }
 
-declare function CWeaponCZ75a(ptr_or_class: string|AnySDKClass): CWeaponCZ75a;
-
 declare interface CWeaponElite {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponElite(ptr_or_class: string|AnySDKClass): CWeaponElite;
 
 declare interface CWeaponFamas {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18231,15 +15505,11 @@ declare interface CWeaponFamas {
     IsValid: () => boolean;
 }
 
-declare function CWeaponFamas(ptr_or_class: string|AnySDKClass): CWeaponFamas;
-
 declare interface CWeaponFiveSeven {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponFiveSeven(ptr_or_class: string|AnySDKClass): CWeaponFiveSeven;
 
 declare interface CWeaponG3SG1 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18247,15 +15517,11 @@ declare interface CWeaponG3SG1 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponG3SG1(ptr_or_class: string|AnySDKClass): CWeaponG3SG1;
-
 declare interface CWeaponGalilAR {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponGalilAR(ptr_or_class: string|AnySDKClass): CWeaponGalilAR;
 
 declare interface CWeaponGlock {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18263,15 +15529,11 @@ declare interface CWeaponGlock {
     IsValid: () => boolean;
 }
 
-declare function CWeaponGlock(ptr_or_class: string|AnySDKClass): CWeaponGlock;
-
 declare interface CWeaponHKP2000 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponHKP2000(ptr_or_class: string|AnySDKClass): CWeaponHKP2000;
 
 declare interface CWeaponM249 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18279,15 +15541,11 @@ declare interface CWeaponM249 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponM249(ptr_or_class: string|AnySDKClass): CWeaponM249;
-
 declare interface CWeaponM4A1 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponM4A1(ptr_or_class: string|AnySDKClass): CWeaponM4A1;
 
 declare interface CWeaponM4A1Silencer {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18295,15 +15553,11 @@ declare interface CWeaponM4A1Silencer {
     IsValid: () => boolean;
 }
 
-declare function CWeaponM4A1Silencer(ptr_or_class: string|AnySDKClass): CWeaponM4A1Silencer;
-
 declare interface CWeaponMAC10 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponMAC10(ptr_or_class: string|AnySDKClass): CWeaponMAC10;
 
 declare interface CWeaponMP5SD {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18311,15 +15565,11 @@ declare interface CWeaponMP5SD {
     IsValid: () => boolean;
 }
 
-declare function CWeaponMP5SD(ptr_or_class: string|AnySDKClass): CWeaponMP5SD;
-
 declare interface CWeaponMP7 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponMP7(ptr_or_class: string|AnySDKClass): CWeaponMP7;
 
 declare interface CWeaponMP9 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18327,15 +15577,11 @@ declare interface CWeaponMP9 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponMP9(ptr_or_class: string|AnySDKClass): CWeaponMP9;
-
 declare interface CWeaponMag7 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponMag7(ptr_or_class: string|AnySDKClass): CWeaponMag7;
 
 declare interface CWeaponNOVA {
     readonly "Parent": CCSWeaponBase;
@@ -18343,15 +15589,11 @@ declare interface CWeaponNOVA {
     IsValid: () => boolean;
 }
 
-declare function CWeaponNOVA(ptr_or_class: string|AnySDKClass): CWeaponNOVA;
-
 declare interface CWeaponNegev {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponNegev(ptr_or_class: string|AnySDKClass): CWeaponNegev;
 
 declare interface CWeaponP250 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18359,15 +15601,11 @@ declare interface CWeaponP250 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponP250(ptr_or_class: string|AnySDKClass): CWeaponP250;
-
 declare interface CWeaponP90 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponP90(ptr_or_class: string|AnySDKClass): CWeaponP90;
 
 declare interface CWeaponRevolver {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18375,15 +15613,11 @@ declare interface CWeaponRevolver {
     IsValid: () => boolean;
 }
 
-declare function CWeaponRevolver(ptr_or_class: string|AnySDKClass): CWeaponRevolver;
-
 declare interface CWeaponSCAR20 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponSCAR20(ptr_or_class: string|AnySDKClass): CWeaponSCAR20;
 
 declare interface CWeaponSG556 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18391,23 +15625,17 @@ declare interface CWeaponSG556 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponSG556(ptr_or_class: string|AnySDKClass): CWeaponSG556;
-
 declare interface CWeaponSSG08 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CWeaponSSG08(ptr_or_class: string|AnySDKClass): CWeaponSSG08;
-
 declare interface CWeaponSawedoff {
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponSawedoff(ptr_or_class: string|AnySDKClass): CWeaponSawedoff;
 
 declare interface CWeaponShield {
     "BulletDamageAbsorbed": number;
@@ -18418,8 +15646,6 @@ declare interface CWeaponShield {
     IsValid: () => boolean;
 }
 
-declare function CWeaponShield(ptr_or_class: string|AnySDKClass): CWeaponShield;
-
 declare interface CWeaponTaser {
     "FireTime": number;
     "LastAttackTick": number;
@@ -18428,15 +15654,11 @@ declare interface CWeaponTaser {
     IsValid: () => boolean;
 }
 
-declare function CWeaponTaser(ptr_or_class: string|AnySDKClass): CWeaponTaser;
-
 declare interface CWeaponTec9 {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponTec9(ptr_or_class: string|AnySDKClass): CWeaponTec9;
 
 declare interface CWeaponUMP45 {
     readonly "Parent": CCSWeaponBaseGun;
@@ -18444,15 +15666,11 @@ declare interface CWeaponUMP45 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponUMP45(ptr_or_class: string|AnySDKClass): CWeaponUMP45;
-
 declare interface CWeaponUSPSilencer {
     readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWeaponUSPSilencer(ptr_or_class: string|AnySDKClass): CWeaponUSPSilencer;
 
 declare interface CWeaponXM1014 {
     readonly "Parent": CCSWeaponBase;
@@ -18460,15 +15678,11 @@ declare interface CWeaponXM1014 {
     IsValid: () => boolean;
 }
 
-declare function CWeaponXM1014(ptr_or_class: string|AnySDKClass): CWeaponXM1014;
-
 declare interface CWorld {
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CWorld(ptr_or_class: string|AnySDKClass): CWorld;
 
 declare interface ConstraintSoundInfo {
     readonly "Sampler": VelocitySampler;
@@ -18483,16 +15697,12 @@ declare interface ConstraintSoundInfo {
     IsValid: () => boolean;
 }
 
-declare function ConstraintSoundInfo(ptr_or_class: string|AnySDKClass): ConstraintSoundInfo;
-
 declare interface FilterDamageType {
     "DamageType": number;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FilterDamageType(ptr_or_class: string|AnySDKClass): FilterDamageType;
 
 declare interface FilterHealth {
     "AdrenalineActive": boolean;
@@ -18503,16 +15713,12 @@ declare interface FilterHealth {
     IsValid: () => boolean;
 }
 
-declare function FilterHealth(ptr_or_class: string|AnySDKClass): FilterHealth;
-
 declare interface FilterTeam {
     "FilterTeam": number;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function FilterTeam(ptr_or_class: string|AnySDKClass): FilterTeam;
 
 declare interface RelationshipOverride_t {
     readonly "Entity": CBaseEntity;
@@ -18522,16 +15728,12 @@ declare interface RelationshipOverride_t {
     IsValid: () => boolean;
 }
 
-declare function RelationshipOverride_t(ptr_or_class: string|AnySDKClass): RelationshipOverride_t;
-
 declare interface Relationship_t {
     "Disposition": number;
     "Priority": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function Relationship_t(ptr_or_class: string|AnySDKClass): Relationship_t;
 
 declare interface ResponseContext_t {
     "Name": string;
@@ -18541,16 +15743,12 @@ declare interface ResponseContext_t {
     IsValid: () => boolean;
 }
 
-declare function ResponseContext_t(ptr_or_class: string|AnySDKClass): ResponseContext_t;
-
 declare interface SimpleConstraintSoundProfile {
     "KeyPoints": Object;
     "ReversalSoundThresholds": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SimpleConstraintSoundProfile(ptr_or_class: string|AnySDKClass): SimpleConstraintSoundProfile;
 
 declare interface SoundOpvarTraceResult_t {
     "Pos": Vector;
@@ -18559,8 +15757,6 @@ declare interface SoundOpvarTraceResult_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SoundOpvarTraceResult_t(ptr_or_class: string|AnySDKClass): SoundOpvarTraceResult_t;
 
 declare interface SpawnPoint {
     "Priority": number;
@@ -18571,8 +15767,6 @@ declare interface SpawnPoint {
     IsValid: () => boolean;
 }
 
-declare function SpawnPoint(ptr_or_class: string|AnySDKClass): SpawnPoint;
-
 declare interface VelocitySampler {
     "PrevSample": Vector;
     "PrevSampleTime": number;
@@ -18580,8 +15774,6 @@ declare interface VelocitySampler {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VelocitySampler(ptr_or_class: string|AnySDKClass): VelocitySampler;
 
 declare interface dynpitchvol_base_t {
     "Preset": number;
@@ -18613,15 +15805,11 @@ declare interface dynpitchvol_base_t {
     IsValid: () => boolean;
 }
 
-declare function dynpitchvol_base_t(ptr_or_class: string|AnySDKClass): dynpitchvol_base_t;
-
 declare interface dynpitchvol_t {
     readonly "Parent": dynpitchvol_base_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function dynpitchvol_t(ptr_or_class: string|AnySDKClass): dynpitchvol_t;
 
 declare interface fogplayerparams_t {
     readonly "Ctrl": CFogController;
@@ -18642,8 +15830,6 @@ declare interface fogplayerparams_t {
     IsValid: () => boolean;
 }
 
-declare function fogplayerparams_t(ptr_or_class: string|AnySDKClass): fogplayerparams_t;
-
 declare interface lerpdata_t {
     readonly "Ent": CBaseEntity;
     "MoveType": number;
@@ -18654,8 +15840,6 @@ declare interface lerpdata_t {
     IsValid: () => boolean;
 }
 
-declare function lerpdata_t(ptr_or_class: string|AnySDKClass): lerpdata_t;
-
 declare interface locksound_t {
     "LockedSound": string;
     "UnlockedSound": string;
@@ -18664,15 +15848,11 @@ declare interface locksound_t {
     IsValid: () => boolean;
 }
 
-declare function locksound_t(ptr_or_class: string|AnySDKClass): locksound_t;
-
 declare interface magnetted_objects_t {
     readonly "Entity": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function magnetted_objects_t(ptr_or_class: string|AnySDKClass): magnetted_objects_t;
 
 declare interface CDSPMixgroupModifier {
     "Mixgroup": string;
@@ -18685,15 +15865,11 @@ declare interface CDSPMixgroupModifier {
     IsValid: () => boolean;
 }
 
-declare function CDSPMixgroupModifier(ptr_or_class: string|AnySDKClass): CDSPMixgroupModifier;
-
 declare interface CDSPPresetMixgroupModifierTable {
     readonly "Table": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDSPPresetMixgroupModifierTable(ptr_or_class: string|AnySDKClass): CDSPPresetMixgroupModifierTable;
 
 declare interface CDspPresetModifierList {
     "DspName": string;
@@ -18701,8 +15877,6 @@ declare interface CDspPresetModifierList {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CDspPresetModifierList(ptr_or_class: string|AnySDKClass): CDspPresetModifierList;
 
 declare interface CSosGroupActionLimitSchema {
     "MaxCount": number;
@@ -18712,8 +15886,6 @@ declare interface CSosGroupActionLimitSchema {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupActionLimitSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionLimitSchema;
 
 declare interface CSosGroupActionMemberCountEnvelopeSchema {
     "BaseCount": number;
@@ -18729,8 +15901,6 @@ declare interface CSosGroupActionMemberCountEnvelopeSchema {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupActionMemberCountEnvelopeSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionMemberCountEnvelopeSchema;
-
 declare interface CSosGroupActionSchema {
     "Name": string;
     "ActionType": number;
@@ -18738,8 +15908,6 @@ declare interface CSosGroupActionSchema {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupActionSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSchema;
 
 declare interface CSosGroupActionSetSoundeventParameterSchema {
     "MaxCount": number;
@@ -18751,8 +15919,6 @@ declare interface CSosGroupActionSetSoundeventParameterSchema {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupActionSetSoundeventParameterSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSetSoundeventParameterSchema;
 
 declare interface CSosGroupActionSoundeventClusterSchema {
     "MinNearby": number;
@@ -18767,8 +15933,6 @@ declare interface CSosGroupActionSoundeventClusterSchema {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupActionSoundeventClusterSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSoundeventClusterSchema;
-
 declare interface CSosGroupActionSoundeventCountSchema {
     "ExcludeStoppedSounds": boolean;
     "StrCountKeyName": string;
@@ -18776,8 +15940,6 @@ declare interface CSosGroupActionSoundeventCountSchema {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupActionSoundeventCountSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSoundeventCountSchema;
 
 declare interface CSosGroupActionSoundeventMinMaxValuesSchema {
     "StrQueryPublicFieldName": string;
@@ -18795,8 +15957,6 @@ declare interface CSosGroupActionSoundeventMinMaxValuesSchema {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupActionSoundeventMinMaxValuesSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSoundeventMinMaxValuesSchema;
-
 declare interface CSosGroupActionSoundeventPrioritySchema {
     "PriorityValue": string;
     "PriorityVolumeScalar": string;
@@ -18807,8 +15967,6 @@ declare interface CSosGroupActionSoundeventPrioritySchema {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupActionSoundeventPrioritySchema(ptr_or_class: string|AnySDKClass): CSosGroupActionSoundeventPrioritySchema;
-
 declare interface CSosGroupActionTimeBlockLimitSchema {
     "MaxCount": number;
     "MaxDuration": number;
@@ -18817,16 +15975,12 @@ declare interface CSosGroupActionTimeBlockLimitSchema {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupActionTimeBlockLimitSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionTimeBlockLimitSchema;
-
 declare interface CSosGroupActionTimeLimitSchema {
     "MaxDuration": number;
     readonly "Parent": CSosGroupActionSchema;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupActionTimeLimitSchema(ptr_or_class: string|AnySDKClass): CSosGroupActionTimeLimitSchema;
 
 declare interface CSosGroupBranchPattern {
     "MatchEventName": boolean;
@@ -18837,8 +15991,6 @@ declare interface CSosGroupBranchPattern {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosGroupBranchPattern(ptr_or_class: string|AnySDKClass): CSosGroupBranchPattern;
 
 declare interface CSosGroupMatchPattern {
     "MatchSoundEventName": string;
@@ -18851,15 +16003,11 @@ declare interface CSosGroupMatchPattern {
     IsValid: () => boolean;
 }
 
-declare function CSosGroupMatchPattern(ptr_or_class: string|AnySDKClass): CSosGroupMatchPattern;
-
 declare interface CSosSoundEventGroupListSchema {
     readonly "GroupList": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSosSoundEventGroupListSchema(ptr_or_class: string|AnySDKClass): CSosSoundEventGroupListSchema;
 
 declare interface CSosSoundEventGroupSchema {
     "Name": string;
@@ -18875,15 +16023,11 @@ declare interface CSosSoundEventGroupSchema {
     IsValid: () => boolean;
 }
 
-declare function CSosSoundEventGroupSchema(ptr_or_class: string|AnySDKClass): CSosSoundEventGroupSchema;
-
 declare interface CSoundEventMetaData {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundEventMetaData(ptr_or_class: string|AnySDKClass): CSoundEventMetaData;
 
 declare interface CTestBlendContainer {
     readonly "Parent": CVoiceContainerBase;
@@ -18891,15 +16035,11 @@ declare interface CTestBlendContainer {
     IsValid: () => boolean;
 }
 
-declare function CTestBlendContainer(ptr_or_class: string|AnySDKClass): CTestBlendContainer;
-
 declare interface SelectedEditItemInfo_t {
     readonly "EditItems": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SelectedEditItemInfo_t(ptr_or_class: string|AnySDKClass): SelectedEditItemInfo_t;
 
 declare interface SosEditItemInfo_t {
     "ItemType": number;
@@ -18910,8 +16050,6 @@ declare interface SosEditItemInfo_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function SosEditItemInfo_t(ptr_or_class: string|AnySDKClass): SosEditItemInfo_t;
 
 declare interface VMixAutoFilterDesc_t {
     "EnvelopeAmount": number;
@@ -18925,8 +16063,6 @@ declare interface VMixAutoFilterDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixAutoFilterDesc_t(ptr_or_class: string|AnySDKClass): VMixAutoFilterDesc_t;
 
 declare interface VMixBoxverbDesc_t {
     "SizeMax": number;
@@ -18950,8 +16086,6 @@ declare interface VMixBoxverbDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixBoxverbDesc_t(ptr_or_class: string|AnySDKClass): VMixBoxverbDesc_t;
-
 declare interface VMixConvolutionDesc_t {
     "FldbGain": number;
     "PreDelayMS": number;
@@ -18965,8 +16099,6 @@ declare interface VMixConvolutionDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixConvolutionDesc_t(ptr_or_class: string|AnySDKClass): VMixConvolutionDesc_t;
-
 declare interface VMixDelayDesc_t {
     readonly "FeedbackFilter": VMixFilterDesc_t;
     "EnableFilter": boolean;
@@ -18979,8 +16111,6 @@ declare interface VMixDelayDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixDelayDesc_t(ptr_or_class: string|AnySDKClass): VMixDelayDesc_t;
-
 declare interface VMixDiffusorDesc_t {
     "Size": number;
     "Complexity": number;
@@ -18989,8 +16119,6 @@ declare interface VMixDiffusorDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixDiffusorDesc_t(ptr_or_class: string|AnySDKClass): VMixDiffusorDesc_t;
 
 declare interface VMixDynamics3BandDesc_t {
     "FldbGainOutput": number;
@@ -19007,8 +16135,6 @@ declare interface VMixDynamics3BandDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixDynamics3BandDesc_t(ptr_or_class: string|AnySDKClass): VMixDynamics3BandDesc_t;
-
 declare interface VMixDynamicsBand_t {
     "FldbGainInput": number;
     "FldbGainOutput": number;
@@ -19024,8 +16150,6 @@ declare interface VMixDynamicsBand_t {
     IsValid: () => boolean;
 }
 
-declare function VMixDynamicsBand_t(ptr_or_class: string|AnySDKClass): VMixDynamicsBand_t;
-
 declare interface VMixDynamicsCompressorDesc_t {
     "FldbOutputGain": number;
     "FldbCompressionThreshold": number;
@@ -19039,8 +16163,6 @@ declare interface VMixDynamicsCompressorDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixDynamicsCompressorDesc_t(ptr_or_class: string|AnySDKClass): VMixDynamicsCompressorDesc_t;
 
 declare interface VMixDynamicsDesc_t {
     "FldbGain": number;
@@ -19059,23 +16181,17 @@ declare interface VMixDynamicsDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixDynamicsDesc_t(ptr_or_class: string|AnySDKClass): VMixDynamicsDesc_t;
-
 declare interface VMixEQ8Desc_t {
     readonly "Stages": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function VMixEQ8Desc_t(ptr_or_class: string|AnySDKClass): VMixEQ8Desc_t;
-
 declare interface VMixEffectChainDesc_t {
     "CrossfadeTime": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixEffectChainDesc_t(ptr_or_class: string|AnySDKClass): VMixEffectChainDesc_t;
 
 declare interface VMixEnvelopeDesc_t {
     "AttackTimeMS": number;
@@ -19084,8 +16200,6 @@ declare interface VMixEnvelopeDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixEnvelopeDesc_t(ptr_or_class: string|AnySDKClass): VMixEnvelopeDesc_t;
 
 declare interface VMixFilterDesc_t {
     "FilterType": number;
@@ -19098,8 +16212,6 @@ declare interface VMixFilterDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixFilterDesc_t(ptr_or_class: string|AnySDKClass): VMixFilterDesc_t;
-
 declare interface VMixFreeverbDesc_t {
     "RoomSize": number;
     "Damp": number;
@@ -19108,8 +16220,6 @@ declare interface VMixFreeverbDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixFreeverbDesc_t(ptr_or_class: string|AnySDKClass): VMixFreeverbDesc_t;
 
 declare interface VMixModDelayDesc_t {
     readonly "FeedbackFilter": VMixFilterDesc_t;
@@ -19125,8 +16235,6 @@ declare interface VMixModDelayDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixModDelayDesc_t(ptr_or_class: string|AnySDKClass): VMixModDelayDesc_t;
-
 declare interface VMixOscDesc_t {
     "OscType": number;
     "Freq": number;
@@ -19135,16 +16243,12 @@ declare interface VMixOscDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixOscDesc_t(ptr_or_class: string|AnySDKClass): VMixOscDesc_t;
-
 declare interface VMixPannerDesc_t {
     "Type": number;
     "Strength": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixPannerDesc_t(ptr_or_class: string|AnySDKClass): VMixPannerDesc_t;
 
 declare interface VMixPitchShiftDesc_t {
     "GrainSampleCount": number;
@@ -19154,8 +16258,6 @@ declare interface VMixPitchShiftDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixPitchShiftDesc_t(ptr_or_class: string|AnySDKClass): VMixPitchShiftDesc_t;
 
 declare interface VMixPlateverbDesc_t {
     "Prefilter": number;
@@ -19169,8 +16271,6 @@ declare interface VMixPlateverbDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixPlateverbDesc_t(ptr_or_class: string|AnySDKClass): VMixPlateverbDesc_t;
-
 declare interface VMixShaperDesc_t {
     "Shape": number;
     "FldbDrive": number;
@@ -19181,8 +16281,6 @@ declare interface VMixShaperDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixShaperDesc_t(ptr_or_class: string|AnySDKClass): VMixShaperDesc_t;
-
 declare interface VMixSubgraphSwitchDesc_t {
     "InterpolationMode": number;
     "OnlyTailsOnFadeOut": boolean;
@@ -19190,8 +16288,6 @@ declare interface VMixSubgraphSwitchDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixSubgraphSwitchDesc_t(ptr_or_class: string|AnySDKClass): VMixSubgraphSwitchDesc_t;
 
 declare interface VMixUtilityDesc_t {
     "Op": number;
@@ -19203,8 +16299,6 @@ declare interface VMixUtilityDesc_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMixUtilityDesc_t(ptr_or_class: string|AnySDKClass): VMixUtilityDesc_t;
 
 declare interface VMixVocoderDesc_t {
     "BandCount": number;
@@ -19221,16 +16315,12 @@ declare interface VMixVocoderDesc_t {
     IsValid: () => boolean;
 }
 
-declare function VMixVocoderDesc_t(ptr_or_class: string|AnySDKClass): VMixVocoderDesc_t;
-
 declare interface CAudioEmphasisSample {
     "Time": number;
     "Value": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAudioEmphasisSample(ptr_or_class: string|AnySDKClass): CAudioEmphasisSample;
 
 declare interface CAudioMorphData {
     readonly "Times": Object;
@@ -19242,8 +16332,6 @@ declare interface CAudioMorphData {
     IsValid: () => boolean;
 }
 
-declare function CAudioMorphData(ptr_or_class: string|AnySDKClass): CAudioMorphData;
-
 declare interface CAudioPhonemeTag {
     "StartTime": number;
     "EndTime": number;
@@ -19251,8 +16339,6 @@ declare interface CAudioPhonemeTag {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CAudioPhonemeTag(ptr_or_class: string|AnySDKClass): CAudioPhonemeTag;
 
 declare interface CAudioSentence {
     "ShouldVoiceDuck": boolean;
@@ -19263,16 +16349,12 @@ declare interface CAudioSentence {
     IsValid: () => boolean;
 }
 
-declare function CAudioSentence(ptr_or_class: string|AnySDKClass): CAudioSentence;
-
 declare interface CSoundContainerReference {
     "UseReference": boolean;
     readonly "Sound": CVoiceContainerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundContainerReference(ptr_or_class: string|AnySDKClass): CSoundContainerReference;
 
 declare interface CSoundContainerReferenceArray {
     "UseReference": boolean;
@@ -19281,15 +16363,11 @@ declare interface CSoundContainerReferenceArray {
     IsValid: () => boolean;
 }
 
-declare function CSoundContainerReferenceArray(ptr_or_class: string|AnySDKClass): CSoundContainerReferenceArray;
-
 declare interface CSoundInfoHeader {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CSoundInfoHeader(ptr_or_class: string|AnySDKClass): CSoundInfoHeader;
 
 declare interface CVoiceContainerAmpedDecayingSineWave {
     "GainAmount": number;
@@ -19298,23 +16376,17 @@ declare interface CVoiceContainerAmpedDecayingSineWave {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerAmpedDecayingSineWave(ptr_or_class: string|AnySDKClass): CVoiceContainerAmpedDecayingSineWave;
-
 declare interface CVoiceContainerAnalysisBase {
     "RegenerateCurveOnCompile": boolean;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerAnalysisBase(ptr_or_class: string|AnySDKClass): CVoiceContainerAnalysisBase;
-
 declare interface CVoiceContainerBase {
     readonly "EnvelopeAnalyzer": CVoiceContainerAnalysisBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerBase(ptr_or_class: string|AnySDKClass): CVoiceContainerBase;
 
 declare interface CVoiceContainerBlender {
     readonly "FirstSound": CSoundContainerReference;
@@ -19325,8 +16397,6 @@ declare interface CVoiceContainerBlender {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerBlender(ptr_or_class: string|AnySDKClass): CVoiceContainerBlender;
-
 declare interface CVoiceContainerDecayingSineWave {
     "Frequency": number;
     "DecayTime": number;
@@ -19335,15 +16405,11 @@ declare interface CVoiceContainerDecayingSineWave {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerDecayingSineWave(ptr_or_class: string|AnySDKClass): CVoiceContainerDecayingSineWave;
-
 declare interface CVoiceContainerDefault {
     readonly "Parent": CVoiceContainerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerDefault(ptr_or_class: string|AnySDKClass): CVoiceContainerDefault;
 
 declare interface CVoiceContainerEnvelope {
     readonly "AnalysisContainer": CVoiceContainerAnalysisBase;
@@ -19351,8 +16417,6 @@ declare interface CVoiceContainerEnvelope {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerEnvelope(ptr_or_class: string|AnySDKClass): CVoiceContainerEnvelope;
 
 declare interface CVoiceContainerEnvelopeAnalyzer {
     "Mode": number;
@@ -19363,8 +16427,6 @@ declare interface CVoiceContainerEnvelopeAnalyzer {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerEnvelopeAnalyzer(ptr_or_class: string|AnySDKClass): CVoiceContainerEnvelopeAnalyzer;
-
 declare interface CVoiceContainerGranulator {
     "GrainLength": number;
     "GrainCrossfadeAmount": number;
@@ -19374,8 +16436,6 @@ declare interface CVoiceContainerGranulator {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerGranulator(ptr_or_class: string|AnySDKClass): CVoiceContainerGranulator;
 
 declare interface CVoiceContainerLoopTrigger {
     readonly "Sound": CSoundContainerReference;
@@ -19388,15 +16448,11 @@ declare interface CVoiceContainerLoopTrigger {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerLoopTrigger(ptr_or_class: string|AnySDKClass): CVoiceContainerLoopTrigger;
-
 declare interface CVoiceContainerNull {
     readonly "Parent": CVoiceContainerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerNull(ptr_or_class: string|AnySDKClass): CVoiceContainerNull;
 
 declare interface CVoiceContainerRandomSampler {
     "Amplitude": number;
@@ -19409,8 +16465,6 @@ declare interface CVoiceContainerRandomSampler {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerRandomSampler(ptr_or_class: string|AnySDKClass): CVoiceContainerRandomSampler;
-
 declare interface CVoiceContainerRealtimeFMSineWave {
     "CarrierFrequency": number;
     "ModulatorFrequency": number;
@@ -19419,8 +16473,6 @@ declare interface CVoiceContainerRealtimeFMSineWave {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerRealtimeFMSineWave(ptr_or_class: string|AnySDKClass): CVoiceContainerRealtimeFMSineWave;
 
 declare interface CVoiceContainerSelector {
     "Mode": number;
@@ -19431,8 +16483,6 @@ declare interface CVoiceContainerSelector {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerSelector(ptr_or_class: string|AnySDKClass): CVoiceContainerSelector;
-
 declare interface CVoiceContainerSet {
     readonly "SoundsToPlay": Object;
     readonly "Parent": CVoiceContainerBase;
@@ -19440,16 +16490,12 @@ declare interface CVoiceContainerSet {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerSet(ptr_or_class: string|AnySDKClass): CVoiceContainerSet;
-
 declare interface CVoiceContainerSetElement {
     readonly "Sound": CSoundContainerReference;
     "VolumeDB": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerSetElement(ptr_or_class: string|AnySDKClass): CVoiceContainerSetElement;
 
 declare interface CVoiceContainerShapedNoise {
     "UseCurveForFrequency": boolean;
@@ -19463,15 +16509,11 @@ declare interface CVoiceContainerShapedNoise {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerShapedNoise(ptr_or_class: string|AnySDKClass): CVoiceContainerShapedNoise;
-
 declare interface CVoiceContainerStaticAdditiveSynth {
     readonly "Parent": CVoiceContainerBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CVoiceContainerStaticAdditiveSynth(ptr_or_class: string|AnySDKClass): CVoiceContainerStaticAdditiveSynth;
 
 declare interface CVoiceContainerSwitch {
     readonly "SoundsToPlay": Object;
@@ -19480,15 +16522,11 @@ declare interface CVoiceContainerSwitch {
     IsValid: () => boolean;
 }
 
-declare function CVoiceContainerSwitch(ptr_or_class: string|AnySDKClass): CVoiceContainerSwitch;
-
 declare interface CRangeFloat {
     "Value": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function CRangeFloat(ptr_or_class: string|AnySDKClass): CRangeFloat;
 
 declare interface CRangeInt {
     "Value": Object;
@@ -19496,15 +16534,11 @@ declare interface CRangeInt {
     IsValid: () => boolean;
 }
 
-declare function CRangeInt(ptr_or_class: string|AnySDKClass): CRangeInt;
-
 declare interface IPhysicsPlayerController {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function IPhysicsPlayerController(ptr_or_class: string|AnySDKClass): IPhysicsPlayerController;
 
 declare interface constraint_axislimit_t {
     "MinRotation": number;
@@ -19514,8 +16548,6 @@ declare interface constraint_axislimit_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function constraint_axislimit_t(ptr_or_class: string|AnySDKClass): constraint_axislimit_t;
 
 declare interface constraint_breakableparams_t {
     "Strength": number;
@@ -19527,8 +16559,6 @@ declare interface constraint_breakableparams_t {
     IsValid: () => boolean;
 }
 
-declare function constraint_breakableparams_t(ptr_or_class: string|AnySDKClass): constraint_breakableparams_t;
-
 declare interface constraint_hingeparams_t {
     "WorldPosition": Vector;
     "WorldAxisDirection": Vector;
@@ -19538,16 +16568,12 @@ declare interface constraint_hingeparams_t {
     IsValid: () => boolean;
 }
 
-declare function constraint_hingeparams_t(ptr_or_class: string|AnySDKClass): constraint_hingeparams_t;
-
 declare interface vphysics_save_cphysicsbody_t {
     "OldPointer": number;
     readonly "Parent": RnBodyDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function vphysics_save_cphysicsbody_t(ptr_or_class: string|AnySDKClass): vphysics_save_cphysicsbody_t;
 
 declare interface AggregateLODSetup_t {
     "LODOrigin": Vector;
@@ -19556,8 +16582,6 @@ declare interface AggregateLODSetup_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AggregateLODSetup_t(ptr_or_class: string|AnySDKClass): AggregateLODSetup_t;
 
 declare interface AggregateMeshInfo_t {
     "VisClusterMemberOffset": number;
@@ -19573,8 +16597,6 @@ declare interface AggregateMeshInfo_t {
     IsValid: () => boolean;
 }
 
-declare function AggregateMeshInfo_t(ptr_or_class: string|AnySDKClass): AggregateMeshInfo_t;
-
 declare interface AggregateSceneObject_t {
     "AllFlags": number;
     "AnyFlags": number;
@@ -19585,8 +16607,6 @@ declare interface AggregateSceneObject_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function AggregateSceneObject_t(ptr_or_class: string|AnySDKClass): AggregateSceneObject_t;
 
 declare interface BakedLightingInfo_t {
     "LightmapVersionNumber": number;
@@ -19601,15 +16621,11 @@ declare interface BakedLightingInfo_t {
     IsValid: () => boolean;
 }
 
-declare function BakedLightingInfo_t(ptr_or_class: string|AnySDKClass): BakedLightingInfo_t;
-
 declare interface BaseSceneObjectOverride_t {
     "SceneObjectIndex": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function BaseSceneObjectOverride_t(ptr_or_class: string|AnySDKClass): BaseSceneObjectOverride_t;
 
 declare interface CVoxelVisibility {
     "BaseClusterCount": number;
@@ -19629,8 +16645,6 @@ declare interface CVoxelVisibility {
     IsValid: () => boolean;
 }
 
-declare function CVoxelVisibility(ptr_or_class: string|AnySDKClass): CVoxelVisibility;
-
 declare interface ClutterSceneObject_t {
     readonly "Bounds": AABB_t;
     "Flags": number;
@@ -19643,8 +16657,6 @@ declare interface ClutterSceneObject_t {
     IsValid: () => boolean;
 }
 
-declare function ClutterSceneObject_t(ptr_or_class: string|AnySDKClass): ClutterSceneObject_t;
-
 declare interface ClutterTile_t {
     "FirstInstance": number;
     "LastInstance": number;
@@ -19652,8 +16664,6 @@ declare interface ClutterTile_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ClutterTile_t(ptr_or_class: string|AnySDKClass): ClutterTile_t;
 
 declare interface EntityIOConnectionData_t {
     "OutputName": string;
@@ -19667,15 +16677,11 @@ declare interface EntityIOConnectionData_t {
     IsValid: () => boolean;
 }
 
-declare function EntityIOConnectionData_t(ptr_or_class: string|AnySDKClass): EntityIOConnectionData_t;
-
 declare interface EntityKeyValueData_t {
     readonly "Connections": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function EntityKeyValueData_t(ptr_or_class: string|AnySDKClass): EntityKeyValueData_t;
 
 declare interface ExtraVertexStreamOverride_t {
     "SubSceneObject": number;
@@ -19686,8 +16692,6 @@ declare interface ExtraVertexStreamOverride_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function ExtraVertexStreamOverride_t(ptr_or_class: string|AnySDKClass): ExtraVertexStreamOverride_t;
 
 declare interface InfoOverlayData_t {
     "Width": number;
@@ -19702,8 +16706,6 @@ declare interface InfoOverlayData_t {
     IsValid: () => boolean;
 }
 
-declare function InfoOverlayData_t(ptr_or_class: string|AnySDKClass): InfoOverlayData_t;
-
 declare interface MaterialOverride_t {
     "SubSceneObject": number;
     "DrawCallIndex": number;
@@ -19711,8 +16713,6 @@ declare interface MaterialOverride_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function MaterialOverride_t(ptr_or_class: string|AnySDKClass): MaterialOverride_t;
 
 declare interface NodeData_t {
     "Parent": number;
@@ -19726,15 +16726,11 @@ declare interface NodeData_t {
     IsValid: () => boolean;
 }
 
-declare function NodeData_t(ptr_or_class: string|AnySDKClass): NodeData_t;
-
 declare interface PermEntityLumpData_t {
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function PermEntityLumpData_t(ptr_or_class: string|AnySDKClass): PermEntityLumpData_t;
 
 declare interface SceneObject_t {
     "ObjectID": number;
@@ -19753,15 +16749,11 @@ declare interface SceneObject_t {
     IsValid: () => boolean;
 }
 
-declare function SceneObject_t(ptr_or_class: string|AnySDKClass): SceneObject_t;
-
 declare interface VMapResourceData_t {
 
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VMapResourceData_t(ptr_or_class: string|AnySDKClass): VMapResourceData_t;
 
 declare interface VoxelVisBlockOffset_t {
     "Offset": number;
@@ -19769,8 +16761,6 @@ declare interface VoxelVisBlockOffset_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function VoxelVisBlockOffset_t(ptr_or_class: string|AnySDKClass): VoxelVisBlockOffset_t;
 
 declare interface WorldBuilderParams_t {
     "MinDrawVolumeSize": number;
@@ -19782,8 +16772,6 @@ declare interface WorldBuilderParams_t {
     IsValid: () => boolean;
 }
 
-declare function WorldBuilderParams_t(ptr_or_class: string|AnySDKClass): WorldBuilderParams_t;
-
 declare interface WorldNodeOnDiskBufferData_t {
     "ElementCount": number;
     "ElementSizeInBytes": number;
@@ -19792,8 +16780,6 @@ declare interface WorldNodeOnDiskBufferData_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function WorldNodeOnDiskBufferData_t(ptr_or_class: string|AnySDKClass): WorldNodeOnDiskBufferData_t;
 
 declare interface WorldNode_t {
     readonly "SceneObjects": Object;
@@ -19814,8 +16800,6 @@ declare interface WorldNode_t {
     IsValid: () => boolean;
 }
 
-declare function WorldNode_t(ptr_or_class: string|AnySDKClass): WorldNode_t;
-
 declare interface World_t {
     readonly "BuilderParams": WorldBuilderParams_t;
     readonly "WorldNodes": Object;
@@ -19823,8 +16807,6 @@ declare interface World_t {
     ToPtr: () => string;
     IsValid: () => boolean;
 }
-
-declare function World_t(ptr_or_class: string|AnySDKClass): World_t;
 declare interface ICommands {
     GetAllCommands: () => Object;
     GetCommands: () => Object;
@@ -20593,7 +17575,6 @@ declare interface IPlayerUtils {
 }
 declare const playerutils : IPlayerUtils
 type AnySDKClass = 
-    | CEntityKeyValues
     | AnimationDecodeDebugDumpElement_t
     | AnimationDecodeDebugDump_t
     | AnimationSnapshotBase_t
@@ -22102,6 +19083,1865 @@ type AnySDKClass =
     | WorldNodeOnDiskBufferData_t
     | WorldNode_t
     | World_t
+declare interface ISDK {
+    AnimationDecodeDebugDumpElement_t: (ptr_or_class: string|AnySDKClass) => AnimationDecodeDebugDumpElement_t;
+    AnimationDecodeDebugDump_t: (ptr_or_class: string|AnySDKClass) => AnimationDecodeDebugDump_t;
+    AnimationSnapshotBase_t: (ptr_or_class: string|AnySDKClass) => AnimationSnapshotBase_t;
+    AnimationSnapshot_t: (ptr_or_class: string|AnySDKClass) => AnimationSnapshot_t;
+    CAnimActivity: (ptr_or_class: string|AnySDKClass) => CAnimActivity;
+    CAnimBone: (ptr_or_class: string|AnySDKClass) => CAnimBone;
+    CAnimBoneDifference: (ptr_or_class: string|AnySDKClass) => CAnimBoneDifference;
+    CAnimData: (ptr_or_class: string|AnySDKClass) => CAnimData;
+    CAnimDataChannelDesc: (ptr_or_class: string|AnySDKClass) => CAnimDataChannelDesc;
+    CAnimDecoder: (ptr_or_class: string|AnySDKClass) => CAnimDecoder;
+    CAnimDesc: (ptr_or_class: string|AnySDKClass) => CAnimDesc;
+    CAnimDesc_Flag: (ptr_or_class: string|AnySDKClass) => CAnimDesc_Flag;
+    CAnimEncodeDifference: (ptr_or_class: string|AnySDKClass) => CAnimEncodeDifference;
+    CAnimEncodedFrames: (ptr_or_class: string|AnySDKClass) => CAnimEncodedFrames;
+    CAnimEnum: (ptr_or_class: string|AnySDKClass) => CAnimEnum;
+    CAnimEventDefinition: (ptr_or_class: string|AnySDKClass) => CAnimEventDefinition;
+    CAnimFrameBlockAnim: (ptr_or_class: string|AnySDKClass) => CAnimFrameBlockAnim;
+    CAnimFrameSegment: (ptr_or_class: string|AnySDKClass) => CAnimFrameSegment;
+    CAnimKeyData: (ptr_or_class: string|AnySDKClass) => CAnimKeyData;
+    CAnimLocalHierarchy: (ptr_or_class: string|AnySDKClass) => CAnimLocalHierarchy;
+    CAnimMorphDifference: (ptr_or_class: string|AnySDKClass) => CAnimMorphDifference;
+    CAnimMovement: (ptr_or_class: string|AnySDKClass) => CAnimMovement;
+    CAnimSequenceParams: (ptr_or_class: string|AnySDKClass) => CAnimSequenceParams;
+    CAnimUser: (ptr_or_class: string|AnySDKClass) => CAnimUser;
+    CAnimUserDifference: (ptr_or_class: string|AnySDKClass) => CAnimUserDifference;
+    CAnimationGroup: (ptr_or_class: string|AnySDKClass) => CAnimationGroup;
+    CMoodVData: (ptr_or_class: string|AnySDKClass) => CMoodVData;
+    CSeqAutoLayer: (ptr_or_class: string|AnySDKClass) => CSeqAutoLayer;
+    CSeqAutoLayerFlag: (ptr_or_class: string|AnySDKClass) => CSeqAutoLayerFlag;
+    CSeqBoneMaskList: (ptr_or_class: string|AnySDKClass) => CSeqBoneMaskList;
+    CSeqCmdLayer: (ptr_or_class: string|AnySDKClass) => CSeqCmdLayer;
+    CSeqCmdSeqDesc: (ptr_or_class: string|AnySDKClass) => CSeqCmdSeqDesc;
+    CSeqIKLock: (ptr_or_class: string|AnySDKClass) => CSeqIKLock;
+    CSeqMultiFetch: (ptr_or_class: string|AnySDKClass) => CSeqMultiFetch;
+    CSeqMultiFetchFlag: (ptr_or_class: string|AnySDKClass) => CSeqMultiFetchFlag;
+    CSeqPoseParamDesc: (ptr_or_class: string|AnySDKClass) => CSeqPoseParamDesc;
+    CSeqPoseSetting: (ptr_or_class: string|AnySDKClass) => CSeqPoseSetting;
+    CSeqS1SeqDesc: (ptr_or_class: string|AnySDKClass) => CSeqS1SeqDesc;
+    CSeqScaleSet: (ptr_or_class: string|AnySDKClass) => CSeqScaleSet;
+    CSeqSeqDescFlag: (ptr_or_class: string|AnySDKClass) => CSeqSeqDescFlag;
+    CSeqSynthAnimDesc: (ptr_or_class: string|AnySDKClass) => CSeqSynthAnimDesc;
+    CSeqTransition: (ptr_or_class: string|AnySDKClass) => CSeqTransition;
+    CSequenceGroupData: (ptr_or_class: string|AnySDKClass) => CSequenceGroupData;
+    MoodAnimation_t: (ptr_or_class: string|AnySDKClass) => MoodAnimation_t;
+    AimCameraOpFixedSettings_t: (ptr_or_class: string|AnySDKClass) => AimCameraOpFixedSettings_t;
+    AimMatrixOpFixedSettings_t: (ptr_or_class: string|AnySDKClass) => AimMatrixOpFixedSettings_t;
+    BlendItem_t: (ptr_or_class: string|AnySDKClass) => BlendItem_t;
+    BoneDemoCaptureSettings_t: (ptr_or_class: string|AnySDKClass) => BoneDemoCaptureSettings_t;
+    CActionComponentUpdater: (ptr_or_class: string|AnySDKClass) => CActionComponentUpdater;
+    CAddUpdateNode: (ptr_or_class: string|AnySDKClass) => CAddUpdateNode;
+    CAimCameraUpdateNode: (ptr_or_class: string|AnySDKClass) => CAimCameraUpdateNode;
+    CAimMatrixUpdateNode: (ptr_or_class: string|AnySDKClass) => CAimMatrixUpdateNode;
+    CAnimActionUpdater: (ptr_or_class: string|AnySDKClass) => CAnimActionUpdater;
+    CAnimComponentUpdater: (ptr_or_class: string|AnySDKClass) => CAnimComponentUpdater;
+    CAnimDemoCaptureSettings: (ptr_or_class: string|AnySDKClass) => CAnimDemoCaptureSettings;
+    CAnimGraphDebugReplay: (ptr_or_class: string|AnySDKClass) => CAnimGraphDebugReplay;
+    CAnimGraphModelBinding: (ptr_or_class: string|AnySDKClass) => CAnimGraphModelBinding;
+    CAnimGraphNetworkSettings: (ptr_or_class: string|AnySDKClass) => CAnimGraphNetworkSettings;
+    CAnimGraphSettingsGroup: (ptr_or_class: string|AnySDKClass) => CAnimGraphSettingsGroup;
+    CAnimGraphSettingsManager: (ptr_or_class: string|AnySDKClass) => CAnimGraphSettingsManager;
+    CAnimInputDamping: (ptr_or_class: string|AnySDKClass) => CAnimInputDamping;
+    CAnimMotorUpdaterBase: (ptr_or_class: string|AnySDKClass) => CAnimMotorUpdaterBase;
+    CAnimNodePath: (ptr_or_class: string|AnySDKClass) => CAnimNodePath;
+    CAnimParamHandle: (ptr_or_class: string|AnySDKClass) => CAnimParamHandle;
+    CAnimParamHandleMap: (ptr_or_class: string|AnySDKClass) => CAnimParamHandleMap;
+    CAnimParameterBase: (ptr_or_class: string|AnySDKClass) => CAnimParameterBase;
+    CAnimParameterManagerUpdater: (ptr_or_class: string|AnySDKClass) => CAnimParameterManagerUpdater;
+    CAnimReplayFrame: (ptr_or_class: string|AnySDKClass) => CAnimReplayFrame;
+    CAnimScriptComponentUpdater: (ptr_or_class: string|AnySDKClass) => CAnimScriptComponentUpdater;
+    CAnimScriptManager: (ptr_or_class: string|AnySDKClass) => CAnimScriptManager;
+    CAnimStateMachineUpdater: (ptr_or_class: string|AnySDKClass) => CAnimStateMachineUpdater;
+    CAnimTagBase: (ptr_or_class: string|AnySDKClass) => CAnimTagBase;
+    CAnimTagManagerUpdater: (ptr_or_class: string|AnySDKClass) => CAnimTagManagerUpdater;
+    CAnimUpdateNodeBase: (ptr_or_class: string|AnySDKClass) => CAnimUpdateNodeBase;
+    CAnimUpdateNodeRef: (ptr_or_class: string|AnySDKClass) => CAnimUpdateNodeRef;
+    CAnimUpdateSharedData: (ptr_or_class: string|AnySDKClass) => CAnimUpdateSharedData;
+    CAnimationGraphVisualizerAxis: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerAxis;
+    CAnimationGraphVisualizerLine: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerLine;
+    CAnimationGraphVisualizerPie: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerPie;
+    CAnimationGraphVisualizerPrimitiveBase: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerPrimitiveBase;
+    CAnimationGraphVisualizerSphere: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerSphere;
+    CAnimationGraphVisualizerText: (ptr_or_class: string|AnySDKClass) => CAnimationGraphVisualizerText;
+    CAudioAnimTag: (ptr_or_class: string|AnySDKClass) => CAudioAnimTag;
+    CBinaryUpdateNode: (ptr_or_class: string|AnySDKClass) => CBinaryUpdateNode;
+    CBindPoseUpdateNode: (ptr_or_class: string|AnySDKClass) => CBindPoseUpdateNode;
+    CBlend2DUpdateNode: (ptr_or_class: string|AnySDKClass) => CBlend2DUpdateNode;
+    CBlendCurve: (ptr_or_class: string|AnySDKClass) => CBlendCurve;
+    CBlendUpdateNode: (ptr_or_class: string|AnySDKClass) => CBlendUpdateNode;
+    CBlockSelectionMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CBlockSelectionMetricEvaluator;
+    CBodyGroupAnimTag: (ptr_or_class: string|AnySDKClass) => CBodyGroupAnimTag;
+    CBodyGroupSetting: (ptr_or_class: string|AnySDKClass) => CBodyGroupSetting;
+    CBoneMaskUpdateNode: (ptr_or_class: string|AnySDKClass) => CBoneMaskUpdateNode;
+    CBonePositionMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CBonePositionMetricEvaluator;
+    CBoneVelocityMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CBoneVelocityMetricEvaluator;
+    CBoolAnimParameter: (ptr_or_class: string|AnySDKClass) => CBoolAnimParameter;
+    CCPPScriptComponentUpdater: (ptr_or_class: string|AnySDKClass) => CCPPScriptComponentUpdater;
+    CCachedPose: (ptr_or_class: string|AnySDKClass) => CCachedPose;
+    CChoiceUpdateNode: (ptr_or_class: string|AnySDKClass) => CChoiceUpdateNode;
+    CChoreoUpdateNode: (ptr_or_class: string|AnySDKClass) => CChoreoUpdateNode;
+    CClothSettingsAnimTag: (ptr_or_class: string|AnySDKClass) => CClothSettingsAnimTag;
+    CConcreteAnimParameter: (ptr_or_class: string|AnySDKClass) => CConcreteAnimParameter;
+    CCurrentRotationVelocityMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CCurrentRotationVelocityMetricEvaluator;
+    CCurrentVelocityMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CCurrentVelocityMetricEvaluator;
+    CCycleControlClipUpdateNode: (ptr_or_class: string|AnySDKClass) => CCycleControlClipUpdateNode;
+    CCycleControlUpdateNode: (ptr_or_class: string|AnySDKClass) => CCycleControlUpdateNode;
+    CDampedPathAnimMotorUpdater: (ptr_or_class: string|AnySDKClass) => CDampedPathAnimMotorUpdater;
+    CDampedValueComponentUpdater: (ptr_or_class: string|AnySDKClass) => CDampedValueComponentUpdater;
+    CDampedValueUpdateItem: (ptr_or_class: string|AnySDKClass) => CDampedValueUpdateItem;
+    CDemoSettingsComponentUpdater: (ptr_or_class: string|AnySDKClass) => CDemoSettingsComponentUpdater;
+    CDirectPlaybackTagData: (ptr_or_class: string|AnySDKClass) => CDirectPlaybackTagData;
+    CDirectPlaybackUpdateNode: (ptr_or_class: string|AnySDKClass) => CDirectPlaybackUpdateNode;
+    CDirectionalBlendUpdateNode: (ptr_or_class: string|AnySDKClass) => CDirectionalBlendUpdateNode;
+    CDistanceRemainingMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CDistanceRemainingMetricEvaluator;
+    CEditableMotionGraph: (ptr_or_class: string|AnySDKClass) => CEditableMotionGraph;
+    CEmitTagActionUpdater: (ptr_or_class: string|AnySDKClass) => CEmitTagActionUpdater;
+    CEnumAnimParameter: (ptr_or_class: string|AnySDKClass) => CEnumAnimParameter;
+    CExpressionActionUpdater: (ptr_or_class: string|AnySDKClass) => CExpressionActionUpdater;
+    CFloatAnimParameter: (ptr_or_class: string|AnySDKClass) => CFloatAnimParameter;
+    CFollowAttachmentUpdateNode: (ptr_or_class: string|AnySDKClass) => CFollowAttachmentUpdateNode;
+    CFollowPathUpdateNode: (ptr_or_class: string|AnySDKClass) => CFollowPathUpdateNode;
+    CFollowTargetUpdateNode: (ptr_or_class: string|AnySDKClass) => CFollowTargetUpdateNode;
+    CFootAdjustmentUpdateNode: (ptr_or_class: string|AnySDKClass) => CFootAdjustmentUpdateNode;
+    CFootCycleMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CFootCycleMetricEvaluator;
+    CFootFallAnimTag: (ptr_or_class: string|AnySDKClass) => CFootFallAnimTag;
+    CFootLockUpdateNode: (ptr_or_class: string|AnySDKClass) => CFootLockUpdateNode;
+    CFootPinningUpdateNode: (ptr_or_class: string|AnySDKClass) => CFootPinningUpdateNode;
+    CFootPositionMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CFootPositionMetricEvaluator;
+    CFootStepTriggerUpdateNode: (ptr_or_class: string|AnySDKClass) => CFootStepTriggerUpdateNode;
+    CFootstepLandedAnimTag: (ptr_or_class: string|AnySDKClass) => CFootstepLandedAnimTag;
+    CFutureFacingMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CFutureFacingMetricEvaluator;
+    CFutureVelocityMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CFutureVelocityMetricEvaluator;
+    CHandshakeAnimTagBase: (ptr_or_class: string|AnySDKClass) => CHandshakeAnimTagBase;
+    CHitReactUpdateNode: (ptr_or_class: string|AnySDKClass) => CHitReactUpdateNode;
+    CInputStreamUpdateNode: (ptr_or_class: string|AnySDKClass) => CInputStreamUpdateNode;
+    CIntAnimParameter: (ptr_or_class: string|AnySDKClass) => CIntAnimParameter;
+    CJiggleBoneUpdateNode: (ptr_or_class: string|AnySDKClass) => CJiggleBoneUpdateNode;
+    CJumpHelperUpdateNode: (ptr_or_class: string|AnySDKClass) => CJumpHelperUpdateNode;
+    CLODComponentUpdater: (ptr_or_class: string|AnySDKClass) => CLODComponentUpdater;
+    CLeafUpdateNode: (ptr_or_class: string|AnySDKClass) => CLeafUpdateNode;
+    CLeanMatrixUpdateNode: (ptr_or_class: string|AnySDKClass) => CLeanMatrixUpdateNode;
+    CLookAtUpdateNode: (ptr_or_class: string|AnySDKClass) => CLookAtUpdateNode;
+    CLookComponentUpdater: (ptr_or_class: string|AnySDKClass) => CLookComponentUpdater;
+    CMaterialAttributeAnimTag: (ptr_or_class: string|AnySDKClass) => CMaterialAttributeAnimTag;
+    CMotionDataSet: (ptr_or_class: string|AnySDKClass) => CMotionDataSet;
+    CMotionGraph: (ptr_or_class: string|AnySDKClass) => CMotionGraph;
+    CMotionGraphConfig: (ptr_or_class: string|AnySDKClass) => CMotionGraphConfig;
+    CMotionGraphGroup: (ptr_or_class: string|AnySDKClass) => CMotionGraphGroup;
+    CMotionGraphUpdateNode: (ptr_or_class: string|AnySDKClass) => CMotionGraphUpdateNode;
+    CMotionMatchingUpdateNode: (ptr_or_class: string|AnySDKClass) => CMotionMatchingUpdateNode;
+    CMotionMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CMotionMetricEvaluator;
+    CMotionNode: (ptr_or_class: string|AnySDKClass) => CMotionNode;
+    CMotionNodeBlend1D: (ptr_or_class: string|AnySDKClass) => CMotionNodeBlend1D;
+    CMotionNodeSequence: (ptr_or_class: string|AnySDKClass) => CMotionNodeSequence;
+    CMotionSearchDB: (ptr_or_class: string|AnySDKClass) => CMotionSearchDB;
+    CMotionSearchNode: (ptr_or_class: string|AnySDKClass) => CMotionSearchNode;
+    CMovementComponentUpdater: (ptr_or_class: string|AnySDKClass) => CMovementComponentUpdater;
+    CMovementHandshakeAnimTag: (ptr_or_class: string|AnySDKClass) => CMovementHandshakeAnimTag;
+    CMoverUpdateNode: (ptr_or_class: string|AnySDKClass) => CMoverUpdateNode;
+    COrientationWarpUpdateNode: (ptr_or_class: string|AnySDKClass) => COrientationWarpUpdateNode;
+    CPairedSequenceComponentUpdater: (ptr_or_class: string|AnySDKClass) => CPairedSequenceComponentUpdater;
+    CPairedSequenceUpdateNode: (ptr_or_class: string|AnySDKClass) => CPairedSequenceUpdateNode;
+    CParamSpanUpdater: (ptr_or_class: string|AnySDKClass) => CParamSpanUpdater;
+    CParticleAnimTag: (ptr_or_class: string|AnySDKClass) => CParticleAnimTag;
+    CPathAnimMotorUpdater: (ptr_or_class: string|AnySDKClass) => CPathAnimMotorUpdater;
+    CPathAnimMotorUpdaterBase: (ptr_or_class: string|AnySDKClass) => CPathAnimMotorUpdaterBase;
+    CPathHelperUpdateNode: (ptr_or_class: string|AnySDKClass) => CPathHelperUpdateNode;
+    CPathMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CPathMetricEvaluator;
+    CPlayerInputAnimMotorUpdater: (ptr_or_class: string|AnySDKClass) => CPlayerInputAnimMotorUpdater;
+    CPoseHandle: (ptr_or_class: string|AnySDKClass) => CPoseHandle;
+    CProductQuantizer: (ptr_or_class: string|AnySDKClass) => CProductQuantizer;
+    CRagdollAnimTag: (ptr_or_class: string|AnySDKClass) => CRagdollAnimTag;
+    CRagdollComponentUpdater: (ptr_or_class: string|AnySDKClass) => CRagdollComponentUpdater;
+    CRagdollUpdateNode: (ptr_or_class: string|AnySDKClass) => CRagdollUpdateNode;
+    CRootUpdateNode: (ptr_or_class: string|AnySDKClass) => CRootUpdateNode;
+    CSelectorUpdateNode: (ptr_or_class: string|AnySDKClass) => CSelectorUpdateNode;
+    CSequenceFinishedAnimTag: (ptr_or_class: string|AnySDKClass) => CSequenceFinishedAnimTag;
+    CSequenceTagSpans: (ptr_or_class: string|AnySDKClass) => CSequenceTagSpans;
+    CSequenceUpdateNode: (ptr_or_class: string|AnySDKClass) => CSequenceUpdateNode;
+    CSequenceUpdateNodeBase: (ptr_or_class: string|AnySDKClass) => CSequenceUpdateNodeBase;
+    CSetParameterActionUpdater: (ptr_or_class: string|AnySDKClass) => CSetParameterActionUpdater;
+    CSingleFrameUpdateNode: (ptr_or_class: string|AnySDKClass) => CSingleFrameUpdateNode;
+    CSlopeComponentUpdater: (ptr_or_class: string|AnySDKClass) => CSlopeComponentUpdater;
+    CSlowDownOnSlopesUpdateNode: (ptr_or_class: string|AnySDKClass) => CSlowDownOnSlopesUpdateNode;
+    CSolveIKChainUpdateNode: (ptr_or_class: string|AnySDKClass) => CSolveIKChainUpdateNode;
+    CSolveIKTargetHandle_t: (ptr_or_class: string|AnySDKClass) => CSolveIKTargetHandle_t;
+    CSpeedScaleUpdateNode: (ptr_or_class: string|AnySDKClass) => CSpeedScaleUpdateNode;
+    CStanceOverrideUpdateNode: (ptr_or_class: string|AnySDKClass) => CStanceOverrideUpdateNode;
+    CStanceScaleUpdateNode: (ptr_or_class: string|AnySDKClass) => CStanceScaleUpdateNode;
+    CStateActionUpdater: (ptr_or_class: string|AnySDKClass) => CStateActionUpdater;
+    CStateMachineComponentUpdater: (ptr_or_class: string|AnySDKClass) => CStateMachineComponentUpdater;
+    CStateMachineUpdateNode: (ptr_or_class: string|AnySDKClass) => CStateMachineUpdateNode;
+    CStateNodeStateData: (ptr_or_class: string|AnySDKClass) => CStateNodeStateData;
+    CStateNodeTransitionData: (ptr_or_class: string|AnySDKClass) => CStateNodeTransitionData;
+    CStateUpdateData: (ptr_or_class: string|AnySDKClass) => CStateUpdateData;
+    CStaticPoseCache: (ptr_or_class: string|AnySDKClass) => CStaticPoseCache;
+    CStaticPoseCacheBuilder: (ptr_or_class: string|AnySDKClass) => CStaticPoseCacheBuilder;
+    CStepsRemainingMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CStepsRemainingMetricEvaluator;
+    CStopAtGoalUpdateNode: (ptr_or_class: string|AnySDKClass) => CStopAtGoalUpdateNode;
+    CStringAnimTag: (ptr_or_class: string|AnySDKClass) => CStringAnimTag;
+    CSubtractUpdateNode: (ptr_or_class: string|AnySDKClass) => CSubtractUpdateNode;
+    CSymbolAnimParameter: (ptr_or_class: string|AnySDKClass) => CSymbolAnimParameter;
+    CTargetSelectorUpdateNode: (ptr_or_class: string|AnySDKClass) => CTargetSelectorUpdateNode;
+    CTargetWarpUpdateNode: (ptr_or_class: string|AnySDKClass) => CTargetWarpUpdateNode;
+    CTaskHandshakeAnimTag: (ptr_or_class: string|AnySDKClass) => CTaskHandshakeAnimTag;
+    CTaskStatusAnimTag: (ptr_or_class: string|AnySDKClass) => CTaskStatusAnimTag;
+    CTimeRemainingMetricEvaluator: (ptr_or_class: string|AnySDKClass) => CTimeRemainingMetricEvaluator;
+    CToggleComponentActionUpdater: (ptr_or_class: string|AnySDKClass) => CToggleComponentActionUpdater;
+    CTransitionUpdateData: (ptr_or_class: string|AnySDKClass) => CTransitionUpdateData;
+    CTurnHelperUpdateNode: (ptr_or_class: string|AnySDKClass) => CTurnHelperUpdateNode;
+    CTwoBoneIKUpdateNode: (ptr_or_class: string|AnySDKClass) => CTwoBoneIKUpdateNode;
+    CUnaryUpdateNode: (ptr_or_class: string|AnySDKClass) => CUnaryUpdateNode;
+    CVectorAnimParameter: (ptr_or_class: string|AnySDKClass) => CVectorAnimParameter;
+    CVectorQuantizer: (ptr_or_class: string|AnySDKClass) => CVectorQuantizer;
+    CVirtualAnimParameter: (ptr_or_class: string|AnySDKClass) => CVirtualAnimParameter;
+    CWayPointHelperUpdateNode: (ptr_or_class: string|AnySDKClass) => CWayPointHelperUpdateNode;
+    CZeroPoseUpdateNode: (ptr_or_class: string|AnySDKClass) => CZeroPoseUpdateNode;
+    ChainToSolveData_t: (ptr_or_class: string|AnySDKClass) => ChainToSolveData_t;
+    ConfigIndex: (ptr_or_class: string|AnySDKClass) => ConfigIndex;
+    FollowAttachmentSettings_t: (ptr_or_class: string|AnySDKClass) => FollowAttachmentSettings_t;
+    FollowTargetOpFixedSettings_t: (ptr_or_class: string|AnySDKClass) => FollowTargetOpFixedSettings_t;
+    FootFixedData_t: (ptr_or_class: string|AnySDKClass) => FootFixedData_t;
+    FootFixedSettings: (ptr_or_class: string|AnySDKClass) => FootFixedSettings;
+    FootLockPoseOpFixedSettings: (ptr_or_class: string|AnySDKClass) => FootLockPoseOpFixedSettings;
+    FootPinningPoseOpFixedData_t: (ptr_or_class: string|AnySDKClass) => FootPinningPoseOpFixedData_t;
+    FootStepTrigger: (ptr_or_class: string|AnySDKClass) => FootStepTrigger;
+    HitReactFixedSettings_t: (ptr_or_class: string|AnySDKClass) => HitReactFixedSettings_t;
+    IKBoneNameAndIndex_t: (ptr_or_class: string|AnySDKClass) => IKBoneNameAndIndex_t;
+    IKDemoCaptureSettings_t: (ptr_or_class: string|AnySDKClass) => IKDemoCaptureSettings_t;
+    IKSolverSettings_t: (ptr_or_class: string|AnySDKClass) => IKSolverSettings_t;
+    IKTargetSettings_t: (ptr_or_class: string|AnySDKClass) => IKTargetSettings_t;
+    JiggleBoneSettingsList_t: (ptr_or_class: string|AnySDKClass) => JiggleBoneSettingsList_t;
+    JiggleBoneSettings_t: (ptr_or_class: string|AnySDKClass) => JiggleBoneSettings_t;
+    LookAtBone_t: (ptr_or_class: string|AnySDKClass) => LookAtBone_t;
+    LookAtOpFixedSettings_t: (ptr_or_class: string|AnySDKClass) => LookAtOpFixedSettings_t;
+    MotionBlendItem: (ptr_or_class: string|AnySDKClass) => MotionBlendItem;
+    MotionDBIndex: (ptr_or_class: string|AnySDKClass) => MotionDBIndex;
+    MotionIndex: (ptr_or_class: string|AnySDKClass) => MotionIndex;
+    ParamSpanSample_t: (ptr_or_class: string|AnySDKClass) => ParamSpanSample_t;
+    ParamSpan_t: (ptr_or_class: string|AnySDKClass) => ParamSpan_t;
+    SampleCode: (ptr_or_class: string|AnySDKClass) => SampleCode;
+    ScriptInfo_t: (ptr_or_class: string|AnySDKClass) => ScriptInfo_t;
+    SolveIKChainPoseOpFixedSettings_t: (ptr_or_class: string|AnySDKClass) => SolveIKChainPoseOpFixedSettings_t;
+    StanceInfo_t: (ptr_or_class: string|AnySDKClass) => StanceInfo_t;
+    TagSpan_t: (ptr_or_class: string|AnySDKClass) => TagSpan_t;
+    TraceSettings_t: (ptr_or_class: string|AnySDKClass) => TraceSettings_t;
+    TwoBoneIKSettings_t: (ptr_or_class: string|AnySDKClass) => TwoBoneIKSettings_t;
+    WeightList: (ptr_or_class: string|AnySDKClass) => WeightList;
+    CNmAdditiveBlendTask: (ptr_or_class: string|AnySDKClass) => CNmAdditiveBlendTask;
+    CNmBitFlags: (ptr_or_class: string|AnySDKClass) => CNmBitFlags;
+    CNmBlendTask: (ptr_or_class: string|AnySDKClass) => CNmBlendTask;
+    CNmBlendTaskBase: (ptr_or_class: string|AnySDKClass) => CNmBlendTaskBase;
+    CNmBoneMask: (ptr_or_class: string|AnySDKClass) => CNmBoneMask;
+    CNmCachedPoseReadTask: (ptr_or_class: string|AnySDKClass) => CNmCachedPoseReadTask;
+    CNmCachedPoseWriteTask: (ptr_or_class: string|AnySDKClass) => CNmCachedPoseWriteTask;
+    CNmClip: (ptr_or_class: string|AnySDKClass) => CNmClip;
+    CNmEvent: (ptr_or_class: string|AnySDKClass) => CNmEvent;
+    CNmFootEvent: (ptr_or_class: string|AnySDKClass) => CNmFootEvent;
+    CNmFrameSnapEvent: (ptr_or_class: string|AnySDKClass) => CNmFrameSnapEvent;
+    CNmGraphDefinition: (ptr_or_class: string|AnySDKClass) => CNmGraphDefinition;
+    CNmGraphVariation: (ptr_or_class: string|AnySDKClass) => CNmGraphVariation;
+    CNmIDEvent: (ptr_or_class: string|AnySDKClass) => CNmIDEvent;
+    CNmIKRig: (ptr_or_class: string|AnySDKClass) => CNmIKRig;
+    CNmLegacyEvent: (ptr_or_class: string|AnySDKClass) => CNmLegacyEvent;
+    CNmModelSpaceBlendTask: (ptr_or_class: string|AnySDKClass) => CNmModelSpaceBlendTask;
+    CNmOrientationWarpEvent: (ptr_or_class: string|AnySDKClass) => CNmOrientationWarpEvent;
+    CNmOverlayBlendTask: (ptr_or_class: string|AnySDKClass) => CNmOverlayBlendTask;
+    CNmReferencePoseTask: (ptr_or_class: string|AnySDKClass) => CNmReferencePoseTask;
+    CNmRootMotionData: (ptr_or_class: string|AnySDKClass) => CNmRootMotionData;
+    CNmRootMotionEvent: (ptr_or_class: string|AnySDKClass) => CNmRootMotionEvent;
+    CNmSampleTask: (ptr_or_class: string|AnySDKClass) => CNmSampleTask;
+    CNmSkeleton: (ptr_or_class: string|AnySDKClass) => CNmSkeleton;
+    CNmSyncTrack: (ptr_or_class: string|AnySDKClass) => CNmSyncTrack;
+    CNmTarget: (ptr_or_class: string|AnySDKClass) => CNmTarget;
+    CNmTargetWarpEvent: (ptr_or_class: string|AnySDKClass) => CNmTargetWarpEvent;
+    CNmTask: (ptr_or_class: string|AnySDKClass) => CNmTask;
+    CNmTransitionEvent: (ptr_or_class: string|AnySDKClass) => CNmTransitionEvent;
+    CNmZeroPoseTask: (ptr_or_class: string|AnySDKClass) => CNmZeroPoseTask;
+    NmCompressionSettings_t: (ptr_or_class: string|AnySDKClass) => NmCompressionSettings_t;
+    NmPercent_t: (ptr_or_class: string|AnySDKClass) => NmPercent_t;
+    NmSyncTrackTimeRange_t: (ptr_or_class: string|AnySDKClass) => NmSyncTrackTimeRange_t;
+    NmSyncTrackTime_t: (ptr_or_class: string|AnySDKClass) => NmSyncTrackTime_t;
+    ActiveModelConfig_t: (ptr_or_class: string|AnySDKClass) => ActiveModelConfig_t;
+    AmmoIndex_t: (ptr_or_class: string|AnySDKClass) => AmmoIndex_t;
+    AmmoTypeInfo_t: (ptr_or_class: string|AnySDKClass) => AmmoTypeInfo_t;
+    CAnimEventListener: (ptr_or_class: string|AnySDKClass) => CAnimEventListener;
+    CAnimEventListenerBase: (ptr_or_class: string|AnySDKClass) => CAnimEventListenerBase;
+    CAnimEventQueueListener: (ptr_or_class: string|AnySDKClass) => CAnimEventQueueListener;
+    CAnimGraphControllerBase: (ptr_or_class: string|AnySDKClass) => CAnimGraphControllerBase;
+    CAnimGraphNetworkedVariables: (ptr_or_class: string|AnySDKClass) => CAnimGraphNetworkedVariables;
+    CAttributeList: (ptr_or_class: string|AnySDKClass) => CAttributeList;
+    CAttributeManager: (ptr_or_class: string|AnySDKClass) => CAttributeManager;
+    CBaseAnimGraph: (ptr_or_class: string|AnySDKClass) => CBaseAnimGraph;
+    CBaseAnimGraphController: (ptr_or_class: string|AnySDKClass) => CBaseAnimGraphController;
+    CBasePlayerController: (ptr_or_class: string|AnySDKClass) => CBasePlayerController;
+    CBasePlayerControllerAPI: (ptr_or_class: string|AnySDKClass) => CBasePlayerControllerAPI;
+    CBasePlayerVData: (ptr_or_class: string|AnySDKClass) => CBasePlayerVData;
+    CBasePlayerWeaponVData: (ptr_or_class: string|AnySDKClass) => CBasePlayerWeaponVData;
+    CBaseProp: (ptr_or_class: string|AnySDKClass) => CBaseProp;
+    CBodyComponent: (ptr_or_class: string|AnySDKClass) => CBodyComponent;
+    CBodyComponentBaseAnimGraph: (ptr_or_class: string|AnySDKClass) => CBodyComponentBaseAnimGraph;
+    CBodyComponentBaseModelEntity: (ptr_or_class: string|AnySDKClass) => CBodyComponentBaseModelEntity;
+    CBodyComponentPoint: (ptr_or_class: string|AnySDKClass) => CBodyComponentPoint;
+    CBodyComponentSkeletonInstance: (ptr_or_class: string|AnySDKClass) => CBodyComponentSkeletonInstance;
+    CBombTarget: (ptr_or_class: string|AnySDKClass) => CBombTarget;
+    CBreachCharge: (ptr_or_class: string|AnySDKClass) => CBreachCharge;
+    CBreachChargeProjectile: (ptr_or_class: string|AnySDKClass) => CBreachChargeProjectile;
+    CBreakableStageHelper: (ptr_or_class: string|AnySDKClass) => CBreakableStageHelper;
+    CBumpMine: (ptr_or_class: string|AnySDKClass) => CBumpMine;
+    CBumpMineProjectile: (ptr_or_class: string|AnySDKClass) => CBumpMineProjectile;
+    CBuoyancyHelper: (ptr_or_class: string|AnySDKClass) => CBuoyancyHelper;
+    CCSClientPointScriptEntity: (ptr_or_class: string|AnySDKClass) => CCSClientPointScriptEntity;
+    CCSGOPlayerAnimGraphState: (ptr_or_class: string|AnySDKClass) => CCSGOPlayerAnimGraphState;
+    CCSGOViewModel_GraphController: (ptr_or_class: string|AnySDKClass) => CCSGOViewModel_GraphController;
+    CCSGO_WingmanIntroCharacterPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_WingmanIntroCharacterPosition;
+    CCSGO_WingmanIntroCounterTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_WingmanIntroCounterTerroristPosition;
+    CCSGO_WingmanIntroTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_WingmanIntroTerroristPosition;
+    CCSGameModeRules: (ptr_or_class: string|AnySDKClass) => CCSGameModeRules;
+    CCSGameModeRules_ArmsRace: (ptr_or_class: string|AnySDKClass) => CCSGameModeRules_ArmsRace;
+    CCSGameModeRules_Deathmatch: (ptr_or_class: string|AnySDKClass) => CCSGameModeRules_Deathmatch;
+    CCSGameModeRules_Noop: (ptr_or_class: string|AnySDKClass) => CCSGameModeRules_Noop;
+    CCSObserver_CameraServices: (ptr_or_class: string|AnySDKClass) => CCSObserver_CameraServices;
+    CCSObserver_MovementServices: (ptr_or_class: string|AnySDKClass) => CCSObserver_MovementServices;
+    CCSObserver_ObserverServices: (ptr_or_class: string|AnySDKClass) => CCSObserver_ObserverServices;
+    CCSObserver_UseServices: (ptr_or_class: string|AnySDKClass) => CCSObserver_UseServices;
+    CCSObserver_ViewModelServices: (ptr_or_class: string|AnySDKClass) => CCSObserver_ViewModelServices;
+    CCSPlayerBase_CameraServices: (ptr_or_class: string|AnySDKClass) => CCSPlayerBase_CameraServices;
+    CCSPlayerController: (ptr_or_class: string|AnySDKClass) => CCSPlayerController;
+    CCSPlayerController_ActionTrackingServices: (ptr_or_class: string|AnySDKClass) => CCSPlayerController_ActionTrackingServices;
+    CCSPlayerController_DamageServices: (ptr_or_class: string|AnySDKClass) => CCSPlayerController_DamageServices;
+    CCSPlayerController_InGameMoneyServices: (ptr_or_class: string|AnySDKClass) => CCSPlayerController_InGameMoneyServices;
+    CCSPlayerController_InventoryServices: (ptr_or_class: string|AnySDKClass) => CCSPlayerController_InventoryServices;
+    CCSPlayer_ActionTrackingServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_ActionTrackingServices;
+    CCSPlayer_BulletServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_BulletServices;
+    CCSPlayer_BuyServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_BuyServices;
+    CCSPlayer_CameraServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_CameraServices;
+    CCSPlayer_DamageReactServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_DamageReactServices;
+    CCSPlayer_GlowServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_GlowServices;
+    CCSPlayer_HostageServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_HostageServices;
+    CCSPlayer_ItemServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_ItemServices;
+    CCSPlayer_MovementServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_MovementServices;
+    CCSPlayer_PingServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_PingServices;
+    CCSPlayer_UseServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_UseServices;
+    CCSPlayer_ViewModelServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_ViewModelServices;
+    CCSPlayer_WaterServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_WaterServices;
+    CCSPlayer_WeaponServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_WeaponServices;
+    CCSPointScript: (ptr_or_class: string|AnySDKClass) => CCSPointScript;
+    CCSPointScriptEntity: (ptr_or_class: string|AnySDKClass) => CCSPointScriptEntity;
+    CCSPointScriptExtensions_CCSWeaponBaseVData: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_CCSWeaponBaseVData;
+    CCSPointScriptExtensions_entity: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_entity;
+    CCSPointScriptExtensions_observer: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_observer;
+    CCSPointScriptExtensions_player: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_player;
+    CCSPointScriptExtensions_player_controller: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_player_controller;
+    CCSPointScriptExtensions_weapon_cs_base: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_weapon_cs_base;
+    CCSWeaponBaseVData: (ptr_or_class: string|AnySDKClass) => CCSWeaponBaseVData;
+    CCitadelSoundOpvarSetOBB: (ptr_or_class: string|AnySDKClass) => CCitadelSoundOpvarSetOBB;
+    CClientAlphaProperty: (ptr_or_class: string|AnySDKClass) => CClientAlphaProperty;
+    CClientGapTypeQueryRegistration: (ptr_or_class: string|AnySDKClass) => CClientGapTypeQueryRegistration;
+    CCollisionProperty: (ptr_or_class: string|AnySDKClass) => CCollisionProperty;
+    CCompositeMaterialEditorDoc: (ptr_or_class: string|AnySDKClass) => CCompositeMaterialEditorDoc;
+    CCopyRecipientFilter: (ptr_or_class: string|AnySDKClass) => CCopyRecipientFilter;
+    CDamageRecord: (ptr_or_class: string|AnySDKClass) => CDamageRecord;
+    CDecalInfo: (ptr_or_class: string|AnySDKClass) => CDecalInfo;
+    CDestructiblePartRuntimeData: (ptr_or_class: string|AnySDKClass) => CDestructiblePartRuntimeData;
+    CDestructiblePartRuntimeDataVector: (ptr_or_class: string|AnySDKClass) => CDestructiblePartRuntimeDataVector;
+    CDestructiblePartsSystemData: (ptr_or_class: string|AnySDKClass) => CDestructiblePartsSystemData;
+    CDestructiblePartsSystemData_HitGroupInfoAndPartData: (ptr_or_class: string|AnySDKClass) => CDestructiblePartsSystemData_HitGroupInfoAndPartData;
+    CDestructiblePartsSystemData_PartData: (ptr_or_class: string|AnySDKClass) => CDestructiblePartsSystemData_PartData;
+    CEconItemAttribute: (ptr_or_class: string|AnySDKClass) => CEconItemAttribute;
+    CEffectData: (ptr_or_class: string|AnySDKClass) => CEffectData;
+    CEntitySubclassVDataBase: (ptr_or_class: string|AnySDKClass) => CEntitySubclassVDataBase;
+    CEnvSoundscape: (ptr_or_class: string|AnySDKClass) => CEnvSoundscape;
+    CEnvSoundscapeAlias_snd_soundscape: (ptr_or_class: string|AnySDKClass) => CEnvSoundscapeAlias_snd_soundscape;
+    CEnvSoundscapeProxy: (ptr_or_class: string|AnySDKClass) => CEnvSoundscapeProxy;
+    CEnvSoundscapeProxyAlias_snd_soundscape_proxy: (ptr_or_class: string|AnySDKClass) => CEnvSoundscapeProxyAlias_snd_soundscape_proxy;
+    CEnvSoundscapeTriggerable: (ptr_or_class: string|AnySDKClass) => CEnvSoundscapeTriggerable;
+    CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable: (ptr_or_class: string|AnySDKClass) => CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable;
+    CFireOverlay: (ptr_or_class: string|AnySDKClass) => CFireOverlay;
+    CFiringModeFloat: (ptr_or_class: string|AnySDKClass) => CFiringModeFloat;
+    CFiringModeInt: (ptr_or_class: string|AnySDKClass) => CFiringModeInt;
+    CFlashlightEffect: (ptr_or_class: string|AnySDKClass) => CFlashlightEffect;
+    CFootstepTableHandle: (ptr_or_class: string|AnySDKClass) => CFootstepTableHandle;
+    CFuncWater: (ptr_or_class: string|AnySDKClass) => CFuncWater;
+    CGameSceneNode: (ptr_or_class: string|AnySDKClass) => CGameSceneNode;
+    CGlobalLightBase: (ptr_or_class: string|AnySDKClass) => CGlobalLightBase;
+    CGlowOverlay: (ptr_or_class: string|AnySDKClass) => CGlowOverlay;
+    CGlowProperty: (ptr_or_class: string|AnySDKClass) => CGlowProperty;
+    CGlowSprite: (ptr_or_class: string|AnySDKClass) => CGlowSprite;
+    CGrenadeTracer: (ptr_or_class: string|AnySDKClass) => CGrenadeTracer;
+    CHitboxComponent: (ptr_or_class: string|AnySDKClass) => CHitboxComponent;
+    CHostageRescueZone: (ptr_or_class: string|AnySDKClass) => CHostageRescueZone;
+    CHostageRescueZoneShim: (ptr_or_class: string|AnySDKClass) => CHostageRescueZoneShim;
+    CInButtonState: (ptr_or_class: string|AnySDKClass) => CInButtonState;
+    CInfoDynamicShadowHint: (ptr_or_class: string|AnySDKClass) => CInfoDynamicShadowHint;
+    CInfoDynamicShadowHintBox: (ptr_or_class: string|AnySDKClass) => CInfoDynamicShadowHintBox;
+    CInfoOffscreenPanoramaTexture: (ptr_or_class: string|AnySDKClass) => CInfoOffscreenPanoramaTexture;
+    CInfoParticleTarget: (ptr_or_class: string|AnySDKClass) => CInfoParticleTarget;
+    CInfoTarget: (ptr_or_class: string|AnySDKClass) => CInfoTarget;
+    CInfoWorldLayer: (ptr_or_class: string|AnySDKClass) => CInfoWorldLayer;
+    CInterpolatedValue: (ptr_or_class: string|AnySDKClass) => CInterpolatedValue;
+    CLightComponent: (ptr_or_class: string|AnySDKClass) => CLightComponent;
+    CLogicRelay: (ptr_or_class: string|AnySDKClass) => CLogicRelay;
+    CLogicalEntity: (ptr_or_class: string|AnySDKClass) => CLogicalEntity;
+    CMapInfo: (ptr_or_class: string|AnySDKClass) => CMapInfo;
+    CModelState: (ptr_or_class: string|AnySDKClass) => CModelState;
+    CNavLinkAnimgraphVar: (ptr_or_class: string|AnySDKClass) => CNavLinkAnimgraphVar;
+    CNavLinkMovementVData: (ptr_or_class: string|AnySDKClass) => CNavLinkMovementVData;
+    CNetworkOriginCellCoordQuantizedVector: (ptr_or_class: string|AnySDKClass) => CNetworkOriginCellCoordQuantizedVector;
+    CNetworkOriginQuantizedVector: (ptr_or_class: string|AnySDKClass) => CNetworkOriginQuantizedVector;
+    CNetworkTransmitComponent: (ptr_or_class: string|AnySDKClass) => CNetworkTransmitComponent;
+    CNetworkVelocityVector: (ptr_or_class: string|AnySDKClass) => CNetworkVelocityVector;
+    CNetworkViewOffsetVector: (ptr_or_class: string|AnySDKClass) => CNetworkViewOffsetVector;
+    CNetworkedSequenceOperation: (ptr_or_class: string|AnySDKClass) => CNetworkedSequenceOperation;
+    CPathSimple: (ptr_or_class: string|AnySDKClass) => CPathSimple;
+    CPathSimpleAPI: (ptr_or_class: string|AnySDKClass) => CPathSimpleAPI;
+    CPlayerControllerComponent: (ptr_or_class: string|AnySDKClass) => CPlayerControllerComponent;
+    CPlayerPawnComponent: (ptr_or_class: string|AnySDKClass) => CPlayerPawnComponent;
+    CPlayerSprayDecalRenderHelper: (ptr_or_class: string|AnySDKClass) => CPlayerSprayDecalRenderHelper;
+    CPlayer_AutoaimServices: (ptr_or_class: string|AnySDKClass) => CPlayer_AutoaimServices;
+    CPlayer_CameraServices: (ptr_or_class: string|AnySDKClass) => CPlayer_CameraServices;
+    CPlayer_FlashlightServices: (ptr_or_class: string|AnySDKClass) => CPlayer_FlashlightServices;
+    CPlayer_ItemServices: (ptr_or_class: string|AnySDKClass) => CPlayer_ItemServices;
+    CPlayer_MovementServices: (ptr_or_class: string|AnySDKClass) => CPlayer_MovementServices;
+    CPlayer_MovementServices_Humanoid: (ptr_or_class: string|AnySDKClass) => CPlayer_MovementServices_Humanoid;
+    CPlayer_ObserverServices: (ptr_or_class: string|AnySDKClass) => CPlayer_ObserverServices;
+    CPlayer_UseServices: (ptr_or_class: string|AnySDKClass) => CPlayer_UseServices;
+    CPlayer_ViewModelServices: (ptr_or_class: string|AnySDKClass) => CPlayer_ViewModelServices;
+    CPlayer_WaterServices: (ptr_or_class: string|AnySDKClass) => CPlayer_WaterServices;
+    CPlayer_WeaponServices: (ptr_or_class: string|AnySDKClass) => CPlayer_WeaponServices;
+    CPointChildModifier: (ptr_or_class: string|AnySDKClass) => CPointChildModifier;
+    CPointOffScreenIndicatorUi: (ptr_or_class: string|AnySDKClass) => CPointOffScreenIndicatorUi;
+    CPointTemplate: (ptr_or_class: string|AnySDKClass) => CPointTemplate;
+    CPointTemplateAPI: (ptr_or_class: string|AnySDKClass) => CPointTemplateAPI;
+    CPrecipitationVData: (ptr_or_class: string|AnySDKClass) => CPrecipitationVData;
+    CProjectedTextureBase: (ptr_or_class: string|AnySDKClass) => CProjectedTextureBase;
+    CPropDataComponent: (ptr_or_class: string|AnySDKClass) => CPropDataComponent;
+    CRagdollManager: (ptr_or_class: string|AnySDKClass) => CRagdollManager;
+    CRandSimTimer: (ptr_or_class: string|AnySDKClass) => CRandSimTimer;
+    CRandStopwatch: (ptr_or_class: string|AnySDKClass) => CRandStopwatch;
+    CRemapFloat: (ptr_or_class: string|AnySDKClass) => CRemapFloat;
+    CRenderComponent: (ptr_or_class: string|AnySDKClass) => CRenderComponent;
+    CResponseCriteriaSet: (ptr_or_class: string|AnySDKClass) => CResponseCriteriaSet;
+    CRopeOverlapHit: (ptr_or_class: string|AnySDKClass) => CRopeOverlapHit;
+    CSMatchStats_t: (ptr_or_class: string|AnySDKClass) => CSMatchStats_t;
+    CSPerRoundStats_t: (ptr_or_class: string|AnySDKClass) => CSPerRoundStats_t;
+    CSceneEventInfo: (ptr_or_class: string|AnySDKClass) => CSceneEventInfo;
+    CScriptUniformRandomStream: (ptr_or_class: string|AnySDKClass) => CScriptUniformRandomStream;
+    CServerOnlyModelEntity: (ptr_or_class: string|AnySDKClass) => CServerOnlyModelEntity;
+    CSharedGapTypeQueryRegistration: (ptr_or_class: string|AnySDKClass) => CSharedGapTypeQueryRegistration;
+    CSimTimer: (ptr_or_class: string|AnySDKClass) => CSimTimer;
+    CSimpleSimTimer: (ptr_or_class: string|AnySDKClass) => CSimpleSimTimer;
+    CSimpleStopwatch: (ptr_or_class: string|AnySDKClass) => CSimpleStopwatch;
+    CSkeletonAnimationController: (ptr_or_class: string|AnySDKClass) => CSkeletonAnimationController;
+    CSkeletonInstance: (ptr_or_class: string|AnySDKClass) => CSkeletonInstance;
+    CSkillDamage: (ptr_or_class: string|AnySDKClass) => CSkillDamage;
+    CSkillFloat: (ptr_or_class: string|AnySDKClass) => CSkillFloat;
+    CSkillInt: (ptr_or_class: string|AnySDKClass) => CSkillInt;
+    CSkyboxReference: (ptr_or_class: string|AnySDKClass) => CSkyboxReference;
+    CSoundEnvelope: (ptr_or_class: string|AnySDKClass) => CSoundEnvelope;
+    CSoundPatch: (ptr_or_class: string|AnySDKClass) => CSoundPatch;
+    CSpriteOriented: (ptr_or_class: string|AnySDKClass) => CSpriteOriented;
+    CStopwatch: (ptr_or_class: string|AnySDKClass) => CStopwatch;
+    CStopwatchBase: (ptr_or_class: string|AnySDKClass) => CStopwatchBase;
+    CTablet: (ptr_or_class: string|AnySDKClass) => CTablet;
+    CTakeDamageInfo: (ptr_or_class: string|AnySDKClass) => CTakeDamageInfo;
+    CTakeDamageInfoAPI: (ptr_or_class: string|AnySDKClass) => CTakeDamageInfoAPI;
+    CTakeDamageResult: (ptr_or_class: string|AnySDKClass) => CTakeDamageResult;
+    CTakeDamageSummaryScopeGuard: (ptr_or_class: string|AnySDKClass) => CTakeDamageSummaryScopeGuard;
+    CTimeline: (ptr_or_class: string|AnySDKClass) => CTimeline;
+    CTripWireFire: (ptr_or_class: string|AnySDKClass) => CTripWireFire;
+    CTripWireFireProjectile: (ptr_or_class: string|AnySDKClass) => CTripWireFireProjectile;
+    CWaterSplasher: (ptr_or_class: string|AnySDKClass) => CWaterSplasher;
+    CWeaponZoneRepulsor: (ptr_or_class: string|AnySDKClass) => CWeaponZoneRepulsor;
+    CWorldCompositionChunkReferenceElement_t: (ptr_or_class: string|AnySDKClass) => CWorldCompositionChunkReferenceElement_t;
+    CommandToolCommand_t: (ptr_or_class: string|AnySDKClass) => CommandToolCommand_t;
+    CompMatMutatorCondition_t: (ptr_or_class: string|AnySDKClass) => CompMatMutatorCondition_t;
+    CompMatPropertyMutator_t: (ptr_or_class: string|AnySDKClass) => CompMatPropertyMutator_t;
+    CompositeMaterialAssemblyProcedure_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterialAssemblyProcedure_t;
+    CompositeMaterialEditorPoint_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterialEditorPoint_t;
+    CompositeMaterialInputContainer_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterialInputContainer_t;
+    CompositeMaterialInputLooseVariable_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterialInputLooseVariable_t;
+    CompositeMaterialMatchFilter_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterialMatchFilter_t;
+    CompositeMaterial_t: (ptr_or_class: string|AnySDKClass) => CompositeMaterial_t;
+    CountdownTimer: (ptr_or_class: string|AnySDKClass) => CountdownTimer;
+    EngineCountdownTimer: (ptr_or_class: string|AnySDKClass) => EngineCountdownTimer;
+    EngineLoopState_t: (ptr_or_class: string|AnySDKClass) => EngineLoopState_t;
+    EntityRenderAttribute_t: (ptr_or_class: string|AnySDKClass) => EntityRenderAttribute_t;
+    EntitySpottedState_t: (ptr_or_class: string|AnySDKClass) => EntitySpottedState_t;
+    EventAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventAdvanceTick_t;
+    EventAppShutdown_t: (ptr_or_class: string|AnySDKClass) => EventAppShutdown_t;
+    EventClientAdvanceNonRenderedFrame_t: (ptr_or_class: string|AnySDKClass) => EventClientAdvanceNonRenderedFrame_t;
+    EventClientAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventClientAdvanceTick_t;
+    EventClientFrameSimulate_t: (ptr_or_class: string|AnySDKClass) => EventClientFrameSimulate_t;
+    EventClientOutput_t: (ptr_or_class: string|AnySDKClass) => EventClientOutput_t;
+    EventClientPauseSimulate_t: (ptr_or_class: string|AnySDKClass) => EventClientPauseSimulate_t;
+    EventClientPollInput_t: (ptr_or_class: string|AnySDKClass) => EventClientPollInput_t;
+    EventClientPollNetworking_t: (ptr_or_class: string|AnySDKClass) => EventClientPollNetworking_t;
+    EventClientPostAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventClientPostAdvanceTick_t;
+    EventClientPostOutput_t: (ptr_or_class: string|AnySDKClass) => EventClientPostOutput_t;
+    EventClientPostSimulate_t: (ptr_or_class: string|AnySDKClass) => EventClientPostSimulate_t;
+    EventClientPreOutput_t: (ptr_or_class: string|AnySDKClass) => EventClientPreOutput_t;
+    EventClientPreSimulate_t: (ptr_or_class: string|AnySDKClass) => EventClientPreSimulate_t;
+    EventClientProcessGameInput_t: (ptr_or_class: string|AnySDKClass) => EventClientProcessGameInput_t;
+    EventClientProcessInput_t: (ptr_or_class: string|AnySDKClass) => EventClientProcessInput_t;
+    EventClientProcessNetworking_t: (ptr_or_class: string|AnySDKClass) => EventClientProcessNetworking_t;
+    EventClientSceneSystemThreadStateChange_t: (ptr_or_class: string|AnySDKClass) => EventClientSceneSystemThreadStateChange_t;
+    EventClientSimulate_t: (ptr_or_class: string|AnySDKClass) => EventClientSimulate_t;
+    EventFrameBoundary_t: (ptr_or_class: string|AnySDKClass) => EventFrameBoundary_t;
+    EventModInitialized_t: (ptr_or_class: string|AnySDKClass) => EventModInitialized_t;
+    EventPostAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventPostAdvanceTick_t;
+    EventPostDataUpdate_t: (ptr_or_class: string|AnySDKClass) => EventPostDataUpdate_t;
+    EventPreDataUpdate_t: (ptr_or_class: string|AnySDKClass) => EventPreDataUpdate_t;
+    EventProfileStorageAvailable_t: (ptr_or_class: string|AnySDKClass) => EventProfileStorageAvailable_t;
+    EventServerAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventServerAdvanceTick_t;
+    EventServerBeginAsyncPostTickWork_t: (ptr_or_class: string|AnySDKClass) => EventServerBeginAsyncPostTickWork_t;
+    EventServerEndAsyncPostTickWork_t: (ptr_or_class: string|AnySDKClass) => EventServerEndAsyncPostTickWork_t;
+    EventServerPollNetworking_t: (ptr_or_class: string|AnySDKClass) => EventServerPollNetworking_t;
+    EventServerPostAdvanceTick_t: (ptr_or_class: string|AnySDKClass) => EventServerPostAdvanceTick_t;
+    EventServerPostSimulate_t: (ptr_or_class: string|AnySDKClass) => EventServerPostSimulate_t;
+    EventServerProcessNetworking_t: (ptr_or_class: string|AnySDKClass) => EventServerProcessNetworking_t;
+    EventServerSimulate_t: (ptr_or_class: string|AnySDKClass) => EventServerSimulate_t;
+    EventSetTime_t: (ptr_or_class: string|AnySDKClass) => EventSetTime_t;
+    EventSimpleLoopFrameUpdate_t: (ptr_or_class: string|AnySDKClass) => EventSimpleLoopFrameUpdate_t;
+    EventSimulate_t: (ptr_or_class: string|AnySDKClass) => EventSimulate_t;
+    EventSplitScreenStateChanged_t: (ptr_or_class: string|AnySDKClass) => EventSplitScreenStateChanged_t;
+    GameAmmoTypeInfo_t: (ptr_or_class: string|AnySDKClass) => GameAmmoTypeInfo_t;
+    GeneratedTextureHandle_t: (ptr_or_class: string|AnySDKClass) => GeneratedTextureHandle_t;
+    HullFlags_t: (ptr_or_class: string|AnySDKClass) => HullFlags_t;
+    IChoreoServices: (ptr_or_class: string|AnySDKClass) => IChoreoServices;
+    IClientAlphaProperty: (ptr_or_class: string|AnySDKClass) => IClientAlphaProperty;
+    IEconItemInterface: (ptr_or_class: string|AnySDKClass) => IEconItemInterface;
+    IGapHost_GameEntity: (ptr_or_class: string|AnySDKClass) => IGapHost_GameEntity;
+    IHasAttributes: (ptr_or_class: string|AnySDKClass) => IHasAttributes;
+    IRagdoll: (ptr_or_class: string|AnySDKClass) => IRagdoll;
+    ISkeletonAnimationController: (ptr_or_class: string|AnySDKClass) => ISkeletonAnimationController;
+    IntervalTimer: (ptr_or_class: string|AnySDKClass) => IntervalTimer;
+    ModelConfigHandle_t: (ptr_or_class: string|AnySDKClass) => ModelConfigHandle_t;
+    ParticleIndex_t: (ptr_or_class: string|AnySDKClass) => ParticleIndex_t;
+    PhysicsRagdollPose_t: (ptr_or_class: string|AnySDKClass) => PhysicsRagdollPose_t;
+    PointCameraSettings_t: (ptr_or_class: string|AnySDKClass) => PointCameraSettings_t;
+    PredictedDamageTag_t: (ptr_or_class: string|AnySDKClass) => PredictedDamageTag_t;
+    QuestProgress: (ptr_or_class: string|AnySDKClass) => QuestProgress;
+    RagdollCreationParams_t: (ptr_or_class: string|AnySDKClass) => RagdollCreationParams_t;
+    ResponseFollowup: (ptr_or_class: string|AnySDKClass) => ResponseFollowup;
+    ResponseParams: (ptr_or_class: string|AnySDKClass) => ResponseParams;
+    SceneEventId_t: (ptr_or_class: string|AnySDKClass) => SceneEventId_t;
+    SellbackPurchaseEntry_t: (ptr_or_class: string|AnySDKClass) => SellbackPurchaseEntry_t;
+    SequenceHistory_t: (ptr_or_class: string|AnySDKClass) => SequenceHistory_t;
+    ServerAuthoritativeWeaponSlot_t: (ptr_or_class: string|AnySDKClass) => ServerAuthoritativeWeaponSlot_t;
+    SummaryTakeDamageInfo_t: (ptr_or_class: string|AnySDKClass) => SummaryTakeDamageInfo_t;
+    TimedEvent: (ptr_or_class: string|AnySDKClass) => TimedEvent;
+    VPhysicsCollisionAttribute_t: (ptr_or_class: string|AnySDKClass) => VPhysicsCollisionAttribute_t;
+    ViewAngleServerChange_t: (ptr_or_class: string|AnySDKClass) => ViewAngleServerChange_t;
+    WaterWheelDrag_t: (ptr_or_class: string|AnySDKClass) => WaterWheelDrag_t;
+    WaterWheelFrictionScale_t: (ptr_or_class: string|AnySDKClass) => WaterWheelFrictionScale_t;
+    WeaponPurchaseCount_t: (ptr_or_class: string|AnySDKClass) => WeaponPurchaseCount_t;
+    WeaponPurchaseTracker_t: (ptr_or_class: string|AnySDKClass) => WeaponPurchaseTracker_t;
+    WrappedPhysicsJoint_t: (ptr_or_class: string|AnySDKClass) => WrappedPhysicsJoint_t;
+    audioparams_t: (ptr_or_class: string|AnySDKClass) => audioparams_t;
+    fogparams_t: (ptr_or_class: string|AnySDKClass) => fogparams_t;
+    hudtextparms_t: (ptr_or_class: string|AnySDKClass) => hudtextparms_t;
+    ragdoll_t: (ptr_or_class: string|AnySDKClass) => ragdoll_t;
+    ragdollelement_t: (ptr_or_class: string|AnySDKClass) => ragdollelement_t;
+    shard_model_desc_t: (ptr_or_class: string|AnySDKClass) => shard_model_desc_t;
+    sky3dparams_t: (ptr_or_class: string|AnySDKClass) => sky3dparams_t;
+    sndopvarlatchdata_t: (ptr_or_class: string|AnySDKClass) => sndopvarlatchdata_t;
+    thinkfunc_t: (ptr_or_class: string|AnySDKClass) => thinkfunc_t;
+    CEmptyEntityInstance: (ptr_or_class: string|AnySDKClass) => CEmptyEntityInstance;
+    CEntityComponent: (ptr_or_class: string|AnySDKClass) => CEntityComponent;
+    CEntityComponentHelper: (ptr_or_class: string|AnySDKClass) => CEntityComponentHelper;
+    CEntityIOOutput: (ptr_or_class: string|AnySDKClass) => CEntityIOOutput;
+    CEntityIdentity: (ptr_or_class: string|AnySDKClass) => CEntityIdentity;
+    CEntityInstance: (ptr_or_class: string|AnySDKClass) => CEntityInstance;
+    CNetworkVarChainer: (ptr_or_class: string|AnySDKClass) => CNetworkVarChainer;
+    CScriptComponent: (ptr_or_class: string|AnySDKClass) => CScriptComponent;
+    CVariantDefaultAllocator: (ptr_or_class: string|AnySDKClass) => CVariantDefaultAllocator;
+    EntComponentInfo_t: (ptr_or_class: string|AnySDKClass) => EntComponentInfo_t;
+    EntInput_t: (ptr_or_class: string|AnySDKClass) => EntInput_t;
+    EntOutput_t: (ptr_or_class: string|AnySDKClass) => EntOutput_t;
+    CAnimScriptBase: (ptr_or_class: string|AnySDKClass) => CAnimScriptBase;
+    MaterialParamBuffer_t: (ptr_or_class: string|AnySDKClass) => MaterialParamBuffer_t;
+    MaterialParamFloat_t: (ptr_or_class: string|AnySDKClass) => MaterialParamFloat_t;
+    MaterialParamInt_t: (ptr_or_class: string|AnySDKClass) => MaterialParamInt_t;
+    MaterialParamString_t: (ptr_or_class: string|AnySDKClass) => MaterialParamString_t;
+    MaterialParamTexture_t: (ptr_or_class: string|AnySDKClass) => MaterialParamTexture_t;
+    MaterialParamVector_t: (ptr_or_class: string|AnySDKClass) => MaterialParamVector_t;
+    MaterialParam_t: (ptr_or_class: string|AnySDKClass) => MaterialParam_t;
+    MaterialResourceData_t: (ptr_or_class: string|AnySDKClass) => MaterialResourceData_t;
+    PostProcessingBloomParameters_t: (ptr_or_class: string|AnySDKClass) => PostProcessingBloomParameters_t;
+    PostProcessingLocalContrastParameters_t: (ptr_or_class: string|AnySDKClass) => PostProcessingLocalContrastParameters_t;
+    PostProcessingResource_t: (ptr_or_class: string|AnySDKClass) => PostProcessingResource_t;
+    PostProcessingTonemapParameters_t: (ptr_or_class: string|AnySDKClass) => PostProcessingTonemapParameters_t;
+    PostProcessingVignetteParameters_t: (ptr_or_class: string|AnySDKClass) => PostProcessingVignetteParameters_t;
+    AABB_t: (ptr_or_class: string|AnySDKClass) => AABB_t;
+    CFuseProgram: (ptr_or_class: string|AnySDKClass) => CFuseProgram;
+    CFuseSymbolTable: (ptr_or_class: string|AnySDKClass) => CFuseSymbolTable;
+    ConstantInfo_t: (ptr_or_class: string|AnySDKClass) => ConstantInfo_t;
+    FunctionInfo_t: (ptr_or_class: string|AnySDKClass) => FunctionInfo_t;
+    FuseFunctionIndex_t: (ptr_or_class: string|AnySDKClass) => FuseFunctionIndex_t;
+    FuseVariableIndex_t: (ptr_or_class: string|AnySDKClass) => FuseVariableIndex_t;
+    VariableInfo_t: (ptr_or_class: string|AnySDKClass) => VariableInfo_t;
+    AnimComponentID: (ptr_or_class: string|AnySDKClass) => AnimComponentID;
+    AnimNodeID: (ptr_or_class: string|AnySDKClass) => AnimNodeID;
+    AnimNodeOutputID: (ptr_or_class: string|AnySDKClass) => AnimNodeOutputID;
+    AnimParamID: (ptr_or_class: string|AnySDKClass) => AnimParamID;
+    AnimScriptHandle: (ptr_or_class: string|AnySDKClass) => AnimScriptHandle;
+    AnimStateID: (ptr_or_class: string|AnySDKClass) => AnimStateID;
+    AnimTagID: (ptr_or_class: string|AnySDKClass) => AnimTagID;
+    CAimConstraint: (ptr_or_class: string|AnySDKClass) => CAimConstraint;
+    CAnimAttachment: (ptr_or_class: string|AnySDKClass) => CAnimAttachment;
+    CAnimCycle: (ptr_or_class: string|AnySDKClass) => CAnimCycle;
+    CAnimFoot: (ptr_or_class: string|AnySDKClass) => CAnimFoot;
+    CAnimSkeleton: (ptr_or_class: string|AnySDKClass) => CAnimSkeleton;
+    CAttachment: (ptr_or_class: string|AnySDKClass) => CAttachment;
+    CBaseConstraint: (ptr_or_class: string|AnySDKClass) => CBaseConstraint;
+    CBoneConstraintBase: (ptr_or_class: string|AnySDKClass) => CBoneConstraintBase;
+    CBoneConstraintDotToMorph: (ptr_or_class: string|AnySDKClass) => CBoneConstraintDotToMorph;
+    CBoneConstraintPoseSpaceBone: (ptr_or_class: string|AnySDKClass) => CBoneConstraintPoseSpaceBone;
+    CBoneConstraintPoseSpaceMorph: (ptr_or_class: string|AnySDKClass) => CBoneConstraintPoseSpaceMorph;
+    CConstraintSlave: (ptr_or_class: string|AnySDKClass) => CConstraintSlave;
+    CConstraintTarget: (ptr_or_class: string|AnySDKClass) => CConstraintTarget;
+    CCycleBase: (ptr_or_class: string|AnySDKClass) => CCycleBase;
+    CDrawCullingData: (ptr_or_class: string|AnySDKClass) => CDrawCullingData;
+    CFlexController: (ptr_or_class: string|AnySDKClass) => CFlexController;
+    CFlexDesc: (ptr_or_class: string|AnySDKClass) => CFlexDesc;
+    CFlexOp: (ptr_or_class: string|AnySDKClass) => CFlexOp;
+    CFlexRule: (ptr_or_class: string|AnySDKClass) => CFlexRule;
+    CFootCycle: (ptr_or_class: string|AnySDKClass) => CFootCycle;
+    CFootCycleDefinition: (ptr_or_class: string|AnySDKClass) => CFootCycleDefinition;
+    CFootDefinition: (ptr_or_class: string|AnySDKClass) => CFootDefinition;
+    CFootMotion: (ptr_or_class: string|AnySDKClass) => CFootMotion;
+    CFootStride: (ptr_or_class: string|AnySDKClass) => CFootStride;
+    CFootTrajectories: (ptr_or_class: string|AnySDKClass) => CFootTrajectories;
+    CFootTrajectory: (ptr_or_class: string|AnySDKClass) => CFootTrajectory;
+    CHitBox: (ptr_or_class: string|AnySDKClass) => CHitBox;
+    CHitBoxSet: (ptr_or_class: string|AnySDKClass) => CHitBoxSet;
+    CHitBoxSetList: (ptr_or_class: string|AnySDKClass) => CHitBoxSetList;
+    CMaterialDrawDescriptor: (ptr_or_class: string|AnySDKClass) => CMaterialDrawDescriptor;
+    CMeshletDescriptor: (ptr_or_class: string|AnySDKClass) => CMeshletDescriptor;
+    CModelConfig: (ptr_or_class: string|AnySDKClass) => CModelConfig;
+    CModelConfigElement: (ptr_or_class: string|AnySDKClass) => CModelConfigElement;
+    CModelConfigElement_AttachedModel: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_AttachedModel;
+    CModelConfigElement_Command: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_Command;
+    CModelConfigElement_RandomColor: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_RandomColor;
+    CModelConfigElement_RandomPick: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_RandomPick;
+    CModelConfigElement_SetBodygroup: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_SetBodygroup;
+    CModelConfigElement_SetBodygroupOnAttachedModels: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_SetBodygroupOnAttachedModels;
+    CModelConfigElement_SetMaterialGroup: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_SetMaterialGroup;
+    CModelConfigElement_SetMaterialGroupOnAttachedModels: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_SetMaterialGroupOnAttachedModels;
+    CModelConfigElement_SetRenderColor: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_SetRenderColor;
+    CModelConfigElement_UserPick: (ptr_or_class: string|AnySDKClass) => CModelConfigElement_UserPick;
+    CModelConfigList: (ptr_or_class: string|AnySDKClass) => CModelConfigList;
+    CMorphBundleData: (ptr_or_class: string|AnySDKClass) => CMorphBundleData;
+    CMorphConstraint: (ptr_or_class: string|AnySDKClass) => CMorphConstraint;
+    CMorphData: (ptr_or_class: string|AnySDKClass) => CMorphData;
+    CMorphRectData: (ptr_or_class: string|AnySDKClass) => CMorphRectData;
+    CMorphSetData: (ptr_or_class: string|AnySDKClass) => CMorphSetData;
+    COrientConstraint: (ptr_or_class: string|AnySDKClass) => COrientConstraint;
+    CParentConstraint: (ptr_or_class: string|AnySDKClass) => CParentConstraint;
+    CPhysSurfaceProperties: (ptr_or_class: string|AnySDKClass) => CPhysSurfaceProperties;
+    CPhysSurfacePropertiesAudio: (ptr_or_class: string|AnySDKClass) => CPhysSurfacePropertiesAudio;
+    CPhysSurfacePropertiesPhysics: (ptr_or_class: string|AnySDKClass) => CPhysSurfacePropertiesPhysics;
+    CPhysSurfacePropertiesSoundNames: (ptr_or_class: string|AnySDKClass) => CPhysSurfacePropertiesSoundNames;
+    CPointConstraint: (ptr_or_class: string|AnySDKClass) => CPointConstraint;
+    CRenderBufferBinding: (ptr_or_class: string|AnySDKClass) => CRenderBufferBinding;
+    CRenderGroom: (ptr_or_class: string|AnySDKClass) => CRenderGroom;
+    CRenderMesh: (ptr_or_class: string|AnySDKClass) => CRenderMesh;
+    CRenderSkeleton: (ptr_or_class: string|AnySDKClass) => CRenderSkeleton;
+    CSceneObjectData: (ptr_or_class: string|AnySDKClass) => CSceneObjectData;
+    CTiltTwistConstraint: (ptr_or_class: string|AnySDKClass) => CTiltTwistConstraint;
+    CTwistConstraint: (ptr_or_class: string|AnySDKClass) => CTwistConstraint;
+    CVPhysXSurfacePropertiesList: (ptr_or_class: string|AnySDKClass) => CVPhysXSurfacePropertiesList;
+    DynamicMeshDeformParams_t: (ptr_or_class: string|AnySDKClass) => DynamicMeshDeformParams_t;
+    MaterialGroup_t: (ptr_or_class: string|AnySDKClass) => MaterialGroup_t;
+    ModelBoneFlexDriverControl_t: (ptr_or_class: string|AnySDKClass) => ModelBoneFlexDriverControl_t;
+    ModelBoneFlexDriver_t: (ptr_or_class: string|AnySDKClass) => ModelBoneFlexDriver_t;
+    ModelSkeletonData_t: (ptr_or_class: string|AnySDKClass) => ModelSkeletonData_t;
+    PermModelDataAnimatedMaterialAttribute_t: (ptr_or_class: string|AnySDKClass) => PermModelDataAnimatedMaterialAttribute_t;
+    PermModelData_t: (ptr_or_class: string|AnySDKClass) => PermModelData_t;
+    PermModelExtPart_t: (ptr_or_class: string|AnySDKClass) => PermModelExtPart_t;
+    PermModelInfo_t: (ptr_or_class: string|AnySDKClass) => PermModelInfo_t;
+    PhysSoftbodyDesc_t: (ptr_or_class: string|AnySDKClass) => PhysSoftbodyDesc_t;
+    RenderHairStrandInfo_t: (ptr_or_class: string|AnySDKClass) => RenderHairStrandInfo_t;
+    RenderSkeletonBone_t: (ptr_or_class: string|AnySDKClass) => RenderSkeletonBone_t;
+    SkeletonAnimCapture_t: (ptr_or_class: string|AnySDKClass) => SkeletonAnimCapture_t;
+    SkeletonBoneBounds_t: (ptr_or_class: string|AnySDKClass) => SkeletonBoneBounds_t;
+    SkeletonDemoDb_t: (ptr_or_class: string|AnySDKClass) => SkeletonDemoDb_t;
+    VPhysXAggregateData_t: (ptr_or_class: string|AnySDKClass) => VPhysXAggregateData_t;
+    VPhysXBodyPart_t: (ptr_or_class: string|AnySDKClass) => VPhysXBodyPart_t;
+    VPhysXCollisionAttributes_t: (ptr_or_class: string|AnySDKClass) => VPhysXCollisionAttributes_t;
+    VPhysXConstraint2_t: (ptr_or_class: string|AnySDKClass) => VPhysXConstraint2_t;
+    VPhysXConstraintParams_t: (ptr_or_class: string|AnySDKClass) => VPhysXConstraintParams_t;
+    VPhysXJoint_t: (ptr_or_class: string|AnySDKClass) => VPhysXJoint_t;
+    VPhysXRange_t: (ptr_or_class: string|AnySDKClass) => VPhysXRange_t;
+    VPhysics2ShapeDef_t: (ptr_or_class: string|AnySDKClass) => VPhysics2ShapeDef_t;
+    CNavHullPresetVData: (ptr_or_class: string|AnySDKClass) => CNavHullPresetVData;
+    CNavHullVData: (ptr_or_class: string|AnySDKClass) => CNavHullVData;
+    CNavVolume: (ptr_or_class: string|AnySDKClass) => CNavVolume;
+    CNavVolumeAll: (ptr_or_class: string|AnySDKClass) => CNavVolumeAll;
+    CNavVolumeSphere: (ptr_or_class: string|AnySDKClass) => CNavVolumeSphere;
+    CNavVolumeSphericalShell: (ptr_or_class: string|AnySDKClass) => CNavVolumeSphericalShell;
+    CNavVolumeVector: (ptr_or_class: string|AnySDKClass) => CNavVolumeVector;
+    Extent: (ptr_or_class: string|AnySDKClass) => Extent;
+    NavGravity_t: (ptr_or_class: string|AnySDKClass) => NavGravity_t;
+    ChangeAccessorFieldPathIndex_t: (ptr_or_class: string|AnySDKClass) => ChangeAccessorFieldPathIndex_t;
+    CBaseRendererSource2: (ptr_or_class: string|AnySDKClass) => CBaseRendererSource2;
+    CBaseTrailRenderer: (ptr_or_class: string|AnySDKClass) => CBaseTrailRenderer;
+    CGeneralRandomRotation: (ptr_or_class: string|AnySDKClass) => CGeneralRandomRotation;
+    CGeneralSpin: (ptr_or_class: string|AnySDKClass) => CGeneralSpin;
+    CParticleFunction: (ptr_or_class: string|AnySDKClass) => CParticleFunction;
+    CParticleFunctionConstraint: (ptr_or_class: string|AnySDKClass) => CParticleFunctionConstraint;
+    CParticleFunctionEmitter: (ptr_or_class: string|AnySDKClass) => CParticleFunctionEmitter;
+    CParticleFunctionForce: (ptr_or_class: string|AnySDKClass) => CParticleFunctionForce;
+    CParticleFunctionInitializer: (ptr_or_class: string|AnySDKClass) => CParticleFunctionInitializer;
+    CParticleFunctionOperator: (ptr_or_class: string|AnySDKClass) => CParticleFunctionOperator;
+    CParticleFunctionPreEmission: (ptr_or_class: string|AnySDKClass) => CParticleFunctionPreEmission;
+    CParticleFunctionRenderer: (ptr_or_class: string|AnySDKClass) => CParticleFunctionRenderer;
+    CParticleMassCalculationParameters: (ptr_or_class: string|AnySDKClass) => CParticleMassCalculationParameters;
+    CParticleSystemDefinition: (ptr_or_class: string|AnySDKClass) => CParticleSystemDefinition;
+    CParticleVisibilityInputs: (ptr_or_class: string|AnySDKClass) => CParticleVisibilityInputs;
+    CPathParameters: (ptr_or_class: string|AnySDKClass) => CPathParameters;
+    CRandomNumberGeneratorParameters: (ptr_or_class: string|AnySDKClass) => CRandomNumberGeneratorParameters;
+    CReplicationParameters: (ptr_or_class: string|AnySDKClass) => CReplicationParameters;
+    CSpinUpdateBase: (ptr_or_class: string|AnySDKClass) => CSpinUpdateBase;
+    CollisionGroupContext_t: (ptr_or_class: string|AnySDKClass) => CollisionGroupContext_t;
+    ControlPointReference_t: (ptr_or_class: string|AnySDKClass) => ControlPointReference_t;
+    IParticleCollection: (ptr_or_class: string|AnySDKClass) => IParticleCollection;
+    MaterialVariable_t: (ptr_or_class: string|AnySDKClass) => MaterialVariable_t;
+    ModelReference_t: (ptr_or_class: string|AnySDKClass) => ModelReference_t;
+    ParticleAttributeIndex_t: (ptr_or_class: string|AnySDKClass) => ParticleAttributeIndex_t;
+    ParticleChildrenInfo_t: (ptr_or_class: string|AnySDKClass) => ParticleChildrenInfo_t;
+    ParticleControlPointConfiguration_t: (ptr_or_class: string|AnySDKClass) => ParticleControlPointConfiguration_t;
+    ParticleControlPointDriver_t: (ptr_or_class: string|AnySDKClass) => ParticleControlPointDriver_t;
+    ParticlePreviewBodyGroup_t: (ptr_or_class: string|AnySDKClass) => ParticlePreviewBodyGroup_t;
+    ParticlePreviewState_t: (ptr_or_class: string|AnySDKClass) => ParticlePreviewState_t;
+    PointDefinitionWithTimeValues_t: (ptr_or_class: string|AnySDKClass) => PointDefinitionWithTimeValues_t;
+    PointDefinition_t: (ptr_or_class: string|AnySDKClass) => PointDefinition_t;
+    RenderProjectedMaterial_t: (ptr_or_class: string|AnySDKClass) => RenderProjectedMaterial_t;
+    SequenceWeightedList_t: (ptr_or_class: string|AnySDKClass) => SequenceWeightedList_t;
+    TextureControls_t: (ptr_or_class: string|AnySDKClass) => TextureControls_t;
+    TextureGroup_t: (ptr_or_class: string|AnySDKClass) => TextureGroup_t;
+    VecInputMaterialVariable_t: (ptr_or_class: string|AnySDKClass) => VecInputMaterialVariable_t;
+    CNewParticleEffect: (ptr_or_class: string|AnySDKClass) => CNewParticleEffect;
+    CParticleCollectionBindingInstance: (ptr_or_class: string|AnySDKClass) => CParticleCollectionBindingInstance;
+    CParticleCollectionFloatInput: (ptr_or_class: string|AnySDKClass) => CParticleCollectionFloatInput;
+    CParticleCollectionRendererFloatInput: (ptr_or_class: string|AnySDKClass) => CParticleCollectionRendererFloatInput;
+    CParticleCollectionRendererVecInput: (ptr_or_class: string|AnySDKClass) => CParticleCollectionRendererVecInput;
+    CParticleFloatInput: (ptr_or_class: string|AnySDKClass) => CParticleFloatInput;
+    CParticleInput: (ptr_or_class: string|AnySDKClass) => CParticleInput;
+    CParticleModelInput: (ptr_or_class: string|AnySDKClass) => CParticleModelInput;
+    CParticleProperty: (ptr_or_class: string|AnySDKClass) => CParticleProperty;
+    CParticleRemapFloatInput: (ptr_or_class: string|AnySDKClass) => CParticleRemapFloatInput;
+    CParticleTransformInput: (ptr_or_class: string|AnySDKClass) => CParticleTransformInput;
+    CParticleVecInput: (ptr_or_class: string|AnySDKClass) => CParticleVecInput;
+    CPerParticleFloatInput: (ptr_or_class: string|AnySDKClass) => CPerParticleFloatInput;
+    CPerParticleVecInput: (ptr_or_class: string|AnySDKClass) => CPerParticleVecInput;
+    IParticleEffect: (ptr_or_class: string|AnySDKClass) => IParticleEffect;
+    PARTICLE_EHANDLE__: (ptr_or_class: string|AnySDKClass) => PARTICLE_EHANDLE__;
+    PARTICLE_WORLD_HANDLE__: (ptr_or_class: string|AnySDKClass) => PARTICLE_WORLD_HANDLE__;
+    ParticleNamedValueConfiguration_t: (ptr_or_class: string|AnySDKClass) => ParticleNamedValueConfiguration_t;
+    ParticleNamedValueSource_t: (ptr_or_class: string|AnySDKClass) => ParticleNamedValueSource_t;
+    CFeIndexedJiggleBone: (ptr_or_class: string|AnySDKClass) => CFeIndexedJiggleBone;
+    CFeJiggleBone: (ptr_or_class: string|AnySDKClass) => CFeJiggleBone;
+    CFeMorphLayer: (ptr_or_class: string|AnySDKClass) => CFeMorphLayer;
+    CFeNamedJiggleBone: (ptr_or_class: string|AnySDKClass) => CFeNamedJiggleBone;
+    CFeVertexMapBuildArray: (ptr_or_class: string|AnySDKClass) => CFeVertexMapBuildArray;
+    CRegionSVM: (ptr_or_class: string|AnySDKClass) => CRegionSVM;
+    CastSphereSATParams_t: (ptr_or_class: string|AnySDKClass) => CastSphereSATParams_t;
+    CovMatrix3: (ptr_or_class: string|AnySDKClass) => CovMatrix3;
+    Dop26_t: (ptr_or_class: string|AnySDKClass) => Dop26_t;
+    FeAnimStrayRadius_t: (ptr_or_class: string|AnySDKClass) => FeAnimStrayRadius_t;
+    FeAntiTunnelProbeBuild_t: (ptr_or_class: string|AnySDKClass) => FeAntiTunnelProbeBuild_t;
+    FeAntiTunnelProbe_t: (ptr_or_class: string|AnySDKClass) => FeAntiTunnelProbe_t;
+    FeAxialEdgeBend_t: (ptr_or_class: string|AnySDKClass) => FeAxialEdgeBend_t;
+    FeBandBendLimit_t: (ptr_or_class: string|AnySDKClass) => FeBandBendLimit_t;
+    FeBoxRigid_t: (ptr_or_class: string|AnySDKClass) => FeBoxRigid_t;
+    FeBuildBoxRigid_t: (ptr_or_class: string|AnySDKClass) => FeBuildBoxRigid_t;
+    FeBuildSDFRigid_t: (ptr_or_class: string|AnySDKClass) => FeBuildSDFRigid_t;
+    FeBuildSphereRigid_t: (ptr_or_class: string|AnySDKClass) => FeBuildSphereRigid_t;
+    FeBuildTaperedCapsuleRigid_t: (ptr_or_class: string|AnySDKClass) => FeBuildTaperedCapsuleRigid_t;
+    FeCollisionPlane_t: (ptr_or_class: string|AnySDKClass) => FeCollisionPlane_t;
+    FeCtrlOffset_t: (ptr_or_class: string|AnySDKClass) => FeCtrlOffset_t;
+    FeCtrlOsOffset_t: (ptr_or_class: string|AnySDKClass) => FeCtrlOsOffset_t;
+    FeCtrlSoftOffset_t: (ptr_or_class: string|AnySDKClass) => FeCtrlSoftOffset_t;
+    FeEdgeDesc_t: (ptr_or_class: string|AnySDKClass) => FeEdgeDesc_t;
+    FeEffectDesc_t: (ptr_or_class: string|AnySDKClass) => FeEffectDesc_t;
+    FeFitInfluence_t: (ptr_or_class: string|AnySDKClass) => FeFitInfluence_t;
+    FeFitMatrix_t: (ptr_or_class: string|AnySDKClass) => FeFitMatrix_t;
+    FeFitWeight_t: (ptr_or_class: string|AnySDKClass) => FeFitWeight_t;
+    FeFollowNode_t: (ptr_or_class: string|AnySDKClass) => FeFollowNode_t;
+    FeHingeLimitBuild_t: (ptr_or_class: string|AnySDKClass) => FeHingeLimitBuild_t;
+    FeHingeLimit_t: (ptr_or_class: string|AnySDKClass) => FeHingeLimit_t;
+    FeKelagerBend2_t: (ptr_or_class: string|AnySDKClass) => FeKelagerBend2_t;
+    FeMorphLayerDepr_t: (ptr_or_class: string|AnySDKClass) => FeMorphLayerDepr_t;
+    FeNodeBase_t: (ptr_or_class: string|AnySDKClass) => FeNodeBase_t;
+    FeNodeIntegrator_t: (ptr_or_class: string|AnySDKClass) => FeNodeIntegrator_t;
+    FeNodeReverseOffset_t: (ptr_or_class: string|AnySDKClass) => FeNodeReverseOffset_t;
+    FeNodeWindBase_t: (ptr_or_class: string|AnySDKClass) => FeNodeWindBase_t;
+    FeProxyVertexMap_t: (ptr_or_class: string|AnySDKClass) => FeProxyVertexMap_t;
+    FeQuad_t: (ptr_or_class: string|AnySDKClass) => FeQuad_t;
+    FeRigidColliderIndices_t: (ptr_or_class: string|AnySDKClass) => FeRigidColliderIndices_t;
+    FeRodConstraint_t: (ptr_or_class: string|AnySDKClass) => FeRodConstraint_t;
+    FeSDFRigid_t: (ptr_or_class: string|AnySDKClass) => FeSDFRigid_t;
+    FeSimdAnimStrayRadius_t: (ptr_or_class: string|AnySDKClass) => FeSimdAnimStrayRadius_t;
+    FeSimdNodeBase_t: (ptr_or_class: string|AnySDKClass) => FeSimdNodeBase_t;
+    FeSimdQuad_t: (ptr_or_class: string|AnySDKClass) => FeSimdQuad_t;
+    FeSimdRodConstraintAnim_t: (ptr_or_class: string|AnySDKClass) => FeSimdRodConstraintAnim_t;
+    FeSimdRodConstraint_t: (ptr_or_class: string|AnySDKClass) => FeSimdRodConstraint_t;
+    FeSimdSpringIntegrator_t: (ptr_or_class: string|AnySDKClass) => FeSimdSpringIntegrator_t;
+    FeSimdTri_t: (ptr_or_class: string|AnySDKClass) => FeSimdTri_t;
+    FeSoftParent_t: (ptr_or_class: string|AnySDKClass) => FeSoftParent_t;
+    FeSourceEdge_t: (ptr_or_class: string|AnySDKClass) => FeSourceEdge_t;
+    FeSphereRigid_t: (ptr_or_class: string|AnySDKClass) => FeSphereRigid_t;
+    FeSpringIntegrator_t: (ptr_or_class: string|AnySDKClass) => FeSpringIntegrator_t;
+    FeStiffHingeBuild_t: (ptr_or_class: string|AnySDKClass) => FeStiffHingeBuild_t;
+    FeTaperedCapsuleRigid_t: (ptr_or_class: string|AnySDKClass) => FeTaperedCapsuleRigid_t;
+    FeTaperedCapsuleStretch_t: (ptr_or_class: string|AnySDKClass) => FeTaperedCapsuleStretch_t;
+    FeTreeChildren_t: (ptr_or_class: string|AnySDKClass) => FeTreeChildren_t;
+    FeTri_t: (ptr_or_class: string|AnySDKClass) => FeTri_t;
+    FeTwistConstraint_t: (ptr_or_class: string|AnySDKClass) => FeTwistConstraint_t;
+    FeVertexMapBuild_t: (ptr_or_class: string|AnySDKClass) => FeVertexMapBuild_t;
+    FeVertexMapDesc_t: (ptr_or_class: string|AnySDKClass) => FeVertexMapDesc_t;
+    FeWeightedNode_t: (ptr_or_class: string|AnySDKClass) => FeWeightedNode_t;
+    FeWorldCollisionParams_t: (ptr_or_class: string|AnySDKClass) => FeWorldCollisionParams_t;
+    FourCovMatrices3: (ptr_or_class: string|AnySDKClass) => FourCovMatrices3;
+    OldFeEdge_t: (ptr_or_class: string|AnySDKClass) => OldFeEdge_t;
+    PhysFeModelDesc_t: (ptr_or_class: string|AnySDKClass) => PhysFeModelDesc_t;
+    RnBlendVertex_t: (ptr_or_class: string|AnySDKClass) => RnBlendVertex_t;
+    RnBodyDesc_t: (ptr_or_class: string|AnySDKClass) => RnBodyDesc_t;
+    RnCapsuleDesc_t: (ptr_or_class: string|AnySDKClass) => RnCapsuleDesc_t;
+    RnCapsule_t: (ptr_or_class: string|AnySDKClass) => RnCapsule_t;
+    RnFace_t: (ptr_or_class: string|AnySDKClass) => RnFace_t;
+    RnHalfEdge_t: (ptr_or_class: string|AnySDKClass) => RnHalfEdge_t;
+    RnHullDesc_t: (ptr_or_class: string|AnySDKClass) => RnHullDesc_t;
+    RnHull_t: (ptr_or_class: string|AnySDKClass) => RnHull_t;
+    RnMeshDesc_t: (ptr_or_class: string|AnySDKClass) => RnMeshDesc_t;
+    RnMesh_t: (ptr_or_class: string|AnySDKClass) => RnMesh_t;
+    RnNode_t: (ptr_or_class: string|AnySDKClass) => RnNode_t;
+    RnPlane_t: (ptr_or_class: string|AnySDKClass) => RnPlane_t;
+    RnShapeDesc_t: (ptr_or_class: string|AnySDKClass) => RnShapeDesc_t;
+    RnSoftbodyCapsule_t: (ptr_or_class: string|AnySDKClass) => RnSoftbodyCapsule_t;
+    RnSoftbodyParticle_t: (ptr_or_class: string|AnySDKClass) => RnSoftbodyParticle_t;
+    RnSoftbodySpring_t: (ptr_or_class: string|AnySDKClass) => RnSoftbodySpring_t;
+    RnSphereDesc_t: (ptr_or_class: string|AnySDKClass) => RnSphereDesc_t;
+    RnTriangle_t: (ptr_or_class: string|AnySDKClass) => RnTriangle_t;
+    RnVertex_t: (ptr_or_class: string|AnySDKClass) => RnVertex_t;
+    RnWing_t: (ptr_or_class: string|AnySDKClass) => RnWing_t;
+    VertexPositionColor_t: (ptr_or_class: string|AnySDKClass) => VertexPositionColor_t;
+    VertexPositionNormal_t: (ptr_or_class: string|AnySDKClass) => VertexPositionNormal_t;
+    CTestDomainDerived_Cursor: (ptr_or_class: string|AnySDKClass) => CTestDomainDerived_Cursor;
+    FakeEntityDerivedA_tAPI: (ptr_or_class: string|AnySDKClass) => FakeEntityDerivedA_tAPI;
+    FakeEntityDerivedB_tAPI: (ptr_or_class: string|AnySDKClass) => FakeEntityDerivedB_tAPI;
+    FakeEntity_tAPI: (ptr_or_class: string|AnySDKClass) => FakeEntity_tAPI;
+    IGapHost_Cursor: (ptr_or_class: string|AnySDKClass) => IGapHost_Cursor;
+    IGapHost_ExecLog: (ptr_or_class: string|AnySDKClass) => IGapHost_ExecLog;
+    IGapHost_YieldingCursor: (ptr_or_class: string|AnySDKClass) => IGapHost_YieldingCursor;
+    SignatureOutflow_Continue: (ptr_or_class: string|AnySDKClass) => SignatureOutflow_Continue;
+    SignatureOutflow_Resume: (ptr_or_class: string|AnySDKClass) => SignatureOutflow_Resume;
+    RenderInputLayoutField_t: (ptr_or_class: string|AnySDKClass) => RenderInputLayoutField_t;
+    VsInputSignatureElement_t: (ptr_or_class: string|AnySDKClass) => VsInputSignatureElement_t;
+    VsInputSignature_t: (ptr_or_class: string|AnySDKClass) => VsInputSignature_t;
+    CExampleSchemaVData_Monomorphic: (ptr_or_class: string|AnySDKClass) => CExampleSchemaVData_Monomorphic;
+    CExampleSchemaVData_PolymorphicBase: (ptr_or_class: string|AnySDKClass) => CExampleSchemaVData_PolymorphicBase;
+    CExampleSchemaVData_PolymorphicDerivedA: (ptr_or_class: string|AnySDKClass) => CExampleSchemaVData_PolymorphicDerivedA;
+    CExampleSchemaVData_PolymorphicDerivedB: (ptr_or_class: string|AnySDKClass) => CExampleSchemaVData_PolymorphicDerivedB;
+    ResourceId_t: (ptr_or_class: string|AnySDKClass) => ResourceId_t;
+    ManifestTestResource_t: (ptr_or_class: string|AnySDKClass) => ManifestTestResource_t;
+    TestResource_t: (ptr_or_class: string|AnySDKClass) => TestResource_t;
+    CSSDSEndFrameViewInfo: (ptr_or_class: string|AnySDKClass) => CSSDSEndFrameViewInfo;
+    CSSDSMsg_EndFrame: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_EndFrame;
+    CSSDSMsg_LayerBase: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_LayerBase;
+    CSSDSMsg_PostLayer: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_PostLayer;
+    CSSDSMsg_PreLayer: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_PreLayer;
+    CSSDSMsg_ViewRender: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_ViewRender;
+    CSSDSMsg_ViewTarget: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_ViewTarget;
+    CSSDSMsg_ViewTargetList: (ptr_or_class: string|AnySDKClass) => CSSDSMsg_ViewTargetList;
+    SceneViewId_t: (ptr_or_class: string|AnySDKClass) => SceneViewId_t;
+    AutoRoomDoorwayPairs_t: (ptr_or_class: string|AnySDKClass) => AutoRoomDoorwayPairs_t;
+    CAISound: (ptr_or_class: string|AnySDKClass) => CAISound;
+    CAI_ChangeHintGroup: (ptr_or_class: string|AnySDKClass) => CAI_ChangeHintGroup;
+    CAI_Expresser: (ptr_or_class: string|AnySDKClass) => CAI_Expresser;
+    CAI_ExpresserWithFollowup: (ptr_or_class: string|AnySDKClass) => CAI_ExpresserWithFollowup;
+    CAK47: (ptr_or_class: string|AnySDKClass) => CAK47;
+    CAmbientGeneric: (ptr_or_class: string|AnySDKClass) => CAmbientGeneric;
+    CAttributeContainer: (ptr_or_class: string|AnySDKClass) => CAttributeContainer;
+    CBarnLight: (ptr_or_class: string|AnySDKClass) => CBarnLight;
+    CBaseButton: (ptr_or_class: string|AnySDKClass) => CBaseButton;
+    CBaseCSGrenade: (ptr_or_class: string|AnySDKClass) => CBaseCSGrenade;
+    CBaseCSGrenadeProjectile: (ptr_or_class: string|AnySDKClass) => CBaseCSGrenadeProjectile;
+    CBaseClientUIEntity: (ptr_or_class: string|AnySDKClass) => CBaseClientUIEntity;
+    CBaseCombatCharacter: (ptr_or_class: string|AnySDKClass) => CBaseCombatCharacter;
+    CBaseDMStart: (ptr_or_class: string|AnySDKClass) => CBaseDMStart;
+    CBaseDoor: (ptr_or_class: string|AnySDKClass) => CBaseDoor;
+    CBaseEntity: (ptr_or_class: string|AnySDKClass) => CBaseEntity;
+    CBaseEntityAPI: (ptr_or_class: string|AnySDKClass) => CBaseEntityAPI;
+    CBaseFilter: (ptr_or_class: string|AnySDKClass) => CBaseFilter;
+    CBaseFire: (ptr_or_class: string|AnySDKClass) => CBaseFire;
+    CBaseFlex: (ptr_or_class: string|AnySDKClass) => CBaseFlex;
+    CBaseFlexAlias_funCBaseFlex: (ptr_or_class: string|AnySDKClass) => CBaseFlexAlias_funCBaseFlex;
+    CBaseGrenade: (ptr_or_class: string|AnySDKClass) => CBaseGrenade;
+    CBaseIssue: (ptr_or_class: string|AnySDKClass) => CBaseIssue;
+    CBaseModelEntity: (ptr_or_class: string|AnySDKClass) => CBaseModelEntity;
+    CBaseMoveBehavior: (ptr_or_class: string|AnySDKClass) => CBaseMoveBehavior;
+    CBasePlatTrain: (ptr_or_class: string|AnySDKClass) => CBasePlatTrain;
+    CBasePlayerPawn: (ptr_or_class: string|AnySDKClass) => CBasePlayerPawn;
+    CBasePlayerWeapon: (ptr_or_class: string|AnySDKClass) => CBasePlayerWeapon;
+    CBasePropDoor: (ptr_or_class: string|AnySDKClass) => CBasePropDoor;
+    CBaseToggle: (ptr_or_class: string|AnySDKClass) => CBaseToggle;
+    CBaseTrigger: (ptr_or_class: string|AnySDKClass) => CBaseTrigger;
+    CBaseViewModel: (ptr_or_class: string|AnySDKClass) => CBaseViewModel;
+    CBeam: (ptr_or_class: string|AnySDKClass) => CBeam;
+    CBlood: (ptr_or_class: string|AnySDKClass) => CBlood;
+    CBot: (ptr_or_class: string|AnySDKClass) => CBot;
+    CBreakable: (ptr_or_class: string|AnySDKClass) => CBreakable;
+    CBreakableProp: (ptr_or_class: string|AnySDKClass) => CBreakableProp;
+    CBtActionAim: (ptr_or_class: string|AnySDKClass) => CBtActionAim;
+    CBtActionCombatPositioning: (ptr_or_class: string|AnySDKClass) => CBtActionCombatPositioning;
+    CBtActionMoveTo: (ptr_or_class: string|AnySDKClass) => CBtActionMoveTo;
+    CBtActionParachutePositioning: (ptr_or_class: string|AnySDKClass) => CBtActionParachutePositioning;
+    CBtNode: (ptr_or_class: string|AnySDKClass) => CBtNode;
+    CBtNodeComposite: (ptr_or_class: string|AnySDKClass) => CBtNodeComposite;
+    CBtNodeCondition: (ptr_or_class: string|AnySDKClass) => CBtNodeCondition;
+    CBtNodeConditionInactive: (ptr_or_class: string|AnySDKClass) => CBtNodeConditionInactive;
+    CBtNodeDecorator: (ptr_or_class: string|AnySDKClass) => CBtNodeDecorator;
+    CBubbling: (ptr_or_class: string|AnySDKClass) => CBubbling;
+    CBuyZone: (ptr_or_class: string|AnySDKClass) => CBuyZone;
+    CC4: (ptr_or_class: string|AnySDKClass) => CC4;
+    CCSBot: (ptr_or_class: string|AnySDKClass) => CCSBot;
+    CCSGOViewModel: (ptr_or_class: string|AnySDKClass) => CCSGOViewModel;
+    CCSGO_TeamIntroCharacterPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamIntroCharacterPosition;
+    CCSGO_TeamIntroCounterTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamIntroCounterTerroristPosition;
+    CCSGO_TeamIntroTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamIntroTerroristPosition;
+    CCSGO_TeamPreviewCharacterPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamPreviewCharacterPosition;
+    CCSGO_TeamSelectCharacterPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamSelectCharacterPosition;
+    CCSGO_TeamSelectCounterTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamSelectCounterTerroristPosition;
+    CCSGO_TeamSelectTerroristPosition: (ptr_or_class: string|AnySDKClass) => CCSGO_TeamSelectTerroristPosition;
+    CCSGameRules: (ptr_or_class: string|AnySDKClass) => CCSGameRules;
+    CCSGameRulesProxy: (ptr_or_class: string|AnySDKClass) => CCSGameRulesProxy;
+    CCSMinimapBoundary: (ptr_or_class: string|AnySDKClass) => CCSMinimapBoundary;
+    CCSObserverPawn: (ptr_or_class: string|AnySDKClass) => CCSObserverPawn;
+    CCSPlace: (ptr_or_class: string|AnySDKClass) => CCSPlace;
+    CCSPlayerPawn: (ptr_or_class: string|AnySDKClass) => CCSPlayerPawn;
+    CCSPlayerPawnBase: (ptr_or_class: string|AnySDKClass) => CCSPlayerPawnBase;
+    CCSPlayerResource: (ptr_or_class: string|AnySDKClass) => CCSPlayerResource;
+    CCSPlayer_RadioServices: (ptr_or_class: string|AnySDKClass) => CCSPlayer_RadioServices;
+    CCSServerPointScriptEntity: (ptr_or_class: string|AnySDKClass) => CCSServerPointScriptEntity;
+    CCSSprite: (ptr_or_class: string|AnySDKClass) => CCSSprite;
+    CCSTeam: (ptr_or_class: string|AnySDKClass) => CCSTeam;
+    CCSWeaponBase: (ptr_or_class: string|AnySDKClass) => CCSWeaponBase;
+    CCSWeaponBaseGun: (ptr_or_class: string|AnySDKClass) => CCSWeaponBaseGun;
+    CChangeLevel: (ptr_or_class: string|AnySDKClass) => CChangeLevel;
+    CChicken: (ptr_or_class: string|AnySDKClass) => CChicken;
+    CColorCorrection: (ptr_or_class: string|AnySDKClass) => CColorCorrection;
+    CColorCorrectionVolume: (ptr_or_class: string|AnySDKClass) => CColorCorrectionVolume;
+    CCommentaryAuto: (ptr_or_class: string|AnySDKClass) => CCommentaryAuto;
+    CCommentarySystem: (ptr_or_class: string|AnySDKClass) => CCommentarySystem;
+    CCommentaryViewPosition: (ptr_or_class: string|AnySDKClass) => CCommentaryViewPosition;
+    CConstantForceController: (ptr_or_class: string|AnySDKClass) => CConstantForceController;
+    CConstraintAnchor: (ptr_or_class: string|AnySDKClass) => CConstraintAnchor;
+    CCredits: (ptr_or_class: string|AnySDKClass) => CCredits;
+    CDEagle: (ptr_or_class: string|AnySDKClass) => CDEagle;
+    CDebugHistory: (ptr_or_class: string|AnySDKClass) => CDebugHistory;
+    CDecoyGrenade: (ptr_or_class: string|AnySDKClass) => CDecoyGrenade;
+    CDecoyProjectile: (ptr_or_class: string|AnySDKClass) => CDecoyProjectile;
+    CDynamicLight: (ptr_or_class: string|AnySDKClass) => CDynamicLight;
+    CDynamicProp: (ptr_or_class: string|AnySDKClass) => CDynamicProp;
+    CDynamicPropAlias_cable_dynamic: (ptr_or_class: string|AnySDKClass) => CDynamicPropAlias_cable_dynamic;
+    CDynamicPropAlias_dynamic_prop: (ptr_or_class: string|AnySDKClass) => CDynamicPropAlias_dynamic_prop;
+    CDynamicPropAlias_prop_dynamic_override: (ptr_or_class: string|AnySDKClass) => CDynamicPropAlias_prop_dynamic_override;
+    CEconEntity: (ptr_or_class: string|AnySDKClass) => CEconEntity;
+    CEconItemView: (ptr_or_class: string|AnySDKClass) => CEconItemView;
+    CEconWearable: (ptr_or_class: string|AnySDKClass) => CEconWearable;
+    CEnableMotionFixup: (ptr_or_class: string|AnySDKClass) => CEnableMotionFixup;
+    CEntityBlocker: (ptr_or_class: string|AnySDKClass) => CEntityBlocker;
+    CEntityDissolve: (ptr_or_class: string|AnySDKClass) => CEntityDissolve;
+    CEntityFlame: (ptr_or_class: string|AnySDKClass) => CEntityFlame;
+    CEnvBeam: (ptr_or_class: string|AnySDKClass) => CEnvBeam;
+    CEnvBeverage: (ptr_or_class: string|AnySDKClass) => CEnvBeverage;
+    CEnvCombinedLightProbeVolume: (ptr_or_class: string|AnySDKClass) => CEnvCombinedLightProbeVolume;
+    CEnvCubemap: (ptr_or_class: string|AnySDKClass) => CEnvCubemap;
+    CEnvCubemapBox: (ptr_or_class: string|AnySDKClass) => CEnvCubemapBox;
+    CEnvCubemapFog: (ptr_or_class: string|AnySDKClass) => CEnvCubemapFog;
+    CEnvDecal: (ptr_or_class: string|AnySDKClass) => CEnvDecal;
+    CEnvDetailController: (ptr_or_class: string|AnySDKClass) => CEnvDetailController;
+    CEnvEntityIgniter: (ptr_or_class: string|AnySDKClass) => CEnvEntityIgniter;
+    CEnvEntityMaker: (ptr_or_class: string|AnySDKClass) => CEnvEntityMaker;
+    CEnvExplosion: (ptr_or_class: string|AnySDKClass) => CEnvExplosion;
+    CEnvFade: (ptr_or_class: string|AnySDKClass) => CEnvFade;
+    CEnvFireSensor: (ptr_or_class: string|AnySDKClass) => CEnvFireSensor;
+    CEnvFireSource: (ptr_or_class: string|AnySDKClass) => CEnvFireSource;
+    CEnvFunnel: (ptr_or_class: string|AnySDKClass) => CEnvFunnel;
+    CEnvGlobal: (ptr_or_class: string|AnySDKClass) => CEnvGlobal;
+    CEnvHudHint: (ptr_or_class: string|AnySDKClass) => CEnvHudHint;
+    CEnvInstructorHint: (ptr_or_class: string|AnySDKClass) => CEnvInstructorHint;
+    CEnvInstructorVRHint: (ptr_or_class: string|AnySDKClass) => CEnvInstructorVRHint;
+    CEnvLaser: (ptr_or_class: string|AnySDKClass) => CEnvLaser;
+    CEnvLightProbeVolume: (ptr_or_class: string|AnySDKClass) => CEnvLightProbeVolume;
+    CEnvMicrophone: (ptr_or_class: string|AnySDKClass) => CEnvMicrophone;
+    CEnvMuzzleFlash: (ptr_or_class: string|AnySDKClass) => CEnvMuzzleFlash;
+    CEnvParticleGlow: (ptr_or_class: string|AnySDKClass) => CEnvParticleGlow;
+    CEnvProjectedTexture: (ptr_or_class: string|AnySDKClass) => CEnvProjectedTexture;
+    CEnvScreenOverlay: (ptr_or_class: string|AnySDKClass) => CEnvScreenOverlay;
+    CEnvShake: (ptr_or_class: string|AnySDKClass) => CEnvShake;
+    CEnvSky: (ptr_or_class: string|AnySDKClass) => CEnvSky;
+    CEnvSpark: (ptr_or_class: string|AnySDKClass) => CEnvSpark;
+    CEnvSplash: (ptr_or_class: string|AnySDKClass) => CEnvSplash;
+    CEnvTilt: (ptr_or_class: string|AnySDKClass) => CEnvTilt;
+    CEnvTracer: (ptr_or_class: string|AnySDKClass) => CEnvTracer;
+    CEnvViewPunch: (ptr_or_class: string|AnySDKClass) => CEnvViewPunch;
+    CEnvVolumetricFogController: (ptr_or_class: string|AnySDKClass) => CEnvVolumetricFogController;
+    CEnvVolumetricFogVolume: (ptr_or_class: string|AnySDKClass) => CEnvVolumetricFogVolume;
+    CEnvWind: (ptr_or_class: string|AnySDKClass) => CEnvWind;
+    CEnvWindShared: (ptr_or_class: string|AnySDKClass) => CEnvWindShared;
+    CFilterAttributeInt: (ptr_or_class: string|AnySDKClass) => CFilterAttributeInt;
+    CFilterClass: (ptr_or_class: string|AnySDKClass) => CFilterClass;
+    CFilterContext: (ptr_or_class: string|AnySDKClass) => CFilterContext;
+    CFilterEnemy: (ptr_or_class: string|AnySDKClass) => CFilterEnemy;
+    CFilterLOS: (ptr_or_class: string|AnySDKClass) => CFilterLOS;
+    CFilterMassGreater: (ptr_or_class: string|AnySDKClass) => CFilterMassGreater;
+    CFilterModel: (ptr_or_class: string|AnySDKClass) => CFilterModel;
+    CFilterMultiple: (ptr_or_class: string|AnySDKClass) => CFilterMultiple;
+    CFilterName: (ptr_or_class: string|AnySDKClass) => CFilterName;
+    CFilterProximity: (ptr_or_class: string|AnySDKClass) => CFilterProximity;
+    CFire: (ptr_or_class: string|AnySDKClass) => CFire;
+    CFireCrackerBlast: (ptr_or_class: string|AnySDKClass) => CFireCrackerBlast;
+    CFireSmoke: (ptr_or_class: string|AnySDKClass) => CFireSmoke;
+    CFish: (ptr_or_class: string|AnySDKClass) => CFish;
+    CFishPool: (ptr_or_class: string|AnySDKClass) => CFishPool;
+    CFists: (ptr_or_class: string|AnySDKClass) => CFists;
+    CFlashbang: (ptr_or_class: string|AnySDKClass) => CFlashbang;
+    CFlashbangProjectile: (ptr_or_class: string|AnySDKClass) => CFlashbangProjectile;
+    CFogController: (ptr_or_class: string|AnySDKClass) => CFogController;
+    CFogTrigger: (ptr_or_class: string|AnySDKClass) => CFogTrigger;
+    CFogVolume: (ptr_or_class: string|AnySDKClass) => CFogVolume;
+    CFootstepControl: (ptr_or_class: string|AnySDKClass) => CFootstepControl;
+    CFuncBrush: (ptr_or_class: string|AnySDKClass) => CFuncBrush;
+    CFuncConveyor: (ptr_or_class: string|AnySDKClass) => CFuncConveyor;
+    CFuncElectrifiedVolume: (ptr_or_class: string|AnySDKClass) => CFuncElectrifiedVolume;
+    CFuncIllusionary: (ptr_or_class: string|AnySDKClass) => CFuncIllusionary;
+    CFuncInteractionLayerClip: (ptr_or_class: string|AnySDKClass) => CFuncInteractionLayerClip;
+    CFuncLadder: (ptr_or_class: string|AnySDKClass) => CFuncLadder;
+    CFuncLadderAlias_func_useableladder: (ptr_or_class: string|AnySDKClass) => CFuncLadderAlias_func_useableladder;
+    CFuncMonitor: (ptr_or_class: string|AnySDKClass) => CFuncMonitor;
+    CFuncMoveLinear: (ptr_or_class: string|AnySDKClass) => CFuncMoveLinear;
+    CFuncMoveLinearAlias_momentary_door: (ptr_or_class: string|AnySDKClass) => CFuncMoveLinearAlias_momentary_door;
+    CFuncMover: (ptr_or_class: string|AnySDKClass) => CFuncMover;
+    CFuncMoverAPI: (ptr_or_class: string|AnySDKClass) => CFuncMoverAPI;
+    CFuncNavBlocker: (ptr_or_class: string|AnySDKClass) => CFuncNavBlocker;
+    CFuncNavObstruction: (ptr_or_class: string|AnySDKClass) => CFuncNavObstruction;
+    CFuncPlat: (ptr_or_class: string|AnySDKClass) => CFuncPlat;
+    CFuncPlatRot: (ptr_or_class: string|AnySDKClass) => CFuncPlatRot;
+    CFuncPropRespawnZone: (ptr_or_class: string|AnySDKClass) => CFuncPropRespawnZone;
+    CFuncRotating: (ptr_or_class: string|AnySDKClass) => CFuncRotating;
+    CFuncShatterglass: (ptr_or_class: string|AnySDKClass) => CFuncShatterglass;
+    CFuncTankTrain: (ptr_or_class: string|AnySDKClass) => CFuncTankTrain;
+    CFuncTimescale: (ptr_or_class: string|AnySDKClass) => CFuncTimescale;
+    CFuncTrackAuto: (ptr_or_class: string|AnySDKClass) => CFuncTrackAuto;
+    CFuncTrackChange: (ptr_or_class: string|AnySDKClass) => CFuncTrackChange;
+    CFuncTrackTrain: (ptr_or_class: string|AnySDKClass) => CFuncTrackTrain;
+    CFuncTrain: (ptr_or_class: string|AnySDKClass) => CFuncTrain;
+    CFuncTrainControls: (ptr_or_class: string|AnySDKClass) => CFuncTrainControls;
+    CFuncVPhysicsClip: (ptr_or_class: string|AnySDKClass) => CFuncVPhysicsClip;
+    CFuncVehicleClip: (ptr_or_class: string|AnySDKClass) => CFuncVehicleClip;
+    CFuncWall: (ptr_or_class: string|AnySDKClass) => CFuncWall;
+    CFuncWallToggle: (ptr_or_class: string|AnySDKClass) => CFuncWallToggle;
+    CGameChoreoServices: (ptr_or_class: string|AnySDKClass) => CGameChoreoServices;
+    CGameEnd: (ptr_or_class: string|AnySDKClass) => CGameEnd;
+    CGameGibManager: (ptr_or_class: string|AnySDKClass) => CGameGibManager;
+    CGameMoney: (ptr_or_class: string|AnySDKClass) => CGameMoney;
+    CGamePlayerEquip: (ptr_or_class: string|AnySDKClass) => CGamePlayerEquip;
+    CGamePlayerZone: (ptr_or_class: string|AnySDKClass) => CGamePlayerZone;
+    CGameRules: (ptr_or_class: string|AnySDKClass) => CGameRules;
+    CGameRulesProxy: (ptr_or_class: string|AnySDKClass) => CGameRulesProxy;
+    CGameScriptedMoveData: (ptr_or_class: string|AnySDKClass) => CGameScriptedMoveData;
+    CGameScriptedMoveDef_t: (ptr_or_class: string|AnySDKClass) => CGameScriptedMoveDef_t;
+    CGameText: (ptr_or_class: string|AnySDKClass) => CGameText;
+    CGenericConstraint: (ptr_or_class: string|AnySDKClass) => CGenericConstraint;
+    CGradientFog: (ptr_or_class: string|AnySDKClass) => CGradientFog;
+    CGunTarget: (ptr_or_class: string|AnySDKClass) => CGunTarget;
+    CHEGrenade: (ptr_or_class: string|AnySDKClass) => CHEGrenade;
+    CHEGrenadeProjectile: (ptr_or_class: string|AnySDKClass) => CHEGrenadeProjectile;
+    CHandleDummy: (ptr_or_class: string|AnySDKClass) => CHandleDummy;
+    CHandleTest: (ptr_or_class: string|AnySDKClass) => CHandleTest;
+    CHostage: (ptr_or_class: string|AnySDKClass) => CHostage;
+    CHostageAlias_info_hostage_spawn: (ptr_or_class: string|AnySDKClass) => CHostageAlias_info_hostage_spawn;
+    CHostageCarriableProp: (ptr_or_class: string|AnySDKClass) => CHostageCarriableProp;
+    CHostageExpresserShim: (ptr_or_class: string|AnySDKClass) => CHostageExpresserShim;
+    CIncendiaryGrenade: (ptr_or_class: string|AnySDKClass) => CIncendiaryGrenade;
+    CInferno: (ptr_or_class: string|AnySDKClass) => CInferno;
+    CInfoData: (ptr_or_class: string|AnySDKClass) => CInfoData;
+    CInfoDeathmatchSpawn: (ptr_or_class: string|AnySDKClass) => CInfoDeathmatchSpawn;
+    CInfoGameEventProxy: (ptr_or_class: string|AnySDKClass) => CInfoGameEventProxy;
+    CInfoInstructorHintBombTargetA: (ptr_or_class: string|AnySDKClass) => CInfoInstructorHintBombTargetA;
+    CInfoInstructorHintBombTargetB: (ptr_or_class: string|AnySDKClass) => CInfoInstructorHintBombTargetB;
+    CInfoInstructorHintHostageRescueZone: (ptr_or_class: string|AnySDKClass) => CInfoInstructorHintHostageRescueZone;
+    CInfoInstructorHintTarget: (ptr_or_class: string|AnySDKClass) => CInfoInstructorHintTarget;
+    CInfoLadderDismount: (ptr_or_class: string|AnySDKClass) => CInfoLadderDismount;
+    CInfoLandmark: (ptr_or_class: string|AnySDKClass) => CInfoLandmark;
+    CInfoPlayerCounterterrorist: (ptr_or_class: string|AnySDKClass) => CInfoPlayerCounterterrorist;
+    CInfoPlayerStart: (ptr_or_class: string|AnySDKClass) => CInfoPlayerStart;
+    CInfoPlayerTerrorist: (ptr_or_class: string|AnySDKClass) => CInfoPlayerTerrorist;
+    CInfoSpawnGroupLandmark: (ptr_or_class: string|AnySDKClass) => CInfoSpawnGroupLandmark;
+    CInfoSpawnGroupLoadUnload: (ptr_or_class: string|AnySDKClass) => CInfoSpawnGroupLoadUnload;
+    CInfoTargetServerOnly: (ptr_or_class: string|AnySDKClass) => CInfoTargetServerOnly;
+    CInfoTeleportDestination: (ptr_or_class: string|AnySDKClass) => CInfoTeleportDestination;
+    CInfoVisibilityBox: (ptr_or_class: string|AnySDKClass) => CInfoVisibilityBox;
+    CInstancedSceneEntity: (ptr_or_class: string|AnySDKClass) => CInstancedSceneEntity;
+    CInstructorEventEntity: (ptr_or_class: string|AnySDKClass) => CInstructorEventEntity;
+    CIronSightController: (ptr_or_class: string|AnySDKClass) => CIronSightController;
+    CItem: (ptr_or_class: string|AnySDKClass) => CItem;
+    CItemAssaultSuit: (ptr_or_class: string|AnySDKClass) => CItemAssaultSuit;
+    CItemDefuser: (ptr_or_class: string|AnySDKClass) => CItemDefuser;
+    CItemDefuserAlias_item_defuser: (ptr_or_class: string|AnySDKClass) => CItemDefuserAlias_item_defuser;
+    CItemDogtags: (ptr_or_class: string|AnySDKClass) => CItemDogtags;
+    CItemHeavyAssaultSuit: (ptr_or_class: string|AnySDKClass) => CItemHeavyAssaultSuit;
+    CItemKevlar: (ptr_or_class: string|AnySDKClass) => CItemKevlar;
+    CItemSoda: (ptr_or_class: string|AnySDKClass) => CItemSoda;
+    CItem_Healthshot: (ptr_or_class: string|AnySDKClass) => CItem_Healthshot;
+    CKeepUpright: (ptr_or_class: string|AnySDKClass) => CKeepUpright;
+    CKnife: (ptr_or_class: string|AnySDKClass) => CKnife;
+    CLightDirectionalEntity: (ptr_or_class: string|AnySDKClass) => CLightDirectionalEntity;
+    CLightEntity: (ptr_or_class: string|AnySDKClass) => CLightEntity;
+    CLightEnvironmentEntity: (ptr_or_class: string|AnySDKClass) => CLightEnvironmentEntity;
+    CLightGlow: (ptr_or_class: string|AnySDKClass) => CLightGlow;
+    CLightOrthoEntity: (ptr_or_class: string|AnySDKClass) => CLightOrthoEntity;
+    CLightSpotEntity: (ptr_or_class: string|AnySDKClass) => CLightSpotEntity;
+    CLogicAchievement: (ptr_or_class: string|AnySDKClass) => CLogicAchievement;
+    CLogicActiveAutosave: (ptr_or_class: string|AnySDKClass) => CLogicActiveAutosave;
+    CLogicAuto: (ptr_or_class: string|AnySDKClass) => CLogicAuto;
+    CLogicAutosave: (ptr_or_class: string|AnySDKClass) => CLogicAutosave;
+    CLogicBranch: (ptr_or_class: string|AnySDKClass) => CLogicBranch;
+    CLogicBranchList: (ptr_or_class: string|AnySDKClass) => CLogicBranchList;
+    CLogicCase: (ptr_or_class: string|AnySDKClass) => CLogicCase;
+    CLogicCollisionPair: (ptr_or_class: string|AnySDKClass) => CLogicCollisionPair;
+    CLogicCompare: (ptr_or_class: string|AnySDKClass) => CLogicCompare;
+    CLogicDistanceAutosave: (ptr_or_class: string|AnySDKClass) => CLogicDistanceAutosave;
+    CLogicDistanceCheck: (ptr_or_class: string|AnySDKClass) => CLogicDistanceCheck;
+    CLogicEventListener: (ptr_or_class: string|AnySDKClass) => CLogicEventListener;
+    CLogicGameEvent: (ptr_or_class: string|AnySDKClass) => CLogicGameEvent;
+    CLogicGameEventListener: (ptr_or_class: string|AnySDKClass) => CLogicGameEventListener;
+    CLogicLineToEntity: (ptr_or_class: string|AnySDKClass) => CLogicLineToEntity;
+    CLogicMeasureMovement: (ptr_or_class: string|AnySDKClass) => CLogicMeasureMovement;
+    CLogicNPCCounter: (ptr_or_class: string|AnySDKClass) => CLogicNPCCounter;
+    CLogicNPCCounterAABB: (ptr_or_class: string|AnySDKClass) => CLogicNPCCounterAABB;
+    CLogicNPCCounterOBB: (ptr_or_class: string|AnySDKClass) => CLogicNPCCounterOBB;
+    CLogicNavigation: (ptr_or_class: string|AnySDKClass) => CLogicNavigation;
+    CLogicPlayerProxy: (ptr_or_class: string|AnySDKClass) => CLogicPlayerProxy;
+    CLogicProximity: (ptr_or_class: string|AnySDKClass) => CLogicProximity;
+    CLogicScript: (ptr_or_class: string|AnySDKClass) => CLogicScript;
+    CMapVetoPickController: (ptr_or_class: string|AnySDKClass) => CMapVetoPickController;
+    CMarkupVolume: (ptr_or_class: string|AnySDKClass) => CMarkupVolume;
+    CMarkupVolumeTagged: (ptr_or_class: string|AnySDKClass) => CMarkupVolumeTagged;
+    CMarkupVolumeTagged_Nav: (ptr_or_class: string|AnySDKClass) => CMarkupVolumeTagged_Nav;
+    CMarkupVolumeTagged_NavGame: (ptr_or_class: string|AnySDKClass) => CMarkupVolumeTagged_NavGame;
+    CMarkupVolumeWithRef: (ptr_or_class: string|AnySDKClass) => CMarkupVolumeWithRef;
+    CMathColorBlend: (ptr_or_class: string|AnySDKClass) => CMathColorBlend;
+    CMathCounter: (ptr_or_class: string|AnySDKClass) => CMathCounter;
+    CMathRemap: (ptr_or_class: string|AnySDKClass) => CMathRemap;
+    CMelee: (ptr_or_class: string|AnySDKClass) => CMelee;
+    CMessage: (ptr_or_class: string|AnySDKClass) => CMessage;
+    CMessageEntity: (ptr_or_class: string|AnySDKClass) => CMessageEntity;
+    CModelPointEntity: (ptr_or_class: string|AnySDKClass) => CModelPointEntity;
+    CMolotovGrenade: (ptr_or_class: string|AnySDKClass) => CMolotovGrenade;
+    CMolotovProjectile: (ptr_or_class: string|AnySDKClass) => CMolotovProjectile;
+    CMomentaryRotButton: (ptr_or_class: string|AnySDKClass) => CMomentaryRotButton;
+    CMotorController: (ptr_or_class: string|AnySDKClass) => CMotorController;
+    CMoverPathNode: (ptr_or_class: string|AnySDKClass) => CMoverPathNode;
+    CMultiLightProxy: (ptr_or_class: string|AnySDKClass) => CMultiLightProxy;
+    CMultiSource: (ptr_or_class: string|AnySDKClass) => CMultiSource;
+    CMultiplayRules: (ptr_or_class: string|AnySDKClass) => CMultiplayRules;
+    CMultiplayer_Expresser: (ptr_or_class: string|AnySDKClass) => CMultiplayer_Expresser;
+    CNavLinkAreaEntity: (ptr_or_class: string|AnySDKClass) => CNavLinkAreaEntity;
+    CNavSpaceInfo: (ptr_or_class: string|AnySDKClass) => CNavSpaceInfo;
+    CNavVolumeBreadthFirstSearch: (ptr_or_class: string|AnySDKClass) => CNavVolumeBreadthFirstSearch;
+    CNavVolumeCalculatedVector: (ptr_or_class: string|AnySDKClass) => CNavVolumeCalculatedVector;
+    CNavVolumeMarkupVolume: (ptr_or_class: string|AnySDKClass) => CNavVolumeMarkupVolume;
+    CNavWalkable: (ptr_or_class: string|AnySDKClass) => CNavWalkable;
+    CNullEntity: (ptr_or_class: string|AnySDKClass) => CNullEntity;
+    COmniLight: (ptr_or_class: string|AnySDKClass) => COmniLight;
+    COrnamentProp: (ptr_or_class: string|AnySDKClass) => COrnamentProp;
+    CParticleSystem: (ptr_or_class: string|AnySDKClass) => CParticleSystem;
+    CPathCorner: (ptr_or_class: string|AnySDKClass) => CPathCorner;
+    CPathCornerCrash: (ptr_or_class: string|AnySDKClass) => CPathCornerCrash;
+    CPathKeyFrame: (ptr_or_class: string|AnySDKClass) => CPathKeyFrame;
+    CPathMover: (ptr_or_class: string|AnySDKClass) => CPathMover;
+    CPathParticleRope: (ptr_or_class: string|AnySDKClass) => CPathParticleRope;
+    CPathParticleRopeAlias_path_particle_rope_clientside: (ptr_or_class: string|AnySDKClass) => CPathParticleRopeAlias_path_particle_rope_clientside;
+    CPathTrack: (ptr_or_class: string|AnySDKClass) => CPathTrack;
+    CPhysBallSocket: (ptr_or_class: string|AnySDKClass) => CPhysBallSocket;
+    CPhysBox: (ptr_or_class: string|AnySDKClass) => CPhysBox;
+    CPhysConstraint: (ptr_or_class: string|AnySDKClass) => CPhysConstraint;
+    CPhysExplosion: (ptr_or_class: string|AnySDKClass) => CPhysExplosion;
+    CPhysFixed: (ptr_or_class: string|AnySDKClass) => CPhysFixed;
+    CPhysForce: (ptr_or_class: string|AnySDKClass) => CPhysForce;
+    CPhysHinge: (ptr_or_class: string|AnySDKClass) => CPhysHinge;
+    CPhysHingeAlias_phys_hinge_local: (ptr_or_class: string|AnySDKClass) => CPhysHingeAlias_phys_hinge_local;
+    CPhysImpact: (ptr_or_class: string|AnySDKClass) => CPhysImpact;
+    CPhysLength: (ptr_or_class: string|AnySDKClass) => CPhysLength;
+    CPhysMagnet: (ptr_or_class: string|AnySDKClass) => CPhysMagnet;
+    CPhysMotor: (ptr_or_class: string|AnySDKClass) => CPhysMotor;
+    CPhysPulley: (ptr_or_class: string|AnySDKClass) => CPhysPulley;
+    CPhysSlideConstraint: (ptr_or_class: string|AnySDKClass) => CPhysSlideConstraint;
+    CPhysThruster: (ptr_or_class: string|AnySDKClass) => CPhysThruster;
+    CPhysTorque: (ptr_or_class: string|AnySDKClass) => CPhysTorque;
+    CPhysWheelConstraint: (ptr_or_class: string|AnySDKClass) => CPhysWheelConstraint;
+    CPhysicalButton: (ptr_or_class: string|AnySDKClass) => CPhysicalButton;
+    CPhysicsEntitySolver: (ptr_or_class: string|AnySDKClass) => CPhysicsEntitySolver;
+    CPhysicsProp: (ptr_or_class: string|AnySDKClass) => CPhysicsProp;
+    CPhysicsPropMultiplayer: (ptr_or_class: string|AnySDKClass) => CPhysicsPropMultiplayer;
+    CPhysicsPropOverride: (ptr_or_class: string|AnySDKClass) => CPhysicsPropOverride;
+    CPhysicsPropRespawnable: (ptr_or_class: string|AnySDKClass) => CPhysicsPropRespawnable;
+    CPhysicsShake: (ptr_or_class: string|AnySDKClass) => CPhysicsShake;
+    CPhysicsSpring: (ptr_or_class: string|AnySDKClass) => CPhysicsSpring;
+    CPhysicsWire: (ptr_or_class: string|AnySDKClass) => CPhysicsWire;
+    CPlantedC4: (ptr_or_class: string|AnySDKClass) => CPlantedC4;
+    CPlatTrigger: (ptr_or_class: string|AnySDKClass) => CPlatTrigger;
+    CPlayerPing: (ptr_or_class: string|AnySDKClass) => CPlayerPing;
+    CPlayerSprayDecal: (ptr_or_class: string|AnySDKClass) => CPlayerSprayDecal;
+    CPlayerVisibility: (ptr_or_class: string|AnySDKClass) => CPlayerVisibility;
+    CPointAngleSensor: (ptr_or_class: string|AnySDKClass) => CPointAngleSensor;
+    CPointAngularVelocitySensor: (ptr_or_class: string|AnySDKClass) => CPointAngularVelocitySensor;
+    CPointBroadcastClientCommand: (ptr_or_class: string|AnySDKClass) => CPointBroadcastClientCommand;
+    CPointCamera: (ptr_or_class: string|AnySDKClass) => CPointCamera;
+    CPointCameraVFOV: (ptr_or_class: string|AnySDKClass) => CPointCameraVFOV;
+    CPointClientCommand: (ptr_or_class: string|AnySDKClass) => CPointClientCommand;
+    CPointClientUIDialog: (ptr_or_class: string|AnySDKClass) => CPointClientUIDialog;
+    CPointClientUIWorldPanel: (ptr_or_class: string|AnySDKClass) => CPointClientUIWorldPanel;
+    CPointClientUIWorldTextPanel: (ptr_or_class: string|AnySDKClass) => CPointClientUIWorldTextPanel;
+    CPointEntity: (ptr_or_class: string|AnySDKClass) => CPointEntity;
+    CPointEntityFinder: (ptr_or_class: string|AnySDKClass) => CPointEntityFinder;
+    CPointGamestatsCounter: (ptr_or_class: string|AnySDKClass) => CPointGamestatsCounter;
+    CPointGiveAmmo: (ptr_or_class: string|AnySDKClass) => CPointGiveAmmo;
+    CPointHurt: (ptr_or_class: string|AnySDKClass) => CPointHurt;
+    CPointPrefab: (ptr_or_class: string|AnySDKClass) => CPointPrefab;
+    CPointProximitySensor: (ptr_or_class: string|AnySDKClass) => CPointProximitySensor;
+    CPointPush: (ptr_or_class: string|AnySDKClass) => CPointPush;
+    CPointServerCommand: (ptr_or_class: string|AnySDKClass) => CPointServerCommand;
+    CPointTeleport: (ptr_or_class: string|AnySDKClass) => CPointTeleport;
+    CPointValueRemapper: (ptr_or_class: string|AnySDKClass) => CPointValueRemapper;
+    CPointVelocitySensor: (ptr_or_class: string|AnySDKClass) => CPointVelocitySensor;
+    CPointWorldText: (ptr_or_class: string|AnySDKClass) => CPointWorldText;
+    CPostProcessingVolume: (ptr_or_class: string|AnySDKClass) => CPostProcessingVolume;
+    CPrecipitation: (ptr_or_class: string|AnySDKClass) => CPrecipitation;
+    CPrecipitationBlocker: (ptr_or_class: string|AnySDKClass) => CPrecipitationBlocker;
+    CPredictedViewModel: (ptr_or_class: string|AnySDKClass) => CPredictedViewModel;
+    CProjectedDecal: (ptr_or_class: string|AnySDKClass) => CProjectedDecal;
+    CPropDoorRotating: (ptr_or_class: string|AnySDKClass) => CPropDoorRotating;
+    CPropDoorRotatingBreakable: (ptr_or_class: string|AnySDKClass) => CPropDoorRotatingBreakable;
+    CPushable: (ptr_or_class: string|AnySDKClass) => CPushable;
+    CRagdollConstraint: (ptr_or_class: string|AnySDKClass) => CRagdollConstraint;
+    CRagdollMagnet: (ptr_or_class: string|AnySDKClass) => CRagdollMagnet;
+    CRagdollProp: (ptr_or_class: string|AnySDKClass) => CRagdollProp;
+    CRagdollPropAlias_physics_prop_ragdoll: (ptr_or_class: string|AnySDKClass) => CRagdollPropAlias_physics_prop_ragdoll;
+    CRagdollPropAttached: (ptr_or_class: string|AnySDKClass) => CRagdollPropAttached;
+    CRectLight: (ptr_or_class: string|AnySDKClass) => CRectLight;
+    CResponseQueue: (ptr_or_class: string|AnySDKClass) => CResponseQueue;
+    CRetakeGameRules: (ptr_or_class: string|AnySDKClass) => CRetakeGameRules;
+    CRevertSaved: (ptr_or_class: string|AnySDKClass) => CRevertSaved;
+    CRopeKeyframe: (ptr_or_class: string|AnySDKClass) => CRopeKeyframe;
+    CRopeKeyframeAlias_move_rope: (ptr_or_class: string|AnySDKClass) => CRopeKeyframeAlias_move_rope;
+    CRotButton: (ptr_or_class: string|AnySDKClass) => CRotButton;
+    CRotDoor: (ptr_or_class: string|AnySDKClass) => CRotDoor;
+    CRuleBrushEntity: (ptr_or_class: string|AnySDKClass) => CRuleBrushEntity;
+    CRuleEntity: (ptr_or_class: string|AnySDKClass) => CRuleEntity;
+    CRulePointEntity: (ptr_or_class: string|AnySDKClass) => CRulePointEntity;
+    CSAdditionalMatchStats_t: (ptr_or_class: string|AnySDKClass) => CSAdditionalMatchStats_t;
+    CSAdditionalPerRoundStats_t: (ptr_or_class: string|AnySDKClass) => CSAdditionalPerRoundStats_t;
+    CSceneEntity: (ptr_or_class: string|AnySDKClass) => CSceneEntity;
+    CSceneEntityAlias_logic_choreographed_scene: (ptr_or_class: string|AnySDKClass) => CSceneEntityAlias_logic_choreographed_scene;
+    CSceneListManager: (ptr_or_class: string|AnySDKClass) => CSceneListManager;
+    CScriptItem: (ptr_or_class: string|AnySDKClass) => CScriptItem;
+    CScriptNavBlocker: (ptr_or_class: string|AnySDKClass) => CScriptNavBlocker;
+    CScriptTriggerHurt: (ptr_or_class: string|AnySDKClass) => CScriptTriggerHurt;
+    CScriptTriggerMultiple: (ptr_or_class: string|AnySDKClass) => CScriptTriggerMultiple;
+    CScriptTriggerOnce: (ptr_or_class: string|AnySDKClass) => CScriptTriggerOnce;
+    CScriptTriggerPush: (ptr_or_class: string|AnySDKClass) => CScriptTriggerPush;
+    CScriptedSequence: (ptr_or_class: string|AnySDKClass) => CScriptedSequence;
+    CSensorGrenade: (ptr_or_class: string|AnySDKClass) => CSensorGrenade;
+    CSensorGrenadeProjectile: (ptr_or_class: string|AnySDKClass) => CSensorGrenadeProjectile;
+    CServerOnlyEntity: (ptr_or_class: string|AnySDKClass) => CServerOnlyEntity;
+    CServerOnlyPointEntity: (ptr_or_class: string|AnySDKClass) => CServerOnlyPointEntity;
+    CServerRagdollTrigger: (ptr_or_class: string|AnySDKClass) => CServerRagdollTrigger;
+    CShatterGlassShard: (ptr_or_class: string|AnySDKClass) => CShatterGlassShard;
+    CShatterGlassShardPhysics: (ptr_or_class: string|AnySDKClass) => CShatterGlassShardPhysics;
+    CShower: (ptr_or_class: string|AnySDKClass) => CShower;
+    CSimpleMarkupVolumeTagged: (ptr_or_class: string|AnySDKClass) => CSimpleMarkupVolumeTagged;
+    CSingleplayRules: (ptr_or_class: string|AnySDKClass) => CSingleplayRules;
+    CSkyCamera: (ptr_or_class: string|AnySDKClass) => CSkyCamera;
+    CSmokeGrenade: (ptr_or_class: string|AnySDKClass) => CSmokeGrenade;
+    CSmokeGrenadeProjectile: (ptr_or_class: string|AnySDKClass) => CSmokeGrenadeProjectile;
+    CSmoothFunc: (ptr_or_class: string|AnySDKClass) => CSmoothFunc;
+    CSound: (ptr_or_class: string|AnySDKClass) => CSound;
+    CSoundAreaEntityBase: (ptr_or_class: string|AnySDKClass) => CSoundAreaEntityBase;
+    CSoundAreaEntityOrientedBox: (ptr_or_class: string|AnySDKClass) => CSoundAreaEntityOrientedBox;
+    CSoundAreaEntitySphere: (ptr_or_class: string|AnySDKClass) => CSoundAreaEntitySphere;
+    CSoundEnt: (ptr_or_class: string|AnySDKClass) => CSoundEnt;
+    CSoundEventAABBEntity: (ptr_or_class: string|AnySDKClass) => CSoundEventAABBEntity;
+    CSoundEventEntity: (ptr_or_class: string|AnySDKClass) => CSoundEventEntity;
+    CSoundEventEntityAlias_snd_event_point: (ptr_or_class: string|AnySDKClass) => CSoundEventEntityAlias_snd_event_point;
+    CSoundEventOBBEntity: (ptr_or_class: string|AnySDKClass) => CSoundEventOBBEntity;
+    CSoundEventParameter: (ptr_or_class: string|AnySDKClass) => CSoundEventParameter;
+    CSoundEventPathCornerEntity: (ptr_or_class: string|AnySDKClass) => CSoundEventPathCornerEntity;
+    CSoundEventSphereEntity: (ptr_or_class: string|AnySDKClass) => CSoundEventSphereEntity;
+    CSoundOpvarSetAABBEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetAABBEntity;
+    CSoundOpvarSetAutoRoomEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetAutoRoomEntity;
+    CSoundOpvarSetEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetEntity;
+    CSoundOpvarSetOBBEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetOBBEntity;
+    CSoundOpvarSetOBBWindEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetOBBWindEntity;
+    CSoundOpvarSetPathCornerEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetPathCornerEntity;
+    CSoundOpvarSetPointBase: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetPointBase;
+    CSoundOpvarSetPointEntity: (ptr_or_class: string|AnySDKClass) => CSoundOpvarSetPointEntity;
+    CSoundStackSave: (ptr_or_class: string|AnySDKClass) => CSoundStackSave;
+    CSplineConstraint: (ptr_or_class: string|AnySDKClass) => CSplineConstraint;
+    CSpotlightEnd: (ptr_or_class: string|AnySDKClass) => CSpotlightEnd;
+    CSprite: (ptr_or_class: string|AnySDKClass) => CSprite;
+    CSpriteAlias_env_glow: (ptr_or_class: string|AnySDKClass) => CSpriteAlias_env_glow;
+    CSun: (ptr_or_class: string|AnySDKClass) => CSun;
+    CTankTargetChange: (ptr_or_class: string|AnySDKClass) => CTankTargetChange;
+    CTankTrainAI: (ptr_or_class: string|AnySDKClass) => CTankTrainAI;
+    CTeam: (ptr_or_class: string|AnySDKClass) => CTeam;
+    CTeamplayRules: (ptr_or_class: string|AnySDKClass) => CTeamplayRules;
+    CTestEffect: (ptr_or_class: string|AnySDKClass) => CTestEffect;
+    CTextureBasedAnimatable: (ptr_or_class: string|AnySDKClass) => CTextureBasedAnimatable;
+    CTimerEntity: (ptr_or_class: string|AnySDKClass) => CTimerEntity;
+    CTonemapController2: (ptr_or_class: string|AnySDKClass) => CTonemapController2;
+    CTonemapController2Alias_env_tonemap_controller2: (ptr_or_class: string|AnySDKClass) => CTonemapController2Alias_env_tonemap_controller2;
+    CTonemapTrigger: (ptr_or_class: string|AnySDKClass) => CTonemapTrigger;
+    CTouchExpansionComponent: (ptr_or_class: string|AnySDKClass) => CTouchExpansionComponent;
+    CTriggerActiveWeaponDetect: (ptr_or_class: string|AnySDKClass) => CTriggerActiveWeaponDetect;
+    CTriggerBombReset: (ptr_or_class: string|AnySDKClass) => CTriggerBombReset;
+    CTriggerBrush: (ptr_or_class: string|AnySDKClass) => CTriggerBrush;
+    CTriggerBuoyancy: (ptr_or_class: string|AnySDKClass) => CTriggerBuoyancy;
+    CTriggerCallback: (ptr_or_class: string|AnySDKClass) => CTriggerCallback;
+    CTriggerDetectBulletFire: (ptr_or_class: string|AnySDKClass) => CTriggerDetectBulletFire;
+    CTriggerDetectExplosion: (ptr_or_class: string|AnySDKClass) => CTriggerDetectExplosion;
+    CTriggerFan: (ptr_or_class: string|AnySDKClass) => CTriggerFan;
+    CTriggerGameEvent: (ptr_or_class: string|AnySDKClass) => CTriggerGameEvent;
+    CTriggerGravity: (ptr_or_class: string|AnySDKClass) => CTriggerGravity;
+    CTriggerHostageReset: (ptr_or_class: string|AnySDKClass) => CTriggerHostageReset;
+    CTriggerHurt: (ptr_or_class: string|AnySDKClass) => CTriggerHurt;
+    CTriggerImpact: (ptr_or_class: string|AnySDKClass) => CTriggerImpact;
+    CTriggerLerpObject: (ptr_or_class: string|AnySDKClass) => CTriggerLerpObject;
+    CTriggerLook: (ptr_or_class: string|AnySDKClass) => CTriggerLook;
+    CTriggerMultiple: (ptr_or_class: string|AnySDKClass) => CTriggerMultiple;
+    CTriggerOnce: (ptr_or_class: string|AnySDKClass) => CTriggerOnce;
+    CTriggerPhysics: (ptr_or_class: string|AnySDKClass) => CTriggerPhysics;
+    CTriggerProximity: (ptr_or_class: string|AnySDKClass) => CTriggerProximity;
+    CTriggerPush: (ptr_or_class: string|AnySDKClass) => CTriggerPush;
+    CTriggerRemove: (ptr_or_class: string|AnySDKClass) => CTriggerRemove;
+    CTriggerSave: (ptr_or_class: string|AnySDKClass) => CTriggerSave;
+    CTriggerSndSosOpvar: (ptr_or_class: string|AnySDKClass) => CTriggerSndSosOpvar;
+    CTriggerSoundscape: (ptr_or_class: string|AnySDKClass) => CTriggerSoundscape;
+    CTriggerTeleport: (ptr_or_class: string|AnySDKClass) => CTriggerTeleport;
+    CTriggerToggleSave: (ptr_or_class: string|AnySDKClass) => CTriggerToggleSave;
+    CTriggerTripWire: (ptr_or_class: string|AnySDKClass) => CTriggerTripWire;
+    CTriggerVolume: (ptr_or_class: string|AnySDKClass) => CTriggerVolume;
+    CWaterBullet: (ptr_or_class: string|AnySDKClass) => CWaterBullet;
+    CWeaponAWP: (ptr_or_class: string|AnySDKClass) => CWeaponAWP;
+    CWeaponAug: (ptr_or_class: string|AnySDKClass) => CWeaponAug;
+    CWeaponBaseItem: (ptr_or_class: string|AnySDKClass) => CWeaponBaseItem;
+    CWeaponBizon: (ptr_or_class: string|AnySDKClass) => CWeaponBizon;
+    CWeaponCZ75a: (ptr_or_class: string|AnySDKClass) => CWeaponCZ75a;
+    CWeaponElite: (ptr_or_class: string|AnySDKClass) => CWeaponElite;
+    CWeaponFamas: (ptr_or_class: string|AnySDKClass) => CWeaponFamas;
+    CWeaponFiveSeven: (ptr_or_class: string|AnySDKClass) => CWeaponFiveSeven;
+    CWeaponG3SG1: (ptr_or_class: string|AnySDKClass) => CWeaponG3SG1;
+    CWeaponGalilAR: (ptr_or_class: string|AnySDKClass) => CWeaponGalilAR;
+    CWeaponGlock: (ptr_or_class: string|AnySDKClass) => CWeaponGlock;
+    CWeaponHKP2000: (ptr_or_class: string|AnySDKClass) => CWeaponHKP2000;
+    CWeaponM249: (ptr_or_class: string|AnySDKClass) => CWeaponM249;
+    CWeaponM4A1: (ptr_or_class: string|AnySDKClass) => CWeaponM4A1;
+    CWeaponM4A1Silencer: (ptr_or_class: string|AnySDKClass) => CWeaponM4A1Silencer;
+    CWeaponMAC10: (ptr_or_class: string|AnySDKClass) => CWeaponMAC10;
+    CWeaponMP5SD: (ptr_or_class: string|AnySDKClass) => CWeaponMP5SD;
+    CWeaponMP7: (ptr_or_class: string|AnySDKClass) => CWeaponMP7;
+    CWeaponMP9: (ptr_or_class: string|AnySDKClass) => CWeaponMP9;
+    CWeaponMag7: (ptr_or_class: string|AnySDKClass) => CWeaponMag7;
+    CWeaponNOVA: (ptr_or_class: string|AnySDKClass) => CWeaponNOVA;
+    CWeaponNegev: (ptr_or_class: string|AnySDKClass) => CWeaponNegev;
+    CWeaponP250: (ptr_or_class: string|AnySDKClass) => CWeaponP250;
+    CWeaponP90: (ptr_or_class: string|AnySDKClass) => CWeaponP90;
+    CWeaponRevolver: (ptr_or_class: string|AnySDKClass) => CWeaponRevolver;
+    CWeaponSCAR20: (ptr_or_class: string|AnySDKClass) => CWeaponSCAR20;
+    CWeaponSG556: (ptr_or_class: string|AnySDKClass) => CWeaponSG556;
+    CWeaponSSG08: (ptr_or_class: string|AnySDKClass) => CWeaponSSG08;
+    CWeaponSawedoff: (ptr_or_class: string|AnySDKClass) => CWeaponSawedoff;
+    CWeaponShield: (ptr_or_class: string|AnySDKClass) => CWeaponShield;
+    CWeaponTaser: (ptr_or_class: string|AnySDKClass) => CWeaponTaser;
+    CWeaponTec9: (ptr_or_class: string|AnySDKClass) => CWeaponTec9;
+    CWeaponUMP45: (ptr_or_class: string|AnySDKClass) => CWeaponUMP45;
+    CWeaponUSPSilencer: (ptr_or_class: string|AnySDKClass) => CWeaponUSPSilencer;
+    CWeaponXM1014: (ptr_or_class: string|AnySDKClass) => CWeaponXM1014;
+    CWorld: (ptr_or_class: string|AnySDKClass) => CWorld;
+    ConstraintSoundInfo: (ptr_or_class: string|AnySDKClass) => ConstraintSoundInfo;
+    FilterDamageType: (ptr_or_class: string|AnySDKClass) => FilterDamageType;
+    FilterHealth: (ptr_or_class: string|AnySDKClass) => FilterHealth;
+    FilterTeam: (ptr_or_class: string|AnySDKClass) => FilterTeam;
+    RelationshipOverride_t: (ptr_or_class: string|AnySDKClass) => RelationshipOverride_t;
+    Relationship_t: (ptr_or_class: string|AnySDKClass) => Relationship_t;
+    ResponseContext_t: (ptr_or_class: string|AnySDKClass) => ResponseContext_t;
+    SimpleConstraintSoundProfile: (ptr_or_class: string|AnySDKClass) => SimpleConstraintSoundProfile;
+    SoundOpvarTraceResult_t: (ptr_or_class: string|AnySDKClass) => SoundOpvarTraceResult_t;
+    SpawnPoint: (ptr_or_class: string|AnySDKClass) => SpawnPoint;
+    VelocitySampler: (ptr_or_class: string|AnySDKClass) => VelocitySampler;
+    dynpitchvol_base_t: (ptr_or_class: string|AnySDKClass) => dynpitchvol_base_t;
+    dynpitchvol_t: (ptr_or_class: string|AnySDKClass) => dynpitchvol_t;
+    fogplayerparams_t: (ptr_or_class: string|AnySDKClass) => fogplayerparams_t;
+    lerpdata_t: (ptr_or_class: string|AnySDKClass) => lerpdata_t;
+    locksound_t: (ptr_or_class: string|AnySDKClass) => locksound_t;
+    magnetted_objects_t: (ptr_or_class: string|AnySDKClass) => magnetted_objects_t;
+    CDSPMixgroupModifier: (ptr_or_class: string|AnySDKClass) => CDSPMixgroupModifier;
+    CDSPPresetMixgroupModifierTable: (ptr_or_class: string|AnySDKClass) => CDSPPresetMixgroupModifierTable;
+    CDspPresetModifierList: (ptr_or_class: string|AnySDKClass) => CDspPresetModifierList;
+    CSosGroupActionLimitSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionLimitSchema;
+    CSosGroupActionMemberCountEnvelopeSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionMemberCountEnvelopeSchema;
+    CSosGroupActionSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSchema;
+    CSosGroupActionSetSoundeventParameterSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSetSoundeventParameterSchema;
+    CSosGroupActionSoundeventClusterSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSoundeventClusterSchema;
+    CSosGroupActionSoundeventCountSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSoundeventCountSchema;
+    CSosGroupActionSoundeventMinMaxValuesSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSoundeventMinMaxValuesSchema;
+    CSosGroupActionSoundeventPrioritySchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionSoundeventPrioritySchema;
+    CSosGroupActionTimeBlockLimitSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionTimeBlockLimitSchema;
+    CSosGroupActionTimeLimitSchema: (ptr_or_class: string|AnySDKClass) => CSosGroupActionTimeLimitSchema;
+    CSosGroupBranchPattern: (ptr_or_class: string|AnySDKClass) => CSosGroupBranchPattern;
+    CSosGroupMatchPattern: (ptr_or_class: string|AnySDKClass) => CSosGroupMatchPattern;
+    CSosSoundEventGroupListSchema: (ptr_or_class: string|AnySDKClass) => CSosSoundEventGroupListSchema;
+    CSosSoundEventGroupSchema: (ptr_or_class: string|AnySDKClass) => CSosSoundEventGroupSchema;
+    CSoundEventMetaData: (ptr_or_class: string|AnySDKClass) => CSoundEventMetaData;
+    CTestBlendContainer: (ptr_or_class: string|AnySDKClass) => CTestBlendContainer;
+    SelectedEditItemInfo_t: (ptr_or_class: string|AnySDKClass) => SelectedEditItemInfo_t;
+    SosEditItemInfo_t: (ptr_or_class: string|AnySDKClass) => SosEditItemInfo_t;
+    VMixAutoFilterDesc_t: (ptr_or_class: string|AnySDKClass) => VMixAutoFilterDesc_t;
+    VMixBoxverbDesc_t: (ptr_or_class: string|AnySDKClass) => VMixBoxverbDesc_t;
+    VMixConvolutionDesc_t: (ptr_or_class: string|AnySDKClass) => VMixConvolutionDesc_t;
+    VMixDelayDesc_t: (ptr_or_class: string|AnySDKClass) => VMixDelayDesc_t;
+    VMixDiffusorDesc_t: (ptr_or_class: string|AnySDKClass) => VMixDiffusorDesc_t;
+    VMixDynamics3BandDesc_t: (ptr_or_class: string|AnySDKClass) => VMixDynamics3BandDesc_t;
+    VMixDynamicsBand_t: (ptr_or_class: string|AnySDKClass) => VMixDynamicsBand_t;
+    VMixDynamicsCompressorDesc_t: (ptr_or_class: string|AnySDKClass) => VMixDynamicsCompressorDesc_t;
+    VMixDynamicsDesc_t: (ptr_or_class: string|AnySDKClass) => VMixDynamicsDesc_t;
+    VMixEQ8Desc_t: (ptr_or_class: string|AnySDKClass) => VMixEQ8Desc_t;
+    VMixEffectChainDesc_t: (ptr_or_class: string|AnySDKClass) => VMixEffectChainDesc_t;
+    VMixEnvelopeDesc_t: (ptr_or_class: string|AnySDKClass) => VMixEnvelopeDesc_t;
+    VMixFilterDesc_t: (ptr_or_class: string|AnySDKClass) => VMixFilterDesc_t;
+    VMixFreeverbDesc_t: (ptr_or_class: string|AnySDKClass) => VMixFreeverbDesc_t;
+    VMixModDelayDesc_t: (ptr_or_class: string|AnySDKClass) => VMixModDelayDesc_t;
+    VMixOscDesc_t: (ptr_or_class: string|AnySDKClass) => VMixOscDesc_t;
+    VMixPannerDesc_t: (ptr_or_class: string|AnySDKClass) => VMixPannerDesc_t;
+    VMixPitchShiftDesc_t: (ptr_or_class: string|AnySDKClass) => VMixPitchShiftDesc_t;
+    VMixPlateverbDesc_t: (ptr_or_class: string|AnySDKClass) => VMixPlateverbDesc_t;
+    VMixShaperDesc_t: (ptr_or_class: string|AnySDKClass) => VMixShaperDesc_t;
+    VMixSubgraphSwitchDesc_t: (ptr_or_class: string|AnySDKClass) => VMixSubgraphSwitchDesc_t;
+    VMixUtilityDesc_t: (ptr_or_class: string|AnySDKClass) => VMixUtilityDesc_t;
+    VMixVocoderDesc_t: (ptr_or_class: string|AnySDKClass) => VMixVocoderDesc_t;
+    CAudioEmphasisSample: (ptr_or_class: string|AnySDKClass) => CAudioEmphasisSample;
+    CAudioMorphData: (ptr_or_class: string|AnySDKClass) => CAudioMorphData;
+    CAudioPhonemeTag: (ptr_or_class: string|AnySDKClass) => CAudioPhonemeTag;
+    CAudioSentence: (ptr_or_class: string|AnySDKClass) => CAudioSentence;
+    CSoundContainerReference: (ptr_or_class: string|AnySDKClass) => CSoundContainerReference;
+    CSoundContainerReferenceArray: (ptr_or_class: string|AnySDKClass) => CSoundContainerReferenceArray;
+    CSoundInfoHeader: (ptr_or_class: string|AnySDKClass) => CSoundInfoHeader;
+    CVoiceContainerAmpedDecayingSineWave: (ptr_or_class: string|AnySDKClass) => CVoiceContainerAmpedDecayingSineWave;
+    CVoiceContainerAnalysisBase: (ptr_or_class: string|AnySDKClass) => CVoiceContainerAnalysisBase;
+    CVoiceContainerBase: (ptr_or_class: string|AnySDKClass) => CVoiceContainerBase;
+    CVoiceContainerBlender: (ptr_or_class: string|AnySDKClass) => CVoiceContainerBlender;
+    CVoiceContainerDecayingSineWave: (ptr_or_class: string|AnySDKClass) => CVoiceContainerDecayingSineWave;
+    CVoiceContainerDefault: (ptr_or_class: string|AnySDKClass) => CVoiceContainerDefault;
+    CVoiceContainerEnvelope: (ptr_or_class: string|AnySDKClass) => CVoiceContainerEnvelope;
+    CVoiceContainerEnvelopeAnalyzer: (ptr_or_class: string|AnySDKClass) => CVoiceContainerEnvelopeAnalyzer;
+    CVoiceContainerGranulator: (ptr_or_class: string|AnySDKClass) => CVoiceContainerGranulator;
+    CVoiceContainerLoopTrigger: (ptr_or_class: string|AnySDKClass) => CVoiceContainerLoopTrigger;
+    CVoiceContainerNull: (ptr_or_class: string|AnySDKClass) => CVoiceContainerNull;
+    CVoiceContainerRandomSampler: (ptr_or_class: string|AnySDKClass) => CVoiceContainerRandomSampler;
+    CVoiceContainerRealtimeFMSineWave: (ptr_or_class: string|AnySDKClass) => CVoiceContainerRealtimeFMSineWave;
+    CVoiceContainerSelector: (ptr_or_class: string|AnySDKClass) => CVoiceContainerSelector;
+    CVoiceContainerSet: (ptr_or_class: string|AnySDKClass) => CVoiceContainerSet;
+    CVoiceContainerSetElement: (ptr_or_class: string|AnySDKClass) => CVoiceContainerSetElement;
+    CVoiceContainerShapedNoise: (ptr_or_class: string|AnySDKClass) => CVoiceContainerShapedNoise;
+    CVoiceContainerStaticAdditiveSynth: (ptr_or_class: string|AnySDKClass) => CVoiceContainerStaticAdditiveSynth;
+    CVoiceContainerSwitch: (ptr_or_class: string|AnySDKClass) => CVoiceContainerSwitch;
+    CRangeFloat: (ptr_or_class: string|AnySDKClass) => CRangeFloat;
+    CRangeInt: (ptr_or_class: string|AnySDKClass) => CRangeInt;
+    IPhysicsPlayerController: (ptr_or_class: string|AnySDKClass) => IPhysicsPlayerController;
+    constraint_axislimit_t: (ptr_or_class: string|AnySDKClass) => constraint_axislimit_t;
+    constraint_breakableparams_t: (ptr_or_class: string|AnySDKClass) => constraint_breakableparams_t;
+    constraint_hingeparams_t: (ptr_or_class: string|AnySDKClass) => constraint_hingeparams_t;
+    vphysics_save_cphysicsbody_t: (ptr_or_class: string|AnySDKClass) => vphysics_save_cphysicsbody_t;
+    AggregateLODSetup_t: (ptr_or_class: string|AnySDKClass) => AggregateLODSetup_t;
+    AggregateMeshInfo_t: (ptr_or_class: string|AnySDKClass) => AggregateMeshInfo_t;
+    AggregateSceneObject_t: (ptr_or_class: string|AnySDKClass) => AggregateSceneObject_t;
+    BakedLightingInfo_t: (ptr_or_class: string|AnySDKClass) => BakedLightingInfo_t;
+    BaseSceneObjectOverride_t: (ptr_or_class: string|AnySDKClass) => BaseSceneObjectOverride_t;
+    CVoxelVisibility: (ptr_or_class: string|AnySDKClass) => CVoxelVisibility;
+    ClutterSceneObject_t: (ptr_or_class: string|AnySDKClass) => ClutterSceneObject_t;
+    ClutterTile_t: (ptr_or_class: string|AnySDKClass) => ClutterTile_t;
+    EntityIOConnectionData_t: (ptr_or_class: string|AnySDKClass) => EntityIOConnectionData_t;
+    EntityKeyValueData_t: (ptr_or_class: string|AnySDKClass) => EntityKeyValueData_t;
+    ExtraVertexStreamOverride_t: (ptr_or_class: string|AnySDKClass) => ExtraVertexStreamOverride_t;
+    InfoOverlayData_t: (ptr_or_class: string|AnySDKClass) => InfoOverlayData_t;
+    MaterialOverride_t: (ptr_or_class: string|AnySDKClass) => MaterialOverride_t;
+    NodeData_t: (ptr_or_class: string|AnySDKClass) => NodeData_t;
+    PermEntityLumpData_t: (ptr_or_class: string|AnySDKClass) => PermEntityLumpData_t;
+    SceneObject_t: (ptr_or_class: string|AnySDKClass) => SceneObject_t;
+    VMapResourceData_t: (ptr_or_class: string|AnySDKClass) => VMapResourceData_t;
+    VoxelVisBlockOffset_t: (ptr_or_class: string|AnySDKClass) => VoxelVisBlockOffset_t;
+    WorldBuilderParams_t: (ptr_or_class: string|AnySDKClass) => WorldBuilderParams_t;
+    WorldNodeOnDiskBufferData_t: (ptr_or_class: string|AnySDKClass) => WorldNodeOnDiskBufferData_t;
+    WorldNode_t: (ptr_or_class: string|AnySDKClass) => WorldNode_t;
+    World_t: (ptr_or_class: string|AnySDKClass) => World_t;
+    ConvarFlags: ConvarFlags;
+    RoundEndReason_t: RoundEndReason_t;
+    PluginState_t: PluginState_t;
+    Team: Team;
+    HookHandle: HookHandle;
+    TimerHandle: TimerHandle;
+    EventHandler: EventHandler;
+    EventResult: EventResult;
+    MessageType: MessageType;
+    DisconnectReason: DisconnectReason;
+    EConVarType: EConVarType;
+    ListenOverride: ListenOverride;
+    VoiceFlagValue: VoiceFlagValue;
+    LogType_t: LogType_t;
+    AnimParamButton_t: AnimParamButton_t;
+    AnimParamNetworkSetting: AnimParamNetworkSetting;
+    AnimParamType_t: AnimParamType_t;
+    AnimPoseControl: AnimPoseControl;
+    AnimationProcessingType_t: AnimationProcessingType_t;
+    AnimationSnapshotType_t: AnimationSnapshotType_t;
+    BoneTransformSpace_t: BoneTransformSpace_t;
+    FootstepLandedFootSoundType_t: FootstepLandedFootSoundType_t;
+    MoodType_t: MoodType_t;
+    ParticleAttachment_t: ParticleAttachment_t;
+    RagdollPoseControl: RagdollPoseControl;
+    SeqCmd_t: SeqCmd_t;
+    SeqPoseSetting_t: SeqPoseSetting_t;
+    AimMatrixBlendMode: AimMatrixBlendMode;
+    AnimNodeNetworkMode: AnimNodeNetworkMode;
+    AnimScriptType: AnimScriptType;
+    AnimValueSource: AnimValueSource;
+    AnimVectorSource: AnimVectorSource;
+    BinaryNodeChildOption: BinaryNodeChildOption;
+    BinaryNodeTiming: BinaryNodeTiming;
+    Blend2DMode: Blend2DMode;
+    BlendKeyType: BlendKeyType;
+    BoneMaskBlendSpace: BoneMaskBlendSpace;
+    CAnimationGraphVisualizerPrimitiveType: CAnimationGraphVisualizerPrimitiveType;
+    ChoiceBlendMethod: ChoiceBlendMethod;
+    ChoiceChangeMethod: ChoiceChangeMethod;
+    ChoiceMethod: ChoiceMethod;
+    DampingSpeedFunction: DampingSpeedFunction;
+    EDemoBoneSelectionMode: EDemoBoneSelectionMode;
+    EIKEndEffectorRotationFixUpMode: EIKEndEffectorRotationFixUpMode;
+    FacingMode: FacingMode;
+    FieldNetworkOption: FieldNetworkOption;
+    FootFallTagFoot_t: FootFallTagFoot_t;
+    FootLockSubVisualization: FootLockSubVisualization;
+    FootPinningTimingSource: FootPinningTimingSource;
+    HandshakeTagType_t: HandshakeTagType_t;
+    IKChannelMode: IKChannelMode;
+    IKSolverType: IKSolverType;
+    IKTargetCoordinateSystem: IKTargetCoordinateSystem;
+    IKTargetSource: IKTargetSource;
+    IkEndEffectorType: IkEndEffectorType;
+    IkTargetType: IkTargetType;
+    JiggleBoneSimSpace: JiggleBoneSimSpace;
+    JumpCorrectionMethod: JumpCorrectionMethod;
+    MatterialAttributeTagType_t: MatterialAttributeTagType_t;
+    PoseType_t: PoseType_t;
+    ResetCycleOption: ResetCycleOption;
+    SelectorTagBehavior_t: SelectorTagBehavior_t;
+    SolveIKChainAnimNodeDebugSetting: SolveIKChainAnimNodeDebugSetting;
+    StanceOverrideMode: StanceOverrideMode;
+    StateActionBehavior: StateActionBehavior;
+    StepPhase: StepPhase;
+    VelocityMetricMode: VelocityMetricMode;
+    NmCachedValueMode_t: NmCachedValueMode_t;
+    NmEasingFunction_t: NmEasingFunction_t;
+    NmEasingOperation_t: NmEasingOperation_t;
+    NmEventConditionRules_t: NmEventConditionRules_t;
+    NmFootPhaseCondition_t: NmFootPhaseCondition_t;
+    NmFootPhase_t: NmFootPhase_t;
+    NmFrameSnapEventMode_t: NmFrameSnapEventMode_t;
+    NmGraphValueType_t: NmGraphValueType_t;
+    NmPoseBlendMode_t: NmPoseBlendMode_t;
+    NmRootMotionBlendMode_t: NmRootMotionBlendMode_t;
+    NmStateEventTypeCondition_t: NmStateEventTypeCondition_t;
+    NmTargetWarpAlgorithm_t: NmTargetWarpAlgorithm_t;
+    NmTargetWarpRule_t: NmTargetWarpRule_t;
+    NmTransitionRuleCondition_t: NmTransitionRuleCondition_t;
+    NmTransitionRule_t: NmTransitionRule_t;
+    AmmoFlags_t: AmmoFlags_t;
+    AmmoPosition_t: AmmoPosition_t;
+    AnimLoopMode_t: AnimLoopMode_t;
+    BaseExplosionTypes_t: BaseExplosionTypes_t;
+    BeamClipStyle_t: BeamClipStyle_t;
+    BeamType_t: BeamType_t;
+    BeginDeathLifeStateTransition_t: BeginDeathLifeStateTransition_t;
+    BloodType: BloodType;
+    BreakableContentsType_t: BreakableContentsType_t;
+    BrushSolidities_e: BrushSolidities_e;
+    C4LightEffect_t: C4LightEffect_t;
+    CDebugOverlayCombinedTypes_t: CDebugOverlayCombinedTypes_t;
+    CDebugOverlayFilterType_t: CDebugOverlayFilterType_t;
+    CSPlayerBlockingUseAction_t: CSPlayerBlockingUseAction_t;
+    CSPlayerState: CSPlayerState;
+    CSWeaponCategory: CSWeaponCategory;
+    CSWeaponMode: CSWeaponMode;
+    CSWeaponSilencerType: CSWeaponSilencerType;
+    CSWeaponState_t: CSWeaponState_t;
+    CSWeaponType: CSWeaponType;
+    CanPlaySequence_t: CanPlaySequence_t;
+    ChatIgnoreType_t: ChatIgnoreType_t;
+    ChoreoLookAtMode_t: ChoreoLookAtMode_t;
+    ChoreoLookAtSpeed_t: ChoreoLookAtSpeed_t;
+    Class_T: Class_T;
+    CommandEntitySpecType_t: CommandEntitySpecType_t;
+    CommandExecMode_t: CommandExecMode_t;
+    CompMatPropertyMutatorConditionType_t: CompMatPropertyMutatorConditionType_t;
+    CompMatPropertyMutatorType_t: CompMatPropertyMutatorType_t;
+    CompositeMaterialInputContainerSourceType_t: CompositeMaterialInputContainerSourceType_t;
+    CompositeMaterialInputLooseVariableType_t: CompositeMaterialInputLooseVariableType_t;
+    CompositeMaterialInputTextureType_t: CompositeMaterialInputTextureType_t;
+    CompositeMaterialMatchFilterType_t: CompositeMaterialMatchFilterType_t;
+    CompositeMaterialVarSystemVar_t: CompositeMaterialVarSystemVar_t;
+    DamageTypes_t: DamageTypes_t;
+    DebugOverlayBits_t: DebugOverlayBits_t;
+    Disposition_t: Disposition_t;
+    DoorState_t: DoorState_t;
+    EContributionScoreFlag_t: EContributionScoreFlag_t;
+    EDestructiblePartDamagePassThroughType: EDestructiblePartDamagePassThroughType;
+    EInButtonState: EInButtonState;
+    EKillTypes_t: EKillTypes_t;
+    EProceduralRagdollWeightIndexPropagationMethod: EProceduralRagdollWeightIndexPropagationMethod;
+    EntityDisolveType_t: EntityDisolveType_t;
+    EntityDistanceMode_t: EntityDistanceMode_t;
+    EntityPlatformTypes_t: EntityPlatformTypes_t;
+    EntitySubclassScope_t: EntitySubclassScope_t;
+    FixAngleSet_t: FixAngleSet_t;
+    GameAnimEventIndex_t: GameAnimEventIndex_t;
+    GrenadeType_t: GrenadeType_t;
+    HierarchyType_t: HierarchyType_t;
+    HitGroup_t: HitGroup_t;
+    Hull_t: Hull_t;
+    InputBitMask_t: InputBitMask_t;
+    ItemFlagTypes_t: ItemFlagTypes_t;
+    LatchDirtyPermission_t: LatchDirtyPermission_t;
+    LifeState_t: LifeState_t;
+    MedalRank_t: MedalRank_t;
+    ModifyDamageReturn_t: ModifyDamageReturn_t;
+    MoveCollide_t: MoveCollide_t;
+    MoveMountingAmount_t: MoveMountingAmount_t;
+    MoveType_t: MoveType_t;
+    ObserverInterpState_t: ObserverInterpState_t;
+    ObserverMode_t: ObserverMode_t;
+    OnFrame: OnFrame;
+    PerformanceMode_t: PerformanceMode_t;
+    PlayerAnimEvent_t: PlayerAnimEvent_t;
+    PlayerConnectedState: PlayerConnectedState;
+    PointTemplateClientOnlyEntityBehavior_t: PointTemplateClientOnlyEntityBehavior_t;
+    PointTemplateOwnerSpawnGroupType_t: PointTemplateOwnerSpawnGroupType_t;
+    PointWorldTextJustifyHorizontal_t: PointWorldTextJustifyHorizontal_t;
+    PointWorldTextJustifyVertical_t: PointWorldTextJustifyVertical_t;
+    PointWorldTextReorientMode_t: PointWorldTextReorientMode_t;
+    PreviewCharacterMode: PreviewCharacterMode;
+    PreviewEOMCelebration: PreviewEOMCelebration;
+    PreviewWeaponState: PreviewWeaponState;
+    RenderFx_t: RenderFx_t;
+    RenderMode_t: RenderMode_t;
+    RumbleEffect_t: RumbleEffect_t;
+    ScriptedHeldWeaponBehavior_t: ScriptedHeldWeaponBehavior_t;
+    ScriptedMoveTo_t: ScriptedMoveTo_t;
+    ScriptedOnDeath_t: ScriptedOnDeath_t;
+    SequenceFinishNotifyState_t: SequenceFinishNotifyState_t;
+    ShadowType_t: ShadowType_t;
+    ShakeCommand_t: ShakeCommand_t;
+    ShardSolid_t: ShardSolid_t;
+    ShatterDamageCause: ShatterDamageCause;
+    ShatterGlassStressType: ShatterGlassStressType;
+    SolidType_t: SolidType_t;
+    StanceType_t: StanceType_t;
+    SubclassVDataChangeType_t: SubclassVDataChangeType_t;
+    SurroundingBoundsType_t: SurroundingBoundsType_t;
+    TakeDamageFlags_t: TakeDamageFlags_t;
+    TimelineCompression_t: TimelineCompression_t;
+    ValueRemapperHapticsType_t: ValueRemapperHapticsType_t;
+    ValueRemapperInputType_t: ValueRemapperInputType_t;
+    ValueRemapperMomentumType_t: ValueRemapperMomentumType_t;
+    ValueRemapperOutputType_t: ValueRemapperOutputType_t;
+    ValueRemapperRatchetType_t: ValueRemapperRatchetType_t;
+    WaterLevel_t: WaterLevel_t;
+    WeaponAttackType_t: WeaponAttackType_t;
+    WeaponSound_t: WeaponSound_t;
+    WeaponSwitchReason_t: WeaponSwitchReason_t;
+    WorldTextPanelHorizontalAlign_t: WorldTextPanelHorizontalAlign_t;
+    WorldTextPanelOrientation_t: WorldTextPanelOrientation_t;
+    WorldTextPanelVerticalAlign_t: WorldTextPanelVerticalAlign_t;
+    attributeprovidertypes_t: attributeprovidertypes_t;
+    gear_slot_t: gear_slot_t;
+    loadout_slot_t: loadout_slot_t;
+    vote_create_failed_t: vote_create_failed_t;
+    SpawnDebugOverrideState_t: SpawnDebugOverrideState_t;
+    SpawnDebugRestrictionOverrideState_t: SpawnDebugRestrictionOverrideState_t;
+    EntityDormancyType_t: EntityDormancyType_t;
+    EntityIOTargetType_t: EntityIOTargetType_t;
+    BloomBlendMode_t: BloomBlendMode_t;
+    HorizJustification_e: HorizJustification_e;
+    LayoutPositionType_e: LayoutPositionType_e;
+    VertJustification_e: VertJustification_e;
+    ViewFadeMode_t: ViewFadeMode_t;
+    FuseVariableAccess_t: FuseVariableAccess_t;
+    FuseVariableType_t: FuseVariableType_t;
+    FlexOpCode_t: FlexOpCode_t;
+    MeshDrawPrimitiveFlags_t: MeshDrawPrimitiveFlags_t;
+    ModelBoneFlexComponent_t: ModelBoneFlexComponent_t;
+    ModelConfigAttachmentType_t: ModelConfigAttachmentType_t;
+    MorphBundleType_t: MorphBundleType_t;
+    MorphFlexControllerRemapType_t: MorphFlexControllerRemapType_t;
+    MovementGait_t: MovementGait_t;
+    NavAttributeEnum: NavAttributeEnum;
+    NavDirType: NavDirType;
+    ELayoutNodeType: ELayoutNodeType;
+    EStyleNodeType: EStyleNodeType;
+    AnimationType_t: AnimationType_t;
+    BBoxVolumeType_t: BBoxVolumeType_t;
+    BlurFilterType_t: BlurFilterType_t;
+    ClosestPointTestType_t: ClosestPointTestType_t;
+    Detail2Combo_t: Detail2Combo_t;
+    DetailCombo_t: DetailCombo_t;
+    EventTypeSelection_t: EventTypeSelection_t;
+    HitboxLerpType_t: HitboxLerpType_t;
+    InheritableBoolType_t: InheritableBoolType_t;
+    MaterialProxyType_t: MaterialProxyType_t;
+    MissingParentInheritBehavior_t: MissingParentInheritBehavior_t;
+    ModelHitboxType_t: ModelHitboxType_t;
+    PFuncVisualizationType_t: PFuncVisualizationType_t;
+    ParticleAlphaReferenceType_t: ParticleAlphaReferenceType_t;
+    ParticleAttrBoxFlags_t: ParticleAttrBoxFlags_t;
+    ParticleCollisionMode_t: ParticleCollisionMode_t;
+    ParticleColorBlendMode_t: ParticleColorBlendMode_t;
+    ParticleColorBlendType_t: ParticleColorBlendType_t;
+    ParticleControlPointAxis_t: ParticleControlPointAxis_t;
+    ParticleDepthFeatheringMode_t: ParticleDepthFeatheringMode_t;
+    ParticleDetailLevel_t: ParticleDetailLevel_t;
+    ParticleDirectionNoiseType_t: ParticleDirectionNoiseType_t;
+    ParticleEndcapMode_t: ParticleEndcapMode_t;
+    ParticleFalloffFunction_t: ParticleFalloffFunction_t;
+    ParticleFogType_t: ParticleFogType_t;
+    ParticleHitboxBiasType_t: ParticleHitboxBiasType_t;
+    ParticleHitboxDataSelection_t: ParticleHitboxDataSelection_t;
+    ParticleImpulseType_t: ParticleImpulseType_t;
+    ParticleLightBehaviorChoiceList_t: ParticleLightBehaviorChoiceList_t;
+    ParticleLightFogLightingMode_t: ParticleLightFogLightingMode_t;
+    ParticleLightTypeChoiceList_t: ParticleLightTypeChoiceList_t;
+    ParticleLightUnitChoiceList_t: ParticleLightUnitChoiceList_t;
+    ParticleLightingQuality_t: ParticleLightingQuality_t;
+    ParticleLightnintBranchBehavior_t: ParticleLightnintBranchBehavior_t;
+    ParticleMassMode_t: ParticleMassMode_t;
+    ParticleOmni2LightTypeChoiceList_t: ParticleOmni2LightTypeChoiceList_t;
+    ParticleOrientationChoiceList_t: ParticleOrientationChoiceList_t;
+    ParticleOrientationSetMode_t: ParticleOrientationSetMode_t;
+    ParticleOutputBlendMode_t: ParticleOutputBlendMode_t;
+    ParticleParentSetMode_t: ParticleParentSetMode_t;
+    ParticlePinDistance_t: ParticlePinDistance_t;
+    ParticlePostProcessPriorityGroup_t: ParticlePostProcessPriorityGroup_t;
+    ParticleReplicationMode_t: ParticleReplicationMode_t;
+    ParticleRotationLockType_t: ParticleRotationLockType_t;
+    ParticleSelection_t: ParticleSelection_t;
+    ParticleSequenceCropOverride_t: ParticleSequenceCropOverride_t;
+    ParticleSetMethod_t: ParticleSetMethod_t;
+    ParticleSortingChoiceList_t: ParticleSortingChoiceList_t;
+    ParticleTextureLayerBlendType_t: ParticleTextureLayerBlendType_t;
+    ParticleTopology_t: ParticleTopology_t;
+    ParticleTraceMissBehavior_t: ParticleTraceMissBehavior_t;
+    ParticleTraceSet_t: ParticleTraceSet_t;
+    ParticleVRHandChoiceList_t: ParticleVRHandChoiceList_t;
+    PetGroundType_t: PetGroundType_t;
+    RenderModelSubModelFieldType_t: RenderModelSubModelFieldType_t;
+    ScalarExpressionType_t: ScalarExpressionType_t;
+    SnapshotIndexType_t: SnapshotIndexType_t;
+    SpriteCardPerParticleScale_t: SpriteCardPerParticleScale_t;
+    SpriteCardShaderType_t: SpriteCardShaderType_t;
+    SpriteCardTextureChannel_t: SpriteCardTextureChannel_t;
+    SpriteCardTextureType_t: SpriteCardTextureType_t;
+    StandardLightingAttenuationStyle_t: StandardLightingAttenuationStyle_t;
+    TextureRepetitionMode_t: TextureRepetitionMode_t;
+    VectorExpressionType_t: VectorExpressionType_t;
+    VectorFloatExpressionType_t: VectorFloatExpressionType_t;
+    PFNoiseModifier_t: PFNoiseModifier_t;
+    PFNoiseTurbulence_t: PFNoiseTurbulence_t;
+    PFNoiseType_t: PFNoiseType_t;
+    ParticleFloatBiasType_t: ParticleFloatBiasType_t;
+    ParticleFloatInputMode_t: ParticleFloatInputMode_t;
+    ParticleFloatMapType_t: ParticleFloatMapType_t;
+    ParticleFloatRandomMode_t: ParticleFloatRandomMode_t;
+    ParticleFloatRoundType_t: ParticleFloatRoundType_t;
+    ParticleFloatType_t: ParticleFloatType_t;
+    ParticleModelType_t: ParticleModelType_t;
+    ParticleTransformType_t: ParticleTransformType_t;
+    ParticleVecType_t: ParticleVecType_t;
+    JointAxis_t: JointAxis_t;
+    JointMotion_t: JointMotion_t;
+    InputLayoutVariation_t: InputLayoutVariation_t;
+    RenderBufferFlags_t: RenderBufferFlags_t;
+    RenderMultisampleType_t: RenderMultisampleType_t;
+    RenderPrimitiveType_t: RenderPrimitiveType_t;
+    RenderSlotType_t: RenderSlotType_t;
+    DisableShadows_t: DisableShadows_t;
+    ThreeState_t: ThreeState_t;
+    fieldtype_t: fieldtype_t;
+    ChickenActivity: ChickenActivity;
+    EOverrideBlockLOS_t: EOverrideBlockLOS_t;
+    EntFinderMethod_t: EntFinderMethod_t;
+    Explosions: Explosions;
+    ForcedCrouchState_t: ForcedCrouchState_t;
+    FuncDoorSpawnPos_t: FuncDoorSpawnPos_t;
+    LessonPanelLayoutFileTypes_t: LessonPanelLayoutFileTypes_t;
+    Materials: Materials;
+    MoveLinearAuthoredPos_t: MoveLinearAuthoredPos_t;
+    NPCFollowFormation_t: NPCFollowFormation_t;
+    PropDoorRotatingOpenDirection_e: PropDoorRotatingOpenDirection_e;
+    PropDoorRotatingSpawnPos_t: PropDoorRotatingSpawnPos_t;
+    SceneOnPlayerDeath_t: SceneOnPlayerDeath_t;
+    ScriptedConflictResponse_t: ScriptedConflictResponse_t;
+    ScriptedMoveType_t: ScriptedMoveType_t;
+    SoundEventStartType_t: SoundEventStartType_t;
+    SoundFlags_t: SoundFlags_t;
+    SoundTypes_t: SoundTypes_t;
+    TOGGLE_STATE: TOGGLE_STATE;
+    TRAIN_CODE: TRAIN_CODE;
+    Touch_t: Touch_t;
+    TrackOrientationType_t: TrackOrientationType_t;
+    TrainOrientationType_t: TrainOrientationType_t;
+    TrainVelocityType_t: TrainVelocityType_t;
+    doorCheck_e: doorCheck_e;
+    eSplinePushType: eSplinePushType;
+    filter_t: filter_t;
+    navproperties_t: navproperties_t;
+    ActionType_t: ActionType_t;
+    SosActionSortType_t: SosActionSortType_t;
+    SosActionStopType_t: SosActionStopType_t;
+    SosEditItemType_t: SosEditItemType_t;
+    SosGroupType_t: SosGroupType_t;
+    soundlevel_t: soundlevel_t;
+    VMixChannelOperation_t: VMixChannelOperation_t;
+    VMixFilterSlope_t: VMixFilterSlope_t;
+    VMixFilterType_t: VMixFilterType_t;
+    VMixLFOShape_t: VMixLFOShape_t;
+    VMixPannerType_t: VMixPannerType_t;
+    VMixProcessorType_t: VMixProcessorType_t;
+    VMixSubgraphSwitchInterpolationType_t: VMixSubgraphSwitchInterpolationType_t;
+    CVSoundFormat_t: CVSoundFormat_t;
+    EMidiNote: EMidiNote;
+    EMode_t: EMode_t;
+    EWaveform: EWaveform;
+    PlayBackMode_t: PlayBackMode_t;
+    ObjectTypeFlags_t: ObjectTypeFlags_t;
+}
+declare const sdk : ISDK
 declare interface IServer {
     GetTickCount: () => number;
     GetCurrentTime: () => number;

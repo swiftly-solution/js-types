@@ -11,6 +11,8 @@ const dataFiles = [
 ]
 
 let functionStxPoll = {}
+let sdkclasses = [];
+let sdktypes = [];
 
 const AddInArray = (arr, idx, element) => {
     arr.splice(idx, 0, element);
@@ -159,6 +161,7 @@ const ProcessData = (data, subfolder, className) => {
                     existsTypes = true
                 }
                 appendFileSync(subfolder + "/types.d.ts", `\n\ndeclare const enum ${data[key].title} {\n${Object.keys(data[key].values).map((val) => `    ${val} = ${data[key].values[val]}`).join(",\n")}\n}`)
+                sdktypes.push(data[key].title)
             } else if (data[key].template.includes("event-syntax")) {
                 var subfld = `../types/events/list.d.ts`
                 let created = false;
@@ -171,14 +174,17 @@ const ProcessData = (data, subfolder, className) => {
             } else if (data[key].template == "class-syntax") {
                 if (!existsSync("../types/classes.d.ts")) writeFileSync("../types/classes.d.ts", "")
                 if (key.startsWith("c_")) continue;
-                appendFileSync("../types/classes.d.ts", `\n\ndeclare interface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
+                appendFileSync("../types/classes.d.ts", `\n\ndeclare interface ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")} {\n${GenerateClassProperties(data[key].properties)}\n${GenerateClassFunctions(key, data[key])}\n}${data[key].constructor.hide != true && data[key].description != "" ? `\n\ndeclare function ${data[key].title == "Event" ? "PEvent" : data[key].title}(${ProcessParameters(data[key].constructor)}): ${data[key].title.split(" ").join("") == "Event" ? "I" : ""}${data[key].title.split(" ").join("")};` : ""}`)
 
                 let created = false;
                 if (!existsSync("../types/sdkclassalias.d.ts")) {
                     created = true;
                     writeFileSync("../types/sdkclassalias.d.ts", `type AnySDKClass = `)
                 }
-                if (data[key].description == "") appendFileSync("../types/sdkclassalias.d.ts", `\n    ${!created ? "| " : "  "}${data[key].title.split(" ").join("")}`)
+                if (data[key].description == "" && data[key].title != "CEntityKeyValues") {
+                    appendFileSync("../types/sdkclassalias.d.ts", `\n    ${!created ? "| " : "  "}${data[key].title.split(" ").join("")}`)
+                    sdkclasses.push(data[key].title.split(" ").join(""))
+                }
             }
         }
     }
@@ -188,6 +194,8 @@ for (const dataFile of dataFiles) {
     ProcessData(JSON.parse(readFileSync(dataFile)), __dirname + "/../types")
 }
 
-for (key in functionStxPoll) {
+for (const key in functionStxPoll) {
     writeFileSync(key, functionStxPoll[key].file.join("\n"));
 }
+
+writeFileSync(__dirname + "/../types/sdkcls.d.ts", `declare interface ISDK {\n${sdkclasses.map((v) => `    ${v}: (ptr_or_class: string|AnySDKClass) => ${v};`).join("\n")}\n${sdktypes.map((v) => `    ${v}: ${v};`).join("\n")}\n}\ndeclare const sdk : ISDK`);
