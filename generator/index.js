@@ -48,7 +48,7 @@ const GetType = (type) => {
     else if (type.includes("|") && !type.includes("fun")) return `${type};`;
     else if (type.includes("fun")) {
         if (type == "function") return `() => void;`
-        else if (type == "fun(...)") return `(...args: any[]) => any;`
+        else if (type == "fun(...args: any[])") return `(...args: any[]) => any;`
         else if (type.includes("):")) {
             const fun = type.split("):")
             return `${fun[0].replace("fun", "")}) => ${fun[1]};`

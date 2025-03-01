@@ -20438,7 +20438,7 @@ declare interface IExports {
     }
 }
 declare const exports : IExports
-declare function exp(exportName: string,callback: (...args: any[]) => void) : null|undefined;
+declare function exp(exportName: string,callback: (...args: any[]) => any) : null|undefined;
 declare interface IFiles {
     Decompress: (path: string,output: string) => boolean;
     Compress: (path: string,output: string) => boolean;
