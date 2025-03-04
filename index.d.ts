@@ -92,6 +92,167 @@ declare interface Vector4D {
 
 declare function Vector4D(x: number,y: number,z: number,w: number): Vector4D;
 
+declare interface BBox {
+    "mins": Vector;
+    "maxs": Vector;
+
+}
+
+declare function BBox(): BBox;
+
+declare interface CTraceFilter {
+    "InteractsWith": number;
+    "InteractsExclude": number;
+    "InteractsAs": number;
+    "EntityIdsToIgnore": Object;
+    "OwnerIdsToIgnore": Object;
+    "HierarchyIds": Object;
+    "ObjectSetMask": number;
+    "CollisionGroup": number;
+    "HitSolid": boolean;
+    "HitSolidRequiresGenerateContacts": boolean;
+    "HitTrigger": boolean;
+    "ShouldIgnoreDisabledPairs": boolean;
+    "IgnoreIfBothInteractWithHitboxes": boolean;
+    "ForceHitEverything": boolean;
+    "Unknown": boolean;
+    "IterateEntities": boolean;
+    Save: () => null|undefined;
+}
+
+declare function CTraceFilter(): CTraceFilter;
+
+declare interface CPhysSurfacePropertiesPhysics {
+    "friction": number;
+    "elasticity": number;
+    "density": number;
+    "thickness": number;
+    "softContactFrequency": number;
+    "softContactDampingRatio": number;
+    "wheelDrag": number;
+
+}
+
+declare function CPhysSurfacePropertiesPhysics(): CPhysSurfacePropertiesPhysics;
+
+declare interface CPhysSurfacePropertiesAudio {
+    "reflectivity": number;
+    "hardnessFactor": number;
+    "roughnessFactor": number;
+    "roughThreshold": number;
+    "hardThreshold": number;
+    "hardVelocityThreshold": number;
+    "StaticImpactVolume": number;
+    "OcclusionFactor": number;
+
+}
+
+declare function CPhysSurfacePropertiesAudio(): CPhysSurfacePropertiesAudio;
+
+declare interface CPhysSurfacePropertiesSoundNames {
+    "impactSoft": string;
+    "impactHard": string;
+    "scrapeSmooth": string;
+    "scrapeRough": string;
+    "bulletImpact": string;
+    "rolling": string;
+    "break": string;
+    "strain": string;
+    "meleeImpact": string;
+    "pushOff": string;
+    "skidStop": string;
+
+}
+
+declare function CPhysSurfacePropertiesSoundNames(): CPhysSurfacePropertiesSoundNames;
+
+declare interface CPhysSurfaceProperties {
+    "name": string;
+    "nameHash": number;
+    "baseNameHash": number;
+    "ListIndex": number;
+    "BaseListIndex": number;
+    "Hidden": boolean;
+    "description": string;
+    "physics": CPhysSurfacePropertiesPhysics;
+    "audioSounds": CPhysSurfacePropertiesSoundNames;
+    "audioParams": CPhysSurfacePropertiesAudio;
+
+}
+
+declare function CPhysSurfaceProperties(): CPhysSurfaceProperties;
+
+declare interface CHitBox {
+    "name": string;
+    "SurfaceProperty": string;
+    "BoneName": string;
+    "MinBounds": Vector;
+    "MaxBounds": Vector;
+    "ShapeRadius": number;
+    "BoneNameHash": number;
+    "GroupId": number;
+    "ShapeType": number;
+    "TranslationOnly": boolean;
+    "CRC": number;
+    "RenderColor": Color;
+    "HitBoxIndex": number;
+    "ShouldForceTransform": boolean;
+
+}
+
+declare function CHitBox(): CHitBox;
+
+declare interface RnCollisionAttr_t {
+    "InteractsAs": number;
+    "InteractsWith": number;
+    "InteractsExclude": number;
+    "EntityId": number;
+    "OwnerId": number;
+    "HierarchyId": number;
+    "CollisionGroup": number;
+    "CollisionFunctionMask": number;
+
+}
+
+declare function RnCollisionAttr_t(): RnCollisionAttr_t;
+
+declare interface trace_t {
+    readonly "SurfaceProperties": CPhysSurfaceProperties;
+    readonly "Hitbox": CHitBox;
+    "Contents": number;
+    "ShapeAttributes": RnCollisionAttr_t;
+    "StartPos": Vector;
+    "EndPos": Vector;
+    "HitNormal": Vector;
+    "HitPoint": Vector;
+    "HitOffset": number;
+    "Fraction": number;
+    "Triangle": number;
+    "HitboxBoneIndex": number;
+    "RayType": RayType_t;
+    "StartInSolid": boolean;
+    "ExactHitPoint": boolean;
+    GetEntity: () => string;
+    SyncToTrace: () => null|undefined;
+    SyncFromTrace: () => null|undefined;
+    GetRawTrace: () => string;
+}
+
+declare function trace_t(): trace_t;
+
+declare interface Ray_t {
+
+    InitLine: (startOffset: Vector) => null|undefined;
+    InitSphere: (center: Vector,radius: number) => null|undefined;
+    InitHull: (min: Vector,max: Vector) => null|undefined;
+    InitCapsule: (centerA: Vector,centerB: Vector,radius: number) => null|undefined;
+    InitMesh: (min: Vector,max: Vector,vertices: Object) => null|undefined;
+    GetRayPtr: () => string;
+    GetType: () => RayType_t;
+}
+
+declare function Ray_t(): Ray_t;
+
 declare interface QueryBuilder {
 
     Table: (table_name: string) => QueryBuilder;
@@ -17414,6 +17575,14 @@ type GameEvent =
     | "OnPlayerPostThink"
     | "OnUserMessageSend"
     | "OnUserMessageReceive"
+    | "OnEntityStartTouch"
+    | "OnPostEntityStartTouch"
+    | "OnEntityTouching"
+    | "OnPostEntityTouching"
+    | "OnEntityStopTouch"
+    | "OnPostEntityStopTouch"
+    | "OnEntityUse"
+    | "OnPostEntityUse"
 declare interface IExports {
     [plugin_name: string]: {
         [function_name: string]: (...args: any[]) => any;
@@ -17574,6 +17743,11 @@ declare interface IPlayerUtils {
     SetBunnyhop: (playerid: number,state: boolean) => null|undefined;
 }
 declare const playerutils : IPlayerUtils
+declare interface IRayTrace {
+    TracePlayerBBox: (start: Vector,end: Vector,bounds: BBox,filter: CTraceFilter,trace_out: trace_t) => null|undefined;
+    TraceShape: (start: Vector,end: Vector,ray: Ray_t,filter: CTraceFilter,trace_out: trace_t) => null|undefined;
+}
+declare const raytrace : IRayTrace
 type AnySDKClass = 
     | AnimationDecodeDebugDumpElement_t
     | AnimationDecodeDebugDump_t
@@ -20606,6 +20780,10 @@ declare interface ISDK {
     ListenOverride: ListenOverride;
     VoiceFlagValue: VoiceFlagValue;
     LogType_t: LogType_t;
+    RayType_t: RayType_t;
+    HitboxShapeType_t: HitboxShapeType_t;
+    RnQueryObjectSet: RnQueryObjectSet;
+    CollisionFunctionMask_t: CollisionFunctionMask_t;
     AnimParamButton_t: AnimParamButton_t;
     AnimParamNetworkSetting: AnimParamNetworkSetting;
     AnimParamType_t: AnimParamType_t;
@@ -21221,6 +21399,39 @@ declare const enum LogType_t {
     Warning = 2,
     Error = 3,
     Common = 4
+}
+
+declare const enum RayType_t {
+    RAY_TYPE_LINE = 0,
+    RAY_TYPE_SPHERE = 1,
+    RAY_TYPE_HULL = 2,
+    RAY_TYPE_CAPSULE = 3,
+    RAY_TYPE_MESH = 4
+}
+
+declare const enum HitboxShapeType_t {
+    HITBOX_SHAPE_HULL = 0,
+    HITBOX_SHAPE_SPHERE = 1,
+    HITBOX_SHAPE_CAPSULE = 2
+}
+
+declare const enum RnQueryObjectSet {
+    RNQUERY_OBJECTS_STATIC = (1<<0),
+    RNQUERY_OBJECTS_DYNAMIC = (1<<1),
+    RNQUERY_OBJECTS_NON_COLLIDEABLE = (1<<2),
+    RNQUERY_OBJECTS_KEYFRAMED_ONLY = (1<<3) | (1<<8),
+    RNQUERY_OBJECTS_DYNAMIC_ONLY = (1<<4) | (1<<8),
+    RNQUERY_OBJECTS_ALL_GAME_ENTITIES = RNQUERY_OBJECTS_DYNAMIC | RNQUERY_OBJECTS_NON_COLLIDEABLE,
+    RNQUERY_OBJECTS_ALL = RNQUERY_OBJECTS_STATIC | RNQUERY_OBJECTS_ALL_GAME_ENTITIES
+}
+
+declare const enum CollisionFunctionMask_t {
+    FCOLLISION_FUNC_ENABLE_SOLID_CONTACT = (1<<0),
+    FCOLLISION_FUNC_ENABLE_TRACE_QUERY = (1<<1),
+    FCOLLISION_FUNC_ENABLE_TOUCH_EVENT = (1<<2),
+    FCOLLISION_FUNC_ENABLE_SELF_COLLISIONS = (1<<3),
+    FCOLLISION_FUNC_IGNORE_FOR_HITBOX_TEST = (1<<4),
+    FCOLLISION_FUNC_ENABLE_TOUCH_PERSISTS = (1<<5)
 }
 
 declare const enum AnimParamButton_t {
