@@ -17007,7 +17007,7 @@ declare function FindEntitiesByClassname(className: string) : Object;
 declare function CreateEntityByName(className: string) : CEntityInstance;
 declare interface IFunctions {
 }
-declare function AddEventHandler(eventName: GameEvent,callback: (event:Event,...args: any[]) => EventResult|void) : EventHandler;
+declare function AddEventHandler(eventName: GameEvent,callback: (event:IEvent,...args: any[]) => EventResult|void) : EventHandler;
 declare function RemoveEventHandler(eventHandler: EventHandler) : null|undefined;
 declare function TriggerEvent(eventName: GameEvent,...args: any[]) : [EventResult, Event];
 type GameEvent =
@@ -17614,8 +17614,8 @@ declare function CreateTextTable(data: Object) : string;
 declare interface IHooks {
 }
 declare function AddHook(memory: IMemory,args_list: string,return_type: string) : HookHandle;
-declare function AddPreHookListener(hookHandle: HookHandle,callback: (event:Event) => EventResult) : EventHandler;
-declare function AddPostHookListener(hookHandle: HookHandle,callback: (event:Event) => EventResult) : EventHandler;
+declare function AddPreHookListener(hookHandle: HookHandle,callback: (event:IEvent) => EventResult) : EventHandler;
+declare function AddPostHookListener(hookHandle: HookHandle,callback: (event:IEvent) => EventResult) : EventHandler;
 declare function RemoveHookListener(eventHandler: EventHandler) : null|undefined;
 declare function CallHook(hookHandle: HookHandle,...args: any[]) : any;
 declare interface IHTTP {

@@ -25,6 +25,7 @@ const GetType = (type) => {
 
     type = type.replace(new RegExp("nil", "g"), "null")
     type = type.replace("...)", "...args: any[])")
+    type = type.replace("event:Event", "event:IEvent")
     if (type == "bool") type = "boolean"
     if (type.startsWith("bitfield:")) {
         return "any;";
