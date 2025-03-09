@@ -3138,7 +3138,7 @@ declare interface CAttributeList {
 
 declare interface CAttributeManager {
     "ReapplyProvisionParity": number;
-    readonly "Outer": CBaseEntity;
+    "Outer": CBaseEntity;
     "PreventLoopback": boolean;
     "ProviderType": number;
     ToPtr: () => string;
@@ -3185,10 +3185,10 @@ declare interface CBaseAnimGraphController {
 declare interface CBasePlayerController {
     "InButtonsWhichAreToggles": number;
     "TickBase": number;
-    readonly "Pawn": CBasePlayerPawn;
+    "Pawn": CBasePlayerPawn;
     "KnownTeamMismatch": boolean;
     "SplitScreenSlot": number;
-    readonly "SplitOwner": CBasePlayerController;
+    "SplitOwner": CBasePlayerController;
     "IsHLTV": boolean;
     "Connected": number;
     "PlayerName": string;
@@ -3312,7 +3312,7 @@ declare interface CBombTarget {
     "IsHeistBombTarget": boolean;
     "BombPlantedHere": boolean;
     "MountTarget": string;
-    readonly "InstructorHint": CBaseEntity;
+    "InstructorHint": CBaseEntity;
     "BombSiteDesignation": number;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
@@ -3461,8 +3461,8 @@ declare interface CCSPlayerBase_CameraServices {
     "FOVStart": number;
     "FOVTime": number;
     "FOVRate": number;
-    readonly "ZoomOwner": CBaseEntity;
-    readonly "LastFogTrigger": CBaseEntity;
+    "ZoomOwner": CBaseEntity;
+    "LastFogTrigger": CBaseEntity;
     readonly "Parent": CPlayer_CameraServices;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3518,10 +3518,10 @@ declare interface CCSPlayerController {
     "HasBeenControlledByPlayerThisRound": boolean;
     "BotsControlledThisRound": number;
     "CanControlObservedBot": boolean;
-    readonly "PlayerPawn": CCSPlayerPawn;
-    readonly "ObserverPawn": CCSObserverPawn;
+    "PlayerPawn": CCSPlayerPawn;
+    "ObserverPawn": CCSObserverPawn;
     "DesiredObserverMode": number;
-    readonly "DesiredObserverTarget": CEntityInstance;
+    "DesiredObserverTarget": CEntityInstance;
     "PawnIsAlive": boolean;
     "PawnHealth": number;
     "PawnArmor": number;
@@ -3531,7 +3531,7 @@ declare interface CCSPlayerController {
     "PawnLifetimeStart": number;
     "PawnLifetimeEnd": number;
     "PawnBotDifficulty": number;
-    readonly "OriginalControllerOfCurrentPawn": CCSPlayerController;
+    "OriginalControllerOfCurrentPawn": CCSPlayerController;
     "Score": number;
     "RoundScore": number;
     "RoundsWon": number;
@@ -3610,7 +3610,7 @@ declare interface CCSPlayerController_InventoryServices {
 }
 
 declare interface CCSPlayer_ActionTrackingServices {
-    readonly "LastWeaponBeforeC4AutoSwitch": CBasePlayerWeapon;
+    "LastWeaponBeforeC4AutoSwitch": CBasePlayerWeapon;
     "IsRescuing": boolean;
     readonly "WeaponPurchasesThisMatch": WeaponPurchaseTracker_t;
     readonly "WeaponPurchasesThisRound": WeaponPurchaseTracker_t;
@@ -3652,8 +3652,8 @@ declare interface CCSPlayer_GlowServices {
 }
 
 declare interface CCSPlayer_HostageServices {
-    readonly "CarriedHostage": CBaseEntity;
-    readonly "CarriedHostageProp": CBaseEntity;
+    "CarriedHostage": CBaseEntity;
+    "CarriedHostageProp": CBaseEntity;
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3715,14 +3715,14 @@ declare interface CCSPlayer_MovementServices {
 
 declare interface CCSPlayer_PingServices {
     "PlayerPingTokens": Object;
-    readonly "PlayerPing": CBaseEntity;
+    "PlayerPing": CBaseEntity;
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface CCSPlayer_UseServices {
-    readonly "LastKnownUseEntity": CBaseEntity;
+    "LastKnownUseEntity": CBaseEntity;
     "LastUseTimeStamp": number;
     "TimeLastUsedWindow": number;
     readonly "Parent": CPlayer_UseServices;
@@ -3731,7 +3731,7 @@ declare interface CCSPlayer_UseServices {
 }
 
 declare interface CCSPlayer_ViewModelServices {
-    readonly "ViewModel": Object;
+    "ViewModel": Object;
     readonly "Parent": CPlayer_ViewModelServices;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3753,7 +3753,7 @@ declare interface CCSPlayer_WeaponServices {
     "NextAttack": number;
     "IsLookingAtWeapon": boolean;
     "IsHoldingLookAtWeapon": boolean;
-    readonly "SavedWeapon": CBasePlayerWeapon;
+    "SavedWeapon": CBasePlayerWeapon;
     "TimeToMelee": number;
     "TimeToSecondary": number;
     "TimeToPrimary": number;
@@ -3979,10 +3979,10 @@ declare interface CCopyRecipientFilter {
 }
 
 declare interface CDamageRecord {
-    readonly "PlayerDamager": CCSPlayerPawn;
-    readonly "PlayerRecipient": CCSPlayerPawn;
-    readonly "PlayerControllerDamager": CCSPlayerController;
-    readonly "PlayerControllerRecipient": CCSPlayerController;
+    "PlayerDamager": CCSPlayerPawn;
+    "PlayerRecipient": CCSPlayerPawn;
+    "PlayerControllerDamager": CCSPlayerController;
+    "PlayerControllerRecipient": CCSPlayerController;
     "PlayerDamagerName": string;
     "PlayerRecipientName": string;
     "DamagerXuid": number;
@@ -4066,8 +4066,8 @@ declare interface CEffectData {
     "Start": Vector;
     "Normal": Vector;
     "Angles": QAngle;
-    readonly "Entity": CEntityInstance;
-    readonly "OtherEntity": CEntityInstance;
+    "Entity": CEntityInstance;
+    "OtherEntity": CEntityInstance;
     "Scale": number;
     "Magnitude": number;
     "Radius": number;
@@ -4099,7 +4099,7 @@ declare interface CEnvSoundscape {
     "SoundscapeIndex": number;
     "SoundscapeEntityListId": number;
     "PositionNames": Object;
-    readonly "ProxySoundscape": CEnvSoundscape;
+    "ProxySoundscape": CEnvSoundscape;
     "Disabled": boolean;
     "SoundscapeName": string;
     "SoundEventHash": number;
@@ -4140,7 +4140,7 @@ declare interface CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable {
 }
 
 declare interface CFireOverlay {
-    readonly "Owner": any;
+    readonly "Owner": CFireSmoke;
     "BaseColors": Object;
     "Scale": number;
     "GUID": number;
@@ -4268,8 +4268,8 @@ declare interface CGlobalLightBase {
     "WorldPoints": Object;
     "FogOffsetLayer0": Vector2D;
     "FogOffsetLayer1": Vector2D;
-    readonly "EnvWind": any;
-    readonly "EnvSky": any;
+    "EnvWind": CBaseEntity;
+    "EnvSky": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -4355,7 +4355,7 @@ declare interface CInfoDynamicShadowHint {
     "Range": number;
     "Importance": number;
     "LightChoice": number;
-    readonly "Light": CBaseEntity;
+    "Light": CBaseEntity;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -4647,9 +4647,9 @@ declare interface CPlayer_CameraServices {
     "CsViewPunchAngleTick": number;
     "CsViewPunchAngleTickRatio": number;
     readonly "PlayerFog": fogplayerparams_t;
-    readonly "ColorCorrectionCtrl": CColorCorrection;
-    readonly "ViewEntity": CBaseEntity;
-    readonly "TonemapController": CTonemapController2;
+    "ColorCorrectionCtrl": CColorCorrection;
+    "ViewEntity": CBaseEntity;
+    "TonemapController": CTonemapController2;
     readonly "Audio": audioparams_t;
     "OldPlayerZ": number;
     "OldPlayerViewOffsetZ": number;
@@ -4713,7 +4713,7 @@ declare interface CPlayer_MovementServices_Humanoid {
 
 declare interface CPlayer_ObserverServices {
     "ObserverMode": number;
-    readonly "ObserverTarget": CBaseEntity;
+    "ObserverTarget": CBaseEntity;
     "ObserverLastMode": number;
     "ForcedObserverMode": boolean;
     readonly "Parent": CPlayerPawnComponent;
@@ -4740,8 +4740,8 @@ declare interface CPlayer_WaterServices {
 }
 
 declare interface CPlayer_WeaponServices {
-    readonly "ActiveWeapon": CBasePlayerWeapon;
-    readonly "LastWeapon": CBasePlayerWeapon;
+    "ActiveWeapon": CBasePlayerWeapon;
+    "LastWeapon": CBasePlayerWeapon;
     "Ammo": Object;
     "PreventWeaponPickup": boolean;
     readonly "Parent": CPlayerPawnComponent;
@@ -4760,7 +4760,7 @@ declare interface CPointOffScreenIndicatorUi {
     "BeenEnabled": boolean;
     "Hide": boolean;
     "SeenTargetTime": number;
-    readonly "TargetPanel": any;
+    readonly "TargetPanel": CPointClientUIWorldPanel;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -4799,7 +4799,7 @@ declare interface CPrecipitationVData {
 }
 
 declare interface CProjectedTextureBase {
-    readonly "TargetEntity": any;
+    "TargetEntity": CBaseEntity;
     "State": boolean;
     "AlwaysUpdate": boolean;
     "LightFOV": number;
@@ -4900,7 +4900,7 @@ declare interface CResponseCriteriaSet {
 }
 
 declare interface CRopeOverlapHit {
-    readonly "Entity": any;
+    "Entity": CBaseEntity;
     readonly "OverlappingLinks": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -4961,7 +4961,7 @@ declare interface CSceneEventInfo {
     "Next": number;
     "IsGesture": boolean;
     "ShouldRemove": boolean;
-    readonly "Target": any;
+    "Target": CBaseEntity;
     readonly "SceneEventId": SceneEventId_t;
     "ClientSide": boolean;
     "Started": boolean;
@@ -5050,7 +5050,7 @@ declare interface CSkillInt {
 
 declare interface CSkyboxReference {
     "WorldGroupId": number;
-    readonly "SkyCamera": CSkyCamera;
+    "SkyCamera": CSkyCamera;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -5071,7 +5071,7 @@ declare interface CSoundPatch {
     "ShutdownTime": number;
     "LastTime": number;
     "SoundScriptName": string;
-    readonly "Ent": any;
+    "Ent": CBaseEntity;
     "SoundEntityIndex": number;
     "SoundOrigin": Vector;
     "IsPlaying": number;
@@ -5114,9 +5114,9 @@ declare interface CTakeDamageInfo {
     "DamagePosition": Vector;
     "ReportedPosition": Vector;
     "DamageDirection": Vector;
-    readonly "Inflictor": any;
-    readonly "Attacker": any;
-    readonly "Ability": any;
+    "Inflictor": CBaseEntity;
+    "Attacker": CBaseEntity;
+    "Ability": CBaseEntity;
     "Damage": number;
     "TotalledDamage": number;
     "TotalledDamageAbsorbed": number;
@@ -5741,7 +5741,7 @@ declare interface ParticleIndex_t {
 }
 
 declare interface PhysicsRagdollPose_t {
-    readonly "Owner": CBaseEntity;
+    "Owner": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -5811,7 +5811,7 @@ declare interface SellbackPurchaseEntry_t {
     "Cost": number;
     "PrevArmor": number;
     "PrevHelmet": boolean;
-    readonly "Item": CEntityInstance;
+    "Item": CEntityInstance;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -5839,7 +5839,7 @@ declare interface SummaryTakeDamageInfo_t {
     "SummarisedCount": number;
     readonly "Info": CTakeDamageInfo;
     readonly "Result": CTakeDamageResult;
-    readonly "Target": any;
+    "Target": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -9227,7 +9227,7 @@ declare interface CAmbientGeneric {
     "Looping": boolean;
     "Sound": string;
     "SourceEntName": string;
-    readonly "SoundSource": CBaseEntity;
+    "SoundSource": CBaseEntity;
     "SoundSourceEntIndex": number;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
@@ -9337,11 +9337,11 @@ declare interface CBaseButton {
     readonly "OnIn": CEntityIOOutput;
     readonly "OnOut": CEntityIOOutput;
     "State": number;
-    readonly "Constraint": CEntityInstance;
-    readonly "ConstraintParent": CEntityInstance;
+    "Constraint": CEntityInstance;
+    "ConstraintParent": CEntityInstance;
     "ForceNpcExclude": boolean;
     "GlowEntity": string;
-    readonly "GlowEntity1": CBaseModelEntity;
+    "GlowEntity1": CBaseModelEntity;
     "Usable": boolean;
     "DisplayText": string;
     readonly "Parent": CBaseToggle;
@@ -9363,7 +9363,7 @@ declare interface CBaseCSGrenade {
     "JustPulledPin": boolean;
     "NextHoldTick": number;
     "NextHoldFrac": number;
-    readonly "SwitchToWeaponAfterThrow": CCSWeaponBase;
+    "SwitchToWeaponAfterThrow": CCSWeaponBase;
     readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9489,7 +9489,7 @@ declare interface CBaseEntity {
     "SlimeTouch": number;
     "RestoreInHierarchy": boolean;
     "Target": string;
-    readonly "DamageFilter": CBaseFilter;
+    "DamageFilter": CBaseFilter;
     "DamageFilterName": string;
     "MoveDoneTime": number;
     "SubclassID": number;
@@ -9514,10 +9514,10 @@ declare interface CBaseEntity {
     "BaseVelocity": Vector;
     "PushEnumCount": number;
     readonly "Collision": CCollisionProperty;
-    readonly "EffectEntity": CBaseEntity;
-    readonly "OwnerEntity": CBaseEntity;
+    "EffectEntity": CBaseEntity;
+    "OwnerEntity": CBaseEntity;
     "Effects": number;
-    readonly "GroundEntity": CBaseEntity;
+    "GroundEntity": CBaseEntity;
     "GroundBodyIndex": number;
     "Friction": number;
     "Elasticity": number;
@@ -9538,7 +9538,7 @@ declare interface CBaseEntity {
     "NetworkQuantizeOriginAndAngles": boolean;
     "LagCompensate": boolean;
     "OverriddenFriction": number;
-    readonly "Blocker": CBaseEntity;
+    "Blocker": CBaseEntity;
     "LocalTime": number;
     "VPhysicsUpdateLocalTime": number;
     "BloodType": number;
@@ -9612,9 +9612,9 @@ declare interface CBaseGrenade {
     "Damage": number;
     "BounceSound": string;
     "ExplosionSound": string;
-    readonly "Thrower": CCSPlayerPawn;
+    "Thrower": CCSPlayerPawn;
     "NextAttack": number;
-    readonly "OriginalThrower": CCSPlayerPawn;
+    "OriginalThrower": CCSPlayerPawn;
     readonly "Parent": CBaseFlex;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9720,7 +9720,7 @@ declare interface CBasePlayerPawn {
     "NextSuicideTime": number;
     "InitHUD": boolean;
     readonly "Expresser": CAI_Expresser;
-    readonly "Controller": CBasePlayerController;
+    "Controller": CBasePlayerController;
     "HltvReplayDelay": number;
     "HltvReplayEnd": number;
     "HltvReplayEntity": number;
@@ -9752,12 +9752,12 @@ declare interface CBasePropDoor {
     "Locked": boolean;
     "ClosedPosition": Vector;
     "ClosedAngles": QAngle;
-    readonly "Blocker": CBaseEntity;
+    "Blocker": CBaseEntity;
     "FirstBlocked": boolean;
     readonly "Ls": locksound_t;
     "ForceClosed": boolean;
     "LatchWorldPosition": Vector;
-    readonly "Activator": CBaseEntity;
+    "Activator": CBaseEntity;
     "SoundMoving": string;
     "SoundOpen": string;
     "SoundClose": string;
@@ -9770,7 +9770,7 @@ declare interface CBasePropDoor {
     "NumCloseAttempts": number;
     "PhysicsMaterial": number;
     "SlaveName": string;
-    readonly "Master": CBasePropDoor;
+    "Master": CBasePropDoor;
     readonly "OnBlockedClosing": CEntityIOOutput;
     readonly "OnBlockedOpening": CEntityIOOutput;
     readonly "OnUnblockedClosing": CEntityIOOutput;
@@ -9798,7 +9798,7 @@ declare interface CBaseToggle {
     "Angle1": QAngle;
     "Angle2": QAngle;
     "Height": number;
-    readonly "Activator": CBaseEntity;
+    "Activator": CBaseEntity;
     "FinalDest": Vector;
     "FinalAngle": QAngle;
     "MovementType": number;
@@ -9811,7 +9811,7 @@ declare interface CBaseToggle {
 declare interface CBaseTrigger {
     "Disabled": boolean;
     "FilterName": string;
-    readonly "Filter": CBaseFilter;
+    "Filter": CBaseFilter;
     readonly "OnStartTouch": CEntityIOOutput;
     readonly "OnStartTouchAll": CEntityIOOutput;
     readonly "OnEndTouch": CEntityIOOutput;
@@ -9830,13 +9830,13 @@ declare interface CBaseViewModel {
     "ViewModelIndex": number;
     "AnimationParity": number;
     "AnimationStartTime": number;
-    readonly "Weapon": CBasePlayerWeapon;
+    "Weapon": CBasePlayerWeapon;
     "VMName": string;
     "AnimationPrefix": string;
     "OldLayerSequence": number;
     "OldLayer": number;
     "OldLayerStartTime": number;
-    readonly "ControlPanel": CBaseEntity;
+    "ControlPanel": CBaseEntity;
     readonly "Parent": CBaseAnimGraph;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9850,7 +9850,7 @@ declare interface CBeam {
     "NumBeamEnts": number;
     "BeamType": number;
     "BeamFlags": number;
-    readonly "AttachEntity": Object;
+    "AttachEntity": Object;
     "Width": number;
     "EndWidth": number;
     "FadeLength": number;
@@ -9862,7 +9862,7 @@ declare interface CBeam {
     "ClipStyle": number;
     "TurnedOff": boolean;
     "EndPos": Vector;
-    readonly "EndEntity": CBaseEntity;
+    "EndEntity": CBaseEntity;
     "DissolveType": number;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
@@ -9900,7 +9900,7 @@ declare interface CBot {
 declare interface CBreakable {
     readonly "CPropDataComponent": CPropDataComponent;
     "Material": number;
-    readonly "Breaker": CBaseEntity;
+    "Breaker": CBaseEntity;
     "Explosion": number;
     "SpawnObject": string;
     "PressureDelay": number;
@@ -9910,7 +9910,7 @@ declare interface CBreakable {
     "OverrideBlockLOS": number;
     readonly "OnBreak": CEntityIOOutput;
     "PerformanceMode": number;
-    readonly "PhysicsAttacker": CBasePlayerPawn;
+    "PhysicsAttacker": CBasePlayerPawn;
     "LastPhysicsInfluenceTime": number;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
@@ -9927,7 +9927,7 @@ declare interface CBreakableProp {
     "PressureDelay": number;
     "DefBurstScale": number;
     "DefBurstOffset": Vector;
-    readonly "Breaker": CBaseEntity;
+    "Breaker": CBaseEntity;
     "PerformanceMode": number;
     "PreventDamageBeforeTime": number;
     "BreakableContentsType": number;
@@ -9941,12 +9941,12 @@ declare interface CBreakableProp {
     "ExplosionCustomEffect": string;
     "ExplosionCustomSound": string;
     "ExplosionModifier": string;
-    readonly "PhysicsAttacker": CBasePlayerPawn;
+    "PhysicsAttacker": CBasePlayerPawn;
     "LastPhysicsInfluenceTime": number;
     "OriginalBlockLOS": boolean;
     "DefaultFadeScale": number;
-    readonly "LastAttacker": CBaseEntity;
-    readonly "FlareEnt": CBaseEntity;
+    "LastAttacker": CBaseEntity;
+    "FlareEnt": CBaseEntity;
     "UsePuntSound": boolean;
     "PuntSound": string;
     "NoGhostCollision": boolean;
@@ -10090,7 +10090,7 @@ declare interface CCSBot {
     readonly "SurpriseTimer": CountdownTimer;
     "AllowActive": boolean;
     "IsFollowing": boolean;
-    readonly "Leader": CCSPlayerPawn;
+    "Leader": CCSPlayerPawn;
     "FollowTimestamp": number;
     "AllowAutoFollowTime": number;
     readonly "HurryTimer": CountdownTimer;
@@ -10100,10 +10100,10 @@ declare interface CCSBot {
     "StateTimestamp": number;
     "IsAttacking": boolean;
     "IsOpeningDoor": boolean;
-    readonly "TaskEntity": CBaseEntity;
+    "TaskEntity": CBaseEntity;
     "GoalPosition": Vector;
-    readonly "GoalEntity": CBaseEntity;
-    readonly "Avoid": CBaseEntity;
+    "GoalEntity": CBaseEntity;
+    "Avoid": CBaseEntity;
     "AvoidTimestamp": number;
     "IsStopping": boolean;
     "HasVisitedEnemySpawn": boolean;
@@ -10169,7 +10169,7 @@ declare interface CCSBot {
     "AimFocusInterval": number;
     "AimFocusNextUpdate": number;
     readonly "IgnoreEnemiesTimer": CountdownTimer;
-    readonly "Enemy": CCSPlayerPawn;
+    "Enemy": CCSPlayerPawn;
     "IsEnemyVisible": boolean;
     "VisibleEnemyParts": number;
     "LastEnemyPosition": Vector;
@@ -10180,12 +10180,12 @@ declare interface CCSBot {
     "FriendDeathTimestamp": number;
     "IsLastEnemyDead": boolean;
     "NearbyEnemyCount": number;
-    readonly "Bomber": CCSPlayerPawn;
+    "Bomber": CCSPlayerPawn;
     "NearbyFriendCount": number;
-    readonly "ClosestVisibleFriend": CCSPlayerPawn;
-    readonly "ClosestVisibleHumanFriend": CCSPlayerPawn;
+    "ClosestVisibleFriend": CCSPlayerPawn;
+    "ClosestVisibleHumanFriend": CCSPlayerPawn;
     readonly "AttentionInterval": IntervalTimer;
-    readonly "Attacker": CCSPlayerPawn;
+    "Attacker": CCSPlayerPawn;
     "AttackedTimestamp": number;
     readonly "BurnedByFlamesTimer": IntervalTimer;
     "LastVictimID": number;
@@ -10213,7 +10213,7 @@ declare interface CCSBot {
     "LastOrigin": Vector;
     "LastRadioRecievedTimestamp": number;
     "LastRadioSentTimestamp": number;
-    readonly "RadioSubject": CCSPlayerPawn;
+    "RadioSubject": CCSPlayerPawn;
     "RadioPosition": Vector;
     "VoiceEndTimestamp": number;
     "LastValidReactionQueueFrame": number;
@@ -10441,7 +10441,7 @@ declare interface CCSGameRules {
     "HasTriggeredRoundStartMusic": boolean;
     "SwitchingTeamsAtRoundReset": boolean;
     readonly "GameModeRules": CCSGameModeRules;
-    readonly "PlayerResource": CBaseEntity;
+    "PlayerResource": CBaseEntity;
     readonly "RetakeRules": CRetakeGameRules;
     "TeamLastKillUsedUniqueWeaponMatch": Object;
     "MatchEndCount": number;
@@ -10642,7 +10642,7 @@ declare interface CCSPlayerPawnBase {
     "EyeAngles": QAngle;
     "WasNotKilledNaturally": boolean;
     "CommittingSuicideOnTeamChange": boolean;
-    readonly "OriginalController": CCSPlayerController;
+    "OriginalController": CCSPlayerController;
     readonly "Parent": CBasePlayerPawn;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -10760,7 +10760,7 @@ declare interface CCSWeaponBase {
     "NextOwnerTouchTime": number;
     "NextPrevOwnerTouchTime": number;
     "NextPrevOwnerUseTime": number;
-    readonly "PrevOwner": CCSPlayerPawn;
+    "PrevOwner": CCSPlayerPawn;
     "DropTick": number;
     "Donated": boolean;
     "LastShotTime": number;
@@ -10818,13 +10818,13 @@ declare interface CChicken {
     "CurrentActivity": number;
     readonly "ActivityTimer": CountdownTimer;
     "TurnRate": number;
-    readonly "FleeFrom": CBaseEntity;
+    "FleeFrom": CBaseEntity;
     readonly "MoveRateThrottleTimer": CountdownTimer;
     readonly "StartleTimer": CountdownTimer;
     readonly "VocalizeTimer": CountdownTimer;
     "WhenZombified": number;
     "JumpedThisFrame": boolean;
-    readonly "Leader": CCSPlayerPawn;
+    "Leader": CCSPlayerPawn;
     readonly "ReuseTimer": CountdownTimer;
     "HasBeenUsed": boolean;
     readonly "JumpTimer": CountdownTimer;
@@ -11028,7 +11028,7 @@ declare interface CEconEntity {
     "FallbackSeed": number;
     "FallbackWear": number;
     "FallbackStatTrak": number;
-    readonly "OldProvidee": CBaseEntity;
+    "OldProvidee": CBaseEntity;
     "OldOwnerClass": number;
     readonly "Parent": CBaseFlex;
     ToPtr: () => string;
@@ -11091,14 +11091,14 @@ declare interface CEntityDissolve {
 }
 
 declare interface CEntityFlame {
-    readonly "EntAttached": CBaseEntity;
+    "EntAttached": CBaseEntity;
     "CheapEffect": boolean;
     "Size": number;
     "UseHitboxes": boolean;
     "NumHitboxFires": number;
     "HitboxFireScale": number;
     "Lifetime": number;
-    readonly "Attacker": CBaseEntity;
+    "Attacker": CBaseEntity;
     "DangerSound": number;
     "DirectDamagePerSecond": number;
     "CustomDamageType": number;
@@ -11123,7 +11123,7 @@ declare interface CEnvBeam {
     "Radius": number;
     "TouchType": number;
     "FilterName": string;
-    readonly "Filter": CBaseEntity;
+    "Filter": CBaseEntity;
     "Decal": string;
     readonly "OnTouchedByEntity": CEntityIOOutput;
     readonly "Parent": CBeam;
@@ -11247,8 +11247,8 @@ declare interface CEnvEntityIgniter {
 declare interface CEnvEntityMaker {
     "EntityMins": Vector;
     "EntityMaxs": Vector;
-    readonly "CurrentInstance": CBaseEntity;
-    readonly "CurrentBlocker": CBaseEntity;
+    "CurrentInstance": CBaseEntity;
+    "CurrentBlocker": CBaseEntity;
     "BlockerOrigin": Vector;
     "PostSpawnDirection": QAngle;
     "PostSpawnDirectionVariance": number;
@@ -11269,7 +11269,7 @@ declare interface CEnvExplosion {
     "InnerRadius": number;
     "SpriteScale": number;
     "DamageForce": number;
-    readonly "Inflictor": CBaseEntity;
+    "Inflictor": CBaseEntity;
     "CustomDamageType": number;
     "CreateDebris": boolean;
     "ExplosionType": string;
@@ -11278,7 +11278,7 @@ declare interface CEnvExplosion {
     "ClassIgnore": number;
     "ClassIgnore2": number;
     "EntityIgnoreName": string;
-    readonly "EntityIgnore": CBaseEntity;
+    "EntityIgnore": CBaseEntity;
     readonly "Parent": CModelPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -11417,18 +11417,18 @@ declare interface CEnvLightProbeVolume {
 
 declare interface CEnvMicrophone {
     "Disabled": boolean;
-    readonly "MeasureTarget": CBaseEntity;
+    "MeasureTarget": CBaseEntity;
     "SoundType": number;
     "SoundFlags": number;
     "Sensitivity": number;
     "SmoothFactor": number;
     "MaxRange": number;
     "SpeakerName": string;
-    readonly "Speaker": CBaseEntity;
+    "Speaker": CBaseEntity;
     "AvoidFeedback": boolean;
     "SpeakerDSPPreset": number;
     "ListenFilter": string;
-    readonly "ListenFilter1": CBaseFilter;
+    "ListenFilter1": CBaseFilter;
     readonly "OnRoutedSound": CEntityIOOutput;
     readonly "OnHeardSound": CEntityIOOutput;
     "LastSound": string;
@@ -11457,7 +11457,7 @@ declare interface CEnvParticleGlow {
 }
 
 declare interface CEnvProjectedTexture {
-    readonly "TargetEntity": CBaseEntity;
+    "TargetEntity": CBaseEntity;
     "State": boolean;
     "AlwaysUpdate": boolean;
     "LightFOV": number;
@@ -11678,7 +11678,7 @@ declare interface CEnvWindShared {
     "Gusting": boolean;
     "WindAngleVariation": number;
     "WindSpeedVariation": number;
-    readonly "EntOwner": CBaseEntity;
+    "EntOwner": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -11738,7 +11738,7 @@ declare interface CFilterModel {
 declare interface CFilterMultiple {
     "FilterType": number;
     "FilterName": Object;
-    readonly "Filter": Object;
+    "Filter": Object;
     "FilterCount": number;
     readonly "Parent": CBaseFilter;
     ToPtr: () => string;
@@ -11760,8 +11760,8 @@ declare interface CFilterProximity {
 }
 
 declare interface CFire {
-    readonly "Effect": CBaseFire;
-    readonly "Owner": CBaseEntity;
+    "Effect": CBaseFire;
+    "Owner": CBaseEntity;
     "FireType": number;
     "Fuel": number;
     "DamageTime": number;
@@ -11799,7 +11799,7 @@ declare interface CFireSmoke {
 }
 
 declare interface CFish {
-    readonly "Pool": CFishPool;
+    "Pool": CFishPool;
     "Id": number;
     "X": number;
     "Y": number;
@@ -11844,8 +11844,8 @@ declare interface CFists {
     "PlayingUninterruptableAct": boolean;
     "UninterruptableActivity": number;
     "RestorePrevWep": boolean;
-    readonly "WeaponBeforePrevious": CBasePlayerWeapon;
-    readonly "WeaponPrevious": CBasePlayerWeapon;
+    "WeaponBeforePrevious": CBasePlayerWeapon;
+    "WeaponPrevious": CBasePlayerWeapon;
     "DelayedHardPunchIncoming": boolean;
     "DestroyAfterTaunt": boolean;
     readonly "Parent": CCSWeaponBase;
@@ -11983,7 +11983,7 @@ declare interface CFuncMonitor {
     "RenderShadows": boolean;
     "UseUniqueColorTarget": boolean;
     "BrushModelName": string;
-    readonly "TargetCamera1": CBaseEntity;
+    "TargetCamera1": CBaseEntity;
     "Enabled": boolean;
     "Draw3DSkybox": boolean;
     "StartEnabled": boolean;
@@ -12019,7 +12019,7 @@ declare interface CFuncMoveLinearAlias_momentary_door {
 declare interface CFuncMover {
     "CreateMovableNavMesh": boolean;
     "PathName": string;
-    readonly "PathMover": CPathMover;
+    "PathMover": CPathMover;
     "PathNodeStart": string;
     readonly "MoveType": any;
     "IsReversing": boolean;
@@ -12039,7 +12039,7 @@ declare interface CFuncMover {
     "DistanceToReachZeroSpeed": number;
     "TimeMovementStart": number;
     "TimeMovementStop": number;
-    readonly "StopAtNode": CMoverPathNode;
+    "StopAtNode": CMoverPathNode;
     "PathLocationToBeginStop": number;
     "StartForwardSound": string;
     "LoopForwardSound": string;
@@ -12194,7 +12194,7 @@ declare interface CFuncTrackChange {
 }
 
 declare interface CFuncTrackTrain {
-    readonly "Ppath": CPathTrack;
+    "Ppath": CPathTrack;
     "Length": number;
     "PosPrev": Vector;
     "Prev": QAngle;
@@ -12237,9 +12237,9 @@ declare interface CFuncTrackTrain {
 }
 
 declare interface CFuncTrain {
-    readonly "CurrentTarget": CBaseEntity;
+    "CurrentTarget": CBaseEntity;
     "Activated": boolean;
-    readonly "Enemy": CBaseEntity;
+    "Enemy": CBaseEntity;
     "BlockDamage": number;
     "NextBlockTime": number;
     "LastTarget": string;
@@ -12281,8 +12281,8 @@ declare interface CFuncWallToggle {
 }
 
 declare interface CGameChoreoServices {
-    readonly "Owner": CBaseAnimGraph;
-    readonly "ScriptedSequence": CScriptedSequence;
+    "Owner": CBaseAnimGraph;
+    "ScriptedSequence": CScriptedSequence;
     "TimeStartedState": number;
     readonly "Parent": IChoreoServices;
     ToPtr: () => string;
@@ -12353,7 +12353,7 @@ declare interface CGameScriptedMoveData {
     "Src1": QAngle;
     "Dst": QAngle;
     "Current": QAngle;
-    readonly "DestEntity": CBaseEntity;
+    "DestEntity": CBaseEntity;
     "LockedSpeed": number;
     "AngRate": number;
     "Duration": number;
@@ -12372,7 +12372,7 @@ declare interface CGameScriptedMoveData {
 declare interface CGameScriptedMoveDef_t {
     "Type": any;
     "DestOffset": Vector;
-    readonly "DestEntity": CBaseEntity;
+    "DestEntity": CBaseEntity;
     "Dest": QAngle;
     "Duration": number;
     "AngRate": number;
@@ -12465,7 +12465,7 @@ declare interface CGradientFog {
 
 declare interface CGunTarget {
     "On": boolean;
-    readonly "TargetEnt": CBaseEntity;
+    "TargetEnt": CBaseEntity;
     readonly "OnDeath": CEntityIOOutput;
     readonly "Parent": CBaseToggle;
     ToPtr: () => string;
@@ -12491,7 +12491,7 @@ declare interface CHandleDummy {
 }
 
 declare interface CHandleTest {
-    readonly "Handle": CBaseEntity;
+    "Handle": CBaseEntity;
     "SendHandle": boolean;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
@@ -12512,8 +12512,8 @@ declare interface CHostage {
     "IsRescued": boolean;
     "JumpedThisFrame": boolean;
     "HostageState": number;
-    readonly "Leader": CBaseEntity;
-    readonly "LastLeader": CCSPlayerPawnBase;
+    "Leader": CBaseEntity;
+    "LastLeader": CCSPlayerPawnBase;
     readonly "ReuseTimer": CountdownTimer;
     "HasBeenUsed": boolean;
     "Accel": Vector;
@@ -12527,7 +12527,7 @@ declare interface CHostage {
     readonly "WiggleTimer": CountdownTimer;
     "IsAdjusted": boolean;
     "HandsHaveBeenCut": boolean;
-    readonly "HostageGrabber": CCSPlayerPawn;
+    "HostageGrabber": CCSPlayerPawn;
     "LastGrabTime": number;
     "PositionWhenStartedDroppingToGround": Vector;
     "GrabbedPos": Vector;
@@ -12720,13 +12720,13 @@ declare interface CInfoVisibilityBox {
 }
 
 declare interface CInstancedSceneEntity {
-    readonly "Owner": CBaseEntity;
+    "Owner": CBaseEntity;
     "HadOwner": boolean;
     "PostSpeakDelay": number;
     "PreDelay": number;
     "IsBackground": boolean;
     "RemoveOnCompletion": boolean;
-    readonly "Target": CBaseEntity;
+    "Target": CBaseEntity;
     readonly "Parent": CSceneEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -12735,7 +12735,7 @@ declare interface CInstancedSceneEntity {
 declare interface CInstructorEventEntity {
     "Name": string;
     "HintTargetEntity": string;
-    readonly "TargetPlayer": CBasePlayerPawn;
+    "TargetPlayer": CBasePlayerPawn;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -12785,8 +12785,8 @@ declare interface CItemDefuserAlias_item_defuser {
 }
 
 declare interface CItemDogtags {
-    readonly "OwningPlayer": CCSPlayerPawn;
-    readonly "KillingPlayer": CCSPlayerPawn;
+    "OwningPlayer": CCSPlayerPawn;
+    "KillingPlayer": CCSPlayerPawn;
     readonly "Parent": CItem;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -12820,7 +12820,7 @@ declare interface CKeepUpright {
     "WorldGoalAxis": Vector;
     "LocalTestAxis": Vector;
     "NameAttach": string;
-    readonly "AttachedObject": CBaseEntity;
+    "AttachedObject": CBaseEntity;
     "AngularLimit": number;
     "Active": boolean;
     "DampAllRotation": boolean;
@@ -13029,8 +13029,8 @@ declare interface CLogicGameEventListener {
 
 declare interface CLogicLineToEntity {
     "SourceName": string;
-    readonly "StartEntity": CBaseEntity;
-    readonly "EndEntity": CBaseEntity;
+    "StartEntity": CBaseEntity;
+    "EndEntity": CBaseEntity;
     readonly "Parent": CLogicalEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -13040,10 +13040,10 @@ declare interface CLogicMeasureMovement {
     "StrMeasureTarget": string;
     "StrMeasureReference": string;
     "StrTargetReference": string;
-    readonly "MeasureTarget": CBaseEntity;
-    readonly "MeasureReference": CBaseEntity;
-    readonly "Target": CBaseEntity;
-    readonly "TargetReference": CBaseEntity;
+    "MeasureTarget": CBaseEntity;
+    "MeasureReference": CBaseEntity;
+    "Target": CBaseEntity;
+    "TargetReference": CBaseEntity;
     "Scale": number;
     "MeasureType": number;
     readonly "Parent": CLogicalEntity;
@@ -13060,7 +13060,7 @@ declare interface CLogicNPCCounter {
     readonly "OnMaxCount_2": CEntityIOOutput;
     readonly "OnMinCount_3": CEntityIOOutput;
     readonly "OnMaxCount_3": CEntityIOOutput;
-    readonly "Source": CEntityInstance;
+    "Source": CEntityInstance;
     "SourceEntityName": string;
     "DistanceMax": number;
     "Disabled": boolean;
@@ -13122,7 +13122,7 @@ declare interface CLogicNavigation {
 }
 
 declare interface CLogicPlayerProxy {
-    readonly "Player": CBaseEntity;
+    "Player": CBaseEntity;
     readonly "PlayerHasAmmo": CEntityIOOutput;
     readonly "PlayerHasNoAmmo": CEntityIOOutput;
     readonly "PlayerDied": CEntityIOOutput;
@@ -13335,7 +13335,7 @@ declare interface CMoverPathNode {
     readonly "OnPassThrough": CEntityIOOutput;
     readonly "OnPassThroughForward": CEntityIOOutput;
     readonly "OnPassThroughReverse": CEntityIOOutput;
-    readonly "Mover": CPathMover;
+    "Mover": CPathMover;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -13355,7 +13355,7 @@ declare interface CMultiLightProxy {
 }
 
 declare interface CMultiSource {
-    readonly "RgEntities": Object;
+    "RgEntities": Object;
     "RgTriggered": Object;
     readonly "OnTrigger": CEntityIOOutput;
     "Total": number;
@@ -13388,7 +13388,7 @@ declare interface CNavLinkAreaEntity {
     "NavLinkIdReverse": number;
     "Enabled": boolean;
     "StrFilterName": string;
-    readonly "Filter": CBaseFilter;
+    "Filter": CBaseFilter;
     readonly "OnNavLinkStart": CEntityIOOutput;
     readonly "OnNavLinkFinish": CEntityIOOutput;
     "IsTerminus": boolean;
@@ -13463,7 +13463,7 @@ declare interface CParticleSystem {
     "PreSimTime": number;
     "ServerControlPoints": Object;
     "ServerControlPointAssignments": Object;
-    readonly "ControlPointEnts": Object;
+    "ControlPointEnts": Object;
     "NoSave": boolean;
     "NoFreeze": boolean;
     "NoRamp": boolean;
@@ -13583,7 +13583,7 @@ declare interface CPhysBox {
     readonly "OnMotionEnabled": CEntityIOOutput;
     readonly "OnPlayerUse": CEntityIOOutput;
     readonly "OnStartTouch": CEntityIOOutput;
-    readonly "CarryingPlayer": CBasePlayerPawn;
+    "CarryingPlayer": CBasePlayerPawn;
     readonly "Parent": CBreakable;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -13592,8 +13592,8 @@ declare interface CPhysBox {
 declare interface CPhysConstraint {
     "NameAttach1": string;
     "NameAttach2": string;
-    readonly "Attach1": CBaseEntity;
-    readonly "Attach2": CBaseEntity;
+    "Attach1": CBaseEntity;
+    "Attach2": CBaseEntity;
     "NameAttachment1": string;
     "NameAttachment2": string;
     "BreakSound": string;
@@ -13639,7 +13639,7 @@ declare interface CPhysForce {
     "NameAttach": string;
     "Force": number;
     "ForceTime": number;
-    readonly "AttachedObject": CBaseEntity;
+    "AttachedObject": CBaseEntity;
     "WasRestored": boolean;
     readonly "Integrator": CConstantForceController;
     readonly "Parent": CPointEntity;
@@ -13718,7 +13718,7 @@ declare interface CPhysMagnet {
 
 declare interface CPhysMotor {
     "NameAttach": string;
-    readonly "AttachedObject": CBaseEntity;
+    "AttachedObject": CBaseEntity;
     "SpinUp": number;
     "AdditionalAcceleration": number;
     "AngularAcceleration": number;
@@ -13793,8 +13793,8 @@ declare interface CPhysicalButton {
 }
 
 declare interface CPhysicsEntitySolver {
-    readonly "MovingEntity": CBaseEntity;
-    readonly "PhysicsBlocker": CBaseEntity;
+    "MovingEntity": CBaseEntity;
+    "PhysicsBlocker": CBaseEntity;
     "SeparationDuration": number;
     "CancelTime": number;
     readonly "Parent": CLogicalEntity;
@@ -13915,8 +13915,8 @@ declare interface CPlantedC4 {
     "DefuseLength": number;
     "DefuseCountDown": number;
     "BombDefused": boolean;
-    readonly "BombDefuser": CCSPlayerPawn;
-    readonly "ControlPanel": CBaseEntity;
+    "BombDefuser": CCSPlayerPawn;
+    "ControlPanel": CBaseEntity;
     "ProgressBarTime": number;
     "VoiceAlertFired": boolean;
     "VoiceAlertPlayed": Object;
@@ -13929,15 +13929,15 @@ declare interface CPlantedC4 {
 }
 
 declare interface CPlatTrigger {
-    readonly "Platform": CFuncPlat;
+    "Platform": CFuncPlat;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface CPlayerPing {
-    readonly "Player": CCSPlayerPawn;
-    readonly "PingedEntity": CBaseEntity;
+    "Player": CCSPlayerPawn;
+    "PingedEntity": CBaseEntity;
     "Type": number;
     "Urgent": boolean;
     "PlaceName": string;
@@ -13982,8 +13982,8 @@ declare interface CPlayerVisibility {
 declare interface CPointAngleSensor {
     "Disabled": boolean;
     "LookAtName": string;
-    readonly "TargetEntity": CBaseEntity;
-    readonly "LookAtEntity": CBaseEntity;
+    "TargetEntity": CBaseEntity;
+    "LookAtEntity": CBaseEntity;
     "Duration": number;
     "DotTolerance": number;
     "FacingTime": number;
@@ -13996,7 +13996,7 @@ declare interface CPointAngleSensor {
 }
 
 declare interface CPointAngularVelocitySensor {
-    readonly "TargetEntity": CBaseEntity;
+    "TargetEntity": CBaseEntity;
     "Threshold": number;
     "LastCompareResult": number;
     "LastFireResult": number;
@@ -14068,7 +14068,7 @@ declare interface CPointClientCommand {
 }
 
 declare interface CPointClientUIDialog {
-    readonly "Activator": CBaseEntity;
+    "Activator": CBaseEntity;
     "StartEnabled": boolean;
     readonly "Parent": CBaseClientUIEntity;
     ToPtr: () => string;
@@ -14118,11 +14118,11 @@ declare interface CPointEntity {
 }
 
 declare interface CPointEntityFinder {
-    readonly "Entity": CBaseEntity;
+    "Entity": CBaseEntity;
     "FilterName": string;
-    readonly "Filter": CBaseFilter;
+    "Filter": CBaseFilter;
     "RefName": string;
-    readonly "Reference": CBaseEntity;
+    "Reference": CBaseEntity;
     "FindMethod": number;
     readonly "OnFoundEntity": CEntityIOOutput;
     readonly "Parent": CBaseEntity;
@@ -14139,7 +14139,7 @@ declare interface CPointGamestatsCounter {
 }
 
 declare interface CPointGiveAmmo {
-    readonly "Activator": CBaseEntity;
+    "Activator": CBaseEntity;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14151,7 +14151,7 @@ declare interface CPointHurt {
     "Radius": number;
     "Delay": number;
     "StrTarget": string;
-    readonly "Activator": CBaseEntity;
+    "Activator": CBaseEntity;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14163,7 +14163,7 @@ declare interface CPointPrefab {
     "AssociatedRelayTargetName": string;
     "FixupNames": boolean;
     "LoadDynamic": boolean;
-    readonly "AssociatedRelayEntity": CPointPrefab;
+    "AssociatedRelayEntity": CPointPrefab;
     readonly "Parent": CServerOnlyPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14171,7 +14171,7 @@ declare interface CPointPrefab {
 
 declare interface CPointProximitySensor {
     "Disabled": boolean;
-    readonly "TargetEntity": CBaseEntity;
+    "TargetEntity": CBaseEntity;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14184,7 +14184,7 @@ declare interface CPointPush {
     "InnerRadius": number;
     "ConeOfInfluence": number;
     "FilterName": string;
-    readonly "Filter": CBaseFilter;
+    "Filter": CBaseFilter;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14212,8 +14212,8 @@ declare interface CPointValueRemapper {
     "InputType": number;
     "RemapLineStartName": string;
     "RemapLineEndName": string;
-    readonly "RemapLineStart": CBaseEntity;
-    readonly "RemapLineEnd": CBaseEntity;
+    "RemapLineStart": CBaseEntity;
+    "RemapLineEnd": CBaseEntity;
     "MaximumChangePerSecond": number;
     "DisengageDistance": number;
     "EngageDistance": number;
@@ -14236,7 +14236,7 @@ declare interface CPointValueRemapper {
     "PreviousValue": number;
     "PreviousUpdateTickTime": number;
     "PreviousTestPoint": Vector;
-    readonly "UsingPlayer": CBasePlayerPawn;
+    "UsingPlayer": CBasePlayerPawn;
     "CustomOutputValue": number;
     "SoundEngage": string;
     "SoundDisengage": string;
@@ -14254,7 +14254,7 @@ declare interface CPointValueRemapper {
 }
 
 declare interface CPointVelocitySensor {
-    readonly "TargetEntity": CBaseEntity;
+    "TargetEntity": CBaseEntity;
     "Axis": Vector;
     "Enabled": boolean;
     "PrevVelocity": number;
@@ -14350,7 +14350,7 @@ declare interface CPropDoorRotating {
     "BackBoundsMin": Vector;
     "BackBoundsMax": Vector;
     "AjarDoorShouldntAlwaysOpen": boolean;
-    readonly "EntityBlocker": CEntityBlocker;
+    "EntityBlocker": CEntityBlocker;
     readonly "Parent": CBasePropDoor;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14402,13 +14402,13 @@ declare interface CRagdollProp {
     "StartDisabled": boolean;
     readonly "RagPos": Object;
     readonly "RagAngles": Object;
-    readonly "RagdollSource": CBaseEntity;
+    "RagdollSource": CBaseEntity;
     "LastUpdateTickCount": number;
     "AllAsleep": boolean;
     "FirstCollisionAfterLaunch": boolean;
-    readonly "DamageEntity": CBaseEntity;
-    readonly "Killer": CBaseEntity;
-    readonly "PhysicsAttacker": CBasePlayerPawn;
+    "DamageEntity": CBaseEntity;
+    "Killer": CBaseEntity;
+    "PhysicsAttacker": CBasePlayerPawn;
     "LastPhysicsInfluenceTime": number;
     "FadeOutStartTime": number;
     "FadeTime": number;
@@ -14497,8 +14497,8 @@ declare interface CRopeKeyframe {
     "ScrollSpeed": number;
     "StartPointValid": boolean;
     "EndPointValid": boolean;
-    readonly "StartPoint": CBaseEntity;
-    readonly "EndPoint": CBaseEntity;
+    "StartPoint": CBaseEntity;
+    "EndPoint": CBaseEntity;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14583,14 +14583,14 @@ declare interface CSceneEntity {
     "Target6": string;
     "Target7": string;
     "Target8": string;
-    readonly "Target11": CBaseEntity;
-    readonly "Target21": CBaseEntity;
-    readonly "Target31": CBaseEntity;
-    readonly "Target41": CBaseEntity;
-    readonly "Target51": CBaseEntity;
-    readonly "Target61": CBaseEntity;
-    readonly "Target71": CBaseEntity;
-    readonly "Target81": CBaseEntity;
+    "Target11": CBaseEntity;
+    "Target21": CBaseEntity;
+    "Target31": CBaseEntity;
+    "Target41": CBaseEntity;
+    "Target51": CBaseEntity;
+    "Target61": CBaseEntity;
+    "Target71": CBaseEntity;
+    "Target81": CBaseEntity;
     "TargetAttachment": string;
     "IsPlayingBack": boolean;
     "Paused": boolean;
@@ -14605,7 +14605,7 @@ declare interface CSceneEntity {
     "AutomatedAction": number;
     "AutomationDelay": number;
     "AutomationTime": number;
-    readonly "WaitingForThisResumeScene": CBaseEntity;
+    "WaitingForThisResumeScene": CBaseEntity;
     "WaitingForResumeScene": boolean;
     "PausedViaInput": boolean;
     "PauseAtNextInterrupt": boolean;
@@ -14622,7 +14622,7 @@ declare interface CSceneEntity {
     readonly "OnPaused": CEntityIOOutput;
     readonly "OnResumed": CEntityIOOutput;
     readonly "OnTrigger": Object;
-    readonly "InterruptScene": CSceneEntity;
+    "InterruptScene": CSceneEntity;
     "InterruptCount": number;
     "SceneMissing": boolean;
     "Interrupted": boolean;
@@ -14631,8 +14631,8 @@ declare interface CSceneEntity {
     "Restoring": boolean;
     "SoundName": string;
     "SequenceName": string;
-    readonly "Actor": CBaseFlex;
-    readonly "Activator": CBaseEntity;
+    "Actor": CBaseFlex;
+    "Activator": CBaseEntity;
     "BusyActor": number;
     "PlayerDeathBehavior": number;
     readonly "Parent": CPointEntity;
@@ -14648,7 +14648,7 @@ declare interface CSceneEntityAlias_logic_choreographed_scene {
 
 declare interface CSceneListManager {
     "Scenes": Object;
-    readonly "Scenes1": Object;
+    "Scenes1": Object;
     readonly "Parent": CLogicalEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14746,13 +14746,13 @@ declare interface CScriptedSequence {
     "Interruptable": boolean;
     "SequenceStarted": boolean;
     "PositionRelativeToOtherEntity": boolean;
-    readonly "TargetEnt": CBaseEntity;
-    readonly "NextCine": CScriptedSequence;
+    "TargetEnt": CBaseEntity;
+    "NextCine": CScriptedSequence;
     "Thinking": boolean;
     "InitiatedSelfDelete": boolean;
     "IsTeleportingDueToMoveTo": boolean;
     "AllowCustomInterruptConditions": boolean;
-    readonly "ForcedTarget": CBaseAnimGraph;
+    "ForcedTarget": CBaseAnimGraph;
     "DontCancelOtherSequences": boolean;
     "ForceSynch": boolean;
     "PreventUpdateYawOnFinish": boolean;
@@ -14766,7 +14766,7 @@ declare interface CScriptedSequence {
     readonly "OnCancelSequence": CEntityIOOutput;
     readonly "OnCancelFailedSequence": CEntityIOOutput;
     readonly "OnScriptEvent": Object;
-    readonly "InteractionMainEntity": CBaseEntity;
+    "InteractionMainEntity": CBaseEntity;
     "PlayerDeathBehavior": number;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
@@ -14782,7 +14782,7 @@ declare interface CSensorGrenade {
 declare interface CSensorGrenadeProjectile {
     "ExpireTime": number;
     "NextDetectPlayerSound": number;
-    readonly "DisplayGrenade": CBaseEntity;
+    "DisplayGrenade": CBaseEntity;
     readonly "Parent": CBaseCSGrenadeProjectile;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14810,8 +14810,8 @@ declare interface CShatterGlassShard {
     "ShardHandle": number;
     readonly "PanelVertices": Object;
     "LocalPanelSpaceOrigin": Vector2D;
-    readonly "PhysicsEntity": CShatterGlassShardPhysics;
-    readonly "ParentPanel": CFuncShatterglass;
+    "PhysicsEntity": CShatterGlassShardPhysics;
+    "ParentPanel": CFuncShatterglass;
     "ParentShard": number;
     "ShatterStressType": number;
     "StressVelocity": Vector;
@@ -14832,7 +14832,7 @@ declare interface CShatterGlassShard {
     "StressPositionBIsValid": boolean;
     "FlaggedForRemoval": boolean;
     "PhysicsEntitySpawnedAtTime": number;
-    readonly "EntityHittingMe": CBaseEntity;
+    "EntityHittingMe": CBaseEntity;
     readonly "Neighbors": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14910,8 +14910,8 @@ declare interface CSmoothFunc {
 }
 
 declare interface CSound {
-    readonly "Owner": CBaseEntity;
-    readonly "Target": CBaseEntity;
+    "Owner": CBaseEntity;
+    "Target": CBaseEntity;
     "Volume": number;
     "OcclusionScale": number;
     "NextAudible": number;
@@ -14979,7 +14979,7 @@ declare interface CSoundEventEntity {
     readonly "OnSoundFinished": CEntityIOOutput;
     "ClientCullRadius": number;
     "SoundName": string;
-    readonly "Source": CEntityInstance;
+    "Source": CEntityInstance;
     "EntityIndexSelection": number;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
@@ -15098,7 +15098,7 @@ declare interface CSoundOpvarSetPathCornerEntity {
 
 declare interface CSoundOpvarSetPointBase {
     "Disabled": boolean;
-    readonly "Source": CEntityInstance;
+    "Source": CEntityInstance;
     "SourceEntityName": string;
     "LastPosition": Vector;
     "StackName": string;
@@ -15129,7 +15129,7 @@ declare interface CSoundOpvarSetPointEntity {
     "VisibilitySamples": number;
     "DynamicProxyPoint": Vector;
     "DynamicMaximumOcclusion": number;
-    readonly "DynamicEntity": CEntityInstance;
+    "DynamicEntity": CEntityInstance;
     "DynamicEntityName": string;
     "PathingDistanceNormFactor": number;
     "PathingSourcePos": Vector;
@@ -15166,7 +15166,7 @@ declare interface CSpotlightEnd {
 }
 
 declare interface CSprite {
-    readonly "AttachedToEntity": CBaseEntity;
+    "AttachedToEntity": CBaseEntity;
     "SpriteFramerate": number;
     "Frame": number;
     "DieTime": number;
@@ -15226,8 +15226,8 @@ declare interface CTankTargetChange {
 }
 
 declare interface CTankTrainAI {
-    readonly "Train": CFuncTrackTrain;
-    readonly "TargetEntity": CBaseEntity;
+    "Train": CFuncTrackTrain;
+    "TargetEntity": CBaseEntity;
     "SoundPlaying": number;
     "StartSoundName": string;
     "EngineSoundName": string;
@@ -15316,7 +15316,7 @@ declare interface CTonemapController2Alias_env_tonemap_controller2 {
 
 declare interface CTonemapTrigger {
     "TonemapControllerName": string;
-    readonly "TonemapController": CEntityInstance;
+    "TonemapController": CEntityInstance;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -15451,7 +15451,7 @@ declare interface CTriggerImpact {
 
 declare interface CTriggerLerpObject {
     "LerpTarget": string;
-    readonly "LerpTarget1": CBaseEntity;
+    "LerpTarget1": CBaseEntity;
     "LerpTargetAttachment": string;
     "LerpDuration": number;
     "LerpRestoreMoveType": boolean;
@@ -15460,7 +15460,7 @@ declare interface CTriggerLerpObject {
     "LerpEffect": string;
     "LerpSound": string;
     "AttachTouchingObject": boolean;
-    readonly "EntityToWaitForDisconnect": CBaseEntity;
+    "EntityToWaitForDisconnect": CBaseEntity;
     readonly "OnLerpStarted": CEntityIOOutput;
     readonly "OnLerpFinished": CEntityIOOutput;
     readonly "Parent": CBaseTrigger;
@@ -15469,7 +15469,7 @@ declare interface CTriggerLerpObject {
 }
 
 declare interface CTriggerLook {
-    readonly "LookTarget": CBaseEntity;
+    "LookTarget": CBaseEntity;
     "FieldOfView": number;
     "LookTime": number;
     "LookTimeTotal": number;
@@ -15521,7 +15521,7 @@ declare interface CTriggerPhysics {
 }
 
 declare interface CTriggerProximity {
-    readonly "MeasureTarget": CBaseEntity;
+    "MeasureTarget": CBaseEntity;
     "MeasureTarget1": string;
     "Radius": number;
     "Touchers": number;
@@ -15579,7 +15579,7 @@ declare interface CTriggerSndSosOpvar {
 }
 
 declare interface CTriggerSoundscape {
-    readonly "Soundscape": CEnvSoundscapeTriggerable;
+    "Soundscape": CEnvSoundscapeTriggerable;
     "SoundscapeName": string;
     readonly "Parent": CBaseTrigger;
     ToPtr: () => string;
@@ -15610,7 +15610,7 @@ declare interface CTriggerTripWire {
 
 declare interface CTriggerVolume {
     "FilterName": string;
-    readonly "Filter": CBaseFilter;
+    "Filter": CBaseFilter;
     readonly "Parent": CBaseModelEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -15882,7 +15882,7 @@ declare interface FilterTeam {
 }
 
 declare interface RelationshipOverride_t {
-    readonly "Entity": CBaseEntity;
+    "Entity": CBaseEntity;
     "ClassType": number;
     readonly "Parent": Relationship_t;
     ToPtr: () => string;
@@ -15973,7 +15973,7 @@ declare interface dynpitchvol_t {
 }
 
 declare interface fogplayerparams_t {
-    readonly "Ctrl": CFogController;
+    "Ctrl": CFogController;
     "TransitionTime": number;
     "OldColor": Color;
     "OldStart": number;
@@ -15992,7 +15992,7 @@ declare interface fogplayerparams_t {
 }
 
 declare interface lerpdata_t {
-    readonly "Ent": CBaseEntity;
+    "Ent": CBaseEntity;
     "MoveType": number;
     "StartTime": number;
     "StartOrigin": Vector;
@@ -16010,7 +16010,7 @@ declare interface locksound_t {
 }
 
 declare interface magnetted_objects_t {
-    readonly "Entity": CBaseEntity;
+    "Entity": CBaseEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
