@@ -9544,6 +9544,8 @@ declare interface CBaseEntity {
     "BloodType": number;
     readonly "Parent": CEntityInstance;
     EmitSound: (sound_name: string,pitch: number,volume: number) => null|undefined;
+    EmitSoundFromEntity: (sound_name: string,pitch: number,volume: number,delay: number) => null|undefined;
+    TakeDamage: (attacker: AnySDKClass,inflictor: AnySDKClass,ability: AnySDKClass,damageType: DamageTypes_t,damage: number) => null|undefined;
     CollisionRulesChanged: () => null|undefined;
     EHandle: () => CBaseEntity;
     Spawn: (keyvals: CEntityKeyValues|null) => null|undefined;
