@@ -504,7 +504,7 @@ declare interface AnimationDecodeDebugDumpElement_t {
 }
 
 declare interface AnimationDecodeDebugDump_t {
-    "ProcessingType": number;
+    "ProcessingType": AnimationProcessingType_t;
     readonly "Elems": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -515,7 +515,7 @@ declare interface AnimationSnapshotBase_t {
     "BonesInWorldSpace": boolean;
     readonly "BoneSetupMask": Object;
     readonly "FlexControllers": Object;
-    "SnapshotType": number;
+    "SnapshotType": AnimationSnapshotType_t;
     "HasDecodeDump": boolean;
     readonly "DecodeDump": AnimationDecodeDebugDumpElement_t;
     ToPtr: () => string;
@@ -726,7 +726,7 @@ declare interface CAnimationGroup {
 }
 
 declare interface CMoodVData {
-    "MoodType": number;
+    "MoodType": MoodType_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -940,7 +940,7 @@ declare interface AimMatrixOpFixedSettings_t {
     readonly "Attachment": CAnimAttachment;
     readonly "Damping": CAnimInputDamping;
     readonly "PoseCacheHandles": Object;
-    "BlendMode": number;
+    "BlendMode": AimMatrixBlendMode;
     "MaxYawAngle": number;
     "MaxPitchAngle": number;
     "SequenceMaxFrame": number;
@@ -984,7 +984,7 @@ declare interface CActionComponentUpdater {
 }
 
 declare interface CAddUpdateNode {
-    "FootMotionTiming": number;
+    "FootMotionTiming": BinaryNodeChildOption;
     "ApplyToFootMotion": boolean;
     "ApplyChannelsSeparately": boolean;
     "UseModelSpace": boolean;
@@ -1012,7 +1012,7 @@ declare interface CAimCameraUpdateNode {
 
 declare interface CAimMatrixUpdateNode {
     readonly "OpFixedSettings": AimMatrixOpFixedSettings_t;
-    "Target": number;
+    "Target": AnimVectorSource;
     readonly "ParamIndex": CAnimParamHandle;
     "Sequence": number;
     "ResetChild": boolean;
@@ -1031,7 +1031,7 @@ declare interface CAnimActionUpdater {
 declare interface CAnimComponentUpdater {
     "Name": string;
     readonly "Id": AnimComponentID;
-    "NetworkMode": number;
+    "NetworkMode": AnimNodeNetworkMode;
     "StartEnabled": boolean;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1050,7 +1050,7 @@ declare interface CAnimDemoCaptureSettings {
     "IkTranslation_MaxQuantizationError": number;
     "BaseSequence": string;
     "BaseSequenceFrame": number;
-    "BoneSelectionMode": number;
+    "BoneSelectionMode": EDemoBoneSelectionMode;
     readonly "Bones": Object;
     readonly "IkChains": Object;
     ToPtr: () => string;
@@ -1092,7 +1092,7 @@ declare interface CAnimGraphSettingsManager {
 }
 
 declare interface CAnimInputDamping {
-    "SpeedFunction": number;
+    "SpeedFunction": DampingSpeedFunction;
     "SpeedScale": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1113,7 +1113,7 @@ declare interface CAnimNodePath {
 }
 
 declare interface CAnimParamHandle {
-    "Type": number;
+    "Type": AnimParamType_t;
     "Index": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1185,7 +1185,7 @@ declare interface CAnimTagManagerUpdater {
 
 declare interface CAnimUpdateNodeBase {
     readonly "NodePath": CAnimNodePath;
-    "NetworkMode": number;
+    "NetworkMode": AnimNodeNetworkMode;
     "Name": string;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1231,7 +1231,7 @@ declare interface CAnimationGraphVisualizerPie {
 }
 
 declare interface CAnimationGraphVisualizerPrimitiveBase {
-    "Type": number;
+    "Type": CAnimationGraphVisualizerPrimitiveType;
     readonly "OwningAnimNodePaths": Object;
     "OwningAnimNodePathCount": number;
     ToPtr: () => string;
@@ -1272,7 +1272,7 @@ declare interface CAudioAnimTag {
 declare interface CBinaryUpdateNode {
     readonly "Child1": CAnimUpdateNodeRef;
     readonly "Child2": CAnimUpdateNodeRef;
-    "TimingBehavior": number;
+    "TimingBehavior": BinaryNodeTiming;
     "TimingBlend": number;
     "ResetChild1": boolean;
     "ResetChild2": boolean;
@@ -1293,11 +1293,11 @@ declare interface CBlend2DUpdateNode {
     readonly "ParamSpans": CParamSpanUpdater;
     readonly "NodeItemIndices": Object;
     readonly "Damping": CAnimInputDamping;
-    "BlendSourceX": number;
+    "BlendSourceX": AnimValueSource;
     readonly "ParamX": CAnimParamHandle;
-    "BlendSourceY": number;
+    "BlendSourceY": AnimValueSource;
     readonly "ParamY": CAnimParamHandle;
-    "BlendMode": number;
+    "BlendMode": Blend2DMode;
     "PlaybackSpeed": number;
     "Loop": boolean;
     "LockBlendOnReset": boolean;
@@ -1319,10 +1319,10 @@ declare interface CBlendUpdateNode {
     readonly "Children": Object;
     readonly "SortedOrder": Object;
     readonly "TargetValues": Object;
-    "BlendValueSource": number;
+    "BlendValueSource": AnimValueSource;
     readonly "ParamIndex": CAnimParamHandle;
     readonly "Damping": CAnimInputDamping;
-    "BlendKeyType": number;
+    "BlendKeyType": BlendKeyType;
     "LockBlendOnReset": boolean;
     "SyncCycles": boolean;
     "Loop": boolean;
@@ -1356,10 +1356,10 @@ declare interface CBodyGroupSetting {
 declare interface CBoneMaskUpdateNode {
     "WeightListIndex": number;
     "RootMotionBlend": number;
-    "BlendSpace": number;
-    "FootMotionTiming": number;
+    "BlendSpace": BoneMaskBlendSpace;
+    "FootMotionTiming": BinaryNodeChildOption;
     "UseBlendScale": boolean;
-    "BlendValueSource": number;
+    "BlendValueSource": AnimValueSource;
     readonly "BlendParameter": CAnimParamHandle;
     readonly "Parent": CBinaryUpdateNode;
     ToPtr: () => string;
@@ -1405,9 +1405,9 @@ declare interface CChoiceUpdateNode {
     readonly "Children": Object;
     readonly "Weights": Object;
     readonly "BlendTimes": Object;
-    "ChoiceMethod": number;
-    "ChoiceChangeMethod": number;
-    "BlendMethod": number;
+    "ChoiceMethod": ChoiceMethod;
+    "ChoiceChangeMethod": ChoiceChangeMethod;
+    "BlendMethod": ChoiceBlendMethod;
     "BlendTime": number;
     "CrossFade": boolean;
     "ResetChosen": boolean;
@@ -1434,8 +1434,8 @@ declare interface CClothSettingsAnimTag {
 }
 
 declare interface CConcreteAnimParameter {
-    "PreviewButton": number;
-    "NetworkSetting": number;
+    "PreviewButton": AnimParamButton_t;
+    "NetworkSetting": AnimParamNetworkSetting;
     "UseMostRecentValue": boolean;
     "AutoReset": boolean;
     "GameWritable": boolean;
@@ -1461,7 +1461,7 @@ declare interface CCycleControlClipUpdateNode {
     readonly "Tags": Object;
     "Sequence": number;
     "Duration": number;
-    "ValueSource": number;
+    "ValueSource": AnimValueSource;
     readonly "ParamIndex": CAnimParamHandle;
     readonly "Parent": CLeafUpdateNode;
     ToPtr: () => string;
@@ -1469,7 +1469,7 @@ declare interface CCycleControlClipUpdateNode {
 }
 
 declare interface CCycleControlUpdateNode {
-    "ValueSource": number;
+    "ValueSource": AnimValueSource;
     readonly "ParamIndex": CAnimParamHandle;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
@@ -1530,7 +1530,7 @@ declare interface CDirectPlaybackUpdateNode {
 declare interface CDirectionalBlendUpdateNode {
     "Sequences": Object;
     readonly "Damping": CAnimInputDamping;
-    "BlendValueSource": number;
+    "BlendValueSource": AnimValueSource;
     readonly "ParamIndex": CAnimParamHandle;
     "PlaybackSpeed": number;
     "Duration": number;
@@ -1579,7 +1579,7 @@ declare interface CEnumAnimParameter {
 
 declare interface CExpressionActionUpdater {
     readonly "Param": CAnimParamHandle;
-    "ParamType": number;
+    "ParamType": AnimParamType_t;
     readonly "Script": AnimScriptHandle;
     readonly "Parent": CAnimActionUpdater;
     ToPtr: () => string;
@@ -1613,7 +1613,7 @@ declare interface CFollowPathUpdateNode {
     "MaxAngle": number;
     "SpeedScaleBlending": number;
     readonly "TurnDamping": CAnimInputDamping;
-    "FacingTarget": number;
+    "FacingTarget": AnimValueSource;
     readonly "Param": CAnimParamHandle;
     "TurnToFaceOffset": number;
     "TurnToFace": boolean;
@@ -1654,7 +1654,7 @@ declare interface CFootCycleMetricEvaluator {
 }
 
 declare interface CFootFallAnimTag {
-    "Foot": number;
+    "Foot": FootFallTagFoot_t;
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1688,7 +1688,7 @@ declare interface CFootLockUpdateNode {
 
 declare interface CFootPinningUpdateNode {
     readonly "PoseOpFixedData": FootPinningPoseOpFixedData_t;
-    "TimingSource": number;
+    "TimingSource": FootPinningTimingSource;
     readonly "Params": Object;
     "ResetChild": boolean;
     readonly "Parent": CUnaryUpdateNode;
@@ -1713,7 +1713,7 @@ declare interface CFootStepTriggerUpdateNode {
 }
 
 declare interface CFootstepLandedAnimTag {
-    "FootstepType": number;
+    "FootstepType": FootstepLandedFootSoundType_t;
     "OverrideSoundName": string;
     "DebugAnimSourceString": string;
     "BoneName": string;
@@ -1734,7 +1734,7 @@ declare interface CFutureVelocityMetricEvaluator {
     "Distance": number;
     "StoppingDistance": number;
     "TargetSpeed": number;
-    "Mode": number;
+    "Mode": VelocityMetricMode;
     readonly "Parent": CMotionMetricEvaluator;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -1789,7 +1789,7 @@ declare interface CJumpHelperUpdateNode {
     "OriginalJumpDuration": number;
     "JumpStartCycle": number;
     "JumpEndCycle": number;
-    "CorrectionMethod": number;
+    "CorrectionMethod": JumpCorrectionMethod;
     "TranslationAxis": Object;
     "ScaleSpeed": boolean;
     readonly "Parent": CSequenceUpdateNode;
@@ -1813,7 +1813,7 @@ declare interface CLeafUpdateNode {
 declare interface CLeanMatrixUpdateNode {
     readonly "Poses": Object;
     readonly "Damping": CAnimInputDamping;
-    "BlendSource": number;
+    "BlendSource": AnimVectorSource;
     readonly "ParamIndex": CAnimParamHandle;
     "VerticalAxis": Vector;
     "HorizontalAxis": Vector;
@@ -1827,7 +1827,7 @@ declare interface CLeanMatrixUpdateNode {
 
 declare interface CLookAtUpdateNode {
     readonly "OpFixedSettings": LookAtOpFixedSettings_t;
-    "Target": number;
+    "Target": AnimVectorSource;
     readonly "ParamIndex": CAnimParamHandle;
     readonly "WeightParamIndex": CAnimParamHandle;
     "ResetChild": boolean;
@@ -1853,7 +1853,7 @@ declare interface CLookComponentUpdater {
 
 declare interface CMaterialAttributeAnimTag {
     "AttributeName": string;
-    "AttributeType": number;
+    "AttributeType": MatterialAttributeTagType_t;
     "Value": number;
     "Color": Color;
     readonly "Parent": CAnimTagBase;
@@ -2002,7 +2002,7 @@ declare interface CMovementHandshakeAnimTag {
 
 declare interface CMoverUpdateNode {
     readonly "Damping": CAnimInputDamping;
-    "FacingTarget": number;
+    "FacingTarget": AnimValueSource;
     readonly "MoveVecParam": CAnimParamHandle;
     readonly "MoveHeadingParam": CAnimParamHandle;
     readonly "TurnToFaceParam": CAnimParamHandle;
@@ -2051,9 +2051,9 @@ declare interface CParticleAnimTag {
     "StopWhenTagEnds": boolean;
     "TagEndStopIsInstant": boolean;
     "AttachmentName": string;
-    "AttachmentType": number;
+    "AttachmentType": ParticleAttachment_t;
     "AttachmentCP1Name": string;
-    "AttachmentCP1Type": number;
+    "AttachmentCP1Type": ParticleAttachment_t;
     readonly "Parent": CAnimTagBase;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -2104,7 +2104,7 @@ declare interface CPlayerInputAnimMotorUpdater {
 
 declare interface CPoseHandle {
     "Index": number;
-    "Type": number;
+    "Type": PoseType_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2117,7 +2117,7 @@ declare interface CProductQuantizer {
 }
 
 declare interface CRagdollAnimTag {
-    "PoseControl": number;
+    "PoseControl": AnimPoseControl;
     "Frequency": number;
     "DampingRatio": number;
     "DecayDuration": number;
@@ -2144,7 +2144,7 @@ declare interface CRagdollComponentUpdater {
 
 declare interface CRagdollUpdateNode {
     "WeightListIndex": number;
-    "PoseControlMethod": number;
+    "PoseControlMethod": RagdollPoseControl;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -2162,7 +2162,7 @@ declare interface CSelectorUpdateNode {
     readonly "BlendCurve": CBlendCurve;
     readonly "Parameter": CAnimParamHandle;
     "TagIndex": number;
-    "TagBehavior": number;
+    "TagBehavior": SelectorTagBehavior_t;
     "ResetOnChange": boolean;
     "LockWhenWaning": boolean;
     "SyncCyclesOnChange": boolean;
@@ -2264,7 +2264,7 @@ declare interface CStanceOverrideUpdateNode {
     readonly "FootStanceInfo": Object;
     readonly "StanceSourceNode": CAnimUpdateNodeRef;
     readonly "Parameter": CAnimParamHandle;
-    "Mode": number;
+    "Mode": StanceOverrideMode;
     readonly "Parent": CUnaryUpdateNode;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -2278,7 +2278,7 @@ declare interface CStanceScaleUpdateNode {
 }
 
 declare interface CStateActionUpdater {
-    "Behavior": number;
+    "Behavior": StateActionBehavior;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2370,7 +2370,7 @@ declare interface CStringAnimTag {
 }
 
 declare interface CSubtractUpdateNode {
-    "FootMotionTiming": number;
+    "FootMotionTiming": BinaryNodeChildOption;
     "ApplyToFootMotion": boolean;
     "ApplyChannelsSeparately": boolean;
     "UseModelSpace": boolean;
@@ -2442,7 +2442,7 @@ declare interface CTransitionUpdateData {
 }
 
 declare interface CTurnHelperUpdateNode {
-    "FacingTarget": number;
+    "FacingTarget": AnimValueSource;
     "TurnStartTimeOffset": number;
     "TurnDuration": number;
     "MatchChildDuration": boolean;
@@ -2485,7 +2485,7 @@ declare interface CVectorQuantizer {
 
 declare interface CVirtualAnimParameter {
     "ExpressionString": string;
-    "ParamType": number;
+    "ParamType": AnimParamType_t;
     readonly "Parent": CAnimParameterBase;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -2512,7 +2512,7 @@ declare interface ChainToSolveData_t {
     "ChainIndex": number;
     readonly "SolverSettings": IKSolverSettings_t;
     readonly "TargetSettings": IKTargetSettings_t;
-    "DebugSetting": number;
+    "DebugSetting": SolveIKChainAnimNodeDebugSetting;
     "DebugNormalizedValue": number;
     "DebugOffset": Vector;
     ToPtr: () => string;
@@ -2580,7 +2580,7 @@ declare interface FootLockPoseOpFixedSettings {
     readonly "FootInfo": Object;
     readonly "HipDampingSettings": CAnimInputDamping;
     "HipBoneIndex": number;
-    "IkSolverType": number;
+    "IkSolverType": IKSolverType;
     "ApplyTilt": boolean;
     "ApplyHipDrop": boolean;
     "AlwaysUseFallbackHinge": boolean;
@@ -2614,7 +2614,7 @@ declare interface FootPinningPoseOpFixedData_t {
 declare interface FootStepTrigger {
     readonly "Tags": Object;
     "FootIndex": number;
-    "TriggerPhase": number;
+    "TriggerPhase": StepPhase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2649,7 +2649,7 @@ declare interface IKBoneNameAndIndex_t {
 
 declare interface IKDemoCaptureSettings_t {
     "ParentBoneName": string;
-    "Mode": number;
+    "Mode": IKChannelMode;
     "IkChainName": string;
     "OneBoneStart": string;
     "OneBoneEnd": string;
@@ -2658,19 +2658,19 @@ declare interface IKDemoCaptureSettings_t {
 }
 
 declare interface IKSolverSettings_t {
-    "SolverType": number;
+    "SolverType": IKSolverType;
     "NumIterations": number;
-    "EndEffectorRotationFixUpMode": number;
+    "EndEffectorRotationFixUpMode": EIKEndEffectorRotationFixUpMode;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface IKTargetSettings_t {
-    "TargetSource": number;
+    "TargetSource": IKTargetSource;
     readonly "Bone": IKBoneNameAndIndex_t;
     readonly "AnimgraphParameterNamePosition": AnimParamID;
     readonly "AnimgraphParameterNameOrientation": AnimParamID;
-    "TargetCoordSystem": number;
+    "TargetCoordSystem": IKTargetCoordinateSystem;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2688,7 +2688,7 @@ declare interface JiggleBoneSettings_t {
     "Damping": number;
     "BoundsMaxLS": Vector;
     "BoundsMinLS": Vector;
-    "SimSpace": number;
+    "SimSpace": JiggleBoneSimSpace;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2744,7 +2744,7 @@ declare interface ParamSpanSample_t {
 declare interface ParamSpan_t {
     readonly "Samples": Object;
     readonly "Param": CAnimParamHandle;
-    "ParamType": number;
+    "ParamType": AnimParamType_t;
     "StartCycle": number;
     "EndCycle": number;
     ToPtr: () => string;
@@ -2762,7 +2762,7 @@ declare interface ScriptInfo_t {
     readonly "ParamsModified": Object;
     readonly "ProxyReadParams": Object;
     readonly "ProxyWriteParams": Object;
-    "ScriptType": number;
+    "ScriptType": AnimScriptType;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -2796,9 +2796,9 @@ declare interface TraceSettings_t {
 }
 
 declare interface TwoBoneIKSettings_t {
-    "EndEffectorType": number;
+    "EndEffectorType": IkEndEffectorType;
     readonly "EndEffectorAttachment": CAnimAttachment;
-    "TargetType": number;
+    "TargetType": IkTargetType;
     readonly "TargetAttachment": CAnimAttachment;
     "TargetBoneIndex": number;
     readonly "PositionParam": CAnimParamHandle;
@@ -2847,7 +2847,6 @@ declare interface CNmBlendTaskBase {
 }
 
 declare interface CNmBoneMask {
-    readonly "WeightInfo": any;
     readonly "Weights": Object;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -2885,14 +2884,14 @@ declare interface CNmEvent {
 }
 
 declare interface CNmFootEvent {
-    "Phase": number;
+    "Phase": NmFootPhase_t;
     readonly "Parent": CNmEvent;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface CNmFrameSnapEvent {
-    "FrameSnapMode": number;
+    "FrameSnapMode": NmFrameSnapEventMode_t;
     readonly "Parent": CNmEvent;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3001,8 +3000,8 @@ declare interface CNmTarget {
 }
 
 declare interface CNmTargetWarpEvent {
-    "Rule": number;
-    "Algorithm": number;
+    "Rule": NmTargetWarpRule_t;
+    "Algorithm": NmTargetWarpAlgorithm_t;
     readonly "Parent": CNmEvent;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3015,7 +3014,7 @@ declare interface CNmTask {
 }
 
 declare interface CNmTransitionEvent {
-    "Rule": number;
+    "Rule": NmTransitionRule_t;
     readonly "Parent": CNmEvent;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -3072,7 +3071,7 @@ declare interface AmmoIndex_t {
 declare interface AmmoTypeInfo_t {
     "MaxCarry": number;
     readonly "SplashSize": CRangeInt;
-    "Flags": number;
+    "Flags": AmmoFlags_t;
     "Mass": number;
     readonly "Speed": CRangeFloat;
     ToPtr: () => string;
@@ -3140,7 +3139,7 @@ declare interface CAttributeManager {
     "ReapplyProvisionParity": number;
     "Outer": CBaseEntity;
     "PreventLoopback": boolean;
-    "ProviderType": number;
+    "ProviderType": attributeprovidertypes_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -3170,9 +3169,9 @@ declare interface CBaseAnimGraphController {
     "Sequence": number;
     "SeqStartTime": number;
     "SeqFixedCycle": number;
-    "AnimLoopMode": number;
+    "AnimLoopMode": AnimLoopMode_t;
     "PlaybackRate": number;
-    "NotifyState": number;
+    "NotifyState": SequenceFinishNotifyState_t;
     "NetworkedAnimationInputsChanged": boolean;
     "NetworkedSequenceChanged": boolean;
     "LastUpdateSkipped": boolean;
@@ -3190,7 +3189,7 @@ declare interface CBasePlayerController {
     "SplitScreenSlot": number;
     "SplitOwner": CBasePlayerController;
     "IsHLTV": boolean;
-    "Connected": number;
+    "Connected": PlayerConnectedState;
     "PlayerName": string;
     "NetworkIDString": string;
     "LerpTime": number;
@@ -3198,7 +3197,7 @@ declare interface CBasePlayerController {
     "Predict": boolean;
     "IsLowViolence": boolean;
     "GamePaused": boolean;
-    "IgnoreGlobalChat": number;
+    "IgnoreGlobalChat": ChatIgnoreType_t;
     "LastPlayerTalkTime": number;
     "LastEntitySteadyState": number;
     "AvailableEntitySteadyState": number;
@@ -3241,7 +3240,7 @@ declare interface CBasePlayerWeaponVData {
     "AllowFlipping": boolean;
     readonly "MuzzleAttachment": any;
     "LinkedCooldowns": boolean;
-    "Flags": number;
+    "Flags": ItemFlagTypes_t;
     "PrimaryAmmoType": number;
     "SecondaryAmmoType": number;
     "MaxClip1": number;
@@ -3252,7 +3251,7 @@ declare interface CBasePlayerWeaponVData {
     "Weight": number;
     "AutoSwitchTo": boolean;
     "AutoSwitchFrom": boolean;
-    "RumbleEffect": number;
+    "RumbleEffect": RumbleEffect_t;
     "Slot": number;
     "Position": number;
     readonly "Parent": CEntitySubclassVDataBase;
@@ -3819,11 +3818,11 @@ declare interface CCSPointScriptExtensions_weapon_cs_base {
 }
 
 declare interface CCSWeaponBaseVData {
-    "WeaponType": number;
-    "WeaponCategory": number;
-    "GearSlot": number;
+    "WeaponType": CSWeaponType;
+    "WeaponCategory": CSWeaponCategory;
+    "GearSlot": gear_slot_t;
     "GearSlotPosition": number;
-    "DefaultLoadoutSlot": number;
+    "DefaultLoadoutSlot": loadout_slot_t;
     "WrongTeamMsg": string;
     "Price": number;
     "KillAward": number;
@@ -3834,7 +3833,7 @@ declare interface CCSWeaponBaseVData {
     "IsRevolver": boolean;
     "CannotShootUnderwater": boolean;
     "AnimExtension": string;
-    "SilencerType": number;
+    "SilencerType": CSWeaponSilencerType;
     "CrosshairMinDistance": number;
     "CrosshairDeltaDistance": number;
     "IsFullAuto": boolean;
@@ -3947,9 +3946,9 @@ declare interface CCollisionProperty {
     "Mins": Vector;
     "Maxs": Vector;
     "SolidFlags": number;
-    "SolidType": number;
+    "SolidType": SolidType_t;
     "TriggerBloat": number;
-    "SurroundType": number;
+    "SurroundType": SurroundingBoundsType_t;
     "CollisionGroup": number;
     "EnablePhysics": number;
     "BoundingRadius": number;
@@ -3993,7 +3992,7 @@ declare interface CDamageRecord {
     "NumHits": number;
     "LastBulletUpdate": number;
     "IsOtherEnemy": boolean;
-    "KillType": number;
+    "KillType": EKillTypes_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -4045,7 +4044,7 @@ declare interface CDestructiblePartsSystemData_PartData {
     "Name": string;
     "BodyGroupValue": number;
     readonly "Health": CSkillInt;
-    "DamagePassthroughType": number;
+    "DamagePassthroughType": EDestructiblePartDamagePassThroughType;
     "KillNPCOnDestruction": boolean;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -4320,7 +4319,7 @@ declare interface CGlowSprite {
 
 declare interface CGrenadeTracer {
     "TracerDuration": number;
-    "Type": number;
+    readonly "Type": renadeType_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -4714,7 +4713,7 @@ declare interface CPlayer_MovementServices_Humanoid {
 declare interface CPlayer_ObserverServices {
     "ObserverMode": number;
     "ObserverTarget": CBaseEntity;
-    "ObserverLastMode": number;
+    "ObserverLastMode": ObserverMode_t;
     "ForcedObserverMode": boolean;
     readonly "Parent": CPlayerPawnComponent;
     ToPtr: () => string;
@@ -4772,8 +4771,8 @@ declare interface CPointTemplate {
     "TimeoutInterval": number;
     "AsynchronouslySpawnEntities": boolean;
     readonly "OutputOnSpawned": CEntityIOOutput;
-    "ClientOnlyEntityBehavior": number;
-    "OwnerSpawnGroupType": number;
+    "ClientOnlyEntityBehavior": PointTemplateClientOnlyEntityBehavior_t;
+    "OwnerSpawnGroupType": PointTemplateOwnerSpawnGroupType_t;
     readonly "CreatedSpawnGroupHandles": Object;
     readonly "Parent": CLogicalEntity;
     ToPtr: () => string;
@@ -4788,7 +4787,7 @@ declare interface CPointTemplateAPI {
 
 declare interface CPrecipitationVData {
     "InnerDistance": number;
-    "AttachType": number;
+    "AttachType": ParticleAttachment_t;
     "BatchSameVolumeType": boolean;
     "RTEnvCP": number;
     "RTEnvCPComponent": number;
@@ -5120,14 +5119,14 @@ declare interface CTakeDamageInfo {
     "Damage": number;
     "TotalledDamage": number;
     "TotalledDamageAbsorbed": number;
-    "BitsDamageType": number;
+    "BitsDamageType": DamageTypes_t;
     "DamageCustom": number;
     "AmmoType": number;
     "OriginalDamage": number;
     "ShouldBleed": boolean;
     "ShouldSpark": boolean;
     "DamageAbsorbed": number;
-    "DamageFlags": number;
+    "DamageFlags": TakeDamageFlags_t;
     "NumObjectsPenetrated": number;
     "FriendlyFireDamageReductionRatio": number;
     "InTakeDamageFlow": boolean;
@@ -5164,7 +5163,7 @@ declare interface CTimeline {
     "BucketCount": number;
     "Interval": number;
     "FinalValue": number;
-    "CompressionType": number;
+    "CompressionType": TimelineCompression_t;
     "Stopped": boolean;
     readonly "Parent": IntervalTimer;
     ToPtr: () => string;
@@ -5207,20 +5206,20 @@ declare interface CommandToolCommand_t {
     "Opened": boolean;
     "InternalId": number;
     "ShortName": string;
-    "ExecMode": number;
+    "ExecMode": CommandExecMode_t;
     "SpawnGroup": string;
     "PeriodicExecDelay": number;
-    "SpecType": number;
+    "SpecType": CommandEntitySpecType_t;
     "EntitySpec": string;
     "Commands": string;
-    "SetDebugBits": number;
-    "ClearDebugBits": number;
+    "SetDebugBits": DebugOverlayBits_t;
+    "ClearDebugBits": DebugOverlayBits_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface CompMatMutatorCondition_t {
-    "MutatorCondition": number;
+    "MutatorCondition": CompMatPropertyMutatorConditionType_t;
     "StrMutatorConditionContainerName": string;
     "StrMutatorConditionContainerVarName": string;
     "StrMutatorConditionContainerVarValue": string;
@@ -5231,7 +5230,7 @@ declare interface CompMatMutatorCondition_t {
 
 declare interface CompMatPropertyMutator_t {
     "Enabled": boolean;
-    "MutatorCommandType": number;
+    "MutatorCommandType": CompMatPropertyMutatorType_t;
     "StrInitWith_Container": string;
     "StrCopyProperty_InputContainerSrc": string;
     "StrCopyProperty_InputContainerProperty": string;
@@ -5282,7 +5281,7 @@ declare interface CompositeMaterialEditorPoint_t {
 
 declare interface CompositeMaterialInputContainer_t {
     "Enabled": boolean;
-    "CompositeMaterialInputContainerSourceType": number;
+    "CompositeMaterialInputContainerSourceType": CompositeMaterialInputContainerSourceType_t;
     "StrAttrName": string;
     "StrAlias": string;
     readonly "LooseVariables": Object;
@@ -5301,7 +5300,7 @@ declare interface CompositeMaterialInputLooseVariable_t {
     "StrExposedVisibleWhenTrue": string;
     "StrExposedHiddenWhenTrue": string;
     "StrExposedValueList": string;
-    "VariableType": number;
+    "VariableType": CompositeMaterialInputLooseVariableType_t;
     "ValueBoolean": boolean;
     "ValueIntX": number;
     "ValueIntY": number;
@@ -5321,10 +5320,10 @@ declare interface CompositeMaterialInputLooseVariable_t {
     "ValueFloatW_Min": number;
     "ValueFloatW_Max": number;
     "CValueColor4": Color;
-    "ValueSystemVar": number;
+    "ValueSystemVar": CompositeMaterialVarSystemVar_t;
     "StrTextureContentAssetPath": string;
     "StrTextureCompilationVtexTemplate": string;
-    "TextureType": number;
+    "TextureType": CompositeMaterialInputTextureType_t;
     "StrString": string;
     "StrPanoramaPanelPath": string;
     "PanoramaRenderRes": number;
@@ -5333,7 +5332,7 @@ declare interface CompositeMaterialInputLooseVariable_t {
 }
 
 declare interface CompositeMaterialMatchFilter_t {
-    "CompositeMaterialMatchFilterType": number;
+    "CompositeMaterialMatchFilterType": CompositeMaterialMatchFilterType_t;
     "StrMatchFilter": string;
     "StrMatchValue": string;
     "PassWhenTrue": boolean;
@@ -5820,7 +5819,7 @@ declare interface SequenceHistory_t {
     "Sequence": number;
     "SeqStartTime": number;
     "SeqFixedCycle": number;
-    "SeqLoopMode": number;
+    "SeqLoopMode": AnimLoopMode_t;
     "PlaybackRate": number;
     "CyclesPerSecond": number;
     ToPtr: () => string;
@@ -5865,7 +5864,7 @@ declare interface VPhysicsCollisionAttribute_t {
 }
 
 declare interface ViewAngleServerChange_t {
-    "Type": number;
+    "Type": FixAngleSet_t;
     "Angle": QAngle;
     "Index": number;
     ToPtr: () => string;
@@ -5975,7 +5974,7 @@ declare interface ragdollelement_t {
 
 declare interface shard_model_desc_t {
     "ModelID": number;
-    "Solid": number;
+    "Solid": ShardSolid_t;
     "PanelSize": Vector2D;
     "StressPositionA": Vector2D;
     "StressPositionB": Vector2D;
@@ -6185,7 +6184,7 @@ declare interface MaterialResourceData_t {
 }
 
 declare interface PostProcessingBloomParameters_t {
-    "BlendMode": number;
+    "BlendMode": BloomBlendMode_t;
     "BloomStrength": number;
     "ScreenBloomStrength": number;
     "BlurBloomStrength": number;
@@ -6314,8 +6313,8 @@ declare interface VariableInfo_t {
     "NameToken": number;
     readonly "Index": FuseVariableIndex_t;
     "NumComponents": number;
-    "VarType": number;
-    "Access": number;
+    "VarType": FuseVariableType_t;
+    "Access": FuseVariableAccess_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -6506,7 +6505,7 @@ declare interface CFlexDesc {
 }
 
 declare interface CFlexOp {
-    "OpCode": number;
+    "OpCode": FlexOpCode_t;
     "Data": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -6621,7 +6620,7 @@ declare interface CMaterialDrawDescriptor {
     "Alpha": number;
     "NumMeshlets": number;
     "FirstMeshlet": number;
-    "PrimitiveType": number;
+    "PrimitiveType": RenderPrimitiveType_t;
     "BaseVertex": number;
     "VertexCount": number;
     "StartIndex": number;
@@ -6659,7 +6658,7 @@ declare interface CModelConfigElement_AttachedModel {
     "AngOffset": QAngle;
     "AttachmentName": string;
     "LocalAttachmentOffsetName": string;
-    "AttachmentType": number;
+    "AttachmentType": ModelConfigAttachmentType_t;
     "BoneMergeFlex": boolean;
     "UserSpecifiedColor": boolean;
     "UserSpecifiedMaterialGroup": boolean;
@@ -6950,7 +6949,7 @@ declare interface MaterialGroup_t {
 }
 
 declare interface ModelBoneFlexDriverControl_t {
-    "BoneComponent": number;
+    "BoneComponent": ModelBoneFlexComponent_t;
     "FlexController": string;
     "FlexControllerToken": number;
     "Min": number;
@@ -7322,16 +7321,16 @@ declare interface CBaseRendererSource2 {
     readonly "RollScale": CParticleCollectionRendererFloatInput;
     readonly "Alpha2Field": ParticleAttributeIndex_t;
     readonly "ColorScale": CParticleCollectionRendererVecInput;
-    "ColorBlendType": number;
-    "ShaderType": number;
+    "ColorBlendType": ParticleColorBlendType_t;
+    "ShaderType": SpriteCardShaderType_t;
     "StrShaderOverride": string;
     readonly "CenterXOffset": CParticleCollectionRendererFloatInput;
     readonly "CenterYOffset": CParticleCollectionRendererFloatInput;
     "BumpStrength": number;
-    "CropTextureOverride": number;
+    "CropTextureOverride": ParticleSequenceCropOverride_t;
     readonly "TexturesInput": Object;
     "AnimationRate": number;
-    "AnimationType": number;
+    "AnimationType": AnimationType_t;
     "AnimateInFPS": boolean;
     readonly "MotionVectorScaleU": CParticleCollectionRendererFloatInput;
     readonly "MotionVectorScaleV": CParticleCollectionRendererFloatInput;
@@ -7340,20 +7339,20 @@ declare interface CBaseRendererSource2 {
     readonly "DiffuseClamp": CParticleCollectionRendererFloatInput;
     "LightingControlPoint": number;
     readonly "SelfIllumPerParticle": ParticleAttributeIndex_t;
-    "OutputBlendMode": number;
+    "OutputBlendMode": ParticleOutputBlendMode_t;
     "GammaCorrectVertexColors": boolean;
     "SaturateColorPreAlphaBlend": boolean;
     readonly "AddSelfAmount": CParticleCollectionRendererFloatInput;
     readonly "Desaturation": CParticleCollectionRendererFloatInput;
     readonly "OverbrightFactor": CParticleCollectionRendererFloatInput;
     "HSVShiftControlPoint": number;
-    "FogType": number;
+    "FogType": ParticleFogType_t;
     readonly "FogAmount": CParticleCollectionRendererFloatInput;
     "TintByFOW": boolean;
     "TintByGlobalLight": boolean;
-    "PerParticleAlphaReference": number;
-    "PerParticleAlphaRefWindow": number;
-    "AlphaReferenceType": number;
+    "PerParticleAlphaReference": SpriteCardPerParticleScale_t;
+    "PerParticleAlphaRefWindow": SpriteCardPerParticleScale_t;
+    "AlphaReferenceType": ParticleAlphaReferenceType_t;
     readonly "AlphaReferenceSoftness": CParticleCollectionRendererFloatInput;
     readonly "SourceAlphaValueToMapToZero": CParticleCollectionRendererFloatInput;
     readonly "SourceAlphaValueToMapToOne": CParticleCollectionRendererFloatInput;
@@ -7361,7 +7360,7 @@ declare interface CBaseRendererSource2 {
     "RefractSolid": boolean;
     readonly "RefractAmount": CParticleCollectionRendererFloatInput;
     "RefractBlurRadius": number;
-    "RefractBlurType": number;
+    "RefractBlurType": BlurFilterType_t;
     "OnlyRenderInEffectsBloomPass": boolean;
     "OnlyRenderInEffectsWaterPass": boolean;
     "UseMixedResolutionRendering": boolean;
@@ -7373,12 +7372,12 @@ declare interface CBaseRendererSource2 {
     "WriteStencilOnDepthFail": boolean;
     "ReverseZBuffering": boolean;
     "DisableZBuffering": boolean;
-    "FeatheringMode": number;
+    "FeatheringMode": ParticleDepthFeatheringMode_t;
     readonly "FeatheringMinDist": CParticleCollectionRendererFloatInput;
     readonly "FeatheringMaxDist": CParticleCollectionRendererFloatInput;
     readonly "FeatheringFilter": CParticleCollectionRendererFloatInput;
     readonly "DepthBias": CParticleCollectionRendererFloatInput;
-    "SortMethod": number;
+    "SortMethod": ParticleSortingChoiceList_t;
     "BlendFramesSeq0": boolean;
     "MaxLuminanceBlendingSequence0": boolean;
     readonly "Parent": CParticleFunctionRenderer;
@@ -7387,7 +7386,7 @@ declare interface CBaseRendererSource2 {
 }
 
 declare interface CBaseTrailRenderer {
-    "OrientationType": number;
+    "OrientationType": ParticleOrientationChoiceList_t;
     "OrientationControlPoint": number;
     "MinSize": number;
     "MaxSize": number;
@@ -7422,7 +7421,7 @@ declare interface CGeneralSpin {
 
 declare interface CParticleFunction {
     readonly "OpStrength": CParticleCollectionFloatInput;
-    "OpEndCapState": number;
+    "OpEndCapState": ParticleEndcapMode_t;
     "OpStartFadeInTime": number;
     "OpEndFadeInTime": number;
     "OpStartFadeOutTime": number;
@@ -7490,7 +7489,7 @@ declare interface CParticleFunctionRenderer {
 }
 
 declare interface CParticleMassCalculationParameters {
-    "MassMode": number;
+    "MassMode": ParticleMassMode_t;
     readonly "Radius": CPerParticleFloatInput;
     readonly "NominalRadius": CPerParticleFloatInput;
     readonly "Scale": CPerParticleFloatInput;
@@ -7552,7 +7551,7 @@ declare interface CParticleSystemDefinition {
     "ShouldHitboxesFallbackToRenderBounds": boolean;
     "ShouldHitboxesFallbackToSnapshot": boolean;
     "ShouldHitboxesFallbackToCollisionHulls": boolean;
-    "ViewModelEffect": number;
+    "ViewModelEffect": InheritableBoolType_t;
     "ScreenSpaceEffect": boolean;
     "TargetLayerID": string;
     "SkipRenderControlPoint": number;
@@ -7608,7 +7607,7 @@ declare interface CRandomNumberGeneratorParameters {
 }
 
 declare interface CReplicationParameters {
-    "ReplicationMode": number;
+    "ReplicationMode": ParticleReplicationMode_t;
     "ScaleChildParticleRadii": boolean;
     readonly "MinRandomRadiusScale": CParticleCollectionFloatInput;
     readonly "MaxRandomRadiusScale": CParticleCollectionFloatInput;
@@ -7667,7 +7666,7 @@ declare interface ParticleChildrenInfo_t {
     "Delay": number;
     "EndCap": boolean;
     "DisableChild": boolean;
-    "DetailLevel": number;
+    "DetailLevel": ParticleDetailLevel_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -7682,7 +7681,7 @@ declare interface ParticleControlPointConfiguration_t {
 
 declare interface ParticleControlPointDriver_t {
     "ControlPoint": number;
-    "AttachType": number;
+    "AttachType": ParticleAttachment_t;
     "AttachmentName": string;
     "Offset": Vector;
     "Offset1": QAngle;
@@ -7701,7 +7700,7 @@ declare interface ParticlePreviewBodyGroup_t {
 declare interface ParticlePreviewState_t {
     "PreviewModel": string;
     "ModSpecificData": number;
-    "GroundType": number;
+    "GroundType": PetGroundType_t;
     "SequenceName": string;
     "FireParticleOnSequenceFrame": number;
     "HitboxSetName": string;
@@ -7757,13 +7756,13 @@ declare interface TextureControls_t {
     readonly "Distortion": CParticleCollectionRendererFloatInput;
     "RandomizeOffsets": boolean;
     "ClampUVs": boolean;
-    "PerParticleBlend": number;
-    "PerParticleScale": number;
-    "PerParticleOffsetU": number;
-    "PerParticleOffsetV": number;
-    "PerParticleRotation": number;
-    "PerParticleZoom": number;
-    "PerParticleDistortion": number;
+    "PerParticleBlend": SpriteCardPerParticleScale_t;
+    "PerParticleScale": SpriteCardPerParticleScale_t;
+    "PerParticleOffsetU": SpriteCardPerParticleScale_t;
+    "PerParticleOffsetV": SpriteCardPerParticleScale_t;
+    "PerParticleRotation": SpriteCardPerParticleScale_t;
+    "PerParticleZoom": SpriteCardPerParticleScale_t;
+    "PerParticleDistortion": SpriteCardPerParticleScale_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -7771,9 +7770,9 @@ declare interface TextureControls_t {
 declare interface TextureGroup_t {
     "Enabled": boolean;
     "ReplaceTextureWithGradient": boolean;
-    "TextureType": number;
-    "TextureChannels": number;
-    "TextureBlendMode": number;
+    "TextureType": SpriteCardTextureType_t;
+    "TextureChannels": SpriteCardTextureChannel_t;
+    "TextureBlendMode": ParticleTextureLayerBlendType_t;
     readonly "TextureBlend": CParticleCollectionRendererFloatInput;
     readonly "TextureControls": TextureControls_t;
     ToPtr: () => string;
@@ -7849,8 +7848,8 @@ declare interface CParticleCollectionRendererVecInput {
 }
 
 declare interface CParticleFloatInput {
-    "Type": number;
-    "MapType": number;
+    "Type": ParticleFloatType_t;
+    "MapType": ParticleFloatMapType_t;
     "LiteralValue": number;
     "ControlPoint": number;
     readonly "ScalarAttribute": ParticleAttributeIndex_t;
@@ -7860,7 +7859,7 @@ declare interface CParticleFloatInput {
     "RandomMax": number;
     "HasRandomSignFlip": boolean;
     "RandomSeed": number;
-    "RandomMode": number;
+    "RandomMode": ParticleFloatRandomMode_t;
     "LOD0": number;
     "LOD1": number;
     "LOD2": number;
@@ -7872,16 +7871,16 @@ declare interface CParticleFloatInput {
     "NoiseOffsetRate": Vector;
     "NoiseOffset": number;
     "NoiseOctaves": number;
-    "NoiseTurbulence": number;
-    "NoiseType": number;
-    "NoiseModifier": number;
+    "NoiseTurbulence": PFNoiseTurbulence_t;
+    "NoiseType": PFNoiseType_t;
+    "NoiseModifier": PFNoiseModifier_t;
     "NoiseTurbulenceScale": number;
     "NoiseTurbulenceMix": number;
     "NoiseImgPreviewScale": number;
     "NoiseImgPreviewLive": boolean;
     "NoCameraFallback": number;
     "UseBoundsCenter": boolean;
-    "InputMode": number;
+    "InputMode": ParticleFloatInputMode_t;
     "MultFactor": number;
     "Input0": number;
     "Input1": number;
@@ -7891,8 +7890,8 @@ declare interface CParticleFloatInput {
     "NotchedRangeMax": number;
     "NotchedOutputOutside": number;
     "NotchedOutputInside": number;
-    "RoundType": number;
-    "BiasType": number;
+    "RoundType": ParticleFloatRoundType_t;
+    "BiasType": ParticleFloatBiasType_t;
     "BiasParameter": number;
     readonly "Parent": CParticleInput;
     ToPtr: () => string;
@@ -7906,7 +7905,7 @@ declare interface CParticleInput {
 }
 
 declare interface CParticleModelInput {
-    "Type": number;
+    "Type": ParticleModelType_t;
     "ControlPoint": number;
     readonly "Parent": CParticleInput;
     ToPtr: () => string;
@@ -7926,7 +7925,7 @@ declare interface CParticleRemapFloatInput {
 }
 
 declare interface CParticleTransformInput {
-    "Type": number;
+    "Type": ParticleTransformType_t;
     "FollowNamedValue": boolean;
     "SupportsDisabled": boolean;
     "UseOrientation": boolean;
@@ -7939,7 +7938,7 @@ declare interface CParticleTransformInput {
 }
 
 declare interface CParticleVecInput {
-    "Type": number;
+    "Type": ParticleVecType_t;
     "LiteralValue": Vector;
     "LiteralColor": Color;
     "FollowNamedValue": boolean;
@@ -7997,7 +7996,7 @@ declare interface PARTICLE_WORLD_HANDLE__ {
 
 declare interface ParticleNamedValueConfiguration_t {
     "ConfigName": string;
-    "AttachType": number;
+    "AttachType": ParticleAttachment_t;
     "BoundEntityPath": string;
     "StrEntityScope": string;
     "StrAttachmentName": string;
@@ -8102,7 +8101,7 @@ declare interface CastSphereSATParams_t {
     "Radius": number;
     "MaxFraction": number;
     "Scale": number;
-    readonly "Hull": any;
+    readonly "Hull": RnHull_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -8831,7 +8830,7 @@ declare interface RnHalfEdge_t {
 }
 
 declare interface RnHullDesc_t {
-    readonly "Hull": any;
+    readonly "Hull": RnHull_t;
     readonly "Parent": RnShapeDesc_t;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9022,7 +9021,7 @@ declare interface RenderInputLayoutField_t {
     "Format": number;
     "Offset": number;
     "Slot": number;
-    "SlotType": number;
+    "SlotType": RenderSlotType_t;
     "InstanceStepRate": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9169,8 +9168,8 @@ declare interface AutoRoomDoorwayPairs_t {
 }
 
 declare interface CAISound {
-    "SoundType": number;
-    "SoundFlags": number;
+    "SoundType": SoundTypes_t;
+    "SoundFlags": SoundFlags_t;
     "Volume": number;
     "SoundIndex": number;
     "Duration": number;
@@ -9221,7 +9220,7 @@ declare interface CAK47 {
 declare interface CAmbientGeneric {
     "Radius": number;
     "MaxRadius": number;
-    "SoundLevel": number;
+    "SoundLevel": soundlevel_t;
     readonly "Dpv": dynpitchvol_t;
     "Active": boolean;
     "Looping": boolean;
@@ -9417,7 +9416,7 @@ declare interface CBaseCombatCharacter {
     "DamageCount": number;
     readonly "VecRelationships": Object;
     "StrRelationships": string;
-    "Hull": number;
+    "Hull": Hull_t;
     "NavHullIdx": number;
     readonly "Parent": CBaseFlex;
     ToPtr: () => string;
@@ -9439,7 +9438,7 @@ declare interface CBaseDoor {
     "DoorGroup": boolean;
     "Locked": boolean;
     "IgnoreDebris": boolean;
-    "SpawnPosition": number;
+    "SpawnPosition": FuncDoorSpawnPos_t;
     "BlockDamage": number;
     "NoiseMoving": string;
     "NoiseArrived": string;
@@ -9480,11 +9479,11 @@ declare interface CBaseEntity {
     "LifeState": number;
     "DamageAccumulator": number;
     "TakesDamage": boolean;
-    "TakeDamageFlags": number;
-    "PlatformType": number;
-    "MoveCollide": number;
-    "MoveType": number;
-    "ActualMoveType": number;
+    "TakeDamageFlags": TakeDamageFlags_t;
+    "PlatformType": EntityPlatformTypes_t;
+    "MoveCollide": MoveCollide_t;
+    "MoveType": MoveType_t;
+    "ActualMoveType": MoveType_t;
     "WaterTouch": number;
     "SlimeTouch": number;
     "RestoreInHierarchy": boolean;
@@ -9541,11 +9540,11 @@ declare interface CBaseEntity {
     "Blocker": CBaseEntity;
     "LocalTime": number;
     "VPhysicsUpdateLocalTime": number;
-    "BloodType": number;
+    "BloodType": BloodType;
     readonly "Parent": CEntityInstance;
     EmitSound: (sound_name: string,pitch: number,volume: number) => null|undefined;
     EmitSoundFromEntity: (sound_name: string,pitch: number,volume: number,delay: number) => null|undefined;
-    TakeDamage: (attacker: AnySDKClass,inflictor: AnySDKClass,ability: AnySDKClass,damageType: DamageTypes_t,damage: number) => null|undefined;
+    TakeDamage: (attacker: any,inflictor: any,ability: any,damageType: DamageTypes_t,damage: number) => null|undefined;
     CollisionRulesChanged: () => null|undefined;
     EHandle: () => CBaseEntity;
     Spawn: (keyvals: CEntityKeyValues|null) => null|undefined;
@@ -9635,17 +9634,17 @@ declare interface CBaseIssue {
 declare interface CBaseModelEntity {
     readonly "CRenderComponent": CRenderComponent;
     readonly "CHitboxComponent": CHitboxComponent;
-    "DestructiblePartInitialStateDestructed0": number;
-    "DestructiblePartInitialStateDestructed1": number;
-    "DestructiblePartInitialStateDestructed2": number;
-    "DestructiblePartInitialStateDestructed3": number;
-    "DestructiblePartInitialStateDestructed4": number;
+    "DestructiblePartInitialStateDestructed0": HitGroup_t;
+    "DestructiblePartInitialStateDestructed1": HitGroup_t;
+    "DestructiblePartInitialStateDestructed2": HitGroup_t;
+    "DestructiblePartInitialStateDestructed3": HitGroup_t;
+    "DestructiblePartInitialStateDestructed4": HitGroup_t;
     "LastHitDestructiblePartIndex": number;
-    "LastHitGroup": number;
+    "LastHitGroup": HitGroup_t;
     "DissolveStartTime": number;
     readonly "OnIgnite": CEntityIOOutput;
-    "RenderMode": number;
-    "RenderFX": number;
+    "RenderMode": RenderMode_t;
+    "RenderFX": RenderFx_t;
     "AllowFadeInView": boolean;
     "Render": Color;
     readonly "RenderAttributes": Object;
@@ -9750,7 +9749,7 @@ declare interface CBasePropDoor {
     "AutoReturnDelay": number;
     "HardwareType": number;
     "NeedsHardware": boolean;
-    "DoorState": number;
+    "DoorState": DoorState_t;
     "Locked": boolean;
     "ClosedPosition": Vector;
     "ClosedAngles": QAngle;
@@ -9789,7 +9788,7 @@ declare interface CBasePropDoor {
 }
 
 declare interface CBaseToggle {
-    "Toggle_state": number;
+    "Toggle_state": TOGGLE_STATE;
     "MoveDistance": number;
     "Wait": number;
     "Lip": number;
@@ -9850,7 +9849,7 @@ declare interface CBeam {
     "FireTime": number;
     "Damage": number;
     "NumBeamEnts": number;
-    "BeamType": number;
+    "BeamType": BeamType_t;
     "BeamFlags": number;
     "AttachEntity": Object;
     "Width": number;
@@ -9861,7 +9860,7 @@ declare interface CBeam {
     "StartFrame": number;
     "Speed": number;
     "Frame": number;
-    "ClipStyle": number;
+    "ClipStyle": BeamClipStyle_t;
     "TurnedOff": boolean;
     "EndPos": Vector;
     "EndEntity": CBaseEntity;
@@ -9875,7 +9874,7 @@ declare interface CBlood {
     "SprayAngles": QAngle;
     "SprayDir": Vector;
     "Amount": number;
-    "Color": number;
+    "Color": BloodType;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -9901,17 +9900,17 @@ declare interface CBot {
 
 declare interface CBreakable {
     readonly "CPropDataComponent": CPropDataComponent;
-    "Material": number;
+    "Material": Materials;
     "Breaker": CBaseEntity;
-    "Explosion": number;
+    "Explosion": Explosions;
     "SpawnObject": string;
     "PressureDelay": number;
     "MinHealthDmg": number;
     "PropData": string;
     "ImpactEnergyScale": number;
-    "OverrideBlockLOS": number;
+    "OverrideBlockLOS": EOverrideBlockLOS_t;
     readonly "OnBreak": CEntityIOOutput;
-    "PerformanceMode": number;
+    "PerformanceMode": PerformanceMode_t;
     "PhysicsAttacker": CBasePlayerPawn;
     "LastPhysicsInfluenceTime": number;
     readonly "Parent": CBaseModelEntity;
@@ -9930,9 +9929,9 @@ declare interface CBreakableProp {
     "DefBurstScale": number;
     "DefBurstOffset": Vector;
     "Breaker": CBaseEntity;
-    "PerformanceMode": number;
+    "PerformanceMode": PerformanceMode_t;
     "PreventDamageBeforeTime": number;
-    "BreakableContentsType": number;
+    "BreakableContentsType": BreakableContentsType_t;
     "StrBreakableContentsPropGroupOverride": string;
     "StrBreakableContentsParticleOverride": string;
     "HasBreakPiecesOrCommands": boolean;
@@ -10522,7 +10521,7 @@ declare interface CCSPlayerPawn {
     "RetakesHasDefuseKit": boolean;
     "RetakesMVPLastRound": boolean;
     "RetakesMVPBoostItem": number;
-    "RetakesMVPBoostExtraUtility": number;
+    "RetakesMVPBoostExtraUtility": loadout_slot_t;
     "HealthShotBoostExpirationTime": number;
     "LandingTimeSeconds": number;
     "AimPunchAngle": QAngle;
@@ -10569,7 +10568,7 @@ declare interface CCSPlayerPawn {
     "ResumeZoom": boolean;
     "IsDefusing": boolean;
     "IsGrabbingHostage": boolean;
-    "BlockingUseActionInProgress": number;
+    "BlockingUseActionInProgress": CSPlayerBlockingUseAction_t;
     "EmitSoundTime": number;
     "InNoDefuseArea": boolean;
     "BombSiteIndex": number;
@@ -10628,7 +10627,7 @@ declare interface CCSPlayerPawnBase {
     readonly "ViewModelServices": CPlayer_ViewModelServices;
     "BlindUntilTime": number;
     "BlindStartTime": number;
-    "PlayerState": number;
+    "PlayerState": CSPlayerState;
     "Respawning": boolean;
     "ImmuneToGunGameDamageTime": number;
     "GunGameImmunity": boolean;
@@ -10714,8 +10713,8 @@ declare interface CCSWeaponBase {
     "FireSequenceStartTime": number;
     "FireSequenceStartTimeChange": number;
     "FireSequenceStartTimeAck": number;
-    "PlayerFireEvent": number;
-    "PlayerFireEventAttackType": number;
+    "PlayerFireEvent": PlayerAnimEvent_t;
+    "PlayerFireEventAttackType": WeaponAttackType_t;
     "SeqIdle": number;
     "SeqFirePrimary": number;
     "SeqFireSecondary": number;
@@ -10725,7 +10724,7 @@ declare interface CCSWeaponBase {
     "ThirdPersonSequences": Object;
     "PlayerAmmoStockOnPickup": boolean;
     "RequireUseToTouch": boolean;
-    "State": number;
+    "State": CSWeaponState_t;
     "LastTimeInAir": number;
     "LastDeployTime": number;
     "LastEmptySoundCmdNum": number;
@@ -10734,7 +10733,7 @@ declare interface CCSWeaponBase {
     "TimeWeaponIdle": number;
     "FireOnEmpty": boolean;
     readonly "OnPlayerPickup": CEntityIOOutput;
-    "WeaponMode": number;
+    "WeaponMode": CSWeaponMode;
     "TurningInaccuracyDelta": number;
     "TurningInaccuracyEyeDirLast": Vector;
     "TurningInaccuracy": number;
@@ -10816,8 +10815,8 @@ declare interface CChicken {
     readonly "CollisionStuckTimer": CountdownTimer;
     "IsOnGround": boolean;
     "FallVelocity": Vector;
-    "DesiredActivity": number;
-    "CurrentActivity": number;
+    "DesiredActivity": ChickenActivity;
+    "CurrentActivity": ChickenActivity;
     readonly "ActivityTimer": CountdownTimer;
     "TurnRate": number;
     "FleeFrom": CBaseEntity;
@@ -10987,7 +10986,7 @@ declare interface CDynamicProp {
     readonly "OnAnimReachedStart": CEntityIOOutput;
     readonly "OnAnimReachedEnd": CEntityIOOutput;
     "IdleAnim": string;
-    "IdleAnimLoopMode": number;
+    "IdleAnimLoopMode": AnimLoopMode_t;
     "RandomizeCycle": boolean;
     "StartDisabled": boolean;
     "FiredStartEndOutput": boolean;
@@ -11084,7 +11083,7 @@ declare interface CEntityDissolve {
     "FadeOutStart": number;
     "FadeOutLength": number;
     "StartTime": number;
-    "DissolveType": number;
+    "DissolveType": EntityDisolveType_t;
     "DissolverOrigin": Vector;
     "Magnitude": number;
     readonly "Parent": CBaseModelEntity;
@@ -11123,7 +11122,7 @@ declare interface CEnvBeam {
     "EndPointWorld": Vector;
     "EndPointRelative": Vector;
     "Radius": number;
-    "TouchType": number;
+    "TouchType": Touch_t;
     "FilterName": string;
     "Filter": CBaseEntity;
     "Decal": string;
@@ -11272,13 +11271,13 @@ declare interface CEnvExplosion {
     "SpriteScale": number;
     "DamageForce": number;
     "Inflictor": CBaseEntity;
-    "CustomDamageType": number;
+    "CustomDamageType": DamageTypes_t;
     "CreateDebris": boolean;
     "ExplosionType": string;
     "CustomEffectName": string;
     "CustomSoundName": string;
-    "ClassIgnore": number;
-    "ClassIgnore2": number;
+    "ClassIgnore": Class_T;
+    "ClassIgnore2": Class_T;
     "EntityIgnoreName": string;
     "EntityIgnore": CBaseEntity;
     readonly "Parent": CModelPointEntity;
@@ -11420,8 +11419,8 @@ declare interface CEnvLightProbeVolume {
 declare interface CEnvMicrophone {
     "Disabled": boolean;
     "MeasureTarget": CBaseEntity;
-    "SoundType": number;
-    "SoundFlags": number;
+    "SoundType": SoundTypes_t;
+    "SoundFlags": SoundFlags_t;
     "Sensitivity": number;
     "SmoothFactor": number;
     "MaxRange": number;
@@ -11738,7 +11737,7 @@ declare interface CFilterModel {
 }
 
 declare interface CFilterMultiple {
-    "FilterType": number;
+    "FilterType": filter_t;
     "FilterName": Object;
     "Filter": Object;
     "FilterCount": number;
@@ -11844,7 +11843,7 @@ declare interface CFishPool {
 
 declare interface CFists {
     "PlayingUninterruptableAct": boolean;
-    "UninterruptableActivity": number;
+    "UninterruptableActivity": PlayerAnimEvent_t;
     "RestorePrevWep": boolean;
     "WeaponBeforePrevious": CBasePlayerWeapon;
     "WeaponPrevious": CBasePlayerWeapon;
@@ -11906,7 +11905,7 @@ declare interface CFootstepControl {
 }
 
 declare interface CFuncBrush {
-    "Solidity": number;
+    "Solidity": BrushSolidities_e;
     "Disabled": number;
     "SolidBsp": boolean;
     "ExcludedClass": string;
@@ -11995,7 +11994,7 @@ declare interface CFuncMonitor {
 }
 
 declare interface CFuncMoveLinear {
-    "AuthoredPosition": number;
+    "AuthoredPosition": MoveLinearAuthoredPos_t;
     "MoveEntitySpace": QAngle;
     "MoveDirParentSpace": Vector;
     "SoundStart": string;
@@ -12023,7 +12022,6 @@ declare interface CFuncMover {
     "PathName": string;
     "PathMover": CPathMover;
     "PathNodeStart": string;
-    readonly "MoveType": any;
     "IsReversing": boolean;
     "Target": Vector;
     "StartSpeed": number;
@@ -12033,7 +12031,7 @@ declare interface CFuncMover {
     "PreviousNodeIndex": number;
     "FixedOrientation": boolean;
     "FixedPitch": boolean;
-    "SolidType": number;
+    "SolidType": SolidType_t;
     "IsMoving": boolean;
     "TimeToReachMaxSpeed": number;
     "DistanceToReachMaxSpeed": number;
@@ -12052,7 +12050,6 @@ declare interface CFuncMover {
     "ArriveAtDestinationSound": string;
     readonly "OnMovementEnd": CEntityIOOutput;
     "StartAtEnd": boolean;
-    readonly "OrientationUpdate": any;
     "TimeStartOrientationChange": number;
     "TimeToBlendToNewOrientation": number;
     "DurationBlendToNewOrientationRan": number;
@@ -12187,7 +12184,7 @@ declare interface CFuncTrackChange {
     "TrackTopName": string;
     "TrackBottomName": string;
     "TrainName": string;
-    "Code": number;
+    "Code": TRAIN_CODE;
     "TargetState": number;
     "Use": number;
     readonly "Parent": CFuncPlatRot;
@@ -12221,8 +12218,8 @@ declare interface CFuncTrackTrain {
     "NextMoveSoundTime": number;
     "MoveSoundMinPitch": number;
     "MoveSoundMaxPitch": number;
-    "OrientationType": number;
-    "VelocityType": number;
+    "OrientationType": TrainOrientationType_t;
+    "VelocityType": TrainVelocityType_t;
     readonly "OnStart": CEntityIOOutput;
     readonly "OnNext": CEntityIOOutput;
     readonly "OnArrivedAtDestinationNode": CEntityIOOutput;
@@ -12363,16 +12360,16 @@ declare interface CGameScriptedMoveData {
     "Active": boolean;
     "TeleportOnEnd": boolean;
     "IgnoreRotation": boolean;
-    "Type": any;
+    "Type": ScriptedMoveType_t;
     "Success": boolean;
-    "ForcedCrouchState": number;
+    "ForcedCrouchState": ForcedCrouchState_t;
     "IgnoreCollisions": boolean;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface CGameScriptedMoveDef_t {
-    "Type": any;
+    "Type": ScriptedMoveType_t;
     "DestOffset": Vector;
     "DestEntity": CBaseEntity;
     "Dest": QAngle;
@@ -12391,9 +12388,9 @@ declare interface CGameText {
 }
 
 declare interface CGenericConstraint {
-    "LinearMotionX": number;
-    "LinearMotionY": number;
-    "LinearMotionZ": number;
+    "LinearMotionX": JointMotion_t;
+    "LinearMotionY": JointMotion_t;
+    "LinearMotionZ": JointMotion_t;
     "LinearFrequencyX": number;
     "LinearFrequencyY": number;
     "LinearFrequencyZ": number;
@@ -12424,9 +12421,9 @@ declare interface CGenericConstraint {
     "AxisNotifiedX": boolean;
     "AxisNotifiedY": boolean;
     "AxisNotifiedZ": boolean;
-    "AngularMotionX": number;
-    "AngularMotionY": number;
-    "AngularMotionZ": number;
+    "AngularMotionX": JointMotion_t;
+    "AngularMotionY": JointMotion_t;
+    "AngularMotionZ": JointMotion_t;
     "AngularFrequencyX": number;
     "AngularFrequencyY": number;
     "AngularFrequencyZ": number;
@@ -13117,7 +13114,7 @@ declare interface CLogicNPCCounterOBB {
 
 declare interface CLogicNavigation {
     "IsOn": boolean;
-    "NavProperty": number;
+    "NavProperty": navproperties_t;
     readonly "Parent": CLogicalEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -13552,7 +13549,7 @@ declare interface CPathTrack {
     "Length": number;
     "AltName": string;
     "IterVal": number;
-    "OrientationType": number;
+    "OrientationType": TrackOrientationType_t;
     readonly "OnPass": CEntityIOOutput;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
@@ -13837,7 +13834,6 @@ declare interface CPhysicsProp {
     "MuteImpactEffects": boolean;
     "AcceptDamageFromHeldObjects": boolean;
     "EnableUseOutput": boolean;
-    readonly "CrateType": any;
     "StrItemClass": Object;
     "ItemCount": Object;
     "RemovableForAmmoBalancing": boolean;
@@ -14125,7 +14121,7 @@ declare interface CPointEntityFinder {
     "Filter": CBaseFilter;
     "RefName": string;
     "Reference": CBaseEntity;
-    "FindMethod": number;
+    "FindMethod": EntFinderMethod_t;
     readonly "OnFoundEntity": CEntityIOOutput;
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
@@ -14149,7 +14145,7 @@ declare interface CPointGiveAmmo {
 
 declare interface CPointHurt {
     "Damage": number;
-    "BitsDamageType": number;
+    "BitsDamageType": DamageTypes_t;
     "Radius": number;
     "Delay": number;
     "StrTarget": string;
@@ -14211,7 +14207,7 @@ declare interface CPointTeleport {
 declare interface CPointValueRemapper {
     "Disabled": boolean;
     "UpdateOnClient": boolean;
-    "InputType": number;
+    "InputType": ValueRemapperInputType_t;
     "RemapLineStartName": string;
     "RemapLineEndName": string;
     "RemapLineStart": CBaseEntity;
@@ -14220,17 +14216,17 @@ declare interface CPointValueRemapper {
     "DisengageDistance": number;
     "EngageDistance": number;
     "RequiresUseKey": boolean;
-    "OutputType": number;
+    "OutputType": ValueRemapperOutputType_t;
     "OutputEntityName": string;
     "OutputEntity2Name": string;
     "OutputEntity3Name": string;
     "OutputEntity4Name": string;
-    "HapticsType": number;
-    "MomentumType": number;
+    "HapticsType": ValueRemapperHapticsType_t;
+    "MomentumType": ValueRemapperMomentumType_t;
     "MomentumModifier": number;
     "SnapValue": number;
     "CurrentMomentum": number;
-    "RatchetType": number;
+    "RatchetType": ValueRemapperRatchetType_t;
     "RatchetOffset": number;
     "InputOffset": number;
     "Engaged": boolean;
@@ -14280,9 +14276,9 @@ declare interface CPointWorldText {
     "BackgroundBorderHeight": number;
     "BackgroundWorldToUV": number;
     "Color": Color;
-    "JustifyHorizontal": number;
-    "JustifyVertical": number;
-    "ReorientMode": number;
+    "JustifyHorizontal": PointWorldTextJustifyHorizontal_t;
+    "JustifyVertical": PointWorldTextJustifyVertical_t;
+    "ReorientMode": PointWorldTextReorientMode_t;
     readonly "Parent": CModelPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14338,9 +14334,9 @@ declare interface CProjectedDecal {
 declare interface CPropDoorRotating {
     "Axis": Vector;
     "Distance": number;
-    "SpawnPosition": number;
-    "OpenDirection": number;
-    "CurrentOpenDirection": number;
+    "SpawnPosition": PropDoorRotatingSpawnPos_t;
+    "OpenDirection": PropDoorRotatingOpenDirection_e;
+    "CurrentOpenDirection": PropDoorRotatingOpenDirection_e;
     "AjarAngle": number;
     "RotationAjarDeprecated": QAngle;
     "RotationClosed": QAngle;
@@ -14636,7 +14632,7 @@ declare interface CSceneEntity {
     "Actor": CBaseFlex;
     "Activator": CBaseEntity;
     "BusyActor": number;
-    "PlayerDeathBehavior": number;
+    "PlayerDeathBehavior": SceneOnPlayerDeath_t;
     readonly "Parent": CPointEntity;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14657,7 +14653,7 @@ declare interface CSceneListManager {
 }
 
 declare interface CScriptItem {
-    "MoveTypeOverride": number;
+    "MoveTypeOverride": MoveType_t;
     readonly "Parent": CItem;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -14707,9 +14703,9 @@ declare interface CScriptedSequence {
     "NextScript": string;
     "Entity": string;
     "SyncGroup": string;
-    "MoveTo": number;
-    "MoveToGait": number;
-    "HeldWeaponBehavior": number;
+    "MoveTo": ScriptedMoveTo_t;
+    "MoveToGait": MovementGait_t;
+    "HeldWeaponBehavior": ScriptedHeldWeaponBehavior_t;
     "IsPlayingPreIdle": boolean;
     "IsPlayingEntry": boolean;
     "IsPlayingAction": boolean;
@@ -14759,8 +14755,8 @@ declare interface CScriptedSequence {
     "ForceSynch": boolean;
     "PreventUpdateYawOnFinish": boolean;
     "EnsureOnNavmeshOnFinish": boolean;
-    "OnDeathBehavior": number;
-    "ConflictResponse": number;
+    "OnDeathBehavior": ScriptedOnDeath_t;
+    "ConflictResponse": ScriptedConflictResponse_t;
     readonly "OnBeginSequence": CEntityIOOutput;
     readonly "OnActionStartOrLoop": CEntityIOOutput;
     readonly "OnEndSequence": CEntityIOOutput;
@@ -14815,7 +14811,7 @@ declare interface CShatterGlassShard {
     "PhysicsEntity": CShatterGlassShardPhysics;
     "ParentPanel": CFuncShatterglass;
     "ParentShard": number;
-    "ShatterStressType": number;
+    "ShatterStressType": ShatterGlassStressType;
     "StressVelocity": Vector;
     "CreatedModel": boolean;
     "LongestEdge": number;
@@ -14824,7 +14820,7 @@ declare interface CShatterGlassShard {
     "ShortestAcross": number;
     "SumOfAllEdges": number;
     "Area": number;
-    "OnFrameEdge": number;
+    "OnFrameEdge": OnFrame;
     "SubShardGeneration": number;
     "AverageVertPosition": Vector2D;
     "AverageVertPositionIsValid": boolean;
@@ -15429,7 +15425,7 @@ declare interface CTriggerHurt {
     "DamageCap": number;
     "LastDmgTime": number;
     "ForgivenessDelay": number;
-    "BitsDamageInflict": number;
+    "BitsDamageInflict": DamageTypes_t;
     "DamageModel": number;
     "NoDmgForce": boolean;
     "DamageForce": Vector;
@@ -15885,14 +15881,14 @@ declare interface FilterTeam {
 
 declare interface RelationshipOverride_t {
     "Entity": CBaseEntity;
-    "ClassType": number;
+    "ClassType": Class_T;
     readonly "Parent": Relationship_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface Relationship_t {
-    "Disposition": number;
+    "Disposition": Disposition_t;
     "Priority": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -15995,7 +15991,7 @@ declare interface fogplayerparams_t {
 
 declare interface lerpdata_t {
     "Ent": CBaseEntity;
-    "MoveType": number;
+    "MoveType": MoveType_t;
     "StartTime": number;
     "StartOrigin": Vector;
     readonly "FXIndex": ParticleIndex_t;
@@ -16043,8 +16039,8 @@ declare interface CDspPresetModifierList {
 
 declare interface CSosGroupActionLimitSchema {
     "MaxCount": number;
-    "StopType": number;
-    "SortType": number;
+    "StopType": SosActionStopType_t;
+    "SortType": SosActionSortType_t;
     readonly "Parent": CSosGroupActionSchema;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -16066,8 +16062,8 @@ declare interface CSosGroupActionMemberCountEnvelopeSchema {
 
 declare interface CSosGroupActionSchema {
     "Name": string;
-    "ActionType": number;
-    "ActionInstanceType": number;
+    "ActionType": ActionType_t;
+    "ActionInstanceType": ActionType_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -16077,7 +16073,7 @@ declare interface CSosGroupActionSetSoundeventParameterSchema {
     "MinValue": number;
     "MaxValue": number;
     "OpvarName": string;
-    "SortType": number;
+    "SortType": SosActionSortType_t;
     readonly "Parent": CSosGroupActionSchema;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -16174,7 +16170,7 @@ declare interface CSosSoundEventGroupListSchema {
 
 declare interface CSosSoundEventGroupSchema {
     "Name": string;
-    "Type": number;
+    "Type": SosGroupType_t;
     "IsBlocking": boolean;
     "BlockMaxCount": number;
     "InvertMatch": boolean;
@@ -16205,7 +16201,7 @@ declare interface SelectedEditItemInfo_t {
 }
 
 declare interface SosEditItemInfo_t {
-    "ItemType": number;
+    "ItemType": SosEditItemType_t;
     "ItemName": string;
     "ItemTypeName": string;
     "ItemKVString": string;
@@ -16222,7 +16218,7 @@ declare interface VMixAutoFilterDesc_t {
     "LFOAmount": number;
     "LFORate": number;
     "Phase": number;
-    "LFOShape": number;
+    "LFOShape": VMixLFOShape_t;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -16365,8 +16361,8 @@ declare interface VMixEnvelopeDesc_t {
 }
 
 declare interface VMixFilterDesc_t {
-    "FilterType": number;
-    "FilterSlope": number;
+    "FilterType": VMixFilterType_t;
+    "FilterSlope": VMixFilterSlope_t;
     "Enabled": boolean;
     "FldbGain": number;
     "CutoffFreq": number;
@@ -16399,7 +16395,7 @@ declare interface VMixModDelayDesc_t {
 }
 
 declare interface VMixOscDesc_t {
-    "OscType": number;
+    "OscType": VMixLFOShape_t;
     "Freq": number;
     "Phase": number;
     ToPtr: () => string;
@@ -16407,7 +16403,7 @@ declare interface VMixOscDesc_t {
 }
 
 declare interface VMixPannerDesc_t {
-    "Type": number;
+    "Type": VMixPannerType_t;
     "Strength": number;
     ToPtr: () => string;
     IsValid: () => boolean;
@@ -16445,7 +16441,7 @@ declare interface VMixShaperDesc_t {
 }
 
 declare interface VMixSubgraphSwitchDesc_t {
-    "InterpolationMode": number;
+    "InterpolationMode": VMixSubgraphSwitchInterpolationType_t;
     "OnlyTailsOnFadeOut": boolean;
     "InterpolationTime": number;
     ToPtr: () => string;
@@ -16453,7 +16449,7 @@ declare interface VMixSubgraphSwitchDesc_t {
 }
 
 declare interface VMixUtilityDesc_t {
-    "Op": number;
+    "Op": VMixChannelOperation_t;
     "InputPan": number;
     "OutputBalance": number;
     "FldbOutputGain": number;
@@ -16582,7 +16578,7 @@ declare interface CVoiceContainerEnvelope {
 }
 
 declare interface CVoiceContainerEnvelopeAnalyzer {
-    "Mode": number;
+    "Mode": EMode_t;
     "Samples": number;
     "Threshold": number;
     readonly "Parent": CVoiceContainerAnalysisBase;
@@ -16638,7 +16634,7 @@ declare interface CVoiceContainerRealtimeFMSineWave {
 }
 
 declare interface CVoiceContainerSelector {
-    "Mode": number;
+    "Mode": PlayBackMode_t;
     readonly "SoundsToPlay": CSoundContainerReferenceArray;
     readonly "ProbabilityWeights": Object;
     readonly "Parent": CVoiceContainerBase;
@@ -16754,15 +16750,15 @@ declare interface AggregateMeshInfo_t {
     "LODSetupIndex": number;
     "LODGroupMask": number;
     "TintColor": Color;
-    "ObjectFlags": number;
+    "ObjectFlags": ObjectTypeFlags_t;
     "LightProbeVolumePrecomputedHandshake": number;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
 
 declare interface AggregateSceneObject_t {
-    "AllFlags": number;
-    "AnyFlags": number;
+    "AllFlags": ObjectTypeFlags_t;
+    "AnyFlags": ObjectTypeFlags_t;
     "Layer": number;
     readonly "AggregateMeshes": Object;
     readonly "LodSetups": Object;
@@ -16810,7 +16806,7 @@ declare interface CVoxelVisibility {
 
 declare interface ClutterSceneObject_t {
     readonly "Bounds": AABB_t;
-    "Flags": number;
+    "Flags": ObjectTypeFlags_t;
     "Layer": number;
     readonly "InstancePositions": Object;
     readonly "InstanceScales": Object;
@@ -16849,7 +16845,7 @@ declare interface EntityKeyValueData_t {
 declare interface ExtraVertexStreamOverride_t {
     "SubSceneObject": number;
     "DrawCallIndex": number;
-    "AdditionalMeshDrawPrimitiveFlags": number;
+    "AdditionalMeshDrawPrimitiveFlags": MeshDrawPrimitiveFlags_t;
     readonly "ExtraBufferBinding": CRenderBufferBinding;
     readonly "Parent": BaseSceneObjectOverride_t;
     ToPtr: () => string;
@@ -16902,7 +16898,7 @@ declare interface SceneObject_t {
     "FadeEndDistance": number;
     "TintColor": Vector4D;
     "Skin": string;
-    "ObjectTypeFlags": number;
+    "ObjectTypeFlags": ObjectTypeFlags_t;
     "LightingOrigin": Vector;
     "OverlayRenderOrder": number;
     "LODOverride": number;

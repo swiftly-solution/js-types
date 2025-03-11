@@ -1,6 +1,9 @@
 #!/bin/bash
 
 git clone https://github.com/swiftly-solution/documentation
+cd documentation
+git pull
+cd ..
 
 rm -rf types
 mkdir types
