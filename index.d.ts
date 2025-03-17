@@ -20768,6 +20768,7 @@ declare interface ISDK {
     CollisionGroup: CollisionGroup;
     MaskContents: MaskContents;
     TraceMask: TraceMask;
+    GamePhase: GamePhase;
     RoundEndReason_t: RoundEndReason_t;
     PluginState_t: PluginState_t;
     Team: Team;
@@ -21268,6 +21269,16 @@ declare const enum TraceMask {
     MASK_SOLID_BRUSHONLY = 12289,
     MASK_PLAYERSOLID_BRUSHONLY = 12305,
     MASK_NPCSOLID_BRUSHONLY = 12321
+}
+
+declare const enum GamePhase {
+    GAMEPHASE_WARMUP_ROUND = 0,
+    GAMEPHASE_PLAYING_STANDARD = 1,
+    GAMEPHASE_PLAYING_FIRST_HALF = 2,
+    GAMEPHASE_PLAYING_SECOND_HALF = 3,
+    GAMEPHASE_HALFTIME = 4,
+    GAMEPHASE_MATCH_ENDED = 5,
+    GAMEPHASE_MAX = 6
 }
 
 declare const enum RoundEndReason_t {
