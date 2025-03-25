@@ -161,7 +161,7 @@ const ProcessData = (data, subfolder, className) => {
                     writeFileSync(subfolder + "/types.d.ts", "")
                     existsTypes = true
                 }
-                appendFileSync(subfolder + "/types.d.ts", `\n\ndeclare const enum ${data[key].title} {\n${Object.keys(data[key].values).map((val) => `    ${val} = ${data[key].values[val]}`).join(",\n")}\n}`)
+                appendFileSync(subfolder + "/types.d.ts", `\n\ndeclare ${Object.keys(data[key].values).length > 0 ? "const enum" : "interface"} ${data[key].title} {\n${Object.keys(data[key].values).map((val) => `    ${val} = ${data[key].values[val]}`).join(",\n")}\n}`)
                 sdktypes.push(data[key].title)
             } else if (data[key].template.includes("event-syntax")) {
                 var subfld = `../types/events/list.d.ts`

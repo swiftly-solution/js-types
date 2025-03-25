@@ -21316,15 +21316,15 @@ declare const enum Team {
     CT = 3
 }
 
-declare const enum HookHandle {
+declare interface HookHandle {
 
 }
 
-declare const enum TimerHandle {
+declare interface TimerHandle {
 
 }
 
-declare const enum EventHandler {
+declare interface EventHandler {
 
 }
 
