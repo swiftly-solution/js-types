@@ -70,7 +70,7 @@ const ProcessParameters = (params) => {
     const returnParams = [];
     for (const paramkey of Object.keys(params)) {
         let name = paramkey
-        if (name == "eventName") params[paramkey] = "GameEvent"
+        if (name == "eventName") params[paramkey] = "GameEvent|string"
         if (name == "...") {
             returnParams.push("...args: any[]");
         } else returnParams.push(`${name}: ${GetType(params[paramkey]).replace(/\//g, "|").slice(0, -1)}`)

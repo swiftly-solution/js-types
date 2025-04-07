@@ -17005,9 +17005,9 @@ declare function FindEntitiesByClassname(className: string) : Object;
 declare function CreateEntityByName(className: string) : CEntityInstance;
 declare interface IFunctions {
 }
-declare function AddEventHandler(eventName: GameEvent,callback: (event:IEvent,...args: any[]) => EventResult|void) : EventHandler;
+declare function AddEventHandler(eventName: GameEvent|string,callback: (event:IEvent,...args: any[]) => EventResult|void) : EventHandler;
 declare function RemoveEventHandler(eventHandler: EventHandler) : null|undefined;
-declare function TriggerEvent(eventName: GameEvent,...args: any[]) : [EventResult, Event];
+declare function TriggerEvent(eventName: GameEvent|string,...args: any[]) : [EventResult, Event];
 type GameEvent =
       "OnGameuiHidden"
     | "OnPostGameuiHidden"
