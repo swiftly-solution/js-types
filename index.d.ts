@@ -5,6 +5,9 @@ declare interface CCheckTransmitInfo {
     GetPlayers: () => Object;
     GetEntities: () => Object;
     SetEntities: (value: Object) => null|undefined;
+    AddEntityIndex: (entityIndex: number) => null|undefined;
+    RemoveEntityIndex: (entityIndex: number) => Object;
+    Clear: () => null|undefined;
 }
 
 declare function CCheckTransmitInfo(ptr_or_cchectransmitinfo: any): CCheckTransmitInfo;
@@ -14,6 +17,9 @@ declare interface CHandle {
     GetPtr: () => string;
     SetPtr: (ptr: string) => null|undefined;
     GetHandlePtr: () => string;
+    IsValid: () => boolean;
+    GetEntryIndex: () => number;
+    GetSerialNumber: () => number;
 }
 
 declare function CHandle(ptr: string): CHandle;
@@ -16994,8 +17000,10 @@ declare interface IConvars {
     Set: (name: string,value: string) => null|undefined;
     GetType: (name: string) => EConVarType;
     Get: (name: string) => any;
+    Delete: (name: string) => null|undefined;
+    Create: (name: string,description: string,cvartype: EConVarType,flags: number,default_value: any|null,min_value: any|null,max_value: any|null) => null|undefined;
     DeleteFake: (name: string) => null|undefined;
-    CreateFake: (name: string,cvartype: EConVarType,defaultValue: any,protected: boolean) => null|undefined;
+    CreateFake: (name: string,cvartype: EConVarType,defaultValue: any,protected: boolean|null) => null|undefined;
 }
 declare const convar : IConvars
 declare interface IEntities {
@@ -17563,6 +17571,7 @@ type GameEvent =
     | "OnPlayerCheckTransmit"
     | "OnClientConnect"
     | "OnEntitySpawned"
+    | "OnEntityParentChanged"
     | "OnEntityCreated"
     | "OnEntityDeleted"
     | "OnClientKeyStateChange"
@@ -17606,12 +17615,16 @@ declare const files : IFiles
 declare interface IGeneric {
 }
 declare function GetCurrentPluginName() : string;
+declare function GetGameName() : string;
 declare function GetPluginPath(plugin_name: string) : string;
+declare function ListenEntityTouchUse(class_name: string) : null|undefined;
+declare function RemoveListenEntityTouchUse(class_name: string) : null|undefined;
 declare function GetPluginState(plugin_name: string) : PluginState_t;
 declare function CreateTextTable(data: Object) : string;
 declare interface IHooks {
 }
 declare function AddHook(memory: IMemory,args_list: string,return_type: string) : HookHandle;
+declare function AddVHook(library: string,vtable_name: string,offset: string,args_list: string,return_type: string) : HookHandle;
 declare function AddPreHookListener(hookHandle: HookHandle,callback: (event:IEvent) => EventResult) : EventHandler;
 declare function AddPostHookListener(hookHandle: HookHandle,callback: (event:IEvent) => EventResult) : EventHandler;
 declare function RemoveHookListener(eventHandler: EventHandler) : null|undefined;
@@ -17663,6 +17676,7 @@ declare interface IMemory {
     SetInt: (value: number) => null|undefined;
     GetBool: () => boolean;
     SetBool: (value: boolean) => null|undefined;
+    Dereferance: () => null|undefined;
     AccessVTableFromOffset: (offsetName: string) => null|undefined;
     AccessVTable: (offset: number) => null|undefined;
     AccessedVTable: () => boolean;
@@ -17712,7 +17726,7 @@ declare interface IPlayer {
     GetChatTagColor: () => string;
     SetChatTag: (tag: string) => null|undefined;
     GetChatTag: () => string;
-    Drop: (reason: DisconnectReason) => null|undefined;
+    Drop: (reason: DisconnectReason,msg: string|null) => null|undefined;
     CCSPlayerPawnBase: () => CCSPlayerPawnBase;
     CCSPlayerPawn: () => CCSPlayerPawn;
     CCSPlayerController: () => CCSPlayerController;
@@ -24837,6 +24851,7 @@ declare interface ITime {
 declare function GetTime() : number;
 declare interface IVGUI {
     SetTextPosition: (textID: number,posX: number,posY: number) => null|undefined;
+    SetColor: (textID: number,color: Color) => null|undefined;
     SetTextMessage: (textID: number,message: string) => null|undefined;
     RemoveText: (textID: number) => null|undefined;
     ShowText: (playerid: number,color: Color,text: string,posX: number,posY: number,font_name: string,background: boolean|null) => number;
