@@ -17632,6 +17632,7 @@ declare function CallHook(hookHandle: HookHandle,...args: any[]) : any;
 declare interface IHTTP {
     Listen: (ip_addr: string,port: number,callback: (req:HTTPRequest,res:HTTPResponse) => void) => null|undefined;
 }
+declare const http : IHTTP
 declare function PerformHTTPRequest(url: string,callback: (status:number,body:string,headers:Object[],err:string) => void,method: string,data: string,headers: Object,files: Object) : null|undefined;
 declare interface IIP {
     GetASN: (ip: string) => string;

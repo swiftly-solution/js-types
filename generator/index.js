@@ -130,8 +130,9 @@ const ProcessData = (data, subfolder, className) => {
                     functionStxPoll[dir].file.push(`declare interface I${functionStxPoll[dir].className} {`);
                     functionStxPoll[dir].file.push(`}`);
 
-                    if (data[key].variable["js"].split(":").length >= 2 || data[key].variable["js"].split(".").length >= 2 || key == "constructor")
-                        functionStxPoll[dir].file.push(`declare const ${classVariable.toLowerCase()} : I${className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")}`)
+                    if (functionStxPoll[dir].className == "HTTP" || data[key].variable["js"].split(":").length >= 2 || data[key].variable["js"].split(".").length >= 2 || key == "constructor") {
+                        functionStxPoll[dir].file.push(`declare const ${functionStxPoll[dir].className == "HTTP" ? "http" : classVariable.toLowerCase()} : I${className == "Weapons Manager" ? "WeaponManager" : className.split(" ").join("")}`)
+                    }
                 }
 
                 if (subfolder.endsWith("database")) {
