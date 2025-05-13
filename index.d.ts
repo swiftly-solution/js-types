@@ -3324,33 +3324,9 @@ declare interface CBombTarget {
     IsValid: () => boolean;
 }
 
-declare interface CBreachCharge {
-    readonly "Parent": CCSWeaponBase;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CBreachChargeProjectile {
-    readonly "Parent": CBaseGrenade;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
 declare interface CBreakableStageHelper {
     "CurrentStage": number;
     "StageCount": number;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CBumpMine {
-    readonly "Parent": CCSWeaponBase;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CBumpMineProjectile {
-    readonly "Parent": CBaseGrenade;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -3480,6 +3456,7 @@ declare interface CCSPlayerController {
     readonly "DamageServices": CCSPlayerController_DamageServices;
     "Ping": number;
     "HasCommunicationAbuseMute": boolean;
+    "UiCommunicationMuteFlags": number;
     "CrosshairCodes": string;
     "PendingTeamNum": number;
     "ForceTeamTime": number;
@@ -3507,10 +3484,12 @@ declare interface CCSPlayerController {
     "CompetitiveRankingPredicted_Tie": number;
     "EndMatchNextMapVote": number;
     "ActiveQuestId": number;
+    "RtActiveMissionPeriod": number;
     "PlayerTvControlFlags": number;
     "DraftIndex": number;
     "MsQueuedModeDisconnectionTimestamp": number;
     "UiAbandonRecordedReason": number;
+    "NetworkDisconnectionReason": number;
     "CannotBeKicked": boolean;
     "EverFullyConnected": boolean;
     "AbandonAllowsSurrender": boolean;
@@ -3904,6 +3883,12 @@ declare interface CCSWeaponBaseVData {
     "ThrowVelocity": number;
     "SmokeColor": Vector;
     readonly "Parent": CBasePlayerWeaponVData;
+    ToPtr: () => string;
+    IsValid: () => boolean;
+}
+
+declare interface CCS_PortraitWorldCallbackHandler {
+
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -5108,12 +5093,6 @@ declare interface CStopwatchBase {
     IsValid: () => boolean;
 }
 
-declare interface CTablet {
-    readonly "Parent": CCSWeaponBase;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
 declare interface CTakeDamageInfo {
     "DamageForce": Vector;
     "DamagePosition": Vector;
@@ -5176,26 +5155,8 @@ declare interface CTimeline {
     IsValid: () => boolean;
 }
 
-declare interface CTripWireFire {
-    readonly "Parent": CBaseCSGrenade;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CTripWireFireProjectile {
-    readonly "Parent": CBaseGrenade;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
 declare interface CWaterSplasher {
 
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CWeaponZoneRepulsor {
-    readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -10350,11 +10311,11 @@ declare interface CCSGameRules {
     "MatchStats_PlayersAlive_T": Object;
     "TeamRespawnWaveTimes": Object;
     "NextRespawnWave": Object;
-    "ServerQuestID": number;
     "MinimapMins": Vector;
     "MinimapMaxs": Vector;
     "MinimapVerticalSectionHeights": Object;
     "SpawnedTerrorHuntHeavy": boolean;
+    "UllLocalMatchID": number;
     "EndMatchMapGroupVoteTypes": Object;
     "EndMatchMapGroupVoteOptions": Object;
     "EndMatchMapVoteWinner": number;
@@ -10732,7 +10693,6 @@ declare interface CCSWeaponBase {
     "RequireUseToTouch": boolean;
     "State": CSWeaponState_t;
     "LastTimeInAir": number;
-    "LastDeployTime": number;
     "LastEmptySoundCmdNum": number;
     "ViewModelIndex": number;
     "ReloadsWithClips": boolean;
@@ -11843,19 +11803,6 @@ declare interface CFishPool {
     "IsDormant": boolean;
     readonly "VisTimer": CountdownTimer;
     readonly "Parent": CBaseEntity;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CFists {
-    "PlayingUninterruptableAct": boolean;
-    "UninterruptableActivity": PlayerAnimEvent_t;
-    "RestorePrevWep": boolean;
-    "WeaponBeforePrevious": CBasePlayerWeapon;
-    "WeaponPrevious": CBasePlayerWeapon;
-    "DelayedHardPunchIncoming": boolean;
-    "DestroyAfterTaunt": boolean;
-    readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -13250,12 +13197,6 @@ declare interface CMathRemap {
     readonly "OnFellBelowMin": CEntityIOOutput;
     readonly "OnFellBelowMax": CEntityIOOutput;
     readonly "Parent": CLogicalEntity;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CMelee {
-    readonly "Parent": CCSWeaponBase;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -14777,21 +14718,6 @@ declare interface CScriptedSequence {
     IsValid: () => boolean;
 }
 
-declare interface CSensorGrenade {
-    readonly "Parent": CBaseCSGrenade;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CSensorGrenadeProjectile {
-    "ExpireTime": number;
-    "NextDetectPlayerSound": number;
-    "DisplayGrenade": CBaseEntity;
-    readonly "Parent": CBaseCSGrenadeProjectile;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
 declare interface CServerOnlyEntity {
     readonly "Parent": CBaseEntity;
     ToPtr: () => string;
@@ -15606,12 +15532,6 @@ declare interface CTriggerToggleSave {
     IsValid: () => boolean;
 }
 
-declare interface CTriggerTripWire {
-    readonly "Parent": CBaseTrigger;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
 declare interface CTriggerVolume {
     "FilterName": string;
     "Filter": CBaseFilter;
@@ -15798,15 +15718,6 @@ declare interface CWeaponSSG08 {
 
 declare interface CWeaponSawedoff {
     readonly "Parent": CCSWeaponBase;
-    ToPtr: () => string;
-    IsValid: () => boolean;
-}
-
-declare interface CWeaponShield {
-    "BulletDamageAbsorbed": number;
-    "LastBulletHitSoundTime": number;
-    "DisplayHealth": number;
-    readonly "Parent": CCSWeaponBaseGun;
     ToPtr: () => string;
     IsValid: () => boolean;
 }
@@ -18066,11 +17977,7 @@ type AnySDKClass =
     | CBodyComponentPoint
     | CBodyComponentSkeletonInstance
     | CBombTarget
-    | CBreachCharge
-    | CBreachChargeProjectile
     | CBreakableStageHelper
-    | CBumpMine
-    | CBumpMineProjectile
     | CBuoyancyHelper
     | CCSClientPointScriptEntity
     | CCSGOPlayerAnimGraphState
@@ -18116,6 +18023,7 @@ type AnySDKClass =
     | CCSPointScriptExtensions_player_controller
     | CCSPointScriptExtensions_weapon_cs_base
     | CCSWeaponBaseVData
+    | CCS_PortraitWorldCallbackHandler
     | CCitadelSoundOpvarSetOBB
     | CClientAlphaProperty
     | CClientGapTypeQueryRegistration
@@ -18224,16 +18132,12 @@ type AnySDKClass =
     | CSpriteOriented
     | CStopwatch
     | CStopwatchBase
-    | CTablet
     | CTakeDamageInfo
     | CTakeDamageInfoAPI
     | CTakeDamageResult
     | CTakeDamageSummaryScopeGuard
     | CTimeline
-    | CTripWireFire
-    | CTripWireFireProjectile
     | CWaterSplasher
-    | CWeaponZoneRepulsor
     | CWorldCompositionChunkReferenceElement_t
     | CommandToolCommand_t
     | CompMatMutatorCondition_t
@@ -18789,7 +18693,6 @@ type AnySDKClass =
     | CFireSmoke
     | CFish
     | CFishPool
-    | CFists
     | CFlashbang
     | CFlashbangProjectile
     | CFogController
@@ -18919,7 +18822,6 @@ type AnySDKClass =
     | CMathColorBlend
     | CMathCounter
     | CMathRemap
-    | CMelee
     | CMessage
     | CMessageEntity
     | CModelPointEntity
@@ -19038,8 +18940,6 @@ type AnySDKClass =
     | CScriptTriggerOnce
     | CScriptTriggerPush
     | CScriptedSequence
-    | CSensorGrenade
-    | CSensorGrenadeProjectile
     | CServerOnlyEntity
     | CServerOnlyPointEntity
     | CServerRagdollTrigger
@@ -19115,7 +19015,6 @@ type AnySDKClass =
     | CTriggerSoundscape
     | CTriggerTeleport
     | CTriggerToggleSave
-    | CTriggerTripWire
     | CTriggerVolume
     | CWaterBullet
     | CWeaponAWP
@@ -19147,7 +19046,6 @@ type AnySDKClass =
     | CWeaponSG556
     | CWeaponSSG08
     | CWeaponSawedoff
-    | CWeaponShield
     | CWeaponTaser
     | CWeaponTec9
     | CWeaponUMP45
@@ -19575,11 +19473,7 @@ declare interface ISDK {
     CBodyComponentPoint: (ptr_or_class: string|AnySDKClass) => CBodyComponentPoint;
     CBodyComponentSkeletonInstance: (ptr_or_class: string|AnySDKClass) => CBodyComponentSkeletonInstance;
     CBombTarget: (ptr_or_class: string|AnySDKClass) => CBombTarget;
-    CBreachCharge: (ptr_or_class: string|AnySDKClass) => CBreachCharge;
-    CBreachChargeProjectile: (ptr_or_class: string|AnySDKClass) => CBreachChargeProjectile;
     CBreakableStageHelper: (ptr_or_class: string|AnySDKClass) => CBreakableStageHelper;
-    CBumpMine: (ptr_or_class: string|AnySDKClass) => CBumpMine;
-    CBumpMineProjectile: (ptr_or_class: string|AnySDKClass) => CBumpMineProjectile;
     CBuoyancyHelper: (ptr_or_class: string|AnySDKClass) => CBuoyancyHelper;
     CCSClientPointScriptEntity: (ptr_or_class: string|AnySDKClass) => CCSClientPointScriptEntity;
     CCSGOPlayerAnimGraphState: (ptr_or_class: string|AnySDKClass) => CCSGOPlayerAnimGraphState;
@@ -19625,6 +19519,7 @@ declare interface ISDK {
     CCSPointScriptExtensions_player_controller: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_player_controller;
     CCSPointScriptExtensions_weapon_cs_base: (ptr_or_class: string|AnySDKClass) => CCSPointScriptExtensions_weapon_cs_base;
     CCSWeaponBaseVData: (ptr_or_class: string|AnySDKClass) => CCSWeaponBaseVData;
+    CCS_PortraitWorldCallbackHandler: (ptr_or_class: string|AnySDKClass) => CCS_PortraitWorldCallbackHandler;
     CCitadelSoundOpvarSetOBB: (ptr_or_class: string|AnySDKClass) => CCitadelSoundOpvarSetOBB;
     CClientAlphaProperty: (ptr_or_class: string|AnySDKClass) => CClientAlphaProperty;
     CClientGapTypeQueryRegistration: (ptr_or_class: string|AnySDKClass) => CClientGapTypeQueryRegistration;
@@ -19733,16 +19628,12 @@ declare interface ISDK {
     CSpriteOriented: (ptr_or_class: string|AnySDKClass) => CSpriteOriented;
     CStopwatch: (ptr_or_class: string|AnySDKClass) => CStopwatch;
     CStopwatchBase: (ptr_or_class: string|AnySDKClass) => CStopwatchBase;
-    CTablet: (ptr_or_class: string|AnySDKClass) => CTablet;
     CTakeDamageInfo: (ptr_or_class: string|AnySDKClass) => CTakeDamageInfo;
     CTakeDamageInfoAPI: (ptr_or_class: string|AnySDKClass) => CTakeDamageInfoAPI;
     CTakeDamageResult: (ptr_or_class: string|AnySDKClass) => CTakeDamageResult;
     CTakeDamageSummaryScopeGuard: (ptr_or_class: string|AnySDKClass) => CTakeDamageSummaryScopeGuard;
     CTimeline: (ptr_or_class: string|AnySDKClass) => CTimeline;
-    CTripWireFire: (ptr_or_class: string|AnySDKClass) => CTripWireFire;
-    CTripWireFireProjectile: (ptr_or_class: string|AnySDKClass) => CTripWireFireProjectile;
     CWaterSplasher: (ptr_or_class: string|AnySDKClass) => CWaterSplasher;
-    CWeaponZoneRepulsor: (ptr_or_class: string|AnySDKClass) => CWeaponZoneRepulsor;
     CWorldCompositionChunkReferenceElement_t: (ptr_or_class: string|AnySDKClass) => CWorldCompositionChunkReferenceElement_t;
     CommandToolCommand_t: (ptr_or_class: string|AnySDKClass) => CommandToolCommand_t;
     CompMatMutatorCondition_t: (ptr_or_class: string|AnySDKClass) => CompMatMutatorCondition_t;
@@ -20298,7 +20189,6 @@ declare interface ISDK {
     CFireSmoke: (ptr_or_class: string|AnySDKClass) => CFireSmoke;
     CFish: (ptr_or_class: string|AnySDKClass) => CFish;
     CFishPool: (ptr_or_class: string|AnySDKClass) => CFishPool;
-    CFists: (ptr_or_class: string|AnySDKClass) => CFists;
     CFlashbang: (ptr_or_class: string|AnySDKClass) => CFlashbang;
     CFlashbangProjectile: (ptr_or_class: string|AnySDKClass) => CFlashbangProjectile;
     CFogController: (ptr_or_class: string|AnySDKClass) => CFogController;
@@ -20428,7 +20318,6 @@ declare interface ISDK {
     CMathColorBlend: (ptr_or_class: string|AnySDKClass) => CMathColorBlend;
     CMathCounter: (ptr_or_class: string|AnySDKClass) => CMathCounter;
     CMathRemap: (ptr_or_class: string|AnySDKClass) => CMathRemap;
-    CMelee: (ptr_or_class: string|AnySDKClass) => CMelee;
     CMessage: (ptr_or_class: string|AnySDKClass) => CMessage;
     CMessageEntity: (ptr_or_class: string|AnySDKClass) => CMessageEntity;
     CModelPointEntity: (ptr_or_class: string|AnySDKClass) => CModelPointEntity;
@@ -20547,8 +20436,6 @@ declare interface ISDK {
     CScriptTriggerOnce: (ptr_or_class: string|AnySDKClass) => CScriptTriggerOnce;
     CScriptTriggerPush: (ptr_or_class: string|AnySDKClass) => CScriptTriggerPush;
     CScriptedSequence: (ptr_or_class: string|AnySDKClass) => CScriptedSequence;
-    CSensorGrenade: (ptr_or_class: string|AnySDKClass) => CSensorGrenade;
-    CSensorGrenadeProjectile: (ptr_or_class: string|AnySDKClass) => CSensorGrenadeProjectile;
     CServerOnlyEntity: (ptr_or_class: string|AnySDKClass) => CServerOnlyEntity;
     CServerOnlyPointEntity: (ptr_or_class: string|AnySDKClass) => CServerOnlyPointEntity;
     CServerRagdollTrigger: (ptr_or_class: string|AnySDKClass) => CServerRagdollTrigger;
@@ -20624,7 +20511,6 @@ declare interface ISDK {
     CTriggerSoundscape: (ptr_or_class: string|AnySDKClass) => CTriggerSoundscape;
     CTriggerTeleport: (ptr_or_class: string|AnySDKClass) => CTriggerTeleport;
     CTriggerToggleSave: (ptr_or_class: string|AnySDKClass) => CTriggerToggleSave;
-    CTriggerTripWire: (ptr_or_class: string|AnySDKClass) => CTriggerTripWire;
     CTriggerVolume: (ptr_or_class: string|AnySDKClass) => CTriggerVolume;
     CWaterBullet: (ptr_or_class: string|AnySDKClass) => CWaterBullet;
     CWeaponAWP: (ptr_or_class: string|AnySDKClass) => CWeaponAWP;
@@ -20656,7 +20542,6 @@ declare interface ISDK {
     CWeaponSG556: (ptr_or_class: string|AnySDKClass) => CWeaponSG556;
     CWeaponSSG08: (ptr_or_class: string|AnySDKClass) => CWeaponSSG08;
     CWeaponSawedoff: (ptr_or_class: string|AnySDKClass) => CWeaponSawedoff;
-    CWeaponShield: (ptr_or_class: string|AnySDKClass) => CWeaponShield;
     CWeaponTaser: (ptr_or_class: string|AnySDKClass) => CWeaponTaser;
     CWeaponTec9: (ptr_or_class: string|AnySDKClass) => CWeaponTec9;
     CWeaponUMP45: (ptr_or_class: string|AnySDKClass) => CWeaponUMP45;
@@ -22240,19 +22125,11 @@ declare const enum CSPlayerBlockingUseAction_t {
     k_CSPlayerBlockingUseAction_DefusingWithKit = 2,
     k_CSPlayerBlockingUseAction_HostageGrabbing = 3,
     k_CSPlayerBlockingUseAction_HostageDropping = 4,
-    k_CSPlayerBlockingUseAction_OpeningSafe = 5,
-    k_CSPlayerBlockingUseAction_EquippingParachute = 6,
-    k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 7,
-    k_CSPlayerBlockingUseAction_EquippingContract = 8,
-    k_CSPlayerBlockingUseAction_EquippingTabletUpgrade = 9,
-    k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 10,
-    k_CSPlayerBlockingUseAction_PayingToOpenDoor = 11,
-    k_CSPlayerBlockingUseAction_CancelingSpawnRappelling = 12,
-    k_CSPlayerBlockingUseAction_EquippingExoJump = 13,
-    k_CSPlayerBlockingUseAction_PickingUpBumpMine = 14,
-    k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 15,
-    k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 16,
-    k_CSPlayerBlockingUseAction_MaxCount = 17
+    k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 5,
+    k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 6,
+    k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 7,
+    k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 8,
+    k_CSPlayerBlockingUseAction_MaxCount = 9
 }
 
 declare const enum CSPlayerState {
@@ -22309,14 +22186,7 @@ declare const enum CSWeaponType {
     WEAPONTYPE_GRENADE = 9,
     WEAPONTYPE_EQUIPMENT = 10,
     WEAPONTYPE_STACKABLEITEM = 11,
-    WEAPONTYPE_FISTS = 12,
-    WEAPONTYPE_BREACHCHARGE = 13,
-    WEAPONTYPE_BUMPMINE = 14,
-    WEAPONTYPE_TABLET = 15,
-    WEAPONTYPE_MELEE = 16,
-    WEAPONTYPE_SHIELD = 17,
-    WEAPONTYPE_ZONE_REPULSOR = 18,
-    WEAPONTYPE_UNKNOWN = 19
+    WEAPONTYPE_UNKNOWN = 12
 }
 
 declare const enum CanPlaySequence_t {
@@ -22659,9 +22529,7 @@ declare const enum GrenadeType_t {
     GRENADE_TYPE_FIRE = 2,
     GRENADE_TYPE_DECOY = 3,
     GRENADE_TYPE_SMOKE = 4,
-    GRENADE_TYPE_SENSOR = 5,
-    GRENADE_TYPE_SNOWBALL = 6,
-    GRENADE_TYPE_TOTAL = 7
+    GRENADE_TYPE_TOTAL = 5
 }
 
 declare const enum HierarchyType_t {
@@ -24831,6 +24699,7 @@ declare interface IMisc {
     split: (str: string,delimiter: string) => Object;
 }
 declare function StateUpdate(ptr: string,classname: string,field: string) : null|undefined;
+declare function GetPluginsList() : Object;
 declare function GetUserMessage(uuid: string) : UserMessage;
 declare function uuid() : string;
 declare function ReplyToCommand(playerid: number,prefix: string,text: string) : null|undefined;
