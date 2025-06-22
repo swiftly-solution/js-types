@@ -449,6 +449,11 @@ declare interface UserMessage {
     GetRepeatedString: (fieldName: string,index: number) => string;
     SetRepeatedString: (fieldName: string,index: number,value: string) => null|undefined;
     AddString: (fieldName: string,value: string) => null|undefined;
+    GetBytes: (fieldName: string) => string;
+    SetBytes: (fieldName: string,value: string) => null|undefined;
+    GetRepeatedBytes: (fieldName: string,index: number) => string;
+    SetRepeatedBytes: (fieldName: string,index: number,value: string) => null|undefined;
+    AddBytes: (fieldName: string,value: string) => null|undefined;
     GetColor: (fieldName: string) => Color;
     SetColor: (fieldName: string,value: Color) => null|undefined;
     GetRepeatedColor: (fieldName: string,index: number) => Color;
@@ -24742,3 +24747,11 @@ declare interface IWeaponManager {
     GiveWeapon: (weapon_name: string) => null|undefined;
 }
 declare const weaponmanager : IWeaponManager
+declare interface IWebSockets {
+    TerminateClientConnectionOnServer: (server_uuid: string,client_id: number) => null|undefined;
+    SendServerMessageToAllClients: (server_uuid: string,message: any) => null|undefined;
+    SendServerMessageToClient: (server_uuid: string,client_id: number,message: any) => null|undefined;
+    StopServer: (server_uuid: string) => null|undefined;
+    StartServer: (port: number,callback: (server_uuid:string,client_id:number,kind:string,message:string) => void) => string;
+}
+declare const ws : IWebSockets
