@@ -17482,6 +17482,7 @@ type GameEvent =
     | "OnMapUnload"
     | "OnGameTick"
     | "OnClientDisconnect"
+    | "OnClientPutInServer"
     | "OnTerminateRound"
     | "OnClientProcessUsercmds"
     | "OnClientSteamAuthorize"
