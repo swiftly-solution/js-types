@@ -24748,6 +24748,9 @@ declare interface IWeaponManager {
 }
 declare const weaponmanager : IWeaponManager
 declare interface IWebSockets {
+    SendMessageToServer: (connection_uuid: string,message: any) => null|undefined;
+    StopConnectionToServer: (connection_uuid: string) => null|undefined;
+    ConnectToServer: (port: number,callback: (connection_uuid:string,kind:string,message:string) => void) => string;
     TerminateClientConnectionOnServer: (server_uuid: string,client_id: number) => null|undefined;
     SendServerMessageToAllClients: (server_uuid: string,message: any) => null|undefined;
     SendServerMessageToClient: (server_uuid: string,client_id: number,message: any) => null|undefined;
